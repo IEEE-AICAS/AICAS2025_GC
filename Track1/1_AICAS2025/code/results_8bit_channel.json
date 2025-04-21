@@ -1,0 +1,389 @@
+{
+    "results": {
+        "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.31313993174061433,
+            "acc_stderr,none": 0.013552671543623501,
+            "acc_norm,none": 0.35238907849829354,
+            "acc_norm_stderr,none": 0.01396014260059868
+        },
+        "ceval-valid": {
+            "acc_norm,none": 0.5163447251114414,
+            "acc_norm_stderr,none": 0.013167598964424303,
+            "acc,none": 0.5163447251114414,
+            "acc_stderr,none": 0.013167598964424303,
+            "alias": "ceval-valid"
+        },
+        "ceval-valid_accountant": {
+            "alias": " - ceval-valid_accountant",
+            "acc,none": 0.4897959183673469,
+            "acc_stderr,none": 0.07215375318230076,
+            "acc_norm,none": 0.4897959183673469,
+            "acc_norm_stderr,none": 0.07215375318230076
+        },
+        "ceval-valid_advanced_mathematics": {
+            "alias": " - ceval-valid_advanced_mathematics",
+            "acc,none": 0.2631578947368421,
+            "acc_stderr,none": 0.10379087338771256,
+            "acc_norm,none": 0.2631578947368421,
+            "acc_norm_stderr,none": 0.10379087338771256
+        },
+        "ceval-valid_art_studies": {
+            "alias": " - ceval-valid_art_studies",
+            "acc,none": 0.3939393939393939,
+            "acc_stderr,none": 0.08637692614387409,
+            "acc_norm,none": 0.3939393939393939,
+            "acc_norm_stderr,none": 0.08637692614387409
+        },
+        "ceval-valid_basic_medicine": {
+            "alias": " - ceval-valid_basic_medicine",
+            "acc,none": 0.47368421052631576,
+            "acc_stderr,none": 0.1176877882894626,
+            "acc_norm,none": 0.47368421052631576,
+            "acc_norm_stderr,none": 0.1176877882894626
+        },
+        "ceval-valid_business_administration": {
+            "alias": " - ceval-valid_business_administration",
+            "acc,none": 0.5454545454545454,
+            "acc_stderr,none": 0.08802234877744129,
+            "acc_norm,none": 0.5454545454545454,
+            "acc_norm_stderr,none": 0.08802234877744129
+        },
+        "ceval-valid_chinese_language_and_literature": {
+            "alias": " - ceval-valid_chinese_language_and_literature",
+            "acc,none": 0.391304347826087,
+            "acc_stderr,none": 0.10405096111532161,
+            "acc_norm,none": 0.391304347826087,
+            "acc_norm_stderr,none": 0.10405096111532161
+        },
+        "ceval-valid_civil_servant": {
+            "alias": " - ceval-valid_civil_servant",
+            "acc,none": 0.48936170212765956,
+            "acc_stderr,none": 0.07370428968378204,
+            "acc_norm,none": 0.48936170212765956,
+            "acc_norm_stderr,none": 0.07370428968378204
+        },
+        "ceval-valid_clinical_medicine": {
+            "alias": " - ceval-valid_clinical_medicine",
+            "acc,none": 0.5,
+            "acc_stderr,none": 0.10910894511799618,
+            "acc_norm,none": 0.5,
+            "acc_norm_stderr,none": 0.10910894511799618
+        },
+        "ceval-valid_college_chemistry": {
+            "alias": " - ceval-valid_college_chemistry",
+            "acc,none": 0.3333333333333333,
+            "acc_stderr,none": 0.09829463743659811,
+            "acc_norm,none": 0.3333333333333333,
+            "acc_norm_stderr,none": 0.09829463743659811
+        },
+        "ceval-valid_college_economics": {
+            "alias": " - ceval-valid_college_economics",
+            "acc,none": 0.36363636363636365,
+            "acc_stderr,none": 0.06546202725664504,
+            "acc_norm,none": 0.36363636363636365,
+            "acc_norm_stderr,none": 0.06546202725664504
+        },
+        "ceval-valid_college_physics": {
+            "alias": " - ceval-valid_college_physics",
+            "acc,none": 0.21052631578947367,
+            "acc_stderr,none": 0.0960916767552923,
+            "acc_norm,none": 0.21052631578947367,
+            "acc_norm_stderr,none": 0.0960916767552923
+        },
+        "ceval-valid_college_programming": {
+            "alias": " - ceval-valid_college_programming",
+            "acc,none": 0.43243243243243246,
+            "acc_stderr,none": 0.08256893144064577,
+            "acc_norm,none": 0.43243243243243246,
+            "acc_norm_stderr,none": 0.08256893144064577
+        },
+        "ceval-valid_computer_architecture": {
+            "alias": " - ceval-valid_computer_architecture",
+            "acc,none": 0.47619047619047616,
+            "acc_stderr,none": 0.11167656571008164,
+            "acc_norm,none": 0.47619047619047616,
+            "acc_norm_stderr,none": 0.11167656571008164
+        },
+        "ceval-valid_computer_network": {
+            "alias": " - ceval-valid_computer_network",
+            "acc,none": 0.2631578947368421,
+            "acc_stderr,none": 0.10379087338771256,
+            "acc_norm,none": 0.2631578947368421,
+            "acc_norm_stderr,none": 0.10379087338771256
+        },
+        "ceval-valid_discrete_mathematics": {
+            "alias": " - ceval-valid_discrete_mathematics",
+            "acc,none": 0.3125,
+            "acc_stderr,none": 0.11967838846954226,
+            "acc_norm,none": 0.3125,
+            "acc_norm_stderr,none": 0.11967838846954226
+        },
+        "ceval-valid_education_science": {
+            "alias": " - ceval-valid_education_science",
+            "acc,none": 0.6551724137931034,
+            "acc_stderr,none": 0.08982552969857373,
+            "acc_norm,none": 0.6551724137931034,
+            "acc_norm_stderr,none": 0.08982552969857373
+        },
+        "ceval-valid_electrical_engineer": {
+            "alias": " - ceval-valid_electrical_engineer",
+            "acc,none": 0.2972972972972973,
+            "acc_stderr,none": 0.07617808344724214,
+            "acc_norm,none": 0.2972972972972973,
+            "acc_norm_stderr,none": 0.07617808344724214
+        },
+        "ceval-valid_environmental_impact_assessment_engineer": {
+            "alias": " - ceval-valid_environmental_impact_assessment_engineer",
+            "acc,none": 0.4838709677419355,
+            "acc_stderr,none": 0.09123958466923197,
+            "acc_norm,none": 0.4838709677419355,
+            "acc_norm_stderr,none": 0.09123958466923197
+        },
+        "ceval-valid_fire_engineer": {
+            "alias": " - ceval-valid_fire_engineer",
+            "acc,none": 0.41935483870967744,
+            "acc_stderr,none": 0.09009187125012223,
+            "acc_norm,none": 0.41935483870967744,
+            "acc_norm_stderr,none": 0.09009187125012223
+        },
+        "ceval-valid_high_school_biology": {
+            "alias": " - ceval-valid_high_school_biology",
+            "acc,none": 0.3684210526315789,
+            "acc_stderr,none": 0.11369720523522557,
+            "acc_norm,none": 0.3684210526315789,
+            "acc_norm_stderr,none": 0.11369720523522557
+        },
+        "ceval-valid_high_school_chemistry": {
+            "alias": " - ceval-valid_high_school_chemistry",
+            "acc,none": 0.47368421052631576,
+            "acc_stderr,none": 0.11768778828946262,
+            "acc_norm,none": 0.47368421052631576,
+            "acc_norm_stderr,none": 0.11768778828946262
+        },
+        "ceval-valid_high_school_chinese": {
+            "alias": " - ceval-valid_high_school_chinese",
+            "acc,none": 0.3684210526315789,
+            "acc_stderr,none": 0.11369720523522558,
+            "acc_norm,none": 0.3684210526315789,
+            "acc_norm_stderr,none": 0.11369720523522558
+        },
+        "ceval-valid_high_school_geography": {
+            "alias": " - ceval-valid_high_school_geography",
+            "acc,none": 0.5263157894736842,
+            "acc_stderr,none": 0.11768778828946262,
+            "acc_norm,none": 0.5263157894736842,
+            "acc_norm_stderr,none": 0.11768778828946262
+        },
+        "ceval-valid_high_school_history": {
+            "alias": " - ceval-valid_high_school_history",
+            "acc,none": 0.75,
+            "acc_stderr,none": 0.09933992677987828,
+            "acc_norm,none": 0.75,
+            "acc_norm_stderr,none": 0.09933992677987828
+        },
+        "ceval-valid_high_school_mathematics": {
+            "alias": " - ceval-valid_high_school_mathematics",
+            "acc,none": 0.3333333333333333,
+            "acc_stderr,none": 0.11433239009500591,
+            "acc_norm,none": 0.3333333333333333,
+            "acc_norm_stderr,none": 0.11433239009500591
+        },
+        "ceval-valid_high_school_physics": {
+            "alias": " - ceval-valid_high_school_physics",
+            "acc,none": 0.6842105263157895,
+            "acc_stderr,none": 0.10956136839295434,
+            "acc_norm,none": 0.6842105263157895,
+            "acc_norm_stderr,none": 0.10956136839295434
+        },
+        "ceval-valid_high_school_politics": {
+            "alias": " - ceval-valid_high_school_politics",
+            "acc,none": 0.631578947368421,
+            "acc_stderr,none": 0.11369720523522563,
+            "acc_norm,none": 0.631578947368421,
+            "acc_norm_stderr,none": 0.11369720523522563
+        },
+        "ceval-valid_ideological_and_moral_cultivation": {
+            "alias": " - ceval-valid_ideological_and_moral_cultivation",
+            "acc,none": 0.8421052631578947,
+            "acc_stderr,none": 0.08594700851870798,
+            "acc_norm,none": 0.8421052631578947,
+            "acc_norm_stderr,none": 0.08594700851870798
+        },
+        "ceval-valid_law": {
+            "alias": " - ceval-valid_law",
+            "acc,none": 0.4166666666666667,
+            "acc_stderr,none": 0.10279899245732686,
+            "acc_norm,none": 0.4166666666666667,
+            "acc_norm_stderr,none": 0.10279899245732686
+        },
+        "ceval-valid_legal_professional": {
+            "alias": " - ceval-valid_legal_professional",
+            "acc,none": 0.4782608695652174,
+            "acc_stderr,none": 0.10649955403405124,
+            "acc_norm,none": 0.4782608695652174,
+            "acc_norm_stderr,none": 0.10649955403405124
+        },
+        "ceval-valid_logic": {
+            "alias": " - ceval-valid_logic",
+            "acc,none": 0.45454545454545453,
+            "acc_stderr,none": 0.10865714630312667,
+            "acc_norm,none": 0.45454545454545453,
+            "acc_norm_stderr,none": 0.10865714630312667
+        },
+        "ceval-valid_mao_zedong_thought": {
+            "alias": " - ceval-valid_mao_zedong_thought",
+            "acc,none": 0.8333333333333334,
+            "acc_stderr,none": 0.07770873402002614,
+            "acc_norm,none": 0.8333333333333334,
+            "acc_norm_stderr,none": 0.07770873402002614
+        },
+        "ceval-valid_marxism": {
+            "alias": " - ceval-valid_marxism",
+            "acc,none": 0.8421052631578947,
+            "acc_stderr,none": 0.08594700851870798,
+            "acc_norm,none": 0.8421052631578947,
+            "acc_norm_stderr,none": 0.08594700851870798
+        },
+        "ceval-valid_metrology_engineer": {
+            "alias": " - ceval-valid_metrology_engineer",
+            "acc,none": 0.6666666666666666,
+            "acc_stderr,none": 0.09829463743659808,
+            "acc_norm,none": 0.6666666666666666,
+            "acc_norm_stderr,none": 0.09829463743659808
+        },
+        "ceval-valid_middle_school_biology": {
+            "alias": " - ceval-valid_middle_school_biology",
+            "acc,none": 0.7142857142857143,
+            "acc_stderr,none": 0.10101525445522107,
+            "acc_norm,none": 0.7142857142857143,
+            "acc_norm_stderr,none": 0.10101525445522107
+        },
+        "ceval-valid_middle_school_chemistry": {
+            "alias": " - ceval-valid_middle_school_chemistry",
+            "acc,none": 0.8,
+            "acc_stderr,none": 0.09176629354822471,
+            "acc_norm,none": 0.8,
+            "acc_norm_stderr,none": 0.09176629354822471
+        },
+        "ceval-valid_middle_school_geography": {
+            "alias": " - ceval-valid_middle_school_geography",
+            "acc,none": 0.75,
+            "acc_stderr,none": 0.1305582419667734,
+            "acc_norm,none": 0.75,
+            "acc_norm_stderr,none": 0.1305582419667734
+        },
+        "ceval-valid_middle_school_history": {
+            "alias": " - ceval-valid_middle_school_history",
+            "acc,none": 0.7272727272727273,
+            "acc_stderr,none": 0.0971859061499725,
+            "acc_norm,none": 0.7272727272727273,
+            "acc_norm_stderr,none": 0.0971859061499725
+        },
+        "ceval-valid_middle_school_mathematics": {
+            "alias": " - ceval-valid_middle_school_mathematics",
+            "acc,none": 0.42105263157894735,
+            "acc_stderr,none": 0.11637279966159299,
+            "acc_norm,none": 0.42105263157894735,
+            "acc_norm_stderr,none": 0.11637279966159299
+        },
+        "ceval-valid_middle_school_physics": {
+            "alias": " - ceval-valid_middle_school_physics",
+            "acc,none": 0.42105263157894735,
+            "acc_stderr,none": 0.11637279966159299,
+            "acc_norm,none": 0.42105263157894735,
+            "acc_norm_stderr,none": 0.11637279966159299
+        },
+        "ceval-valid_middle_school_politics": {
+            "alias": " - ceval-valid_middle_school_politics",
+            "acc,none": 0.8095238095238095,
+            "acc_stderr,none": 0.08780518530755133,
+            "acc_norm,none": 0.8095238095238095,
+            "acc_norm_stderr,none": 0.08780518530755133
+        },
+        "ceval-valid_modern_chinese_history": {
+            "alias": " - ceval-valid_modern_chinese_history",
+            "acc,none": 0.7391304347826086,
+            "acc_stderr,none": 0.09361833424764436,
+            "acc_norm,none": 0.7391304347826086,
+            "acc_norm_stderr,none": 0.09361833424764436
+        },
+        "ceval-valid_operating_system": {
+            "alias": " - ceval-valid_operating_system",
+            "acc,none": 0.5789473684210527,
+            "acc_stderr,none": 0.11637279966159299,
+            "acc_norm,none": 0.5789473684210527,
+            "acc_norm_stderr,none": 0.11637279966159299
+        },
+        "ceval-valid_physician": {
+            "alias": " - ceval-valid_physician",
+            "acc,none": 0.5918367346938775,
+            "acc_stderr,none": 0.070940998689164,
+            "acc_norm,none": 0.5918367346938775,
+            "acc_norm_stderr,none": 0.070940998689164
+        },
+        "ceval-valid_plant_protection": {
+            "alias": " - ceval-valid_plant_protection",
+            "acc,none": 0.5454545454545454,
+            "acc_stderr,none": 0.10865714630312667,
+            "acc_norm,none": 0.5454545454545454,
+            "acc_norm_stderr,none": 0.10865714630312667
+        },
+        "ceval-valid_probability_and_statistics": {
+            "alias": " - ceval-valid_probability_and_statistics",
+            "acc,none": 0.2222222222222222,
+            "acc_stderr,none": 0.1008316903303367,
+            "acc_norm,none": 0.2222222222222222,
+            "acc_norm_stderr,none": 0.1008316903303367
+        },
+        "ceval-valid_professional_tour_guide": {
+            "alias": " - ceval-valid_professional_tour_guide",
+            "acc,none": 0.5862068965517241,
+            "acc_stderr,none": 0.09307607698370039,
+            "acc_norm,none": 0.5862068965517241,
+            "acc_norm_stderr,none": 0.09307607698370039
+        },
+        "ceval-valid_sports_science": {
+            "alias": " - ceval-valid_sports_science",
+            "acc,none": 0.5263157894736842,
+            "acc_stderr,none": 0.1176877882894626,
+            "acc_norm,none": 0.5263157894736842,
+            "acc_norm_stderr,none": 0.1176877882894626
+        },
+        "ceval-valid_tax_accountant": {
+            "alias": " - ceval-valid_tax_accountant",
+            "acc,none": 0.40816326530612246,
+            "acc_stderr,none": 0.070940998689164,
+            "acc_norm,none": 0.40816326530612246,
+            "acc_norm_stderr,none": 0.070940998689164
+        },
+        "ceval-valid_teacher_qualification": {
+            "alias": " - ceval-valid_teacher_qualification",
+            "acc,none": 0.75,
+            "acc_stderr,none": 0.06603381797442179,
+            "acc_norm,none": 0.75,
+            "acc_norm_stderr,none": 0.06603381797442179
+        },
+        "ceval-valid_urban_and_rural_planner": {
+            "alias": " - ceval-valid_urban_and_rural_planner",
+            "acc,none": 0.5652173913043478,
+            "acc_stderr,none": 0.07389883353033022,
+            "acc_norm,none": 0.5652173913043478,
+            "acc_norm_stderr,none": 0.07389883353033022
+        },
+        "ceval-valid_veterinary_medicine": {
+            "alias": " - ceval-valid_veterinary_medicine",
+            "acc,none": 0.4782608695652174,
+            "acc_stderr,none": 0.10649955403405124,
+            "acc_norm,none": 0.4782608695652174,
+            "acc_norm_stderr,none": 0.10649955403405124
+        },
+        "hellaswag": {
+            "alias": "hellaswag",
+            "acc,none": 0.4111730730930094,
+            "acc_stderr,none": 0.00491040915013549,
+            "acc_norm,none": 0.5274845648277235,
+            "acc_norm_stderr,none": 0.004982237133409158
+        }
+    }
+}

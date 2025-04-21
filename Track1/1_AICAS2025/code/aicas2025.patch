@@ -1,0 +1,165 @@
+diff --git a/pymnn/src/llm.h b/pymnn/src/llm.h
+index 9692184f..c7cb9f9a 100644
+--- a/pymnn/src/llm.h
++++ b/pymnn/src/llm.h
+@@ -45,11 +45,11 @@ static PyObject* PyMNNLLM_generate(LLM *self, PyObject *args) {
+         Py_RETURN_NONE;
+     }
+     PyObject *input_ids = nullptr;
+-    if (!PyArg_ParseTuple(args, "O", &input_ids) && isInts(input_ids)) {
++    int max_new_tokens = 0;
++    if (!PyArg_ParseTuple(args, "O|i", &input_ids, &max_new_tokens) && isInts(input_ids)) {
+         Py_RETURN_NONE;
+     }
+-
+-    auto output_ids = self->llm->generate(toInts(input_ids));
++    auto output_ids = self->llm->generate(toInts(input_ids), max_new_tokens);
+     return toPyObj<int, toPyObj>(output_ids);
+ }
+ 
+@@ -160,6 +160,14 @@ static PyObject* PyMNNLLM_release_module(LLM *self, PyObject *args) {
+     return toPyObj(res);
+ }
+ 
++static PyObject* PyMNNLLM_reset(LLM *self, PyObject *args) {
++    if (self->is_embedding) {
++        Py_RETURN_NONE;
++    }
++    self->llm->reset();
++    Py_RETURN_NONE;
++}
++
+ static PyMethodDef PyMNNLLM_methods[] = {
+     {"load", (PyCFunction)PyMNNLLM_load, METH_VARARGS, "load model."},
+     {"forward", (PyCFunction)PyMNNLLM_forward, METH_VARARGS, "forward `logits` by `input_ids`."},
+@@ -173,6 +181,7 @@ static PyMethodDef PyMNNLLM_methods[] = {
+     {"apply_lora", (PyCFunction)PyMNNLLM_apply_lora, METH_VARARGS, "apply_lora."},
+     {"select_module", (PyCFunction)PyMNNLLM_select_module, METH_VARARGS, "select_module."},
+     {"release_module", (PyCFunction)PyMNNLLM_release_module, METH_VARARGS, "release_module."},
++    {"reset", (PyCFunction)PyMNNLLM_reset, METH_VARARGS, "reset."},
+     {NULL}  /* Sentinel */
+ };
+ 
+diff --git a/transformers/llm/engine/src/llm.cpp b/transformers/llm/engine/src/llm.cpp
+index d12ec2c5..e59e4db4 100644
+--- a/transformers/llm/engine/src/llm.cpp
++++ b/transformers/llm/engine/src/llm.cpp
+@@ -467,6 +467,7 @@ MNN::Express::VARP Llm::forwardRaw(MNN::Express::VARP hiddenState, MNN::Express:
+ 
+ VARP Llm::forward(const std::vector<int>& input_ids) {
+     int seq_len         = input_ids.size();
++    mMeta->add          = seq_len;
+     auto attention_mask = gen_attention_mask(seq_len);
+     auto position_ids = gen_position_ids(seq_len);
+     auto hidden_states = embedding(input_ids);
+@@ -478,6 +479,10 @@ VARP Llm::forward(const std::vector<int>& input_ids) {
+ 
+ int Llm::sample(VARP logits, const std::vector<int>& pre_ids, int offset, int size) {
+     std::unordered_set<int> ids_set(pre_ids.begin(), pre_ids.end());
++    if (offset == 0) {
++        auto logits_shape = logits->getInfo()->dim;
++        offset = (logits_shape[1] - 1) * logits_shape[2];
++    }
+     auto scores = (float*)(logits->readMap<float>()) + offset;
+     if (0 == size) {
+         size = logits->getInfo()->size;
+@@ -582,6 +587,8 @@ void Llm::chat() {
+ }
+ 
+ void Llm::reset() {
++    eraseHistory(0, 0);
++    mState.output_ids_.clear();
+     mState.history_ids_.clear();
+     mState.all_seq_len_ = 0;
+ }
+@@ -643,7 +650,7 @@ void Llm::generate(int max_token) {
+             *mState.os_ << std::flush;
+         }
+         mState.history_ids_.push_back(mState.current_token_);
+-        mMeta->add = 1;
++        // mMeta->add = 1;
+         mMeta->remove = 0;
+         auto logits = forward({mState.current_token_});
+         len++;
+@@ -667,7 +674,7 @@ std::vector<int> Llm::generate(const std::vector<int>& input_ids, int max_tokens
+     if (max_tokens < 0) {
+         max_tokens = config_->max_new_tokens();
+     }
+-    mMeta->add = input_ids.size();
++    // mMeta->add = input_ids.size();
+     mState.prompt_len_ = static_cast<int>(input_ids.size());
+     mState.history_ids_.insert(mState.history_ids_.end(), input_ids.begin(), input_ids.end()); // push to history_ids_
+     auto st          = std::chrono::system_clock::now();
+@@ -681,7 +688,7 @@ std::vector<int> Llm::generate(const std::vector<int>& input_ids, int max_tokens
+     auto et = std::chrono::system_clock::now();
+     current_modules_ = decode_modules_;
+     mState.prefill_us_ = std::chrono::duration_cast<std::chrono::microseconds>(et - st).count();
+-    generate(max_tokens);
++    generate(max_tokens - 1);
+ 
+ #ifdef DUMP_PROFILE_INFO
+     print_speed();
+diff --git a/transformers/llm/export/utils/awq_quantizer.py b/transformers/llm/export/utils/awq_quantizer.py
+index 1f69ecbb..41f51c39 100644
+--- a/transformers/llm/export/utils/awq_quantizer.py
++++ b/transformers/llm/export/utils/awq_quantizer.py
+@@ -27,7 +27,7 @@ class AwqQuantizer:
+         self.w_bit = model.args.quant_bit
+         self.group_size = model.args.quant_block
+         self.zeropoint = not model.args.sym
+-        self.calib_data = 'ag_news'
++        self.calib_data = 'piqa'
+         self.split = 'test'
+         self.duo_scaling = True
+         self.apply_clip = apply_clip
+@@ -678,11 +678,15 @@ class AwqQuantizer:
+ 
+         samples = []
+         n_run = 0
++        '''
+         for data in dataset:
+             if isinstance(data, list):
+                 line_encoded = data
+             else:
+-                line = data[text_column]
++                # line = data[text_column]
++                goal = data['goal']
++                sol1 = data['sol1']
++                line = f'Question: {goal}\nAnswer:{sol1}'
+                 line = line.strip()
+                 line_encoded = tokenizer.encode(line)
+             if len(line_encoded) > max_seq_len:
+@@ -694,6 +698,33 @@ class AwqQuantizer:
+             n_run += 1
+             if n_run == n_samples:
+                 break
++        '''
++        for data in dataset:
++            goal = data['goal']
++            sol1 = data['sol1']
++            sol2 = data['sol2']
++            line1 = f'Question: {goal}\nAnswer:{sol1}'
++            line1 = line1.strip()
++            line1_encoded = tokenizer.encode(line1)
++            if len(line1_encoded) > max_seq_len:
++                continue
++            sample1 = torch.tensor([line1_encoded])
++            if sample1.numel() == 0:
++                continue
++            samples.append(sample1)
++
++            line2 = f'Question: {goal}\nAnswer:{sol2}'
++            line2 = line2.strip()
++            line2_encoded = tokenizer.encode(line2)
++            if len(line2_encoded) > max_seq_len:
++                continue
++            sample2 = torch.tensor([line2_encoded])
++            if sample2.numel() == 0:
++                continue
++            samples.append(sample2)
++            n_run += 2
++            if n_run == n_samples:
++                break
+         # now concatenate all samples and split according to max sequence length
+         cat_samples = torch.cat(samples, dim=1)
+         n_split = cat_samples.shape[1] // max_seq_len
