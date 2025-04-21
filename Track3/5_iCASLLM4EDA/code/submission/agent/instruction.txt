@@ -1,0 +1,49 @@
+
+Alright, let's tackle the user's request step by step. They want me to generate calculation instructions for designing a two-stage OP-AMP based on seven parameters: SR, Cc, GBW, Kn, Kp, temp, and Iref. The output should be in markdown with formulas only.
+
+First, I'll review the provided passage to understand each design step and identify the necessary calculations. The example given helps set the format.
+
+Starting with Step 1, which is already provided: calculating I5 using SR and Cc. That's straightforward as I5 = SR * Cc.
+
+Next, in Step 2 for designing M1 & M2, we need to find gm1. The formula given is GBW = gm1 / (2πCc), so rearranging gives gm1 = 2πGBW*Cc. Also, since W_L12 depends on gm1 squared divided by a product of Kn and ID1, which is half of I5.
+
+Moving to Step 3 for M3 & M4 and M5 & M8, we calculate W_L34 using ID1 (half of I5) and Kp and temp. Then, W_L5 requires calculating Vdsat with the given formula, plugging in I5, Kn, and W_L12 from Step 2.
+
+Step 4 involves the second stage's M6 transistor. We compute gm4 as 4.54545*I5, then gm6 using gm1 multiplied by a factor of 9.5. Then, W_L6 is found by taking the ratio of gm6 to gm4 and multiplying by W_L34.
+
+Finally, Step 5 deals with M7 for the second stage. Here, I6 equals I7 due to current mirroring. Using I7 = (gm6^2)/(2*Kp*W_L6), then calculating W_L7 based on the ratio of I7 to I5 times W_L5.
+
+I need to ensure each step only calculates one variable and uses the provided variable names without change. Breaking down any complex formulas into simpler substeps is essential for clarity, as per the user's instructions.
+
+Also, considering LaTeX formatting, every formula should be wrapped in dollar signs. No additional text or explanations should appear outside of code blocks.
+
+Now, I'll structure each step with a title and an equation, following the example closely but adding new steps where necessary based on the passage.
+</think>
+
+```
+Step 1: I₅ = SR × Cc
+# Add your new instructions here
+
+Step 2: gm₁ = 2π × GBW × Cc
+Step 3: W_L12 = (gm₁)² / (2 × Kn × ID₁); ID₁ = 0.5 × I₅
+
+Step 4: gm₂ = gm₁  
+Step 5: ID₂ = ID₁  
+
+Step 6: W_L34 = (2 × ID₃) / (Kp × temp × temp); ID₃ = ID₁  
+Step 7: V_dsat = 0.12 + √(ID₁ / (Kn × W_L12))  
+Step 8: W_L5 = (2 × I₅) / (Kn × V_dsat × V_dsat)
+
+Step 9: I_ref = ?
+Step 10: W_L8 = (W_L5 × I_ref) / I₅
+
+Step 11: gm₄ = 4.54545 × I₅  
+Step 12: gm₆ = 9.5 × gm₁  
+
+Step 13: W_L6 = ((gm₆) / (gm₄)) × W_L34
+
+Step 14: I₇ = (gm₆²) / (2 × Kp × W_L6)
+
+Step 15: W_L7 = (I₇ / I₅) × W_L5
+```
+

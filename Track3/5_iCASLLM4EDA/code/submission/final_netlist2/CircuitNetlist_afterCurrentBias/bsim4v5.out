@@ -1,0 +1,4 @@
+
+Checking parameters for BSIM 4.5 model xi1.xm6:sky130_fd_pr__pfet_01v8__model.24
+Warning: Nfactor = -0.862593 is negative.
+Warning: A2 = 1.50994 is larger than 1. A2 is set to 1 and A1 is set to 0.

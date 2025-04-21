@@ -1,0 +1,251 @@
+test AMP_IDC
+
+.LIB '.././models/sky130.lib.spice'fs
+.INCLUDE ../AMP.cir
+
+
+V1 VSS 0 dc=0V
+V0 VDD_SOURCE 0 dc=1.8V
+VMEAS VDD_SOURCE VDD 0
+
+VIN Vinn 0 dc=0.9V
+VIP Vinp 0 dc=0.9V
+
+XI1 Vinp Vinn VDD VSS Vout AMP
+C1 VOUT 0 2E-12
+
+.CONTROL
+save all @m.xi1.*
+set units=degrees
+run
+op
+let Idc = i(vmeas)*1e6
+echo "IDC: $&Idc uA" > FS_IDC.txt
+
+* region: 0|cutoff, 1|linear, 2|satuation, 3|Subthreshold
+********************************************************
+** XM1
+let vth1 = @m.xi1.xm1.msky130_fd_pr__nfet_01v8[vth]
+let vgs1 = @m.xi1.xm1.msky130_fd_pr__nfet_01v8[vgs]
+let vds1 = @m.xi1.xm1.msky130_fd_pr__nfet_01v8[vds]
+let vdsat1 = @m.xi1.xm1.msky130_fd_pr__nfet_01v8[vdsat]
+let id1 = @m.xi1.xm1.msky130_fd_pr__nfet_01v8[id]
+let gm1 = @m.xi1.xm1.msky130_fd_pr__nfet_01v8[gm]
+if vgs1 > vth1
+    if vds1 > vdsat1
+        echo "XM1: Satuation" >> FS_IDC.txt
+    else 
+        echo "XM1: Linear" >> FS_IDC.txt
+    end
+else
+    if vds1 > 0.1
+        echo "XM1: Subthreshold" >> FS_IDC.txt
+    else
+        echo "XM1: Cutoff" >> FS_IDC.txt
+    end
+end
+*print @m.xi1.xm1.msky130_fd_pr__nfet_01v8[vth]
+*print @m.xi1.xm1.msky130_fd_pr__nfet_01v8[vgs]
+*print @m.xi1.xm1.msky130_fd_pr__nfet_01v8[vds]
+*print @m.xi1.xm1.msky130_fd_pr__nfet_01v8[vdsat]
+*print @m.xi1.xm1.msky130_fd_pr__nfet_01v8[id]
+*print @m.xi1.xm1.msky130_fd_pr__nfet_01v8[gm]
+********************************************************
+** XM2
+let vth2 = @m.xi1.xm2.msky130_fd_pr__nfet_01v8[vth]
+let vgs2 = @m.xi1.xm2.msky130_fd_pr__nfet_01v8[vgs]
+let vds2 = @m.xi1.xm2.msky130_fd_pr__nfet_01v8[vds]
+let vdsat2 = @m.xi1.xm2.msky130_fd_pr__nfet_01v8[vdsat]
+let id2 = @m.xi1.xm2.msky130_fd_pr__nfet_01v8[id]
+let gm2 = @m.xi1.xm2.msky130_fd_pr__nfet_01v8[gm]
+if vgs2 > vth2
+    if vds2 > vdsat2
+        echo "XM2: Satuation" >> FS_IDC.txt
+    else 
+        echo "XM2: Linear" >> FS_IDC.txt
+    end
+else
+    if vds2 > 0.1
+        echo "XM2: Subthreshold" >> FS_IDC.txt
+    else
+        echo "XM2: Cutoff" >> FS_IDC.txt
+    end
+end
+*print @m.xi1.xm2.msky130_fd_pr__nfet_01v8[vth]
+*print @m.xi1.xm2.msky130_fd_pr__nfet_01v8[vgs]
+*print @m.xi1.xm2.msky130_fd_pr__nfet_01v8[vds]
+*print @m.xi1.xm2.msky130_fd_pr__nfet_01v8[vdsat]
+*print @m.xi1.xm2.msky130_fd_pr__nfet_01v8[id]  
+*print @m.xi1.xm2.msky130_fd_pr__nfet_01v8[gm]
+********************************************************
+** XM3
+let vth3 = @m.xi1.xm3.msky130_fd_pr__pfet_01v8[vth] 
+let vgs3 = @m.xi1.xm3.msky130_fd_pr__pfet_01v8[vgs]
+let vds3 = @m.xi1.xm3.msky130_fd_pr__pfet_01v8[vds]
+let vdsat3 = @m.xi1.xm3.msky130_fd_pr__pfet_01v8[vdsat] 
+let id3 = @m.xi1.xm3.msky130_fd_pr__pfet_01v8[id]
+let gm3 = @m.xi1.xm3.msky130_fd_pr__pfet_01v8[gm]   
+if vgs3 > vth3
+    if vds3 > vdsat3
+        echo "XM3: Satuation" >> FS_IDC.txt
+    else 
+        echo "XM3: Linear" >> FS_IDC.txt
+    end
+else
+    if vds3 > 0.1
+        echo "XM3: Subthreshold" >> FS_IDC.txt
+    else
+        echo "XM3: Cutoff" >> FS_IDC.txt
+    end
+end
+*print @m.xi1.xm3.msky130_fd_pr__pfet_01v8[vth] 
+*print @m.xi1.xm3.msky130_fd_pr__pfet_01v8[vgs]
+*print @m.xi1.xm3.msky130_fd_pr__pfet_01v8[vds]
+*print @m.xi1.xm3.msky130_fd_pr__pfet_01v8[vdsat]   
+*print @m.xi1.xm3.msky130_fd_pr__pfet_01v8[id]  
+*print @m.xi1.xm3.msky130_fd_pr__pfet_01v8[gm]  
+********************************************************
+** XM4
+let vth4 = @m.xi1.xm4.msky130_fd_pr__pfet_01v8[vth]
+let vgs4 = @m.xi1.xm4.msky130_fd_pr__pfet_01v8[vgs]
+let vds4 = @m.xi1.xm4.msky130_fd_pr__pfet_01v8[vds]
+let vdsat4 = @m.xi1.xm4.msky130_fd_pr__pfet_01v8[vdsat] 
+let id4 = @m.xi1.xm4.msky130_fd_pr__pfet_01v8[id]
+let gm4 = @m.xi1.xm4.msky130_fd_pr__pfet_01v8[gm]   
+if vgs4 > vth4
+    if vds4 > vdsat4
+        echo "XM4: Satuation" >> FS_IDC.txt
+    else 
+        echo "XM4: Linear" >> FS_IDC.txt
+    end
+else
+    if vds4 > 0.1
+        echo "XM4: Subthreshold" >> FS_IDC.txt
+    else
+        echo "XM4: Cutoff" >> FS_IDC.txt
+    end
+end
+*print @m.xi1.xm4.msky130_fd_pr__pfet_01v8[vth] 
+*print @m.xi1.xm4.msky130_fd_pr__pfet_01v8[vgs]
+*print @m.xi1.xm4.msky130_fd_pr__pfet_01v8[vds]
+*print @m.xi1.xm4.msky130_fd_pr__pfet_01v8[vdsat]   
+*print @m.xi1.xm4.msky130_fd_pr__pfet_01v8[id]  
+*print @m.xi1.xm4.msky130_fd_pr__pfet_01v8[gm]  
+********************************************************
+** XM5
+let vth5 = @m.xi1.xm5.msky130_fd_pr__nfet_01v8[vth]
+let vgs5 = @m.xi1.xm5.msky130_fd_pr__nfet_01v8[vgs]
+let vds5 = @m.xi1.xm5.msky130_fd_pr__nfet_01v8[vds]
+let vdsat5 = @m.xi1.xm5.msky130_fd_pr__nfet_01v8[vdsat]
+let id5 = @m.xi1.xm5.msky130_fd_pr__nfet_01v8[id]
+let gm5 = @m.xi1.xm5.msky130_fd_pr__nfet_01v8[gm]
+if vgs5 > vth5
+    if vds5 > vdsat5
+        echo "XM5: Satuation" >> FS_IDC.txt
+    else 
+        echo "XM5: Linear" >> FS_IDC.txt
+    end
+else
+    if vds5 > 0.1
+        echo "XM5: Subthreshold" >> FS_IDC.txt
+    else
+        echo "XM5: Cutoff" >> FS_IDC.txt
+    end
+end
+*print @m.xi1.xm5.msky130_fd_pr__nfet_01v8[vth]
+*print @m.xi1.xm5.msky130_fd_pr__nfet_01v8[vgs]
+*print @m.xi1.xm5.msky130_fd_pr__nfet_01v8[vds]
+*print @m.xi1.xm5.msky130_fd_pr__nfet_01v8[vdsat]
+*print @m.xi1.xm5.msky130_fd_pr__nfet_01v8[id]  
+*print @m.xi1.xm5.msky130_fd_pr__nfet_01v8[gm]
+********************************************************
+** XM6
+let vth6 = @m.xi1.xm6.msky130_fd_pr__pfet_01v8[vth]
+let vgs6 = @m.xi1.xm6.msky130_fd_pr__pfet_01v8[vgs]
+let vds6 = @m.xi1.xm6.msky130_fd_pr__pfet_01v8[vds]
+let vdsat6 = @m.xi1.xm6.msky130_fd_pr__pfet_01v8[vdsat] 
+let id6 = @m.xi1.xm6.msky130_fd_pr__pfet_01v8[id]
+let gm6 = @m.xi1.xm6.msky130_fd_pr__pfet_01v8[gm]   
+if vgs6 > vth6
+    if vds6 > vdsat6
+        echo "XM6: Satuation" >> FS_IDC.txt
+    else 
+        echo "XM6: Linear" >> FS_IDC.txt
+    end
+else
+    if vds6 > 0.1
+        echo "XM6: Subthreshold" >> FS_IDC.txt
+    else
+        echo "XM6: Cutoff" >> FS_IDC.txt
+    end
+end
+*print @m.xi1.xm6.msky130_fd_pr__pfet_01v8[vth] 
+*print @m.xi1.xm6.msky130_fd_pr__pfet_01v8[vgs]
+*print @m.xi1.xm6.msky130_fd_pr__pfet_01v8[vds]
+*print @m.xi1.xm6.msky130_fd_pr__pfet_01v8[vdsat]   
+*print @m.xi1.xm6.msky130_fd_pr__pfet_01v8[id]  
+*print @m.xi1.xm6.msky130_fd_pr__pfet_01v8[gm]  
+********************************************************
+** XM7
+let vth7 = @m.xi1.xm7.msky130_fd_pr__nfet_01v8[vth]
+let vgs7 = @m.xi1.xm7.msky130_fd_pr__nfet_01v8[vgs]
+let vds7 = @m.xi1.xm7.msky130_fd_pr__nfet_01v8[vds]
+let vdsat7 = @m.xi1.xm7.msky130_fd_pr__nfet_01v8[vdsat]
+let id7 = @m.xi1.xm7.msky130_fd_pr__nfet_01v8[id]
+let gm7 = @m.xi1.xm7.msky130_fd_pr__nfet_01v8[gm]
+if vgs7 > vth7
+    if vds7 > vdsat7
+        echo "XM7: Satuation" >> FS_IDC.txt
+    else 
+        echo "XM7: Linear" >> FS_IDC.txt
+    end
+else
+    if vds7 > 0.1
+        echo "XM7: Subthreshold" >> FS_IDC.txt
+    else
+        echo "XM7: Cutoff" >> FS_IDC.txt
+    end
+end
+*print @m.xi1.xm7.msky130_fd_pr__nfet_01v8[vth]
+*print @m.xi1.xm7.msky130_fd_pr__nfet_01v8[vgs]
+*print @m.xi1.xm7.msky130_fd_pr__nfet_01v8[vds]
+*print @m.xi1.xm7.msky130_fd_pr__nfet_01v8[vdsat]
+*print @m.xi1.xm7.msky130_fd_pr__nfet_01v8[id]  
+*print @m.xi1.xm7.msky130_fd_pr__nfet_01v8[gm]
+********************************************************
+** XM8
+let vth8 = @m.xi1.xm8.msky130_fd_pr__nfet_01v8[vth]
+let vgs8 = @m.xi1.xm8.msky130_fd_pr__nfet_01v8[vgs]
+let vds8 = @m.xi1.xm8.msky130_fd_pr__nfet_01v8[vds]
+let vdsat8 = @m.xi1.xm8.msky130_fd_pr__nfet_01v8[vdsat]
+let id8 = @m.xi1.xm8.msky130_fd_pr__nfet_01v8[id]
+let gm8 = @m.xi1.xm8.msky130_fd_pr__nfet_01v8[gm]
+if vgs8 > vth8
+    if vds8 > vdsat8
+        echo "XM8: Satuation" >> FS_IDC.txt
+    else 
+        echo "XM8: Linear" >> FS_IDC.txt
+    end
+else
+    if vds8 > 0.1
+        echo "XM8: Subthreshold" >> FS_IDC.txt
+    else
+        echo "XM8: Cutoff" >> FS_IDC.txt
+    end
+end
+*print @m.xi1.xm8.msky130_fd_pr__nfet_01v8[vth]
+*print @m.xi1.xm8.msky130_fd_pr__nfet_01v8[vgs]
+*print @m.xi1.xm8.msky130_fd_pr__nfet_01v8[vds]
+*print @m.xi1.xm8.msky130_fd_pr__nfet_01v8[vdsat]
+*print @m.xi1.xm8.msky130_fd_pr__nfet_01v8[id]  
+*print @m.xi1.xm8.msky130_fd_pr__nfet_01v8[gm]
+
+let iref = 1e6 * @m.xi1.xm8.msky130_fd_pr__nfet_01v8[id]
+echo "******************************" 
+echo "Iref: $&iref uA" >> FS_IDC.txt
+echo "Vth8: $&vth8 V" >> FS_IDC.txt
+echo "******************************" 
+
+quit
+.ENDC
+.END

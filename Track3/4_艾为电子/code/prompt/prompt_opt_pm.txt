@@ -1,0 +1,14 @@
+Now it is necessary to optimize the PM effect, focusing on the following tubes:
+${component}
+
+Current PM Value: ${PM}
+
+The optimization scheme is as follows:
+  Scenario 1. If R1 reaches 3k or PM is greater than 50 to meet one, priority is given to increasing the value of C1, but do not adjust too much at one time, it is recommended to increase 0.1 each time, but the value of C1 should not theoretically exceed 2;
+  Scenario 2. If the PM is lower than 50 and the R1 is less than 3k, consider increasing the value of R1 first, but do not adjust too much at once, it is recommended to increase 1k each time, and the R1 should not exceed 3k, but it can reach 3k.
+  Note: Please do not modify the unit.
+
+Please follow the following format for output, just modify the parameter values, please be careful not to output the reason for the modification:
+```spice_final
+${component}
+```

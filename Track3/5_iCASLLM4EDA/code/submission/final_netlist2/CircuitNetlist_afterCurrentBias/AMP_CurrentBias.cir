@@ -1,0 +1,45 @@
+.subckt AMP_CurrentBias Vinp Vinn VDD VSS Vout
+
+.param W12 = 26      	    mult_12 = 1  		    L12 = 1.0
+.param W34 = 18.4    	 	mult_34 = 1   			L34 = 1.0
+.param W5 =  8.45      	    mult_5 = 1
+.param W6 =  60.5	  	   	    mult_6 = 2
+.param W7 =  88.6   	        mult_7 = 1        		L7 = 0.8
+.param W8 =  6.75    	    mult_8 = 1
+
+XM1 net1 Vinn net3 VSS sky130_fd_pr__nfet_01v8 L=L12 W=W12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=mult_12 m=mult_12
+
+XM2 net2 Vinp net3 VSS sky130_fd_pr__nfet_01v8 L=L12 W=W12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=mult_12 m=mult_12 
+
+XM3 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=L34 W=W34 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=mult_34 m=mult_34 
+
+XM4 net2 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=L34 W=W34 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=mult_34 m=mult_34
+
+XM5 net3 Ibias VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=W5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=mult_5 m=mult_5 
+
+XM6 Vout net2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=W6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=mult_6 m=mult_6 
+
+XM7 Vout Ibias VSS VSS sky130_fd_pr__nfet_01v8 L=L7 W=W7 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=mult_7 m=mult_7
+
+XM8 Ibias Ibias VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=W8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=mult_8 m=mult_8 
+
+XI1 Ibias VDD VDD VSS CurrentBias
+C1 net2 Vout 0.5p m=1
+
+.ends AMP_CurrentBias

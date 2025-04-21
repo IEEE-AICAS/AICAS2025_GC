@@ -1,0 +1,26 @@
+test AMP_IDC
+
+.LIB '.././models/sky130.lib.spice'sf
+.INCLUDE ../AMP.cir
+
+
+V1 VSS 0 dc=0V
+V0 VDD_SOURCE 0 dc=1.8V
+VMEAS VDD_SOURCE VDD 0
+
+VIN Vinn 0 dc=0.9V
+VIP Vinp 0 dc=0.9V
+
+XI1 Vinp Vinn VDD VSS Vout AMP
+C1 VOUT 0 2E-12
+
+.CONTROL
+set units=degrees
+run
+op
+print i(vmeas) >SF_Idc.txt
+
+
+quit
+.ENDC
+.END

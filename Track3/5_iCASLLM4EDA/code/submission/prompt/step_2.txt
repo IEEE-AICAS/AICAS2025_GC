@@ -1,0 +1,28 @@
+Please fullfill this python function to solve this mathmatical problem below. The return variable should be the variable I ask you to calculate. You only need to generate a function without any example usages, and ONLY RETURN THE MODIFIED FUCTION WITHOUT ANYTHING ELSE.
+
+[Function to be fulfilled]
+```python
+import math
+
+def calculate_ratio(SR, Cc, GBW, Kn, Kp, temp, Iref):
+	#Add your code here
+
+	return W_L12,  W_L34,  W_L5, W_L6,  W_L7,  W_L8
+```
+
+[Problem to be solved]
+Please follow the instructions below to do calculations.
+Step 1: I5 = SR * Cc.
+Step 2: gm1 = 2*pi*GBW*Cc;
+Step 3: W_L12 = (gm1*gm1) / (Kn*I5);
+Step 4: W_L34 = (I5)/(Kp*temp*temp);
+Step 5: p=(Kn*W_L12),
+Step 6: Vdsat= 0.12+sqrt(I5/p),
+Step 7: W_L5 = (2*I5)/(Kn*Vdsat*Vdsat).
+Step 8: W_L8 = W_L5*(Iref/I5),
+Step 9: gm4=I5*4.54545, 
+Step 10: W_L6=((9.5*gm1)/gm4)*(W_L34),
+Step 11: gm6=9.5*gm1,
+Step 12: I7=(gm6**2)/(2*Kp*W_L6),
+Step 13: W_L7=(I7/I5)*W_L5.
+Please calculate the values of:W_L12,  W_L34,  W_L5, W_L6,  W_L7,  W_L8.

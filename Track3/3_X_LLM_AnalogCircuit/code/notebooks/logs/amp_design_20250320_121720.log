@@ -1,0 +1,6 @@
+2025-03-20 12:17:20 - root - INFO - === Amplifier Design System Started ===
+2025-03-20 12:17:20 - root - INFO - Log file created at: logs/amp_design_20250320_121720.log
+2025-03-20 12:17:20 - LLMGenerator - INFO - 开始生成响应...
+2025-03-20 12:17:20 - LLMGenerator - ERROR - API调用失败: Completions.create() got an unexpected keyword argument 'top_k'
+2025-03-20 13:10:15 - LLMGenerator - INFO - 开始生成响应...
+2025-03-20 13:10:15 - LLMGenerator - ERROR - API调用失败: Completions.create() got an unexpected keyword argument 'top_k'

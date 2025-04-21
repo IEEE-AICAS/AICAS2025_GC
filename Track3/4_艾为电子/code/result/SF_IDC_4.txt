@@ -1,0 +1,11 @@
+IDC: 134.242 uA
+XM1: Subthreshold
+XM2: Subthreshold
+XM3: Satuation
+XM4: Satuation
+XM5: Satuation
+XM6: Satuation
+XM7: Satuation
+XM8: Satuation
+Iref: 20.0059 uA
+Vth8: 0.522104 V

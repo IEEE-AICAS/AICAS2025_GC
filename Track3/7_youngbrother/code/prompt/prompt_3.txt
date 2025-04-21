@@ -1,0 +1,6 @@
+Gain > 60 dB
+GBW > 20M Hz
+PM	> 60°
+SR	> 20 V/uS
+Idc	< 500u A
+

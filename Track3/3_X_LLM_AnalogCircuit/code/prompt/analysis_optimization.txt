@@ -1,0 +1,1 @@
+Based on the provided netlist and the simulation results, analyze the circuit performance and provide optimization suggestions.

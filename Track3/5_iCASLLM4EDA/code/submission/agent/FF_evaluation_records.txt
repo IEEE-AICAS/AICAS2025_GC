@@ -1,0 +1,8 @@
+------------------------
+Simulation Result Metrix:
+Gain: 77.846 GBW: 33.2155 PM: 62.1537 CMRR: 74.4839 noise: 0.222582 PSRR: 85.7997 SR: 24.083 IDC: 435.106
+------------------------
+------------------------
+Evaluation Result Metrix:
+Gain: True GBW: True PM: True CMRR: True noise: True PSRR: True SR: True IDC: True
+------------------------

@@ -1,0 +1,11 @@
+Now we need to optimize the SR performance, focusing on improving the following components:
+${component}
+
+The optimization approach is to increase the first-stage tail current:
+If the W of XM5 is below 40, prioritize increasing W and L values of XM5. To maintain symmetry, synchronously increase W and L of XM7 while preserving the W=2L relationship between XM5 and XM7. Recommend a direct 10x increase.
+Important: Note that Case 1 only adjusts W and L of XM5/XM7, keeping m values unchanged, and all parameters of XM6/XM7 remain constant.
+
+Output in the following format with parameter modifications only:
+```spice_final
+${component}
+```

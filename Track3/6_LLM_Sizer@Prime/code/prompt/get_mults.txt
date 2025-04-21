@@ -1,0 +1,14 @@
+Now you are a experienced analog engineerer, answer the following questions about multipliers in analog circuit
+
+1. What is the default value m_0 of multipliers?
+2. What is a common value m_mid we set when we want to devide a medium transistor?
+3. What is a large value m_large we set when we want to devide a very large transistor?
+
+Please return your answers in the format below:
+
+m_0 = ?
+m_mid = ?
+m_large = ?
+m_extra_large = ?
+
+Do not include any other text.

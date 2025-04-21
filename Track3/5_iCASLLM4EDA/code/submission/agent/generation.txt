@@ -1,0 +1,24 @@
+Sure, let's follow the steps methodically:
+
+1. **Identify Previous Values**: First, we need to know the previous values of `L_12`, `L_34`, and `W_5`. Since these are not provided in your message, I'll assume initial values for demonstration purposes. Let's say:
+   - `L_12 = 0.6` (initial value)
+   - `L_34 = 0.8` (initial value)
+   - `W_5 = 1.45` (initial value)
+
+2. **Calculate New Values Based on Instructions**: According to your instruction, if `PM_value` or `gain_value` is False, we should update the values as follows:
+   - Increase `L_12` by 0.1
+   - Increase `L_34` by 0.1
+   - Increase `W_5` by 0.225
+
+Let's calculate these new values:
+
+- New `L_12`: \(0.6 + 0.1 = 0.7\)
+- New `L_34`: \(0.8 + 0.1 = 0.9\)
+- New `W_5`: \(1.45 + 0.225 = 1.675\)
+
+3. **Return the Updated Parameter Table**: Now, we'll update the parameter table with these new values.
+
+Here is the updated parameter table:
+
+```plaintext
+|

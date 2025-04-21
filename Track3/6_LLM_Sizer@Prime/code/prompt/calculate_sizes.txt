@@ -1,0 +1,6 @@
+The minimal length permitted in sky130 process is 0.42um, and we need a thirty W/L ratio for the bias transistor.
+Please transfer the information mentioned in the following format:
+L_min = x um
+ratio_bias = x 
+
+

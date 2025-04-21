@@ -1,0 +1,18 @@
+```spice
+.subckt AMP Vinp Vinn VDD VSS Vout
+
+XM1 net1 Vinn net3 VSS sky130_fd_pr__nfet_01v8 L=<L1> W=<W1> nf=<nf1> m=<m1>
+XM2 net2 Vinp net3 VSS sky130_fd_pr__nfet_01v8 L=<L2> W=<W2> nf=<nf2> m=<m2>
+XM3 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=<L3> W=<W3> nf=<nf3> m=<m3>
+XM4 net2 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=<L4> W=<W4> nf=<nf4> m=<m4>
+XM5 net3 Ibias VSS VSS sky130_fd_pr__nfet_01v8 L=<L5> W=<W5> nf=<nf5> m=<m5>
+XM6 Vout net2 VDD VDD sky130_fd_pr__pfet_01v8 L=<L6> W=<W6> nf=<nf6> m=<m6>
+XM7 Vout Ibias VSS VSS sky130_fd_pr__nfet_01v8 L=<L7> W=<W7> nf=<nf7> m=<m7>
+XM8 Ibias Ibias VSS VSS sky130_fd_pr__nfet_01v8 L=<L8> W=<W8> nf=<nf8> m=<m8>
+
+Rref VDD Ibias <R2>k
+C1 net2 netx <C1>p
+R1 netx Vout <R1>k
+
+.ends AMP
+```

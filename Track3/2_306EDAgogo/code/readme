@@ -1,0 +1,78 @@
+# AICAS4Analog代码运行
+
+## 运行方法
+先启动ollama服务
+```bash
+ollama serve
+```
+### 全部指标验证
+新开一个终端，运行如下命令
+```bash
+conda activate AICAS4Analog
+cd /root/Desktop/analog
+python monitor.py --mode final
+```
+
+### 单个指标验证
+在`agent/data.py`中修改配置,将`IS_SINGLE`设置为`True`,将`SINGLE`设置为需要验证的指标
+```py
+class Mode:
+    SINGLE = "Idc" # 其他指标为"Gain","GBW","PM","SR"
+    IS_SINGLE = True
+```
+在`agent/data.py`中修改单个指标的指标值
+```py
+Gain_min = 60   #dB
+GBW_min = 20    #MHz
+PM_min = 60     #deg
+SR_min = 60     #V/us
+Idc_max = 500   #uA
+```
+然后在新的终端中运行如下命令
+```bash
+conda activate AICAS4Analog
+cd /root/Desktop/analog
+python agent/main.py
+```
+
+
+## 项目结构
+
+项目主要由以下目录和文件组成：
+
+### 核心代码目录
+- `agent/` - 核心算法和代理实现目录
+  - `main.py` - 主程序入口文件
+  - `data.py` - 数据定义和参数配置文件
+  - `config.py` - 日志配置文件
+  - `utils.py` - 工具函数集合
+  - `agent0.py`, - 参数设计智能体
+  - `agent1.py`, - 参数计算智能体
+  - `agent2.py` - 参数修正智能体
+
+### 仿真和结果目录
+- `sim/` - 仿真相关文件目录
+  - `AMP.cir` - 程序运行过程中生成的电路网表，也是程序运行结束后最终生成的网表
+- `logs/` - 日志文件存储目录
+- `final_netlist/` - 队伍最终提交网表文件目录
+- `prompt/` - 提示词和配置文件目录
+
+### 监控和结果文件
+- `monitor.py` - 监控程序，用于验证和评估性能指标
+- `monitor_results.json` - 监控结果存储文件
+
+## agent使用方式和承担工作
+
+### agent0
+- 承担工作：
+  - 读取拓扑结构，对拓扑结构中晶体管长度L进行初始化
+
+### agent1
+- 承担工作：
+  - 计算晶体管宽度W
+  - 计算偏置电路缩放因子k
+
+### agent2
+- 承担工作：
+  - 针对仿真结果做不同的修正
+

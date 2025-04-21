@@ -1,0 +1,37 @@
+Please think step by step.
+You are an analog circuit design expert needing to design an operational amplifier front-end transistor-level circuit with the following topology:
+${topology}
+
+All <> enclosed parts in this topology are variables. You need to design reasonable values (W and L don't require units as the simulator has default units). Some variables have constraints as explained below:
+
+R2: Current mirror bias resistor
+R1: Compensation PM resistor
+C1: Compensation PM capacitor
+W8 L8: Current mirror bias device, m8 fixed at 1
+XM5: First-stage bias current mirror device. Parameters should match XM8 to reduce variables (W5=W8 L5=L8 m5=m1=m8)
+XM7: Second-stage bias current mirror device. W/L should match XM5, only modify m value to increase current (W7=W8, L7=L8)
+W1 L1: First-stage amplifier device, m1 fixed at 1. XM1 parameters must match XM2 due to symmetry (W2=W1 L2=L1 m2=m1)
+W3 L3: First-stage load device. Parameters must match XM4 (m3=1). (W4=W3 L4=L3 m4=m3)
+XM6: Initial L6/W6 can match XM3, only modify m6 (W6=W3, L6=L3)
+
+Initialization suggestions:
+- R2 should be large (40-60k)
+- R1 should be small (1-5k)
+- C1: 1-2p
+- All nf=1 (no impact)
+- W: 1-100, L: 0.5-10, m: 1-16
+- W8 = 2×L8 (e.g., W8=4/L8=2)
+- W7=W5=W8, L7=L5=L8
+- Minimize L1, maximize W1 (e.g., L1=1/W1=90)
+- Minimize L3, W3≈20×L3 (e.g., L3=1/W3=20)
+- W3=W4=W6, L3=L4=L6
+- m6 should follow m6:m4=2×(m7:m5). Example: m4=m5=1 → m7=4 if m6=8
+
+Provide complete netlist following this format:
+${outputExample}
+
+Requirements:
+- All XM devices must include L/W/nf/m parameters (no units)
+- R1/R2 with "k", C1 with "p"
+- 8 transistors total with 4 parameters each
+- Initialize R1/R2/C1 values

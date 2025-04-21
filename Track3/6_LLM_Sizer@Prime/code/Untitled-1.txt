@@ -1,0 +1,475 @@
+
+import sys
+sys.path.append("..")
+sys.path.append("../..")
+import pdb
+import matlab
+import torch
+from torch import nn
+import time
+import numpy as np
+import torch
+import math
+import matplotlib
+import matplotlib.pyplot as plt
+from copy import deepcopy
+import yaml
+import yamlordereddictloader
+import os
+import plotly
+import plotly.graph_objects as go
+from SIMULATOR.simulator import Simulator
+import pandas as pd
+import multiprocessing as mp
+from multiprocessing import Pool
+import concurrent.futures
+from pyDOE import *
+import re
+import random
+import fileinput
+import copy
+
+'''
+sizings_res = list()
+fom_res = list()
+perf_res = list()
+corner_res = list()
+'''
+def wrap_config(config):
+    for i,varnames in enumerate(list(config["des_vars"].keys())):
+        config["des_vars"][varnames] = matlab.double([float(i) for i in config["des_vars"][varnames]])
+
+    for constname in list(config["constraints"].keys()):
+        if not type(config["constraints"][constname][0]) == float:
+            config["constraints"][constname][0] = float(config["constraints"][constname][0])
+        if not type(config["constraints"][constname][1]) == float:
+            config["constraints"][constname][1] = float(config["constraints"][constname][1])
+        if not type(config["constraints"][constname][2]) == float:
+            config["constraints"][constname][2] = float(config["constraints"][constname][2])
+    '''
+    for constname in list(config["constraints_real"].keys()):
+        if not type(config["constraints_real"][constname][0]) == float:
+            config["constraints_real"][constname][0] = float(config["constraints_real"][constname][0])
+        if not type(config["constraints_real"][constname][1]) == float:
+            config["constraints_real"][constname][1] = float(config["constraints_real"][constname][1])
+        if not type(config["constraints_real"][constname][2]) == float:
+            config["constraints_real"][constname][2] = float(config["constraints_real"][constname][2])
+    '''
+    for varnames in list(config["given_vars"].keys()):
+        if not type(config["given_vars"][varnames]) == float:
+            config["given_vars"][varnames] = float(config["given_vars"][varnames])
+        
+    return config
+
+
+
+
+class Env:
+    def __init__(self, yml_file, workers=8):
+        self.yml_file = yml_file
+
+        with open(yml_file) as f:
+            config = yaml.load(f, Loader=yamlordereddictloader.Loader)
+            config = wrap_config(config)
+        design_bounds = np.array(list(config['des_vars'].values())).squeeze()
+
+        self.config = config
+        self.lb = design_bounds[:,0]
+        self.ub = design_bounds[:,1]
+        self.unit = design_bounds[:,2]
+        self.init = design_bounds[:,3]
+        self.gap = design_bounds[:,4]
+        self.gap_lb = design_bounds[:,5]
+        self.gap_ub = design_bounds[:,6]
+        self.vars = list(config['des_vars'].keys())
+        self.perf = list(config['outputs'].keys())
+        self.constraints = copy.deepcopy(config['constraints'])
+        self.constraints_real = copy.deepcopy(config['constraints'])
+        self.corner = config['corner']
+        self.corner_normal = {'process': self.corner['process_normal'], 'temp': self.corner['temp_normal'], 'vdd': self.corner['vdd_normal']}
+        self.circuit_name = config['circuit_name']
+        self.sizings_history = []
+        self.perf_history = []
+        self.FoM_history = []
+        self.corner_history = []
+        self.work_path = config['work_path']
+        self.workers = workers
+        self.worker_load = 1
+        self.action_dim = len(self.vars)
+        self.state_dim = 5+1+1  #P+V+T
+        self.lock = mp.Lock()
+        self.wr_lock = mp.Lock()
+        self.cnt = 0
+
+        self.dynamic_constraints = True
+        self.dynamic_count = {}
+        self.constraint_bounds = {}
+        self.dynamic_count_threshold = 10
+        if self.dynamic_constraints is True:
+            self.constraints = copy.deepcopy(self.constraints_real)
+            self.dynamic_count = copy.deepcopy(self.constraints_real)
+            self.constraint_bounds = copy.deepcopy(self.constraints_real)
+            for item in self.dynamic_count.keys():
+                self.dynamic_count[item] = 0
+                if self.constraint_bounds[item][1] == 0:
+                    self.constraint_bounds[item][0] *= 1.1
+                    self.constraints[item][0] *= 1.1
+                elif self.constraint_bounds[item][1] == 1:
+                    self.constraint_bounds[item][0] *= 0.9
+                    self.constraints[item][0] *= 0.9
+
+    def __call__(self, X, corner=list(), dir_ind=-1):
+
+        if len(corner) == 0:
+            for _ in range(len(X)):
+                corner.append(self.corner_normal)
+        N = len(X)
+        X = np.array(X)
+        for i in range(len(self.gap)):
+            if self.gap[i] == 1:
+                for j in range(X.shape[0]):
+                    if (X[j][i] < self.gap_ub[i]) and (X[j][i] > self.gap_lb[i]):
+                        X[j][i] = self.gap_lb[i]
+
+        #print(corner)
+        sizings = []
+        perf = []
+        fom = []
+        corners =[]
+        cnt = 0
+        while N > 0:
+            process_num = min(self.workers, N)
+            sim_num = min(N, self.workers*self.worker_load)
+            N -= sim_num
+
+            inputs = dict()
+            inputs["sizings"] = list()
+            inputs["corners"] = list()
+            for i in range(process_num):
+                inputs["sizings"].append(list())
+                inputs["corners"].append(list())
+            
+            for i in range(sim_num):
+                temp = dict()
+                temp["config"] = self.config
+                temp["sizing"] = dict(zip(self.vars, X[cnt]))
+                #print(i)
+                temp["corner"] = corner[cnt]
+                inputs["sizings"][i%process_num].append(temp["sizing"])
+                inputs["corners"][i%process_num].append(temp["corner"])
+
+                cnt+=1
+
+            
+            s, p, f, c = self.multicore(inputs, process_num, dir_ind)
+            sizings += s
+            perf += p
+            fom += f
+            corners += c
+
+            self.sizings_history += s
+            self.perf_history += p
+            self.FoM_history += f
+            self.corner_history += c
+
+        with open("./history.txt","a") as fi:
+            for s,p in zip(sizings, perf):
+                fi.write(f"{s}\n {p}\n")
+        return sizings, perf, fom, corners  
+
+
+    def Refine_sizings(self, sizings):
+        sizings = torch.tensor(sizings)
+        lb = torch.tensor(self.lb)
+        ub = torch.tensor(self.ub)
+        unit = torch.tensor(self.unit)
+        
+        sizings = torch.floor(sizings / unit) * unit
+        sizings = sizings.clamp(lb, ub)
+        sizings = sizings.tolist()
+            
+        return sizings
+
+
+    def calc_FoM(self, perfs):
+        #print(perfs)
+        N = len(perfs)
+        FoM = list()
+        ind = list()
+        i = 0
+        for perf in perfs:
+            value = 0
+            if len(perf) == 0:
+                num = len(list(self.constraints.keys()))
+                value = -1.0 * num
+                ind.append(i)
+            else:
+                for item in self.constraints.keys():
+                    if self.constraints[item][1] == 0:
+                        obj = self.constraints[item][0]
+                        
+                        #if self.dynamic_constraints is True:
+                        #	if obj > perf[item]:
+                        #		self.dynamic_count[item] += 1
+                        #		if 
+                                
+                        
+                        #print(perf[item])
+                        #print(obj)
+
+                        tmp = min((perf[item]-obj)/abs(max((perf[item]+obj), obj)), 0)
+                        value += tmp
+                        
+                        if perf[item] == 0.0:
+                            value += -1
+                    else:
+                        obj = self.constraints[item][0]
+                        
+                        tmp = min((obj-perf[item])/abs(max((perf[item]+obj), obj)), 0) 
+                        value += tmp
+                        
+
+                        if perf[item] == 0.0:
+                            value += -1
+
+                if value > -0.00002:
+                    value = float(0.2)
+
+            FoM.append([value])
+            i += 1
+
+        return FoM, ind
+
+    def calc_FoM_real(self, perfs):
+        #print(perfs)
+        N = len(perfs)
+        FoM = list()
+        ind = list()
+        i = 0
+        #print(perfs)
+        for perf in perfs:
+            value = 0
+            if len(perf) == 0:
+                num = len(list(self.constraints_real.keys()))
+                value = -1.0 * num
+                ind.append(i)
+            else:
+                for item in self.constraints_real.keys():
+                    if self.constraints_real[item][1] == 0:
+                        obj = self.constraints_real[item][0]
+                        #print(perf[item])
+                        #print(obj)
+                        tmp = min((perf[item]-obj)/abs(max((perf[item]+obj), obj)), 0)
+
+                        value += tmp
+                        if perf[item] == 0.0:
+                            value += -1
+                    else:
+                        obj = self.constraints_real[item][0]
+                        tmp = min((obj-perf[item])/abs(max((perf[item]+obj), obj)), 0) 
+
+                        value += tmp
+                        if perf[item] == 0.0:
+                            value += -1
+
+                if value > -0.00002:
+                    value = float(0.2)
+
+            FoM.append([value])
+            i += 1
+        #print(FoM)
+        return FoM, ind
+
+
+
+    def run_simulate(self, inputs, i, s, p, f, c, ind):		
+        tmpPath = self.work_path + f"/tmp_{ind}"
+        batch_size = len(inputs["sizings"][i])
+        simulator = Simulator(self.config, tmpPath, batch_size)
+        num_batch = len(inputs["sizings"])
+        for j in range (num_batch):
+            for n in range (batch_size):
+                for k in range (7):
+                    ww = inputs["sizings"][j][n][f'W{k+1}'] * inputs["sizings"][j][n][f'L{k+1}']
+                    #print(ww,"\n")
+                    inputs["sizings"][j][n][f'W{k+1}'] = ww
+                    if inputs["sizings"][j][n][f'W{k+1}'] >= 150e-6:
+                        inputs["sizings"][j][n][f'W{k+1}'] = 149e-6
+        if os.path.exists(tmpPath) == True:
+            os.system("rm -rf %s"%(tmpPath))
+        print(inputs["sizings"])  
+        nl_paths = list(self.config['netlist'].values())
+        os.system("mkdir %s"%(tmpPath))
+        for nl in nl_paths:
+            os.system("cp -r %s %s"%(nl, tmpPath))
+
+        #print(inputs)
+        perf = simulator.simulate(inputs["sizings"][i], inputs["corners"][i])
+        FoM, bad_index = self.calc_FoM(perf)
+        #print(bad_index)
+        for ind in bad_index:
+            for cons in self.constraints.keys():
+                perf[ind][cons] = 0.0
+        #print(perf)
+
+        #for ind in range(len(perf)):
+        #	perf[ind] = perf[ind][0]
+
+        sizings = list()
+        for sizing in inputs["sizings"][i]:
+            sizings.append(list(sizing.values()))
+        print("***************************************************************************")
+        print(perf)
+        this_corner = inputs["corners"][i][0]
+        print(this_corner)
+        print(f"Corner ID is :{self.corner_to_ID(this_corner)}")
+        print("***************************************************************************")
+        #time.sleep(1000)
+        self.lock.acquire()
+        #print(sizings)
+        #print("STACK1")
+        s.put(sizings)
+        p.put(perf)
+        f.put(FoM)
+        c.put(inputs["corners"][i])
+        #print(s)
+        '''
+        sizings_res += sizings
+        perf_res += perf
+        fom_res += FoM
+        corner_res += inputs["corners"][i]
+        print(sizings_res)
+        '''
+        #print("STACK2")
+        self.lock.release()
+        #print(f"{i} finished")
+
+    def multicore(self, inputs, process_num, dir_ind):
+        #pool = mp.Pool()
+        #res = pool.map(run_simulate, input_all)
+        #print(res)
+        s = list()
+        p = list()
+        f = list()
+        c = list()
+        for i in range(process_num):
+            s.append(mp.Queue())
+            p.append(mp.Queue())
+            f.append(mp.Queue())
+            c.append(mp.Queue())
+        '''
+        s = mp.Queue()
+        p = mp.Queue()
+        f = mp.Queue()
+        c = mp.Queue()
+        '''
+        mps = []
+        
+        sizings_res = list()
+        perf_res = list()
+        fom_res = list()
+        corner_res = list()
+        
+        for i in range(process_num):
+            ind = i
+            if dir_ind != -1:
+                ind = dir_ind
+            tmp_mp = mp.Process(target=self.run_simulate, args=(inputs, i, s[i], p[i], f[i], c[i], ind))
+            tmp_mp.start()
+            mps.append(tmp_mp)
+            #print(f'Simulator: Process-{i} starts')
+
+        for i in range(process_num):
+            mps[i].join()
+            #print(f'Simulator: Process-{i} ends')
+            '''
+            self.lock.acquire()
+            while s.empty() is False:
+                print("Not EMPTY!")
+                sizings_res += s.get()
+                perf_res += p.get()
+                fom_res += f.get()
+                corner_res += c.get()
+            '''
+        '''
+        sizings = list()
+        perf = list()
+        fom = list()
+        corner = list()
+        '''
+        
+        for i in range(process_num):
+            sizings_res += s[i].get()
+        for i in range(process_num):
+            perf_res += p[i].get()
+        for i in range(process_num):
+            fom_res += f[i].get()
+        for i in range(process_num):
+            corner_res += c[i].get()
+        
+        #print(sizings_res)
+        return sizings_res, perf_res, fom_res, corner_res
+
+    def random_sampling(self, num):
+        sizings = []
+        bound = (self.ub - self.lb) / self.unit.tolist()
+        #print(bound)
+        bound = np.round(bound)
+        #print(bound)
+        for i in range(num):
+            tmp = []
+            for j in range(len(bound)):
+                #print(bound[j])
+                para = random.randint(0, bound[j])
+                #print(para)
+                para = self.lb[j] + para * self.unit.tolist()[j]
+                tmp.append(para)
+            tmp = np.floor(np.array(tmp) / np.array(self.unit)) * np.array(self.unit)
+
+            #print(tmp)
+            sizings.append(list(tmp))
+        return np.array(sizings)
+
+
+    def get_num_of_corners(self):
+        p = len(self.corner['process'])
+        t = len(self.corner['temp'])
+        v = len(self.corner['vdd'])
+        return p * v * t
+
+    def corner_to_ID(self, corner):
+        p = list(self.corner['process']).index(corner['process'])
+        v = list(self.corner['vdd']).index(corner['vdd'])
+        t = list(self.corner['temp']).index(corner['temp'])
+        p_num = len(self.corner['process'])
+        t_num = len(self.corner['temp'])
+        v_num = len(self.corner['vdd'])
+        i = p * t_num * v_num + v * t_num + t
+        return i
+        
+    def ID_to_corner(self, ID):
+        corner = dict()
+        p_num = len(self.corner['process'])
+        t_num = len(self.corner['temp'])
+        v_num = len(self.corner['vdd'])
+        p_ID = int(np.floor(ID/(t_num*v_num)))
+        v_ID = int(np.floor((ID - p_ID*t_num*v_num) / t_num))
+        t_ID = int(ID % t_num)
+        corner['process'] = self.corner['process'][p_ID]
+        corner['temp'] = self.corner['temp'][t_ID]
+        corner['vdd'] = self.corner['vdd'][v_ID]
+        return corner
+
+    def corner_to_state(self, corner):
+        state = [0,0,0,0,0,0,0]
+        process_Name = self.corner["process"]
+        process_ind = dict()
+        for i in range(len(process_Name)):
+            process_ind[process_Name[i]] = i
+        #process = {"tt": 0, "ff": 1, "ss": 2, "fs": 3, "sf": 4}
+        state[process_ind[corner['process']]] = 1
+        temp = corner['temp']
+        vdd = corner['vdd']
+        state[5] = -1 + 2 * (temp - self.corner['temp_range'][0]) / (self.corner['temp_range'][1] - self.corner['temp_range'][0])
+        state[6] = -1 + 2 * (vdd - self.corner['vdd_range'][0]) / (self.corner['vdd_range'][1] - self.corner['vdd_range'][0])
+        return state

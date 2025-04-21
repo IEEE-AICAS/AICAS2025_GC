@@ -1,0 +1,9 @@
+2025-03-24 21:13:39 - root - INFO - === Amplifier Design System Started ===
+2025-03-24 21:13:39 - root - INFO - Log file created at: logs/amp_design_20250324_211339.log
+2025-03-24 21:13:39 - AmpDesignController - INFO - === 开始新的运行 2025-03-24_21-13-39 ===
+2025-03-24 21:13:39 - batch_design - INFO - 开始第 1/50 次运行
+2025-03-24 21:13:39 - AmpDesignController - INFO - 开始电路优化设计，最大迭代次数: 1
+2025-03-24 21:13:39 - AmpDesignController - INFO - 
+==================== 第1次设计迭代 ====================
+2025-03-24 21:13:39 - DesignAgent - INFO - 正在进行第1次网表生成尝试...
+2025-03-24 21:13:39 - LLMGenerator - INFO - 开始生成响应...

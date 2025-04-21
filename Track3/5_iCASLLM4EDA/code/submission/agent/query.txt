@@ -1,0 +1,27 @@
+Possible useful parameters are shown after the question (not all the parameters should be used, so ignore the irrelevant values):
+
+```parameter_table
+W_12 = 25.97 
+L_12 = 1.1
+(multi)12 = 1
+W_34 = 18.45 
+L_34 = 1.1
+(multi)34 = 1
+W_5 = 8.665 
+L_5 = 0.5
+(multi)5 = 1
+W_6 = 60.56
+L_6 = 0.5 
+(multi)6 = 2
+W_7 = 88.69 
+(multi)7 = 1
+L_7 = 0.8
+W_8 = 6.75  
+(multi)8 = 1
+L_8 = 0.5
+```
+According to these formulas:
+L_12 = L_12 + 0.1,
+L_34 = L_34 + 0.1,
+W_5 = W_5 + 0.225,
+Please calculate 3 different values: L_12, L_34, W_5. Directly replace the parameter table with the value you calculated and return the WHOLE renewed netlist still wrapped with "```parameter_table" and"```" to me. Do not show any of calculation steps in the renewed parameter table, and each line of the new table should be of three parts, like "variable = calculated_value". The unrenewed values in the same parameter table should still be shown. DO NOT CHANGE THE ORIGINAL FORMAT!!!

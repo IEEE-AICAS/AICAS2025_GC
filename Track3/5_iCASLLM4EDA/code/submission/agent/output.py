@@ -1,0 +1,18 @@
+import math
+
+def calculate_ratio(SR, Cc, GBW, Kn, Kp, temp, Iref):
+    I5 = SR * Cc
+    gm1 = 2 * math.pi * GBW * Cc
+    W_L12 = (gm1 * gm1) / (Kn * I5)
+    W_L34 = I5 / (Kp * temp * temp)
+    p = Kn * W_L12
+    Vdsat = 0.12 + math.sqrt(I5 / p)
+    W_L5 = (2 * I5) / (Kn * Vdsat * Vdsat)
+    W_L8 = W_L5 * (Iref / I5)
+    gm4 = I5 * 4.54545
+    W_L6 = ((9.5 * gm1) / gm4) * W_L34
+    gm6 = 9.5 * gm1
+    I7 = (gm6 ** 2) / (2 * Kp * W_L6)
+    W_L7 = (I7 / I5) * W_L5
+
+    return W_L12, W_L34, W_L5, W_L6, W_L7, W_L8

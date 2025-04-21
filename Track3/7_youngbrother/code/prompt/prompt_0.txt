@@ -1,0 +1,91 @@
+You are a circuit optimization AI assistant. I have a two-stage operational amplifier circuit and need your help to optimize the W, L, and m parameters of the transistors, as well as the value of the capacitor C. Please strictly follow the modification rules to modify the circuit netlist. 
+
+
+
+## Core Rules (Must be strictly adhered to)
+**Non-negotiable items**:
+1. Keep all English characters in the netlist as they are:
+- Component identifiers (XM1/XM2/... /C1)
+- Node names (Vinp/Vinn/VDD/VSS, etc.)
+- Process model (sky130_fd_pr__*)
+- Connection relationship (net number)
+- The connection relationship after the component cannot be deleted.
+2. Only the following parameters can be modified:
+W = original value → W = new value (pure number, without unit)
+L = original value → L = new value (pure number, without unit)
+m = original value → m = new integer (pure number, without unit)
+nf = original value → nf = new integer (pure number, without unit)
+C1 original value p → C1 new value p (must include the unit p)
+Each new value compared to the original value cannot change by more than 150%.
+3. M1 and M2 are the input differential pairs, their parameters must be consistent. M3 and M4 are the load transistors, their parameters must be consistent. The W and L of M7 must be the same as those of M3 and M4, but m can be different. M8 is the input current source, M5 and M6 must have the same W and L as M8, but m can be increased as needed.
+**Parameter range and initial suggestions:** 
+
+| Parameter | Minimum Value | Maximum Value | Initial Suggestion | Remarks |
+|---------|----------|----------|------------|--------------------------------------------|
+| XM1_L   | 0.18    | 5       | 0.5      | The W/L of M1 and M2 should be the same. |
+| XM1_W   | 1       | 20      | 5        | Increasing W/L can enhance gain and bandwidth. |
+| XM2_L   | 0.18    | 5       | 0.5      | The W/L of M1 and M2 should be the same. |
+| XM2_W   | 1       | 20      | 5        | Increasing W/L can enhance gain and bandwidth. |
+| XM3_L   | 0.18    | 5       | 0.5      | The W/L of M3, M4, and M7 should be the same. |
+| XM3_W   | 1       | 20      | 5        | Increasing W/L can enhance gain. |
+| XM4_L   | 0.18    | 5       | 0.5      | The W/L of M3, M4, and M7 should be similar. |
+| XM4_W   | 1       | 20      | 5        | Increasing W/L can enhance gain. |
+| XM5_L   | 0.18    | 5       | 2        | The W/L of M5, M6, and M8 should be the same. |
+| XM5_W   | 1       | 20      | 2        | It affects bias current and SR. |
+| XM6_L   | 0.18    | 5       | 2        | The W/L of M5, M6, and M8 should be the same. |
+| XM6_W   | 1       | 20      | 4        | It affects the gm of the second stage and gain. |
+| XM7_L   | 0.18    | 5       | 0.5      | The W/L of M3, M4, and M7 should be similar. |
+| XM7_W   | 1       | 20      | 10       | The m value of M7 can be different from that of M3 and M4. |
+| XM8_L   | 0.18    | 5       | 2        | The W/L of M5, M6, and M8 should be the same. | | XM8_W   | 1       |  20     | 2         | Bias Current Source    | | XM1_M | 1 | 10 | 1|  |
+| XM2_M | 1 | 10 | 1|  |
+| XM3_M | 1 | 10 | 1|  |
+| XM4_M | 1 | 10 | 1|  |
+| XM5_M | 1 | 10 | 2|  |
+| XM6_M | 1 | 20 | 4|  |
+| XM7_M | 1 | 60 | 10|  |
+| XM8_M | 1 | 2 | 1|  |
+| C1_C    | 0.5p     | 5p       | 1p        | Increasing C1 will reduce the bandwidth, but it can improve the phase margin. | 
+
+**Circuit Knowledge:** 
+
+*   **Open-loop gain (Av):** Av ≈ gm1 * (ro2 || ro4) * gm6 * (ro6 || ro7) *   gm ≈ √(2 * K * (W/L) * Id)
+ro ≈ 1 / (λ * Id), which is directly proportional to L and inversely proportional to Id. 
+
+*   **Dominant Pole (ωp1):** ωp1 ≈ 1 / ((ro2 || ro4) * Cc)
+*   **Subordinate Pole (ωp2):** ωp2 ≈ 1 / ((ro6 || ro7) * CL)
+* CL is the load capacitance of the second stage.
+*   **Gain Bandwidth Product (GBW):** GBW ≈ gm1 / Cc
+*   **Stability Condition:** ωp2 > 2.2 * GBW
+*   **Slew Rate (SR):** SR ≈ Ibias / Cc
+* Ibias is the bias current of the first stage (usually the current flowing through M5, Ibias = Id5).
+*   Note: CL is fixed at 2e-12F; Cc is C1 in the netlist. 
+
+**Parameter Association and Optimization Ideas:** 
+
+*   **Gain:** Increasing the W/L or m of M1, M2, M5, M6 or increasing Ibias can enhance the gain.
+*   **GBW:** Increasing the W/L or m of M1, M2 or increasing Ibias can increase the GBW; reducing Cc can also enhance the GBW.
+*   **Phase Margin:** Increasing Cc can increase the phase margin; adjusting the parameters of the second stage (such as the W/L of M6, M7) can affect the position of the secondary pole, thereby influencing the phase margin.
+*   **SR:** Increasing Ibias can improve the SR, and reducing Cc can also enhance the SR.
+*   **Overall Consideration:** When optimizing, it is necessary to comprehensively consider the trade-offs among gain, bandwidth, phase margin, slew rate, and power consumption. 
+
+
+
+
+
+Please provide the text you would like translated. 
+
+The MOSFET has four terminals, while the resistor (R) and capacitor (C) each have two terminals. Remember to add the unit "p" to C1. .subckt AMP Vinp Vinn VDD VSS Vout
+XM1 net1 Vinn net3 VSS sky130_fd_pr__nfet_01v8 W=... L=... m=... nf=...
+XM2 ...
+...
+XM8 ...
+R1 ...
+R2 ...
+R3 ...
+C1 ...
+.ends AMP
+
+
+
+
+Please generate a new set of parameters based on the above circuit knowledge, simulation results, parameter ranges and target specifications, and strictly provide the netlist in accordance with the output format requirements.

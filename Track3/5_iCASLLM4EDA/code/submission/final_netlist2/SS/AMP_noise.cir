@@ -1,0 +1,25 @@
+test AMP_noise
+
+.LIB '/root/submission/final_netlist2/models/sky130.lib.spice'ss
+.INCLUDE /root/submission/final_netlist2/AMP.cir
+.INCLUDE /root/submission/final_netlist2/CurrentBias.cir
+
+V1 VSS 0 dc=0V
+V0 VDD 0 dc=1.8V
+VINN Vinn 0 dc=0.9V
+VIPP Vinp 0 dc=0.9V ac=1
+
+XI1 Vinp Vinn VDD VSS Vout AMP
+C1 VOUT 0 2E-12
+
+.control
+set units = degrees
+noise v(VOUT) VIPP dec 100 1 1Meg
+setplot noise1
+
+print inoise_spectrum[300] onoise_spectrum[300]
+let noise_1k = noise1.inoise_spectrum[300]
+echo "inputnoise: $&noise_1k" > noise_1KHZ.txt
+
+.endc
+.END

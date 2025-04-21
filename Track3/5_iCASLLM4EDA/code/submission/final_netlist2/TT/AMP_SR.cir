@@ -1,0 +1,40 @@
+test AMP_SR
+
+.LIB '.././models/sky130.lib.spice'tt
+.INCLUDE ../AMP.cir
+
+V1 VSS 0 dc=0V
+V0 VDD 0 dc=1.8V
+
+VIN Vinn 0 PULSE(1.8V 0V 1u 1n 1n 5u 10u)
+VIP Vinp 0 PULSE(0V 1.8V 1u 1n 1n 5u 10u)
+
+
+XI1 Vinp Vinn VDD VSS Vout AMP
+C1 VOUT 0 2E-12
+
+.tran 0.1n 2u
+
+.CONTROL
+set units=degrees
+run
+
+plot v(Vinp) v(Vout) v(Vinn)
+
+
+let v10 = 0.18
+let v90 = 1.62
+
+
+meas tran t10 when v(VOUT)=v10 RISE=1
+meas tran t90 when v(VOUT)=v90 RISE=1
+
+let sr = (v90 - v10)/(t90 - t10)
+print sr > TT_SR.txt
+
+print t10 t90
+print v10 v90
+
+quit
+.ENDC
+.END

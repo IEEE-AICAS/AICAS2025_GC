@@ -1,0 +1,35 @@
+test AMP_AC
+
+.LIB '.././models/sky130.lib.spice'tt
+.INCLUDE ../AMP.cir
+
+V1 VSS 0 dc=0V
+V0 VDD 0 dc=1.8V
+VIN Vinn 0 dc=0.9V ac=0.5V
+VIP Vinp 0 dc=0.9V ac=-0.5V
+
+XI1 Vinp Vinn VDD VSS Vout AMP
+C1 Vout 0 2E-12
+
+.ac dec 100 1Hz 1000MegHz
+
+.CONTROL
+set units = degrees
+run
+
+compose ac_pts start=1 stop=1e9 dec=100
+let freq_pts = ac_pts
+
+
+meas ac gain_max find vdb(Vout) at=1Hz
+meas ac gbw when vdb(Vout)=0
+meas ac phase_margin find vp(Vout) when vdb(Vout)=0
+
+
+echo "Gain: $&gain_max" > TT_AC_results.txt
+echo "GBW: $&gbw" >> TT_AC_results.txt
+echo "PM: $&phase_margin" >> TT_AC_results.txt
+
+quit
+.ENDC
+.END

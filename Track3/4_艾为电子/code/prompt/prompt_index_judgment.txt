@@ -1,0 +1,21 @@
+The current simulation results are:
+${sim_result}
+Please help me analyze which optimization solution I should choose next. Compare the simulation results with the following analysis scheme conditions sequentially. Once a scheme matches, output and stop reasoning.
+Note: Only output the JSON according to the scheme without explanations.
+
+1. If Gain does not meet specification requirements, output:
+```json
+{"Index": "Gain", "Component": ["Rref"]}
+```
+2. If SR does not meet specification requirements, output:
+```json
+{"Index": "SR", "Component": ["XM4", "XM5", "XM6", "XM7"]}
+```
+3. If PM does not meet specification requirements, output:
+```json
+{"Index": "PM", "Component": ["R1", "C1"]}
+```
+4. If GBW does not meet specification requirements, output:
+```json
+{"Index": "GBW", "Component": ["C1"]}
+```

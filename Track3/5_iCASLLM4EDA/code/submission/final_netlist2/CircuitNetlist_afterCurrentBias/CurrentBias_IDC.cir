@@ -1,0 +1,31 @@
+test AMP_IDC
+
+.LIB './models/sky130.lib.spice'tt
+.INCLUDE CurrentBias.cir
+
+
+V1 VSS 0 dc=0V
+V0 VDD_SOURCE 0 dc=1.8V
+VMEAS VDD_SOURCE VDD 0
+
+V2 VDD_SOURCE2 0 dc=1.8V
+VMEAS2 VDD_SOURCE2 VDD2 0
+
+XI1 Ibias1 VDD VDD2 VSS CurrentBias
+
+XM8 Ibias1 Ibias1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+
+.tran 0.1n 2u
+.op
+
+.CONTROL
+set units=degrees
+run
+
+plot v(Ibias1)
+
+
+.ENDC
+.END

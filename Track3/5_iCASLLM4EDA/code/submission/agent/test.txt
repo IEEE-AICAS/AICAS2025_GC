@@ -1,0 +1,32 @@
+We are required to design an OPAMP. Please follow the instruction I give to you and think step by step. Remember to tell me everything of your thinking process.
+Possible useful parameters are shown after the question (not all the parameters should be used, so ignore the irrelevant values):
+
+VDD=1.8V
+VSS=0V
+Avdc>=60dB
+SR ≥ 50 V/μS
+GBW ≥ 50 MHz 
+PM ≥ 60°
+Idc < 500uA
+ICM+ = 1.4V
+ICM- = 0.4V 
+P_total<=900uW
+CMRR>=70dB
+Vthn = 0.52V, Vthp = 0.70V
+Kn = 38E-6
+Kp = 28E-6
+pi = 3.1416
+
+Cc = 0.5pF
+
+First, We have a compensation capacitor (Cc) and bias current (I5), now we have to decide their values from given load capacitor and Slew Rate.
+We know Cc = 0.5pF, SR=50 V/μS, SR = I5/Cc.
+Please calculate 1 different values: I5 .
+
+Then, Design the input transistors. We know
+gm1 = 2*pi*GBW*Cc;
+The unit of given I5 value is uA.
+(W_L)12 = (gm1*gm1) / (Kn*I5);
+Please calculate the value of  (W_L)12 .
+
+Please follow the above steps to calculate the required values. Don't doubt your calculation result.

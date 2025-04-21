@@ -1,0 +1,45 @@
+You need to generate Python code based on the following process parameters and calculation flow.
+L is usually initialized with the simplest integer, L=x, which you should fill in.
+import math
+[Process Parameters]
+
+L = x
+
+KP_AVG1 = 301.48
+KP_AVG2 = 82.35
+IB = I0_uA / 6
+IB = IB * 1e-6
+RS = math.sqrt(1 / (16 * IB * KP_AVG1 * 1e-6))
+S10 = (2 * IB * 1e-6 / (KP_AVG2 * 1e-6) / 0.04) * 1e6
+S11 = S10
+S9 = S10
+S12 = S5
+S13 = S12
+R2 = RS
+
+[Calculation Process]
+netlist={}
+
+
+IB = I0_uA / 6
+IB = IB * 1e-6
+RS = math.sqrt(1 / (16 * IB * KP_AVG1 * 1e-6))
+S10 = (2 * IB * 1e-6 / (KP_AVG2 * 1e-6) / 0.04) * 1e6
+
+S11=S10
+S9=S10
+S12=S5
+S13=S5
+
+netlist["S9"]=f"{S9:.2f}/{L}"
+netlist["S10"]=f"{S10:.2f}/{L}"
+netlist["S11"]=f"{S11:.2f}/{L}"
+netlist["S12"]=f"{S12:.2f}/{L}"
+netlist["S13"]=f"{S13:.2f}/{L}"
+netlist["R2"]=f"{RS:.2f}"
+
+with open("/mnt/c/llm/LLM4AMP/agent/netlist_para.txt", "w") as file:
+    for key, value in netlist.items():
+        file.write(f"{key}: {value}\n")
+
+

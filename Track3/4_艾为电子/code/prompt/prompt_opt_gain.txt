@@ -1,0 +1,15 @@
+Now we need to optimize the gain effect, with a focus on optimizing the following components:
+${component}
+
+${gain}
+
+- Optimization approach for excessive gain:
+    Reduce the resistance value of Rref by 2k each time.
+
+- Optimization approach for insufficient gain:
+    Increase the resistance value of Rref by 2k each time.
+
+Please output in the following format, only modifying parameter values (do not include modification explanations):
+```spice_final
+${component}
+```

@@ -1,0 +1,29 @@
+We need to design a telescopic cascode common-gate amplifier. The netlist of the circuit is as follows: 
+.inc param
+.subckt AMP Vinp Vinn VDD VSS Vout
+XM1 net2 Vinp net3 VSS nmos L=l_input W=w_input
+XM2 net1 Vinn net3 VSS nmos L=l_input W=w_input
+XM9 net3 vbn1 VSS VSS nmos L=l_other W=w_other
+
+XM3 net4 vbn2 net2 VSS nmos L=l_other W=w_other
+XM4 Vout vbn2 net1 VSS nmos L=l_other W=w_other 
+XM5 net4 vbp net6 VDD pmos_lvt L=l_other W=w_other
+XM6 Vout vbp net5 VDD pmos_lvt L=l_other W=w_other
+XM7 net6 net4 VDD VDD pmos_lvt L=l_other W=w_other
+XM8 net5 net4 VDD VDD pmos_lvt L=l_other W=w_other
+
+I1 1 VSS 10
+XB1 1 1 VDD VDD pmos_lvt L=l_other W=w_other
+XB2 2 1 VDD VDD pmos_lvt L=l_other W=w_other
+XB4 vbn2 1 VDD VDD pmos_lvt L=l_other W=w_other
+XB3 2 2 VSS VSS nmos L=l_other W=w_other/10/k
+XB9 3 vbn1 VSS VSS nmos L=l_other W=w_other/k
+XB10 4 vbn1 VSS VSS nmos L=l_other W=w_other/k
+XB5 vbp vbp VDD VDD pmos_lvt L=l_other W=w_other/10/k
+XB6 vbn2 vbn2 vbn1 vbn1 nmos L=l_other W=w_other/k
+XB7 vbn1 2 3 VSS nmos L=l_other W=w_other/k
+XB8 vbp 2 4 VSS nmos L=l_other W=w_other/k
+
+.ends AMP
+The MOSFET parameter design units in micro-units (u) and output a JSON string. Do not output any other unrelated content.
+

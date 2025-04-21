@@ -1,0 +1,22 @@
+.subckt AMP Vinp Vinn VDD VSS Vout
+XM1 net2 Vinp net3 VSS sky130_fd_pr__nfet_01v8 L=0.35 W=19.286 m=10
+XM2 net1 Vinn net3 VSS sky130_fd_pr__nfet_01v8 L=0.35 W=19.286 m=10
+XM9 net3 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=45.0 m=1
+XM3 net4 vbn2 net2 VSS sky130_fd_pr__nfet_01v8 L=1 W=45.0 m=1
+XM4 Vout vbn2 net1 VSS sky130_fd_pr__nfet_01v8 L=1 W=45.0 m=1
+XM5 net4 vbp net6 VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XM6 Vout vbp net5 VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XM7 net6 net4 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XM8 net5 net4 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XB1 1 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XB2 2 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XB4 vbn2 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XB3 2 2 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=0.4201680672268907 m=1
+XB9 3 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+XB10 4 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+XB5 vbp vbp VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=0.4201680672268907 m=1
+XB6 vbn2 vbn2 vbn1 vbn1 sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+XB7 vbn1 2 3 VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+XB8 vbp 2 4 VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+R1 1 VSS sky130_fd_pr__res_generic_nd 127937.69999999998
+.ends AMP

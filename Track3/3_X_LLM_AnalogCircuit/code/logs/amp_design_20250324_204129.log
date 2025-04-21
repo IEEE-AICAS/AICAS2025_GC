@@ -1,0 +1,11 @@
+2025-03-24 20:41:29 - root - INFO - === Amplifier Design System Started ===
+2025-03-24 20:41:29 - root - INFO - Log file created at: logs/amp_design_20250324_204129.log
+2025-03-24 20:41:29 - main - INFO - === Configuration ===
+2025-03-24 20:41:29 - main - INFO - Model: deepseek-coder
+2025-03-24 20:41:29 - main - INFO - Max iterations: 5
+2025-03-24 20:41:29 - AmpDesignController - INFO - === 开始新的运行 2025-03-24_20-41-29 ===
+2025-03-24 20:41:29 - AmpDesignController - INFO - 开始电路优化设计，最大迭代次数: 5
+2025-03-24 20:41:29 - AmpDesignController - INFO - 
+==================== 第1次设计迭代 ====================
+2025-03-24 20:41:29 - DesignAgent - INFO - 正在进行第1次网表生成尝试...
+2025-03-24 20:41:29 - LLMGenerator - INFO - 开始生成响应...

@@ -1,0 +1,43 @@
+2025-03-24 21:14:55 - root - INFO - === Amplifier Design System Started ===
+2025-03-24 21:14:55 - root - INFO - Log file created at: logs/amp_design_20250324_211455.log
+2025-03-24 21:14:55 - AmpDesignController - INFO - === 开始新的运行 2025-03-24_21-14-55 ===
+2025-03-24 21:14:55 - batch_design - INFO - 开始第 1/10 次运行
+2025-03-24 21:14:55 - AmpDesignController - INFO - 开始电路优化设计，最大迭代次数: 1
+2025-03-24 21:14:55 - AmpDesignController - INFO - 
+==================== 第1次设计迭代 ====================
+2025-03-24 21:14:55 - DesignAgent - INFO - 正在进行第1次网表生成尝试...
+2025-03-24 21:14:55 - LLMGenerator - INFO - 开始生成响应...
+2025-03-24 21:15:49 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 21:15:49 - LLMGenerator - INFO - 成功生成响应
+2025-03-24 21:15:49 - LLMGenerator - INFO - 生成的响应: 我是来自阿里云的AI助手，专注于帮助用户设计和优化模拟电路，特别是运算放大器等领域。如果有相关技术问题或需要帮助，请随时告诉我！
+2025-03-24 21:15:49 - DesignAgent - WARNING - 未能从内容中提取到网表代码
+2025-03-24 21:15:49 - DesignAgent - ERROR - 生成的响应中未找到有效的网表
+2025-03-24 21:15:49 - DesignAgent - INFO - 正在进行第2次网表生成尝试...
+2025-03-24 21:15:49 - LLMGenerator - INFO - 开始生成响应...
+2025-03-24 21:16:03 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 21:16:03 - LLMGenerator - INFO - 成功生成响应
+2025-03-24 21:16:03 - LLMGenerator - INFO - 生成的响应: 我是来自阿里云的大规模语言模型，我被称为通义千问。我可以生成各种类型的文本，例如文章、故事、诗歌等，并能够根据不同的场景进行交互和提供信息。在这个场景中，我被设计用来帮助用户设计和优化模拟电路，特别是运算放大器。如果你有任何关于电路设计的问题或者需要帮助的地方，请告诉我！
+2025-03-24 21:16:03 - DesignAgent - WARNING - 未能从内容中提取到网表代码
+2025-03-24 21:16:03 - DesignAgent - ERROR - 生成的响应中未找到有效的网表
+2025-03-24 21:16:03 - DesignAgent - INFO - 正在进行第3次网表生成尝试...
+2025-03-24 21:16:03 - LLMGenerator - INFO - 开始生成响应...
+2025-03-24 21:16:10 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 21:16:10 - LLMGenerator - INFO - 成功生成响应
+2025-03-24 21:16:10 - LLMGenerator - INFO - 生成的响应: 我是来自阿里云的AI助手，专门帮助用户解答关于电子电路设计的问题，特别是关于运算放大器的设计和优化。如果您有任何相关问题或需要帮助，请随时告诉我！
+2025-03-24 21:16:10 - DesignAgent - WARNING - 未能从内容中提取到网表代码
+2025-03-24 21:16:10 - DesignAgent - ERROR - 生成的响应中未找到有效的网表
+2025-03-24 21:16:10 - batch_design - ERROR - 第 1 次运行发生错误: Failed to extract netlist from response
+Traceback (most recent call last):
+  File "/root/data/circuit/agent/main.py", line 301, in main
+    netlist, results, conversation = controller.optimize_design(
+  File "/root/data/circuit/agent/amp_design_controller.py", line 47, in optimize_design
+    netlist, messages = self.designer.process(
+  File "/root/data/circuit/agent/design_agent.py", line 204, in process
+    raise ValueError("Failed to extract netlist from response")
+ValueError: Failed to extract netlist from response
+2025-03-24 21:16:10 - batch_design - INFO - 开始第 2/10 次运行
+2025-03-24 21:16:10 - AmpDesignController - INFO - 开始电路优化设计，最大迭代次数: 1
+2025-03-24 21:16:10 - AmpDesignController - INFO - 
+==================== 第1次设计迭代 ====================
+2025-03-24 21:16:10 - DesignAgent - INFO - 正在进行第1次网表生成尝试...
+2025-03-24 21:16:10 - LLMGenerator - INFO - 开始生成响应...

@@ -1,0 +1,56 @@
+------------------------
+Simulation Result Metrix:
+Gain: 75.8218 GBW: 31.4514 PM: 60.6557 CMRR: 69.6368 noise: 0.21867899999999998 PSRR: 80.2867 SR: 22.358 IDC: 417.033
+------------------------
+------------------------
+Evaluation Result Metrix:
+Gain: True GBW: True PM: True CMRR: False noise: True PSRR: True SR: True IDC: True
+------------------------
+------------------------
+Simulation Result Metrix:
+Gain: 75.8218 GBW: 31.4514 PM: 60.6557 CMRR: 69.6368 noise: 0.21867899999999998 PSRR: 80.2867 SR: 22.358 IDC: 417.033
+------------------------
+------------------------
+Evaluation Result Metrix:
+Gain: True GBW: True PM: True CMRR: False noise: True PSRR: True SR: True IDC: True
+------------------------
+------------------------
+Simulation Result Metrix:
+Gain: 75.8218 GBW: 31.4514 PM: 60.6557 CMRR: 69.6368 noise: 0.21867899999999998 PSRR: 80.2867 SR: 22.358 IDC: 417.033
+------------------------
+------------------------
+Evaluation Result Metrix:
+Gain: True GBW: True PM: True CMRR: False noise: True PSRR: True SR: True IDC: True
+------------------------
+------------------------
+Simulation Result Metrix:
+Gain: 75.8218 GBW: 31.4514 PM: 60.6557 CMRR: 74.4845 noise: 0.23061 PSRR: 88.8822 SR: 22.358 IDC: 417.033
+------------------------
+------------------------
+Evaluation Result Metrix:
+Gain: True GBW: True PM: True CMRR: True noise: True PSRR: True SR: True IDC: True
+------------------------
+------------------------
+Simulation Result Metrix:
+Gain: 75.8218 GBW: 31.4514 PM: 60.6557 CMRR: 69.6368 noise: 0.21867899999999998 PSRR: 80.2867 SR: 22.358 IDC: 417.033
+------------------------
+------------------------
+Evaluation Result Metrix:
+Gain: True GBW: True PM: True CMRR: False noise: True PSRR: True SR: True IDC: True
+------------------------
+------------------------
+Simulation Result Metrix:
+Gain: 75.8218 GBW: 31.4514 PM: 60.6557 CMRR: 69.6368 noise: 0.21867899999999998 PSRR: 80.2867 SR: 22.358 IDC: 417.033
+------------------------
+------------------------
+Evaluation Result Metrix:
+Gain: True GBW: True PM: True CMRR: False noise: True PSRR: True SR: True IDC: True
+------------------------
+------------------------
+Simulation Result Metrix:
+Gain: 75.8218 GBW: 31.4514 PM: 60.6557 CMRR: 69.6368 noise: 0.21867899999999998 PSRR: 80.2867 SR: 22.358 IDC: 417.033
+------------------------
+------------------------
+Evaluation Result Metrix:
+Gain: True GBW: True PM: True CMRR: False noise: True PSRR: True SR: True IDC: True
+------------------------

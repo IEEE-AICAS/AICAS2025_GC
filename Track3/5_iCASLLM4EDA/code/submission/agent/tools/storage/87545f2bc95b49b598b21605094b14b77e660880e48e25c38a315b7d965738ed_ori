@@ -1,0 +1,122 @@
+[
+  {
+    "page_num": 1,
+    "content": [
+      {
+        "text": "# Python Image Processing Tutorial: Downloading Images and Performing Flip Operations \n",
+        "font-size": 11,
+        "token": 14
+      },
+      {
+        "text": "In  this  tutorial,  we  will  learn  how  to  download  images  using  Python  and  perform  basic  image \noperations such as flipping and rotating using the Pillow library. \n ## Prerequisites \n Before we begin, make sure you have the following libraries installed in your Python environment: \n",
+        "font-size": 11,
+        "token": 67
+      },
+      {
+        "text": "- `requests`: for downloading images \n- `Pillow`: for image processing \n If you haven't installed these libraries yet, you can install them using pip: \n",
+        "font-size": 11,
+        "token": 34
+      },
+      {
+        "text": "```bash \npip install requests Pillow \n``` \n ## Step 1: Downloading an Image \n First, we need to download an image. We will use the `requests` library to accomplish this task. \n",
+        "font-size": 11,
+        "token": 43
+      },
+      {
+        "text": "``` \nimport requests \n",
+        "font-size": 11,
+        "token": 5
+      },
+      {
+        "text": "def download_image(url, filename): \n\tresponse = requests.get(url) \n\tif response.status_code == 200: \n\twith open(filename, 'wb') as file: \n\tfile.write(response.content) \n\telse: \n\tprint(f\"Error: Failed to download image from {url}\") \n",
+        "font-size": 11,
+        "token": 60
+      },
+      {
+        "text": "# Example usage \nimage_url = \"https://example.com/image.jpg\"    # Replace with the URL of the image you want to \ndownload \nfilename = \"downloaded_image.jpg\" \ndownload_image(image_url, filename) \n``` \n ## Step 2: Opening and Displaying the Image \n Next, we will use the `Pillow` library to open and display the image we just downloaded. \n",
+        "font-size": 11,
+        "token": 83
+      }
+    ]
+  },
+  {
+    "page_num": 2,
+    "content": [
+      {
+        "text": "``` \nfrom PIL import Image \n",
+        "font-size": 11,
+        "token": 7
+      },
+      {
+        "text": "def open_and_show_image(filename): \n\timage = Image.open(filename) \n\timage.show() \n",
+        "font-size": 11,
+        "token": 19
+      },
+      {
+        "text": "# Example usage \nopen_and_show_image(filename) \n``` \n ## Step 3: Flipping and Rotating the Image \n",
+        "font-size": 11,
+        "token": 26
+      },
+      {
+        "text": "Now we can perform flip and rotate operations on the image. The `Pillow` library provides several \nmethods for image manipulation. \n",
+        "font-size": 11,
+        "token": 27
+      },
+      {
+        "text": "``` \ndef flip_image(filename, mode='horizontal'): \n\timage = Image.open(filename) \n\tif mode == 'horizontal': \n\tflipped_image = image.transpose(Image.FLIP_LEFT_RIGHT) \n\telif mode == 'vertical': \n\tflipped_image = image.transpose(Image.FLIP_TOP_BOTTOM) \n\telse: \n\tprint(\"Error: Mode should be 'horizontal' or 'vertical'\") \n\treturn \n\tflipped_image.show() \n\treturn flipped_image \n",
+        "font-size": 11,
+        "token": 95
+      },
+      {
+        "text": "def rotate_image(filename, degrees): \n\timage = Image.open(filename) \n\trotated_image = image.rotate(degrees) \n\trotated_image.show() \n\treturn rotated_image \n",
+        "font-size": 11,
+        "token": 37
+      },
+      {
+        "text": "# Example usage \nflipped_image = flip_image(filename, mode='horizontal')    # Horizontally flip \nflipped_image.save(\"flipped_horizontal.jpg\")    # Save the horizontally flipped image \n",
+        "font-size": 11,
+        "token": 40
+      },
+      {
+        "text": "flipped_image = flip_image(filename, mode='vertical')    # Vertically flip \nflipped_image.save(\"flipped_vertical.jpg\")    # Save the vertically flipped image \n",
+        "font-size": 11,
+        "token": 36
+      },
+      {
+        "text": "rotated_image = rotate_image(filename, 90)    # Rotate by 90 degrees \nrotated_image.save(\"rotated_90.jpg\")    # Save the rotated image \n",
+        "font-size": 11,
+        "token": 40
+      }
+    ]
+  },
+  {
+    "page_num": 3,
+    "content": [
+      {
+        "text": "``` \n ## Step 4: Saving the Modified Image \n",
+        "font-size": 11,
+        "token": 12
+      },
+      {
+        "text": "In the examples above, we have seen how to save flipped and rotated images. You can use the \n`save` method to save any modified image. \n",
+        "font-size": 11,
+        "token": 32
+      },
+      {
+        "text": "``` \n# Save the image \ndef save_image(image, filename): \n\timage.save(filename) \n",
+        "font-size": 11,
+        "token": 20
+      },
+      {
+        "text": "# Example usage \nsave_image(flipped_image, \"flipped_image.jpg\") \nsave_image(rotated_image, \"rotated_image.jpg\") \n``` \n",
+        "font-size": 11,
+        "token": 32
+      },
+      {
+        "text": "By  now,  you  have  learned  how  to  download  images  using  Python  and  perform  basic  image \noperations using the Pillow library. You can extend these basics to implement more complex image \nprocessing functions as needed. \n",
+        "font-size": 11,
+        "token": 54
+      }
+    ]
+  }
+]

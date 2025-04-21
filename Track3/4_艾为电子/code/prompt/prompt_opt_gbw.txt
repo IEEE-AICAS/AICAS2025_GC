@@ -1,0 +1,15 @@
+Now we need to optimize the GBW effect, with a focus on optimizing the following components:
+${component}
+
+${gbw}
+
+- If GBW is too small:
+    Reduce the resistance value of C1 by 0.05p each time.
+
+- If GBW is too large:
+    Increase the resistance value of C1 by 0.05p each time.
+
+Please output in the following format, only modifying parameter values (do not include modification explanations):
+```spice_final
+${component}
+```

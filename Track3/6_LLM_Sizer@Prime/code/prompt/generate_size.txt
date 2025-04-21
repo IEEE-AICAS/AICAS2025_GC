@@ -1,0 +1,7 @@
+**please use analog design knowledge to answer following questions:
+1.What is a common gate lenth L_large for tail current source transistor?
+2.What is a common gate width to length ratio for a big transistor?
+Answer those questions in the following format
+L_large = x um
+ratio = x
+Only return the given format. Do not include any explanation or extra text. 

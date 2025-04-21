@@ -1,0 +1,40 @@
+.subckt AMP Vinp Vinn VDD VSS Vout
+XM1 net1 Vinn net2 VSS sky130_fd_pr__nfet_01v8 L=1 W=25 nf=1 mult=17 m=17
+XM2 net1 Vinp net3 VSS sky130_fd_pr__nfet_01v8 L=1 W=25 nf=1 mult=17 m=17
+XM3 VSS Vbias1 net1 VSS sky130_fd_pr__nfet_01v8 L=2 W=10 nf=1 mult=6 m=6
+XM4 net3 Vbias2 net4 net3 sky130_fd_pr__pfet_01v8 L=1 W=20 nf=2 mult=4 m=4
+XM5 net2 Vbias2 Vout net2 sky130_fd_pr__pfet_01v8 L=1 W=20 nf=2 mult=4 m=4
+XM6 net6 Vbias3 net4 VSS sky130_fd_pr__nfet_01v8 L=1 W=10 nf=1 mult=8 m=8
+XM7 net7 Vbias3 Vout VSS sky130_fd_pr__nfet_01v8 L=1 W=10 nf=1 mult=8 m=8
+XM8 VSS net4 net6 VSS sky130_fd_pr__nfet_01v8 L=1 W=5 nf=1 mult=5 m=5
+XM9 VSS net4 net7 VSS sky130_fd_pr__nfet_01v8 L=1 W=5 nf=1 mult=5 m=5
+XM10 VDD Vbias4 net3 VDD sky130_fd_pr__pfet_01v8 L=2 W=10 nf=5 mult=10 m=10
+XM11 VDD Vbias4 net2 VDD sky130_fd_pr__pfet_01v8 L=2 W=10 nf=5 mult=10 m=10
+
+XM12 VDD net8 net9 VDD sky130_fd_pr__pfet_01v8 L=2 W=5 nf=1 mult=5 m=5
+XM13 VDD net8 net8 VDD sky130_fd_pr__pfet_01v8 L=2 W=5 nf=1 mult=5 m=5
+XM14 VSS net9 net9 VSS sky130_fd_pr__nfet_01v8 L=2 W=10 nf=1 mult=1 m=1
+XM15 net10 net9 net8 VSS sky130_fd_pr__nfet_01v8 L=2 W=10 nf=1 mult=5 m=5
+XM16 VDD net8 net11 VDD sky130_fd_pr__pfet_01v8 L=2 W=5 nf=1 mult=8 m=8
+XM17 VSS net11 net11 VSS sky130_fd_pr__nfet_01v8 L=2 W=4 nf=1 mult=1 m=1
+XM18 VSS net11 net12 VSS sky130_fd_pr__nfet_01v8 L=2 W=4 nf=1 mult=5 m=5
+XM19 VDD net12 net12 VDD sky130_fd_pr__pfet_01v8 L=2 W=5 nf=1 mult=5 m=5
+XM20 VDD net12 Vbias1 VDD sky130_fd_pr__pfet_01v8 L=2 W=5 nf=1 mult=5 m=5
+XM21 VDD net12 Vbias3 VDD sky130_fd_pr__pfet_01v8 L=2 W=5 nf=1 mult=5 m=5
+XM22 VSS net11 Vbias2 VSS sky130_fd_pr__nfet_01v8 L=2 W=4 nf=1 mult=5 m=5
+XM23 VSS net11 Vbias4 VSS sky130_fd_pr__nfet_01v8 L=2 W=4 nf=1 mult=5 m=5   
+XM24 VDD Vbias4 Vbias4 VDD sky130_fd_pr__pfet_01v8 L=2 W=2.18 nf=1 mult=1 m=1   
+
+Rr0 net10 VSS 90k
+Rr1 Vbias1 VSS 160k
+Rr2 VDD Vbias2 332.5k
+Rr3 Vbias3 VSS 250k
+
+Cc Vout VSS 6.4E-12
+Cc2 Vout net2 5E-13
+Cc3 Vbias1 VSS 100p
+Cc4 Vbias2 VSS 100p
+Cc5 Vbias3 VSS 100p
+Cc6 Vbias4 VSS 100p
+
+.ends AMP

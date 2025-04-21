@@ -1,0 +1,7 @@
+Please add comments to the op-amp circuit netlist. Note: To ensure the annotated netlist remains executable in NGSPICE, please observe the following rules:
+1. Use * at the beginning of standalone comment lines for components or interfaces
+2. For inline component comments, separate the comment with ; after the component
+3. Output the netlist in this format:
+```spice_final
+Netlist content
+```

@@ -1,0 +1,1 @@
+Calculate the k parameter under the conditions L={l} um and WL_max={WL_max} um^2.

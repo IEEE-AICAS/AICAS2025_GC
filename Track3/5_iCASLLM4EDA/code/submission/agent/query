@@ -1,0 +1,56 @@
+W_12 = 25.97 
+L_12 = 1
+(multi)12 = 1
+W_34 = 18.45 
+L_34 = 1
+(multi)34 = 1
+W_5 = 33.77 
+L_5 = 0.5
+(multi)5 = 1
+W_6 = 242.25
+L_6 = 0.5 
+(multi)6 = 2
+W_7 = 138.58 
+(multi)7 = 1
+L_7 = 0.8
+W_8 = 27.02  
+(multi)8 = 1
+L_8 = 0.5
+Last step. Generate ngspice netlist with the (W)n and (multi)n values you calculated.
+Just find the real number values of W_12, W_34, W_5, W_6, W_7, W_8, L_12, L_34, L_5, L_6, L_7, L_8 in the file above, 
+and notice that (multi)12=1, (multi)34=1, (multi)5=1, (multi)6=2, (multi)7=1, and (multi)8=1,
+then substitute the corresponding variable name with their number values and send back the WHOLE modified netlist to me. Do not tell me about your thinking process and only return the netlist. ONLY RETURN THE NETLIST WITHOUT ANY OTHER THINGS.
+```ngspice
+.subckt AMP Vinp Vinn VDD VSS Vout
+
+XM1 net1 Vinn net3 VSS sky130_fd_pr__nfet_01v8 L=L_12 W=W_12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=(multi)12 m=(multi)12
+XM2 net2 Vinp net3 VSS sky130_fd_pr__nfet_01v8 L=L_12 W=W_12 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=(multi)12 m=(multi)12
+XM5 net3 Ibias VSS VSS sky130_fd_pr__nfet_01v8 L=L_5 W=W_5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=(multi)5 m=(multi)5
+XM8 Ibias Ibias VSS VSS sky130_fd_pr__nfet_01v8 L=L_8 W=W_8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=(multi)8 m=(multi)8
+XM7 Vout Ibias VSS VSS sky130_fd_pr__nfet_01v8 L=L_7 W=W_7 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=(multi)7 m=(multi)7
+XM4 net2 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=L_34 W=W_34 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=(multi)34 m=(multi)34
+XM3 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=L_34 W=W_34 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=(multi)34 m=(multi)34
+XM6 Vout net2 VDD VDD sky130_fd_pr__pfet_01v8 L=L_6 W=W_6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=(multi)6 m=(multi)6
+
+I0 VDD Ibias 20u
+C1 net2 Vout 1.25p m=1
+
+.ends AMP
+
+```

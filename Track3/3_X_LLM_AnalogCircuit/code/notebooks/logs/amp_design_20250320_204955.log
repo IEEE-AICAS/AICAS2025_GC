@@ -1,0 +1,6 @@
+2025-03-20 20:49:55 - root - INFO - === Amplifier Design System Started ===
+2025-03-20 20:49:55 - root - INFO - Log file created at: logs/amp_design_20250320_204955.log
+2025-03-20 20:49:55 - LLMGenerator - INFO - 开始生成响应...
+2025-03-20 20:50:28 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-20 20:50:28 - LLMGenerator - INFO - 成功生成响应
+2025-03-20 20:50:28 - LLMGenerator - INFO - 生成的响应: 我是阿里云开发的一款超大规模语言模型，我叫通义千问。很高兴能为你解答问题和提供帮助！

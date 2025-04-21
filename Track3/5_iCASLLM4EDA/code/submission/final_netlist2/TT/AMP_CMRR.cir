@@ -1,0 +1,29 @@
+test AMP_CMRR
+
+.LIB '/root/submission/final_netlist2/models/sky130.lib.spice'tt
+.INCLUDE /root/submission/final_netlist2/AMP.cir
+.INCLUDE /root/submission/final_netlist2/CurrentBias.cir
+.TEMP 25.0
+
+V1 VSS 0 dc=0V
+V0 VDD 0 dc=1.8V
+VIP Vinp 0 dc=0.9V ac=1
+VIN Vinn VOUT ac=1
+XI1 Vinp Vinn VDD VSS Vout AMP
+C1 VOUT 0 2E-12
+
+.control
+set units = degrees
+run
+
+compose ac_pts start=1 stop=1e6 dec=10
+let freq_pts = ac_pts
+
+ac dec 10 1 1Meg
+meas ac cm_gain find vdb(VOUT) at=1e3Hz
+let cm_gain1 = -cm_gain
+echo "CMRR: $&cm_gain1" > CMRR_results.txt
+plot vdb(VOUT)
+
+.ENDC
+.END

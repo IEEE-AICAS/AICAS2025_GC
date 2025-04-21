@@ -1,0 +1,96 @@
+[Circuit Topology Specification]
+Design a operational amplifier with differential input and single-ended output using the following structure:
+
+.subckt AMP Vinp Vinn VDD VSS Vout
+XM1 net1 Vinn net2 VSS sky130_fd_pr__nfet_01v8 L={L1} W={W1} nf={nf1} m={m1}
+XM2 net1 Vinp net3 VSS sky130_fd_pr__nfet_01v8 L={L2} W={W2} nf={nf2} m={m2}
+XM3 VSS Vbias1 net1 VSS sky130_fd_pr__nfet_01v8 L={L3} W={W3} nf={nf3} m={m3}
+XM4 net3 Vbias2 net4 net3 sky130_fd_pr__pfet_01v8 L={L4} W={W4} nf={nf4} m={m4}
+XM5 net2 Vbias2 Vout net2 sky130_fd_pr__pfet_01v8 L={L5} W={W5} nf={nf5} m={m5}
+XM6 net6 Vbias3 net4 VSS sky130_fd_pr__nfet_01v8 L={L6} W={W6} nf={nf6} m={m6}
+XM7 net7 Vbias3 Vout VSS sky130_fd_pr__nfet_01v8 L={L7} W={W7} nf={nf7} m={m7}
+XM8 VSS net4 net6 VSS sky130_fd_pr__nfet_01v8 L={L8} W={W8} nf={nf8} m={m8}
+XM9 VSS net4 net7 VSS sky130_fd_pr__nfet_01v8 L={L9} W={W9} nf={nf9} m={m9}
+XM10 VDD Vbias4 net3 VDD sky130_fd_pr__pfet_01v8 L={L10} W={W10} nf={nf10} m={m10}
+XM11 VDD Vbias4 net2 VDD sky130_fd_pr__pfet_01v8 L={L11} W={W11} nf={nf11} m={m11}
+XM12 VDD net8 net9 VDD sky130_fd_pr__pfet_01v8 L={L12} W={W12} nf={nf12} m={m12}
+XM13 VDD net8 net8 VDD sky130_fd_pr__pfet_01v8 L={L13} W={W13} nf={nf13} m={m13}
+XM14 VSS net9 net9 VSS sky130_fd_pr__nfet_01v8 L={L14} W={W14} nf={nf14} m={m14}
+XM15 net10 net9 net8 VSS sky130_fd_pr__nfet_01v8 L={L15} W={W15} nf={nf15} m={m15}
+XM16 VDD net8 net11 VDD sky130_fd_pr__pfet_01v8 L={L16} W={W16} nf={nf16} m={m16}
+XM17 VSS net11 net11 VSS sky130_fd_pr__nfet_01v8 L={L17} W={W17} nf={nf17} m={m17}
+XM18 VSS net11 net12 VSS sky130_fd_pr__nfet_01v8 L={L18} W={W18} nf={nf18} m={m18}
+XM19 VDD net12 net12 VDD sky130_fd_pr__pfet_01v8 L={L19} W={W19} nf={nf19} m={m19}
+XM20 VDD net12 Vbias1 VDD sky130_fd_pr__pfet_01v8 L={L20} W={W20} nf={nf20} m={m20}
+XM21 VDD net12 Vbias3 VDD sky130_fd_pr__pfet_01v8 L={L21} W={W21} nf={nf21} m={m21}
+XM22 VSS net11 Vbias2 VSS sky130_fd_pr__nfet_01v8 L={L22} W={W22} nf={nf22} m={m22}
+XM23 VSS net11 Vbias4 VSS sky130_fd_pr__nfet_01v8 L={L23} W={W23} nf={nf23} m={m23}
+XM24 VDD Vbias4 Vbias4 VDD sky130_fd_pr__pfet_01v8 L={L24} W={W24} nf={nf24} m={m24}
+Rr1 net10 VSS {r1}
+Rr2 Vbias1 VSS {r2}
+Rr3 VDD Vbias2 {r3}
+Rr4 Vbias3 VSS {r4}
+Cc1 Vout VSS {C1}
+Cc2 Vout net2 {C2}
+Cc3 Vbias1 VSS {C3}
+Cc4 Vbias2 VSS {C4}
+Cc5 Vbias3 VSS {C5}
+Cc6 Vbias4 VSS {C6}
+.ends AMP
+
+[Unit Conversion Reminders]
+- 1μA = 1e-6A
+- 1pF = 1e-12F
+- 1MHz = 1e6Hz
+- 1V/μs = 1e6V/s
+- 1μA/V² = 1e-6A/V²
+- 1μS = 1e-6S
+- 1V/μs*1pF = 1μA
+- 230μA/(150μA/V²·0.0036V²) = 425
+
+[Design Constraints]
+1. Device parameters constraints:
+   - aspect ratio rounded to two decimal place
+   - m (multiplier) ≥1, nf ≥1
+   - All dimensions in microns (no unit suffix)
+
+2. Performance requirements:
+   - Gain > 60dB
+   - GBW > 20MHz
+   - PM > 60°
+   - SR > 20V/μs
+   - VDD=1.8V, Vcm =0.9V, VSS=0V, CL=2pF (external load)
+
+[Design Procedure Guidance (plase strictly follow the guidance to design, the calculation process should be as detailed as possible, note the unit conversions during the calculation process, aspect ratio rounded to one decimal place)]
+Step 1: Determine Currents based on design specifications I_total = 500μA
+- Choose XM3 current I3 ∈ [0.44I_total, 0.48I_total]
+- Choose XM10 and XM11 currents I10 = I11 ∈ [0.4I_total, 0.44I_total]
+- Choose XM8 and XM9 currents I8 = I9 ∈ [0.16I_total, 0.2I_total]
+
+Step 2: Determine Transistor Aspect Ratios (W/L), typical values: kn≈150μA/V², kp≈40μA/V²
+- For XM3: (W/L)3 = 2I3 / (kn·Vdsat3²), assuming Vdsat3 = 0.32V
+- For XM1 and XM2: (W/L)1 = (W/L)2 = I3 / (kn·Vdsat1²), assuming Vdsat1 = 0.06V
+- For XM10 and XM11: (W/L)10 = (W/L)11 = I10 / (kp·Vdsat10²), assuming Vdsat10 = 0.145V
+- For XM8 and XM9: (W/L)8 = (W/L)9 = I8 / (kn·Vdsat8²), assuming Vdsat8 = 0.155V
+- For XM6 and XM7: (W/L)6 = (W/L)7 = I8 / (kn·Vdsat6²), assuming Vdsat6 = 0.0866V
+- For XM4 and XM5: (W/L)4 = (W/L)5 = I8 / (kp·Vdsat4²), assuming Vdsat4 = 0.1186V
+
+Step 3: Determine Capacitors
+- For phase margin improvement, typical values: C1 = 6.4p, C2 = 0.5p
+- For slew rate improvement, typical values: C3 = C4 = C5 = C6 = 100p
+
+Step 4: Determine Bias Circuit
+- Bias current generation (1μA), typical values: (W/L)12 = (W/L)13 = (W/L)19 = ((W/L)8)/2, (W/L)14 = ((W/L)8)/5, (W/L)15 = 5·(W/L)14, r1 = 90k, (W/L)16 = 1.6·(W/L)13, (W/L)17 = ((W/L)3)/15
+- 5μA branch for bias voltage generation: (W/L)18 = 5·(W/L)17
+- Generate Vbias1: (W/L)20 = (W/L)21 = (W/L)19, r2 = 160k, r3 = 332.5k
+- Generate Vbias2: (W/L)22 = (W/L)23 = (W/L)18, r4 = 250k, (W/L)24 = (1.09/2)*(W/L)17
+
+Step 5: Determine nf and m
+- All transistors except XM10/XM11: nf = 1, XM10/XM11: nf = 5
+- Transistors XM3, XM10, XM11, XM12-XM24 with L=2; others: L=1
+
+[Output Requirements]
+1. Replace all {} placeholders with calculated values
+2. Keep parameters within specified ranges
+3. Maintain subckt port order: .SUBCKT AMP Vinp Vinn VDD VSS Vout
+4. Use standard SPICE syntax with parameter substitutions

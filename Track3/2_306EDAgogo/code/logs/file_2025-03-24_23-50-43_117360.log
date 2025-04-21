@@ -1,0 +1,160 @@
+2025-03-24 23:51:13.509 | TRACE    | agent.agent0:invoke:33 - {"l_input":0.15,"l_other":1}
+2025-03-24 23:51:13.509 | INFO     | __main__:design_agent_process:41 - 所有电路关键参数初始化设计完成!
+2025-03-24 23:51:13.510 | INFO     | agent.utils:wrapper:164 - 函数 'design_agent_process' 的运行时间: 30.3872 秒
+2025-03-24 23:51:32.088 | TRACE    | agent.agent1:calculate_k:66 - 计算k: 200.0/0.42/10 = 47.61904761904762
+2025-03-24 23:51:32.677 | TRACE    | agent.agent1:calculate_W:72 - 计算W: 200/0.15 = 1333.3333333333335, 200/1 = 200.0
+2025-03-24 23:51:32.678 | INFO     | agent.utils:wrapper:164 - 函数 'calculation_agent_process' 的运行时间: 19.1680 秒
+2025-03-24 23:51:32.678 | TRACE    | __main__:simulation_agent_process:81 - 当前电路网表: .subckt AMP Vinp Vinn VDD VSS Vout
+XM1 net2 Vinp net3 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=13.333333333333336 m=100
+XM2 net1 Vinn net3 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=13.333333333333336 m=100
+XM9 net3 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=20.0 m=10
+XM3 net4 vbn2 net2 VSS sky130_fd_pr__nfet_01v8 L=1 W=20.0 m=10
+XM4 Vout vbn2 net1 VSS sky130_fd_pr__nfet_01v8 L=1 W=20.0 m=10
+XM5 net4 vbp net6 VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=20.0 m=10
+XM6 Vout vbp net5 VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=20.0 m=10
+XM7 net6 net4 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=20.0 m=10
+XM8 net5 net4 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=20.0 m=10
+XB1 1 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=20.0 m=10
+XB2 2 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=20.0 m=10
+XB4 vbn2 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=20.0 m=10
+XB3 2 2 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=0.41999160016799664 m=1
+XB9 3 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.199916001679966 m=1
+XB10 4 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.199916001679966 m=1
+XB5 vbp vbp VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=0.41999160016799664 m=1
+XB6 vbn2 vbn2 vbn1 vbn1 sky130_fd_pr__nfet_01v8 L=1 W=4.199916001679966 m=1
+XB7 vbn1 2 3 VSS sky130_fd_pr__nfet_01v8 L=1 W=4.199916001679966 m=1
+XB8 vbp 2 4 VSS sky130_fd_pr__nfet_01v8 L=1 W=4.199916001679966 m=1
+I1 1 VSS 10.0u
+.ends AMP
+
+2025-03-24 23:51:38.206 | INFO     | __main__:simulation_agent_process:113 - 当前仿真结果: {'Gain': 57.8549, 'GBW': 296.732, 'PM': 19.1782, 'i(vmeas)': 650.8074, 'sr': 406.0914}
+2025-03-24 23:51:38.206 | INFO     | __main__:simulation_agent_process:128 - 仿真结果不满足要求，继续迭代
+2025-03-24 23:51:38.206 | INFO     | agent.utils:wrapper:164 - 函数 'simulation_agent_process' 的运行时间: 5.5287 秒
+2025-03-24 23:51:51.475 | TRACE    | agent.agent2:revise_param:52 - 增益过小,增大L
+2025-03-24 23:51:51.475 | TRACE    | agent.agent2:revise_param:55 - PM过小,减小WL_max
+2025-03-24 23:51:51.475 | INFO     | __main__:revision_agent_process:138 - 电路参数修正完成!
+2025-03-24 23:51:51.475 | INFO     | agent.utils:wrapper:164 - 函数 'revision_agent_process' 的运行时间: 13.2689 秒
+2025-03-24 23:52:07.128 | TRACE    | agent.agent1:calculate_k:66 - 计算k: 100.0/0.42/10 = 23.80952380952381
+2025-03-24 23:52:07.718 | TRACE    | agent.agent1:calculate_W:72 - 计算W: 100/0.25 = 400.0, 100/1 = 100.0
+2025-03-24 23:52:07.718 | INFO     | agent.utils:wrapper:164 - 函数 'calculation_agent_process' 的运行时间: 16.2423 秒
+2025-03-24 23:52:07.718 | TRACE    | __main__:simulation_agent_process:81 - 当前电路网表: .subckt AMP Vinp Vinn VDD VSS Vout
+XM1 net2 Vinp net3 VSS sky130_fd_pr__nfet_01v8 L=0.25 W=40.0 m=10
+XM2 net1 Vinn net3 VSS sky130_fd_pr__nfet_01v8 L=0.25 W=40.0 m=10
+XM9 net3 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=100.0 m=1
+XM3 net4 vbn2 net2 VSS sky130_fd_pr__nfet_01v8 L=1 W=100.0 m=1
+XM4 Vout vbn2 net1 VSS sky130_fd_pr__nfet_01v8 L=1 W=100.0 m=1
+XM5 net4 vbp net6 VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=100.0 m=1
+XM6 Vout vbp net5 VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=100.0 m=1
+XM7 net6 net4 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=100.0 m=1
+XM8 net5 net4 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=100.0 m=1
+XB1 1 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=100.0 m=1
+XB2 2 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=100.0 m=1
+XB4 vbn2 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=100.0 m=1
+XB3 2 2 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=0.41999160016799664 m=1
+XB9 3 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.199916001679966 m=1
+XB10 4 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.199916001679966 m=1
+XB5 vbp vbp VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=0.41999160016799664 m=1
+XB6 vbn2 vbn2 vbn1 vbn1 sky130_fd_pr__nfet_01v8 L=1 W=4.199916001679966 m=1
+XB7 vbn1 2 3 VSS sky130_fd_pr__nfet_01v8 L=1 W=4.199916001679966 m=1
+XB8 vbp 2 4 VSS sky130_fd_pr__nfet_01v8 L=1 W=4.199916001679966 m=1
+I1 1 VSS 10.0u
+.ends AMP
+
+2025-03-24 23:52:13.277 | INFO     | __main__:simulation_agent_process:113 - 当前仿真结果: {'Gain': 59.9045, 'GBW': 217.339, 'PM': 36.3645, 'i(vmeas)': 366.7427, 'sr': 262.5821}
+2025-03-24 23:52:13.278 | INFO     | __main__:simulation_agent_process:128 - 仿真结果不满足要求，继续迭代
+2025-03-24 23:52:13.278 | INFO     | agent.utils:wrapper:164 - 函数 'simulation_agent_process' 的运行时间: 5.5597 秒
+2025-03-24 23:52:26.492 | TRACE    | agent.agent2:revise_param:52 - 增益过小,增大L
+2025-03-24 23:52:26.493 | TRACE    | agent.agent2:revise_param:55 - PM过小,减小WL_max
+2025-03-24 23:52:26.493 | INFO     | __main__:revision_agent_process:138 - 电路参数修正完成!
+2025-03-24 23:52:26.493 | INFO     | agent.utils:wrapper:164 - 函数 'revision_agent_process' 的运行时间: 13.2149 秒
+2025-03-24 23:52:41.939 | TRACE    | agent.agent1:calculate_k:66 - 计算k: 50.0/0.42/10 = 11.904761904761905
+2025-03-24 23:52:53.579 | TRACE    | agent.agent1:calculate_W:72 - 计算W: 50/0.35 = 142.85714285714286, 50/1 = 50.0
+2025-03-24 23:52:53.580 | INFO     | agent.utils:wrapper:164 - 函数 'calculation_agent_process' 的运行时间: 27.0868 秒
+2025-03-24 23:52:53.580 | TRACE    | __main__:simulation_agent_process:81 - 当前电路网表: .subckt AMP Vinp Vinn VDD VSS Vout
+XM1 net2 Vinp net3 VSS sky130_fd_pr__nfet_01v8 L=0.35 W=14.285714285714286 m=10
+XM2 net1 Vinn net3 VSS sky130_fd_pr__nfet_01v8 L=0.35 W=14.285714285714286 m=10
+XM9 net3 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=50.0 m=1
+XM3 net4 vbn2 net2 VSS sky130_fd_pr__nfet_01v8 L=1 W=50.0 m=1
+XM4 Vout vbn2 net1 VSS sky130_fd_pr__nfet_01v8 L=1 W=50.0 m=1
+XM5 net4 vbp net6 VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=50.0 m=1
+XM6 Vout vbp net5 VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=50.0 m=1
+XM7 net6 net4 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=50.0 m=1
+XM8 net5 net4 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=50.0 m=1
+XB1 1 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=50.0 m=1
+XB2 2 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=50.0 m=1
+XB4 vbn2 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=50.0 m=1
+XB3 2 2 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=0.42016806722689076 m=1
+XB9 3 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268908 m=1
+XB10 4 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268908 m=1
+XB5 vbp vbp VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=0.42016806722689076 m=1
+XB6 vbn2 vbn2 vbn1 vbn1 sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268908 m=1
+XB7 vbn1 2 3 VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268908 m=1
+XB8 vbp 2 4 VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268908 m=1
+I1 1 VSS 10.0u
+.ends AMP
+
+2025-03-24 23:52:58.792 | INFO     | __main__:simulation_agent_process:113 - 当前仿真结果: {'Gain': 60.0927, 'GBW': 125.683, 'PM': 58.4668, 'i(vmeas)': 198.8201, 'sr': 136.5447}
+2025-03-24 23:52:58.792 | INFO     | __main__:simulation_agent_process:128 - 仿真结果不满足要求，继续迭代
+2025-03-24 23:52:58.792 | INFO     | agent.utils:wrapper:164 - 函数 'simulation_agent_process' 的运行时间: 5.2122 秒
+2025-03-24 23:53:11.939 | TRACE    | agent.agent2:revise_param:58 - PM过小,减小WL_max
+2025-03-24 23:53:11.939 | INFO     | __main__:revision_agent_process:138 - 电路参数修正完成!
+2025-03-24 23:53:11.939 | INFO     | agent.utils:wrapper:164 - 函数 'revision_agent_process' 的运行时间: 13.1472 秒
+2025-03-24 23:53:27.667 | TRACE    | agent.agent1:calculate_k:66 - 计算k: 45.0/0.42/10 = 10.714285714285715
+2025-03-24 23:53:28.361 | TRACE    | agent.agent1:calculate_W:72 - 计算W: 45/0.35 = 128.57142857142858, 45/1 = 45.0
+2025-03-24 23:53:28.362 | INFO     | agent.utils:wrapper:164 - 函数 'calculation_agent_process' 的运行时间: 16.4225 秒
+2025-03-24 23:53:28.362 | TRACE    | __main__:simulation_agent_process:81 - 当前电路网表: .subckt AMP Vinp Vinn VDD VSS Vout
+XM1 net2 Vinp net3 VSS sky130_fd_pr__nfet_01v8 L=0.35 W=12.857142857142858 m=10
+XM2 net1 Vinn net3 VSS sky130_fd_pr__nfet_01v8 L=0.35 W=12.857142857142858 m=10
+XM9 net3 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=45.0 m=1
+XM3 net4 vbn2 net2 VSS sky130_fd_pr__nfet_01v8 L=1 W=45.0 m=1
+XM4 Vout vbn2 net1 VSS sky130_fd_pr__nfet_01v8 L=1 W=45.0 m=1
+XM5 net4 vbp net6 VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XM6 Vout vbp net5 VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XM7 net6 net4 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XM8 net5 net4 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XB1 1 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XB2 2 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XB4 vbn2 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XB3 2 2 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=0.4201680672268907 m=1
+XB9 3 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+XB10 4 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+XB5 vbp vbp VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=0.4201680672268907 m=1
+XB6 vbn2 vbn2 vbn1 vbn1 sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+XB7 vbn1 2 3 VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+XB8 vbp 2 4 VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+I1 1 VSS 10.0u
+.ends AMP
+
+2025-03-24 23:53:33.644 | INFO     | __main__:simulation_agent_process:113 - 当前仿真结果: {'Gain': 60.0594, 'GBW': 114.117, 'PM': 61.2409, 'i(vmeas)': 182.1212, 'sr': 123.119}
+2025-03-24 23:53:33.644 | INFO     | __main__:simulation_agent_process:125 - 仿真结果满足要求，结束迭代
+2025-03-24 23:53:33.644 | INFO     | agent.utils:wrapper:164 - 函数 'simulation_agent_process' 的运行时间: 5.2821 秒
+2025-03-24 23:53:48.510 | TRACE    | agent.agent2:revise_param:63 - 满足要求,增大输入对管宽度
+2025-03-24 23:53:48.510 | INFO     | __main__:revision_agent_process:138 - 电路参数修正完成!
+2025-03-24 23:53:48.510 | INFO     | agent.utils:wrapper:164 - 函数 'revision_agent_process' 的运行时间: 14.8660 秒
+2025-03-24 23:53:48.510 | TRACE    | __main__:simulation_agent_process:81 - 当前电路网表: .subckt AMP Vinp Vinn VDD VSS Vout
+XM1 net2 Vinp net3 VSS sky130_fd_pr__nfet_01v8 L=0.35 W=19.286 m=10
+XM2 net1 Vinn net3 VSS sky130_fd_pr__nfet_01v8 L=0.35 W=19.286 m=10
+XM9 net3 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=45.0 m=1
+XM3 net4 vbn2 net2 VSS sky130_fd_pr__nfet_01v8 L=1 W=45.0 m=1
+XM4 Vout vbn2 net1 VSS sky130_fd_pr__nfet_01v8 L=1 W=45.0 m=1
+XM5 net4 vbp net6 VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XM6 Vout vbp net5 VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XM7 net6 net4 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XM8 net5 net4 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XB1 1 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XB2 2 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XB4 vbn2 1 VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=45.0 m=1
+XB3 2 2 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=0.4201680672268907 m=1
+XB9 3 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+XB10 4 vbn1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+XB5 vbp vbp VDD VDD sky130_fd_pr__pfet_01v8_lvt L=1 W=0.4201680672268907 m=1
+XB6 vbn2 vbn2 vbn1 vbn1 sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+XB7 vbn1 2 3 VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+XB8 vbp 2 4 VSS sky130_fd_pr__nfet_01v8 L=1 W=4.201680672268907 m=1
+I1 1 VSS 10.0u
+.ends AMP
+
+2025-03-24 23:53:53.836 | INFO     | __main__:simulation_agent_process:113 - 当前仿真结果: {'Gain': 60.3268, 'GBW': 118.123, 'PM': 58.4819, 'i(vmeas)': 182.86180000000002, 'sr': 124.0631, 'v(xi1.1)': 1.279377}
+2025-03-24 23:53:53.836 | INFO     | __main__:simulation_agent_process:128 - 仿真结果不满足要求，继续迭代
+2025-03-24 23:53:53.836 | INFO     | agent.utils:wrapper:164 - 函数 'simulation_agent_process' 的运行时间: 5.3257 秒
+2025-03-24 23:53:53.836 | INFO     | agent.utils:wrapper:164 - 函数 'main' 的运行时间: 190.7138 秒

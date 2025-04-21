@@ -1,0 +1,10 @@
+2025-03-19 21:20:51 - root - INFO - === Amplifier Design System Started ===
+2025-03-19 21:20:51 - root - INFO - Log file created at: logs/amp_design_20250319_212051.log
+2025-03-19 21:20:51 - LLMGenerator - INFO - 开始生成响应...
+2025-03-19 21:21:09 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-19 21:21:09 - LLMGenerator - INFO - 成功生成响应
+2025-03-19 21:21:09 - LLMGenerator - INFO - 生成的响应: The 2020 World Series was played at Dodger Stadium in Los Angeles, California, which is the home stadium of the Los Angeles Dodgers. Due to疫情防控措施 (COVID-19 pandemic measures), the series was held exclusively in neutral sites, and Dodger Stadium served as one of those venues for games 1-3, 6-8, and the Championship Series. Games 4-5 were played at Globe Life Field in Arlington, Texas.
+2025-03-20 12:15:38 - LLMGenerator - INFO - 开始生成响应...
+2025-03-20 12:16:26 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-20 12:16:26 - LLMGenerator - INFO - 成功生成响应
+2025-03-20 12:16:26 - LLMGenerator - INFO - 生成的响应: The 2020 World Series was played at Dodger Stadium in Los Angeles, California. Due to the COVID-19 pandemic, the series was one of several held in neutral sites, with Dodger Stadium serving as the home field for both the Dodgers and the Tampa Bay Rays during that year's playoffs.

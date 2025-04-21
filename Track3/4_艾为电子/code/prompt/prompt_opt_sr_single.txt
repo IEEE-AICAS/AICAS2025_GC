@@ -1,0 +1,15 @@
+Now we need to optimize the SR effect, with a focus on optimizing the following components:
+${component}
+
+${sr}
+
+- If SR is too small:
+    Reduce the resistance value of C1 by 0.05p each time.
+
+- If SR is too large:
+    Increase the resistance value of C1 by 0.05p each time.
+
+Please output in the following format, only modifying parameter values (do not include modification explanations):
+```spice_final
+${component}
+```

@@ -1,0 +1,267 @@
+2025-03-25 22:15:54 - root - INFO - === Amplifier Design System Started ===
+2025-03-25 22:15:54 - root - INFO - Log file created at: logs/amp_design_20250325_221554.log
+2025-03-25 22:15:54 - AmpDesignController - INFO - === 开始新的运行 2025-03-25_22-15-54 ===
+2025-03-25 22:15:54 - batch_design - INFO - 开始第 1/20 次运行
+2025-03-25 22:15:54 - AmpDesignController - INFO - 开始电路优化设计，最大迭代次数: 1
+2025-03-25 22:15:54 - AmpDesignController - INFO - 
+==================== 第1次设计迭代 ====================
+2025-03-25 22:15:54 - DesignAgent - INFO - 正在进行第1次网表生成尝试...
+2025-03-25 22:15:54 - LLMGenerator - INFO - 开始生成响应...
+2025-03-25 22:15:54 - openai._base_client - INFO - Retrying request to /chat/completions in 0.483034 seconds
+2025-03-25 22:15:55 - openai._base_client - INFO - Retrying request to /chat/completions in 0.810370 seconds
+2025-03-25 22:15:56 - LLMGenerator - ERROR - API调用失败: Connection error.
+2025-03-25 22:15:56 - batch_design - ERROR - 第 1 次运行发生错误: Connection error.
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_exceptions.py", line 10, in map_exceptions
+    yield
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 206, in connect_tcp
+    sock = socket.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/socket.py", line 865, in create_connection
+    raise exceptions[0]
+  File "/root/anaconda3/lib/python3.12/socket.py", line 850, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 268, in handle_request
+    raise exc
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 251, in handle_request
+    response = connection.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 99, in handle_request
+    raise exc
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 76, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/root/anaconda3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 955, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 232, in handle_request
+    with map_httpcore_exceptions():
+  File "/root/anaconda3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_exceptions.py", line 10, in map_exceptions
+    yield
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 206, in connect_tcp
+    sock = socket.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/socket.py", line 865, in create_connection
+    raise exceptions[0]
+  File "/root/anaconda3/lib/python3.12/socket.py", line 850, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 268, in handle_request
+    raise exc
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 251, in handle_request
+    response = connection.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 99, in handle_request
+    raise exc
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 76, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/root/anaconda3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 955, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 232, in handle_request
+    with map_httpcore_exceptions():
+  File "/root/anaconda3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_exceptions.py", line 10, in map_exceptions
+    yield
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 206, in connect_tcp
+    sock = socket.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/socket.py", line 865, in create_connection
+    raise exceptions[0]
+  File "/root/anaconda3/lib/python3.12/socket.py", line 850, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 268, in handle_request
+    raise exc
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 251, in handle_request
+    response = connection.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 99, in handle_request
+    raise exc
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 76, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/root/anaconda3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/root/anaconda3/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 955, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 232, in handle_request
+    with map_httpcore_exceptions():
+  File "/root/anaconda3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/root/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/data/circuit/agent/main.py", line 302, in main
+    netlist, results, conversation = controller.optimize_design(
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/data/circuit/agent/amp_design_controller.py", line 47, in optimize_design
+    netlist, messages = self.designer.process(
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/data/circuit/agent/design_agent.py", line 201, in process
+    response = self.llm.generate(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/data/circuit/utils/llm_generator.py", line 38, in generate
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/openai/_utils/_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 914, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 919, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 979, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 1057, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 979, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 1057, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2025-03-25 22:15:56 - batch_design - INFO - 开始第 2/20 次运行
+2025-03-25 22:15:56 - AmpDesignController - INFO - 开始电路优化设计，最大迭代次数: 1
+2025-03-25 22:15:56 - AmpDesignController - INFO - 
+==================== 第1次设计迭代 ====================
+2025-03-25 22:15:56 - DesignAgent - INFO - 正在进行第1次网表生成尝试...
+2025-03-25 22:15:56 - LLMGenerator - INFO - 开始生成响应...
+2025-03-25 22:15:56 - openai._base_client - INFO - Retrying request to /chat/completions in 0.462443 seconds

@@ -1,0 +1,6 @@
+Please determine the following L parameters for each transistor.
+For l_input: The process allows an L range of 0.15u-2u for NMOS. It is recommended to start by selecting the smaller value because the input differential pair transistors require as large g_m/I_d as possible to increase the GBW and a smaller L has larger g_m/I_d.
+For l_other: The process allows a common L range of (0.35u-2u) for NMOS and LVT PMOS. It is recommended to start by selecting a value near the middle of the range as the initial choice to balance the intrinsic gain and transistor area for load transistors and bias transistors.
+output example:
+{"l_input":value,"l_other":value}
+You should fill in the value for each parameter.

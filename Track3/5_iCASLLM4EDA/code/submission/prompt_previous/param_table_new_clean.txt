@@ -1,0 +1,29 @@
+```parameter_table
+W_12 = [To be calculated] 
+L_12 = 1
+L_new_12 = [To be calculated] 
+(multi)12 = 1
+W_34 = [To be calculated] 
+L_34 = 1
+L_new_34 = [To be calculated] 
+(multi)34 = 1
+W_5 = [To be calculated] 
+W_new_5 = [To be calculated] 
+L_5 = 0.5
+(multi)5 = 1
+W_6 = [To be calculated]
+L_6 = 0.5 
+(multi)6 = 2
+W_7 = [To be calculated] 
+(multi)7 = 1
+L_7 = 0.8
+W_8 = [To be calculated]  
+(multi)8 = 1
+L_8 = 0.5
+gain_value = [To be calculated]
+gbw_value = [To be calculated]
+pm_value = [To be calculated]
+sr_value = [To be calculated]
+idc_value = [To be calculated]
+```
+

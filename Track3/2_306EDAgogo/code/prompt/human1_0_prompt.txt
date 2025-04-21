@@ -1,0 +1,1 @@
+Calculate the W_input and W_other under the conditions L_input={l_input} um and L_other={l_other} um and WL_max={WL_max} um^2

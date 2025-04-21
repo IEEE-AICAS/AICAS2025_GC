@@ -1,0 +1,34 @@
+------------------------
+Simulation Result Metrix:
+Gain: 51.1645 GBW: 21.5124 PM: 70.3948 SR: 20.893 IDC: 300.387
+------------------------
+------------------------
+Evaluation Result Metrix:
+Gain: False GBW: True PM: True SR: True IDC: True
+------------------------
+iteration_number 0
+------------------------------------------------
+Iteration Starts for fine-tuning gain and PM...
+Increase the width of the transistor M6 and M7 by epsilon
+------------------------------------------------
+------------------------
+Simulation Result Metrix:
+Gain: 66.334 GBW: 28.696 PM: 63.491 SR: 21.648 IDC: 339.907
+------------------------
+------------------------
+Evaluation Result Metrix:
+Gain: False GBW: True PM: True SR: True IDC: True
+------------------------
+iteration_number 1
+------------------------------------------------
+Iteration Starts for fine-tuning gain and PM...
+Increase the width of the transistor M6 and M7 by epsilon
+------------------------------------------------
+------------------------
+Simulation Result Metrix:
+Gain: 77.8877 GBW: 30.6733 PM: 62.3511 SR: 22.403 IDC: 368.435
+------------------------
+------------------------
+Evaluation Result Metrix:
+Gain: True GBW: True PM: True SR: True IDC: True
+------------------------
