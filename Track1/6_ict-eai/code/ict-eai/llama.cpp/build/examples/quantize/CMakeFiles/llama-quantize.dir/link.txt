@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG "CMakeFiles/llama-quantize.dir/quantize.cpp.o" -o ../../bin/llama-quantize  -Wl,-rpath,/root/lqc/aicas/llama/llama.cpp/build/bin: ../../common/libcommon.a ../../bin/libllama.so ../../bin/libggml.so ../../bin/libggml-cpu.so ../../bin/libggml-base.so 

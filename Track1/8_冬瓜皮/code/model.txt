@@ -1,0 +1,1058 @@
+, Qwen2ForCausalLM(
+  (model): Qwen2Model(
+    (embed_tokens): Embedding(151936, 896)
+    (layers): ModuleList(
+      (0-23): 24 x Qwen2DecoderLayer(
+        (self_attn): Qwen2SdpaAttention(
+          (q_proj): Linear(in_features=896, out_features=896, bias=True)
+          (k_proj): Linear(in_features=896, out_features=128, bias=True)
+          (v_proj): Linear(in_features=896, out_features=128, bias=True)
+          (o_proj): Linear(in_features=896, out_features=896, bias=False)
+          (rotary_emb): Qwen2RotaryEmbedding()
+        )
+        (mlp): Qwen2MLP(
+          (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+          (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+          (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+        (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+      )
+    )
+    (norm): Qwen2RMSNorm((896,), eps=1e-06)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=896, out_features=151936, bias=False)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2ForCausalLM'>, None
+model, Qwen2Model(
+  (embed_tokens): Embedding(151936, 896)
+  (layers): ModuleList(
+    (0-23): 24 x Qwen2DecoderLayer(
+      (self_attn): Qwen2SdpaAttention(
+        (q_proj): Linear(in_features=896, out_features=896, bias=True)
+        (k_proj): Linear(in_features=896, out_features=128, bias=True)
+        (v_proj): Linear(in_features=896, out_features=128, bias=True)
+        (o_proj): Linear(in_features=896, out_features=896, bias=False)
+        (rotary_emb): Qwen2RotaryEmbedding()
+      )
+      (mlp): Qwen2MLP(
+        (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+        (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+        (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+        (act_fn): SiLU()
+      )
+      (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+      (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+    )
+  )
+  (norm): Qwen2RMSNorm((896,), eps=1e-06)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2Model'>, None
+model.embed_tokens, Embedding(151936, 896), <class 'torch.nn.modules.sparse.Embedding'>, torch.Size([151936, 896])
+model.layers, ModuleList(
+  (0-23): 24 x Qwen2DecoderLayer(
+    (self_attn): Qwen2SdpaAttention(
+      (q_proj): Linear(in_features=896, out_features=896, bias=True)
+      (k_proj): Linear(in_features=896, out_features=128, bias=True)
+      (v_proj): Linear(in_features=896, out_features=128, bias=True)
+      (o_proj): Linear(in_features=896, out_features=896, bias=False)
+      (rotary_emb): Qwen2RotaryEmbedding()
+    )
+    (mlp): Qwen2MLP(
+      (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+      (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+      (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+      (act_fn): SiLU()
+    )
+    (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+    (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  )
+), <class 'torch.nn.modules.container.ModuleList'>, None
+model.layers.0, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.0.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.0.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.0.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.0.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.0.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.0.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.0.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.0.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.0.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.0.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.0.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.0.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.0.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.1, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.1.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.1.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.1.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.1.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.1.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.1.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.1.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.1.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.1.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.1.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.1.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.1.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.1.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.2, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.2.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.2.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.2.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.2.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.2.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.2.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.2.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.2.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.2.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.2.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.2.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.2.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.2.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.3, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.3.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.3.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.3.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.3.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.3.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.3.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.3.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.3.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.3.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.3.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.3.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.3.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.3.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.4, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.4.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.4.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.4.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.4.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.4.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.4.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.4.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.4.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.4.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.4.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.4.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.4.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.4.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.5, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.5.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.5.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.5.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.5.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.5.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.5.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.5.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.5.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.5.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.5.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.5.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.5.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.5.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.6, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.6.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.6.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.6.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.6.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.6.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.6.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.6.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.6.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.6.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.6.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.6.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.6.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.6.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.7, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.7.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.7.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.7.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.7.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.7.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.7.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.7.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.7.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.7.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.7.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.7.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.7.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.7.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.8, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.8.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.8.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.8.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.8.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.8.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.8.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.8.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.8.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.8.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.8.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.8.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.8.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.8.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.9, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.9.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.9.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.9.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.9.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.9.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.9.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.9.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.9.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.9.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.9.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.9.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.9.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.9.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.10, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.10.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.10.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.10.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.10.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.10.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.10.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.10.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.10.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.10.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.10.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.10.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.10.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.10.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.11, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.11.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.11.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.11.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.11.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.11.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.11.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.11.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.11.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.11.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.11.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.11.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.11.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.11.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.12, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.12.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.12.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.12.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.12.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.12.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.12.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.12.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.12.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.12.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.12.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.12.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.12.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.12.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.13, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.13.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.13.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.13.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.13.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.13.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.13.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.13.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.13.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.13.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.13.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.13.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.13.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.13.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.14, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.14.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.14.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.14.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.14.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.14.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.14.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.14.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.14.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.14.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.14.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.14.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.14.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.14.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.15, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.15.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.15.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.15.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.15.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.15.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.15.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.15.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.15.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.15.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.15.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.15.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.15.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.15.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.16, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.16.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.16.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.16.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.16.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.16.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.16.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.16.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.16.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.16.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.16.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.16.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.16.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.16.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.17, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.17.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.17.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.17.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.17.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.17.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.17.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.17.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.17.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.17.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.17.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.17.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.17.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.17.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.18, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.18.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.18.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.18.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.18.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.18.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.18.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.18.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.18.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.18.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.18.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.18.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.18.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.18.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.19, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.19.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.19.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.19.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.19.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.19.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.19.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.19.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.19.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.19.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.19.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.19.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.19.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.19.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.20, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.20.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.20.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.20.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.20.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.20.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.20.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.20.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.20.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.20.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.20.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.20.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.20.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.20.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.21, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.21.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.21.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.21.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.21.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.21.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.21.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.21.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.21.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.21.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.21.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.21.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.21.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.21.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.22, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.22.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.22.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.22.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.22.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.22.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.22.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.22.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.22.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.22.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.22.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.22.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.22.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.22.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.23, Qwen2DecoderLayer(
+  (self_attn): Qwen2SdpaAttention(
+    (q_proj): Linear(in_features=896, out_features=896, bias=True)
+    (k_proj): Linear(in_features=896, out_features=128, bias=True)
+    (v_proj): Linear(in_features=896, out_features=128, bias=True)
+    (o_proj): Linear(in_features=896, out_features=896, bias=False)
+    (rotary_emb): Qwen2RotaryEmbedding()
+  )
+  (mlp): Qwen2MLP(
+    (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+    (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+    (act_fn): SiLU()
+  )
+  (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+  (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>, None
+model.layers.23.self_attn, Qwen2SdpaAttention(
+  (q_proj): Linear(in_features=896, out_features=896, bias=True)
+  (k_proj): Linear(in_features=896, out_features=128, bias=True)
+  (v_proj): Linear(in_features=896, out_features=128, bias=True)
+  (o_proj): Linear(in_features=896, out_features=896, bias=False)
+  (rotary_emb): Qwen2RotaryEmbedding()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2SdpaAttention'>, None
+model.layers.23.self_attn.q_proj, Linear(in_features=896, out_features=896, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.23.self_attn.k_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.23.self_attn.v_proj, Linear(in_features=896, out_features=128, bias=True), <class 'torch.nn.modules.linear.Linear'>, torch.Size([128, 896])
+model.layers.23.self_attn.o_proj, Linear(in_features=896, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 896])
+model.layers.23.self_attn.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+model.layers.23.mlp, Qwen2MLP(
+  (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+  (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+  (act_fn): SiLU()
+), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2MLP'>, None
+model.layers.23.mlp.gate_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.23.mlp.up_proj, Linear(in_features=896, out_features=4864, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([4864, 896])
+model.layers.23.mlp.down_proj, Linear(in_features=4864, out_features=896, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([896, 4864])
+model.layers.23.mlp.act_fn, SiLU(), <class 'torch.nn.modules.activation.SiLU'>, None
+model.layers.23.input_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.layers.23.post_attention_layernorm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.norm, Qwen2RMSNorm((896,), eps=1e-06), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RMSNorm'>, torch.Size([896])
+model.rotary_emb, Qwen2RotaryEmbedding(), <class 'transformers.models.qwen2.modeling_qwen2.Qwen2RotaryEmbedding'>, None
+lm_head, Linear(in_features=896, out_features=151936, bias=False), <class 'torch.nn.modules.linear.Linear'>, torch.Size([151936, 896])

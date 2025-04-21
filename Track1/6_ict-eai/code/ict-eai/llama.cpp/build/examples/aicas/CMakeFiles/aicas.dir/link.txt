@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/aicas.dir/aicas.cpp.o -o ../../bin/aicas  -Wl,-rpath,/root/lqc/aicas/llama/llama.cpp/build/bin: ../../common/libcommon.a ../../bin/libllama.so ../../bin/libggml.so ../../bin/libggml-cpu.so ../../bin/libggml-base.so 

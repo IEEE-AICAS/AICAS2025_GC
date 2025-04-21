@@ -1,0 +1,33 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /usr/local/cuda-11.8/bin/nvcc
+
+cflags = -pthread -B /home/gaoithe/.conda/envs/llm/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/gaoithe/.conda/envs/llm/include -I/home/gaoithe/.conda/envs/llm/include -fPIC -O2 -isystem /home/gaoithe/.conda/envs/llm/include -fPIC -I/home/gaoithe/.conda/envs/llm/lib/python3.9/site-packages/torch/include -I/home/gaoithe/.conda/envs/llm/lib/python3.9/site-packages/torch/include -I/home/gaoithe/.conda/envs/llm/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -I/home/gaoithe/.conda/envs/llm/lib/python3.9/site-packages/torch/include/TH -I/home/gaoithe/.conda/envs/llm/lib/python3.9/site-packages/torch/include/THC -I/usr/local/cuda-11.8/include -I/home/gaoithe/.conda/envs/llm/include/python3.9 -c
+post_cflags = -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=embedding_quant_cuda -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+cuda_cflags = -I/home/gaoithe/.conda/envs/llm/lib/python3.9/site-packages/torch/include -I/home/gaoithe/.conda/envs/llm/lib/python3.9/site-packages/torch/include -I/home/gaoithe/.conda/envs/llm/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -I/home/gaoithe/.conda/envs/llm/lib/python3.9/site-packages/torch/include/TH -I/home/gaoithe/.conda/envs/llm/lib/python3.9/site-packages/torch/include/THC -I/usr/local/cuda-11.8/include -I/home/gaoithe/.conda/envs/llm/include/python3.9 -c
+cuda_post_cflags = -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -arch=sm_86 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=embedding_quant_cuda -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+cuda_dlink_post_cflags = 
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  depfile = $out.d
+  deps = gcc
+  command = $nvcc --generate-dependencies-with-compile --dependency-output $out.d $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+
+
+
+
+build /home/gaoithe/project/python/AICAS-2025-code/embedding_quant_cuda/build/temp.linux-x86_64-cpython-39/binding.o: compile /home/gaoithe/project/python/AICAS-2025-code/embedding_quant_cuda/binding.cpp
+build /home/gaoithe/project/python/AICAS-2025-code/embedding_quant_cuda/build/temp.linux-x86_64-cpython-39/omse.o: cuda_compile /home/gaoithe/project/python/AICAS-2025-code/embedding_quant_cuda/omse.cu
+
+
+
+
+
+

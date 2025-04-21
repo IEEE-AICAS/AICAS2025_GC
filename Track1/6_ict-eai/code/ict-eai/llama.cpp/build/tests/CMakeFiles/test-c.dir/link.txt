@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG "CMakeFiles/test-c.dir/test-c.c.o" -o ../bin/test-c  -Wl,-rpath,/root/lqc/aicas/llama/llama.cpp/build/bin ../bin/libllama.so ../bin/libggml.so ../bin/libggml-cpu.so ../bin/libggml-base.so 

@@ -1,0 +1,7 @@
+CEATRG 模型和代码
+
+我们对推理框架除了参数之外，几乎没有进行优化，建议从 https://github.com/ggml-org/llama.cpp.git 拉取最新的代码进行测试。
+
+模型为 ggml-model-Q4_0.gguf.xz ，解压之后可以直接通过 llama.cpp 进行加载。
+
+qat 文件夹中的内容为QAT的相关配置文件。

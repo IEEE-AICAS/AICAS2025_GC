@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libggml.so -o ../../bin/libggml.so "CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o"  -Wl,-rpath,/root/lqc/aicas/llama/llama.cpp/build/bin: -ldl -lstdc++fs ../../bin/libggml-cpu.so ../../bin/libggml-base.so 

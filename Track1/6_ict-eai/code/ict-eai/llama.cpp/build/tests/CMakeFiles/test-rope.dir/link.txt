@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG "CMakeFiles/test-rope.dir/test-rope.cpp.o" "CMakeFiles/test-rope.dir/get-model.cpp.o" -o ../bin/test-rope  -Wl,-rpath,/root/lqc/aicas/llama/llama.cpp/build/bin: ../common/libcommon.a ../bin/libllama.so ../bin/libggml.so ../bin/libggml-cpu.so ../bin/libggml-base.so 

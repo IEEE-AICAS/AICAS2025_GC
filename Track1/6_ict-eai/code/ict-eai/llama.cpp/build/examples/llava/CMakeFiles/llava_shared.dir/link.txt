@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libllava_shared.so -o ../../bin/libllava_shared.so CMakeFiles/llava.dir/llava.cpp.o CMakeFiles/llava.dir/clip.cpp.o  -Wl,-rpath,/root/lqc/aicas/llama/llama.cpp/build/bin: ../../bin/libllama.so ../../bin/libggml.so ../../bin/libggml-cpu.so ../../bin/libggml-base.so 

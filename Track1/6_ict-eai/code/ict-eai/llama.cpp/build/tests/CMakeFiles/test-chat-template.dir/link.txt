@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG "CMakeFiles/test-chat-template.dir/test-chat-template.cpp.o" "CMakeFiles/test-chat-template.dir/get-model.cpp.o" -o ../bin/test-chat-template  -Wl,-rpath,/root/lqc/aicas/llama/llama.cpp/build/bin: ../common/libcommon.a ../bin/libllama.so ../bin/libggml.so ../bin/libggml-cpu.so ../bin/libggml-base.so 

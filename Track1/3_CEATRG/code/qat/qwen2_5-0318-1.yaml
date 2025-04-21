@@ -1,0 +1,117 @@
+# Config for multi-device QAT finetuning in qat_distributed.py
+# using a Llama3 8B Instruct model
+#
+# This config assumes that you've run the following command before launching
+# this run:
+#   tune download meta-llama/Meta-Llama-3-8B-Instruct --output-dir /tmp/Meta-Llama-3-8B-Instruct --hf-token <HF_TOKEN>
+#
+# To launch on 4 devices, run the following command from root:
+#   tune run --nproc_per_node 4 qat_distributed --config llama3/8B_qat_full
+#
+# You can add specific overrides through the command line. For example
+# to override the checkpointer directory while launching training
+# you can run:
+#   tune run --nproc_per_node 4 qat_distributed --config llama3/8B_qat_full checkpointer.checkpoint_dir=<YOUR_CHECKPOINT_DIR>
+
+# Tokenizer
+tokenizer:
+  _component_: torchtune.models.qwen2_5.qwen2_5_tokenizer
+  path: /data/AICAS2025/model/Qwen2.5-0.5B/vocab.json
+  merges_file: /data/AICAS2025/model/Qwen2.5-0.5B/merges.txt
+  max_seq_len: 2048
+
+# Dataset
+dataset:
+  - _component_: torchtune.datasets.alpaca_cleaned_dataset
+    packed: True  # True increases speed
+    num_proc: 8
+#  - _component_: torchtune.datasets.wikitext_dataset
+#    packed: True
+#    num_proc: 8
+#  - _component_: torchtune.datasets.text_completion_dataset
+#    source: allenai/c4
+#    column: text
+#    data_dir: realnewslike
+#    packed: True
+#    split: train
+#    num_proc: 8
+
+seed: null
+shuffle: True
+
+# Model Arguments
+model:
+  _component_: torchtune.models.qwen2_5.qwen2_5_0_5b
+
+checkpointer:
+  _component_: torchtune.training.FullModelHFCheckpointer
+  checkpoint_dir: /data/AICAS2025/model/Qwen2.5-0.5B
+  checkpoint_files: [model.safetensors]
+  recipe_checkpoint: null
+  output_dir: /data/AICAS2025/qat/new/output-Int4-0318-1
+  model_type: QWEN2
+resume_from_checkpoint: False
+
+# Fine-tuning arguments
+batch_size: 3
+epochs: 4
+max_steps_per_epoch: 50000
+compile: False  # pytorch compile, set to true for better perf/memory
+optimizer_in_bwd: True  # True saves memory. Requires gradient_accumulation_steps=1
+fake_quant_after_n_steps: 500
+
+# QAT arguments
+quantizer:
+  _component_: torchtune.training.quantization.Int4WeightOnlyQATQuantizer
+  groupsize: 32
+
+optimizer:
+  _component_: torch.optim.AdamW
+  lr: 2e-5
+  fused: True
+loss:
+  _component_: torchtune.modules.loss.CEWithChunkedOutputLoss
+gradient_accumulation_steps: 1  # Use to increase virtual batch size
+
+# Training env
+device: cuda
+
+# Memory management
+enable_activation_checkpointing: False  # True reduces memory
+memory_efficient_fsdp_wrap: False
+
+# Reduced precision
+dtype: bf16
+
+# Logging
+metric_logger:
+  _component_: torchtune.training.metric_logging.TensorBoardLogger
+  log_dir: ${output_dir}
+output_dir: /data/AICAS2025/qat/new/_log
+log_every_n_steps: 1
+log_peak_memory_stats: True
+
+# Profiler (disabled)
+profiler:
+  _component_: torchtune.training.setup_torch_profiler
+  enabled: False
+
+  #Output directory of trace artifacts
+  output_dir: ${output_dir}/profiling_outputs
+
+  #`torch.profiler.ProfilerActivity` types to trace
+  cpu: True
+  cuda: True
+
+  #trace options passed to `torch.profiler.profile`
+  profile_memory: False
+  with_stack: False
+  record_shapes: True
+  with_flops: False
+
+  # `torch.profiler.schedule` options:
+  # wait_steps -> wait, warmup_steps -> warmup, active_steps -> active, num_cycles -> repeat
+  wait_steps: 5
+  warmup_steps: 3
+  active_steps: 2
+  num_cycles: 1

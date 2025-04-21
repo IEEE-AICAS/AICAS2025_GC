@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG "CMakeFiles/llama-llava-clip-quantize-cli.dir/clip-quantize-cli.cpp.o" CMakeFiles/llava.dir/llava.cpp.o CMakeFiles/llava.dir/clip.cpp.o -o ../../bin/llama-llava-clip-quantize-cli  -Wl,-rpath,/root/lqc/aicas/llama/llama.cpp/build/bin: ../../common/libcommon.a ../../bin/libllama.so ../../bin/libggml.so ../../bin/libggml-cpu.so ../../bin/libggml-base.so 
