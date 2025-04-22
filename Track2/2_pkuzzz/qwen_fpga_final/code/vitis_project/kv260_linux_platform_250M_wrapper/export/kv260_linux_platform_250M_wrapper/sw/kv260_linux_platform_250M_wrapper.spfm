@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="kv260_linux_platform_250M_wrapper"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+kv260_linux_platform_250M_wrapper
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="kv260_linux_platform_250M_wrapper">
+        <sdx:configuration sdx:name="kv260_linux_platform_250M_wrapper"
+                           sdx:displayName="kv260_linux_platform_250M_wrapper"
+                           sdx:defaultProcessorGroup="linux_psu_cortexa53"
+                           sdx:runtimes="ocl">
+            <sdx:description>kv260_linux_platform_250M_wrapper</sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="kv260_linux_platform_250M_wrapper/boot/linux.bif"
+                            sdx:imageData="kv260_linux_platform_250M_wrapper/linux_psu_cortexa53/image"
+                            sdx:bootmode="sd"
+                            sdx:mountPath="/mnt"
+                            sdx:readme="kv260_linux_platform_250M_wrapper/boot/generic.readme"
+                            sdx:qemuArguments="kv260_linux_platform_250M_wrapper/qemu/pmu_args.txt:kv260_linux_platform_250M_wrapper/qemu/qemu_args.txt"
+                            />
+                <sdx:image sdx:name="linux_psu_cortexa53"
+                            sdx:bif="kv260_linux_platform_250M_wrapper/boot/linux.bif"
+                            sdx:imageData="kv260_linux_platform_250M_wrapper/linux_psu_cortexa53/image"
+                            sdx:mountPath="/mnt"
+                            sdx:readme="kv260_linux_platform_250M_wrapper/boot/generic.readme"
+                            sdx:qemuArguments="kv260_linux_platform_250M_wrapper/linux_psu_cortexa53/qemu/pmu_args.txt:kv260_linux_platform_250M_wrapper/linux_psu_cortexa53/qemu/qemu_args.txt"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="linux_psu_cortexa53"
+                                sdx:displayName="linux_psu_cortexa53"
+                                sdx:cpuType="cortex-a53">
+                <sdx:os sdx:name="linux"
+                        sdx:displayName="linux"
+                        sdx:sysRoot="kv260_linux_platform_250M_wrapper/linux_psu_cortexa53/sysroot/cortexa72-cortexa53-xilinx-linux"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>
