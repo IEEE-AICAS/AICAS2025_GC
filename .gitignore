@@ -15,3 +15,6 @@ Track2/8_json_team/model/model.bin
 Track2/8_json_team/pynq/model/model.bin
 Track2/9_sg_edge_ai_acceleration/code/exe_submit/params_awq64/fullmodel_combined.bin
 Track2/9_sg_edge_ai_acceleration/code/exe_submit/params/fullmodel_combined.bin
+Track2/10_HUST_Ody/code/Qwen2.5-0.5B-INT8/Qwen2.5-0.5B-Instruct-INT8.safetensors
+Track2/10_HUST_Ody/code/Qwen2.5-0.5B-INT8/Qwen2.5-0.5B-Instruct.bin
+Track2/10_HUST_Ody/code/Qwen2.5-0.5B-INT8/model.safetensors
