@@ -3,3 +3,4 @@ Track2/4_HKUSTGZ_MICS/code/HKUSTGZ-MICS/Qwen2.5-0.5B-Instruct-runq.bin
 /Track2/4_HKUSTGZ_MICS/code/Prefill_AICAS/Prefill_AICAS.runs/impl_1
 /Track2/4_HKUSTGZ_MICS/code/Prefill_AICAS
 /Track2/6_post_moore/code/AICAS_T2_result/Q8_0
+/Track2/6_post_moore/code/AICAS_T2_result/KV260/vitis_project/accelerate_wrapper
