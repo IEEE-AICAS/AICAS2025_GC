@@ -1,0 +1,110 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "6 2 5 1",
+    "file": "awq_macro.cpp",
+    "fileloc": 264,
+    "instructions": 87,
+    "loads": {
+      "L": 32
+    },
+    "name": "Macro_MAC_Acc4_top",
+    "total_instructions": 6464
+  },
+  "1": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "awq_macro.cpp",
+    "fileloc": 0,
+    "instructions": 96,
+    "loads": {
+      "L": 4
+    },
+    "name": "_Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t_VITIS_LOOP_338_4",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 96
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "awq_macro.cpp",
+    "fileloc": 0,
+    "instructions": 34,
+    "name": "_Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t_",
+    "stores": {
+      "L": 32
+    },
+    "total_instructions": 34
+  },
+  "3": {
+    "basicblocks": 33,
+    "calls": "7 7 7 7 7 7 7 7",
+    "file": "awq_macro.cpp",
+    "fileloc": 221,
+    "instructions": 342,
+    "loads": {
+      "L": 72
+    },
+    "name": "compute_mac",
+    "stores": {
+      "L": 72
+    },
+    "total_instructions": 1430
+  },
+  "4": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "awq_macro.cpp",
+    "fileloc": 108,
+    "instructions": 104,
+    "loads": {
+      "L": 1
+    },
+    "name": "read_xi_to_stream",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 104
+  },
+  "5": {
+    "basicblocks": 44,
+    "calls": "4 3 3 3 3",
+    "file": "awq_macro.cpp",
+    "fileloc": 0,
+    "instructions": 407,
+    "loads": {
+      "L": 4
+    },
+    "name": "_Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t_for.cond28",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 6231
+  },
+  "6": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "awq_macro.cpp",
+    "fileloc": 0,
+    "instructions": 16,
+    "name": "_Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t_for.inc",
+    "total_instructions": 16
+  },
+  "7": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "awq_macro.cpp",
+    "fileloc": 187,
+    "instructions": 136,
+    "loads": {
+      "L": 10
+    },
+    "name": "compute_mac_sub",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 136
+  }
+}

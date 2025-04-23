@@ -1,0 +1,61 @@
+{
+  "0": {
+    "basicblocks": 31,
+    "calls": "1 3 3 3 3",
+    "file": "awq_macro.cpp",
+    "fileloc": 264,
+    "instructions": 782,
+    "loads": {
+      "L": 8,
+      "T": 48
+    },
+    "name": "Macro_MAC_Acc4_top",
+    "stores": {
+      "L": 76,
+      "T": 4
+    },
+    "total_instructions": 6931
+  },
+  "1": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "awq_macro.cpp",
+    "fileloc": 108,
+    "instructions": 77,
+    "loads": {
+      "L": 4
+    },
+    "name": "read_xi_to_stream",
+    "total_instructions": 77
+  },
+  "2": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "awq_macro.cpp",
+    "fileloc": 187,
+    "instructions": 177,
+    "loads": {
+      "L": 24
+    },
+    "name": "compute_mac_sub",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 177
+  },
+  "3": {
+    "basicblocks": 5,
+    "calls": "2 2 2 2 2 2 2 2",
+    "file": "awq_macro.cpp",
+    "fileloc": 221,
+    "instructions": 102,
+    "loads": {
+      "L": 9
+    },
+    "name": "compute_mac",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 1518
+  }
+}

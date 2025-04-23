@@ -1,0 +1,60 @@
+12 warnings and 3 errors generated.
+Error while processing /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp.
+Trying to resolve conflict: The new insertion has the same insert location as an existing replacement.
+New replacement: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp: 1729500:+0:"
+#pragma HLS aggregate variable = xi
+"
+Existing replacement: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp: 1729500:+0:"
+#pragma HLS aggregate variable = out
+"
+Trying to resolve conflict: The new insertion has the same insert location as an existing replacement.
+New replacement: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp: 1729500:+0:"
+#pragma HLS aggregate variable = mro0
+"
+Existing replacement: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp: 1729500:+0:"
+#pragma HLS aggregate variable = out
+
+#pragma HLS aggregate variable = xi
+"
+Trying to resolve conflict: The new insertion has the same insert location as an existing replacement.
+New replacement: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp: 1729500:+0:"
+#pragma HLS aggregate variable = mro1
+"
+Existing replacement: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp: 1729500:+0:"
+#pragma HLS aggregate variable = out
+
+#pragma HLS aggregate variable = xi
+
+#pragma HLS aggregate variable = mro0
+"
+Trying to resolve conflict: The new insertion has the same insert location as an existing replacement.
+New replacement: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp: 1729500:+0:"
+#pragma HLS aggregate variable = mro2
+"
+Existing replacement: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp: 1729500:+0:"
+#pragma HLS aggregate variable = out
+
+#pragma HLS aggregate variable = xi
+
+#pragma HLS aggregate variable = mro0
+
+#pragma HLS aggregate variable = mro1
+"
+Trying to resolve conflict: The new insertion has the same insert location as an existing replacement.
+New replacement: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp: 1729500:+0:"
+#pragma HLS aggregate variable = mro3
+"
+Existing replacement: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp: 1729500:+0:"
+#pragma HLS aggregate variable = out
+
+#pragma HLS aggregate variable = xi
+
+#pragma HLS aggregate variable = mro0
+
+#pragma HLS aggregate variable = mro1
+
+#pragma HLS aggregate variable = mro2
+"
+clang-tidy applied 58 of 58 suggested fixes.
+Suppressed 87 warnings (87 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

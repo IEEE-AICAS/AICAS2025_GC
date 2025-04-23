@@ -1,0 +1,432 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:282:51" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:283:51" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:284:51" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:285:51" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:286:48" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:287:48" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:288:48" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:289:48" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:316:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:104:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pragma" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=this" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:128:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vector&lt;T, N&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:144:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vector&lt;T, N&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:169:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator++" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:170:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator--" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:198:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator+=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:199:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator-=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:200:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator*=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:201:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator/=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:202:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator%=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:203:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator&amp;=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:204:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator|=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:205:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator^=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:206:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator&lt;&lt;=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:207:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator&gt;&gt;=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:222:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="reduce_add" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:223:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="reduce_mult" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:224:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="reduce_and" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:225:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="reduce_or" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:226:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="reduce_xor" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:256:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator&lt;" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:257:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator&lt;=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:258:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator==" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:259:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator!=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:260:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator&gt;=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h:261:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:97:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="split_uint32_to_uint4_hls" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:117:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_xi_to_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:120:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_xi_to_stream" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:137:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_mro_to_components" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:155:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_mro_to_components" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:158:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_mro_to_components" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:195:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac_sub" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:198:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac_sub" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=w_uint4 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:206:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac_sub" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=scaled_xi complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:208:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac_sub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:214:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac_sub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:229:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=pout_temp dim=0 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:231:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:236:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:237:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=2" ARG_PragmaType="latency" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:241:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=stage1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:242:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=stage1 op=add impl=fabric" ARG_PragmaType="bind_op" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:245:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=stage2 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:246:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=stage2 op=add impl=dsp" ARG_PragmaType="bind_op" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:249:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_mac" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=final_sum op=add impl=dsp" ARG_PragmaType="bind_op" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:273:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = out" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:275:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = xi" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:277:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = mro0" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:279:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = mro1" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:281:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = mro2" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:283:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = mro3" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/script/csynth.tcl:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=Macro_MAC_Acc4_top" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:303:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=qzeros0 complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:304:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=qzeros1 complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:305:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=qzeros2 complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:306:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=qzeros3 complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:307:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=qscale0 complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:308:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=qscale1 complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:309:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=qscale2 complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:310:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=qscale3 complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:311:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=pout_local0 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:312:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=pout_local1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:313:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=pout_local2 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:314:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=pout_local3 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:316:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:325:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=14 max=14" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:339:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Macro_MAC_Acc4_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="src/awq_macro.cpp:144:5" msg_body="Inlining function 'split_uint32_to_uint4_hls(ap_uint&lt;4&gt;*, ap_uint&lt;32&gt;)' into 'read_mro_to_components(hls::vector&lt;unsigned int, 4ul&gt;*, ap_uint&lt;4&gt;*, float*, hls::vector&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;&amp;, unsigned short)'">
+        <args Callee="split_uint32_to_uint4_hls(ap_uint&lt;4&gt;*, ap_uint&lt;32&gt;)" Callee-DebugLoc="File src/awq_macro.cpp Line 96 Column 0" Caller="read_mro_to_components(hls::vector&lt;unsigned int, 4ul&gt;*, ap_uint&lt;4&gt;*, float*, hls::vector&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;&amp;, unsigned short)" Caller-DebugLoc="File src/awq_macro.cpp Line 136 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="src/awq_macro.cpp:201:2" msg_body="Inlining function 'split_uint32_to_uint4_hls(ap_uint&lt;4&gt;*, ap_uint&lt;32&gt;)' into 'compute_mac_sub(hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;unsigned int, 0&gt;&amp;, ap_uint&lt;4&gt;*, float*, float*)'">
+        <args Callee="split_uint32_to_uint4_hls(ap_uint&lt;4&gt;*, ap_uint&lt;32&gt;)" Callee-DebugLoc="File src/awq_macro.cpp Line 96 Column 0" Caller="compute_mac_sub(hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;unsigned int, 0&gt;&amp;, ap_uint&lt;4&gt;*, float*, float*)" Caller-DebugLoc="File src/awq_macro.cpp Line 193 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="src/awq_macro.cpp:327:9" msg_body="Inlining function 'read_mro_to_components(hls::vector&lt;unsigned int, 4ul&gt;*, ap_uint&lt;4&gt;*, float*, hls::vector&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;&amp;, unsigned short)' into 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)'">
+        <args Callee="read_mro_to_components(hls::vector&lt;unsigned int, 4ul&gt;*, ap_uint&lt;4&gt;*, float*, hls::vector&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;&amp;, unsigned short)" Callee-DebugLoc="File src/awq_macro.cpp Line 136 Column 0" Caller="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)" Caller-DebugLoc="File src/awq_macro.cpp Line 272 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/awq_macro.cpp:350:31" msg_body="Loop 'VITIS_LOOP_350_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_350_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/awq_macro.cpp:157:27" msg_body="Loop 'VITIS_LOOP_157_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_157_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/awq_macro.cpp:207:16" msg_body="Loop 'lp_precompute' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="lp_precompute"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/awq_macro.cpp:213:22" msg_body="Loop 'lp_cmp_mac_a' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="lp_cmp_mac_a"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/awq_macro.cpp:119:27" msg_body="Loop 'VITIS_LOOP_119_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_119_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Unrolling loop 'VITIS_LOOP_350_5' (src/awq_macro.cpp:350:31) in function 'Macro_MAC_Acc4_top' completely with a factor of 4">
+        <args Factor="4" LoopLoc="src/awq_macro.cpp:350:31" LoopName="VITIS_LOOP_350_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Unrolling loop 'VITIS_LOOP_157_3' (src/awq_macro.cpp:157:27) in function 'Macro_MAC_Acc4_top' completely with a factor of 4">
+        <args Factor="4" LoopLoc="src/awq_macro.cpp:157:27" LoopName="VITIS_LOOP_157_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/awq_macro.cpp:227:0" msg_body="Unrolling loop 'VITIS_LOOP_230_1' (src/awq_macro.cpp:230:20) in function 'compute_mac' completely with a factor of 8">
+        <args Factor="8" LoopLoc="src/awq_macro.cpp:230:20" LoopName="VITIS_LOOP_230_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/awq_macro.cpp:193:0" msg_body="Unrolling loop 'lp_precompute' (src/awq_macro.cpp:207:16) in function 'compute_mac_sub' completely with a factor of 8">
+        <args Factor="8" LoopLoc="src/awq_macro.cpp:207:16" LoopName="lp_precompute"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/awq_macro.cpp:193:0" msg_body="Unrolling loop 'lp_cmp_mac_a' (src/awq_macro.cpp:213:22) in function 'compute_mac_sub' completely with a factor of 8">
+        <args Factor="8" LoopLoc="src/awq_macro.cpp:213:22" LoopName="lp_cmp_mac_a"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/awq_macro.cpp:114:0" msg_body="Unrolling loop 'VITIS_LOOP_119_2' (src/awq_macro.cpp:119:27) in function 'read_xi_to_stream' completely with a factor of 4">
+        <args Factor="4" LoopLoc="src/awq_macro.cpp:119:27" LoopName="VITIS_LOOP_119_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-366" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:160:13" msg_body="Duplicating function 'std::array&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::operator[](unsigned long)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.">
+        <args Name="std::array&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::operator[](unsigned long)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-366" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:16" msg_body="Duplicating function 'std::__array_traits&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::_S_ref(hls::stream&lt;unsigned int, 0&gt; const (&amp;) [8], unsigned long)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.">
+        <args Name="std::__array_traits&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::_S_ref(hls::stream&lt;unsigned int, 0&gt; const (&amp;) [8], unsigned long)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-366" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:232:18" msg_body="Duplicating function 'std::array&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::operator[](unsigned long)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.">
+        <args Name="std::array&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::operator[](unsigned long)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-366" msg_severity="WARNING" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:16" msg_body="Duplicating function 'std::__array_traits&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::_S_ref(hls::stream&lt;float, 0&gt; const (&amp;) [8], unsigned long)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.">
+        <args Name="std::__array_traits&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::_S_ref(hls::stream&lt;float, 0&gt; const (&amp;) [8], unsigned long)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0" msg_body="Inlining function 'std::__array_traits&lt;float, 4ul&gt;::_S_ref(float const (&amp;) [4], unsigned long)' into 'std::array&lt;float, 4ul&gt;::operator[](unsigned long)'">
+        <args Callee="std::__array_traits&lt;float, 4ul&gt;::_S_ref(float const (&amp;) [4], unsigned long)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 56 Column 0" Caller="std::array&lt;float, 4ul&gt;::operator[](unsigned long)" Caller-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0" msg_body="Inlining function 'std::__array_traits&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::_S_ref(hls::stream&lt;float, 0&gt; const (&amp;) [8], unsigned long) (.31)' into 'std::array&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::operator[](unsigned long)'">
+        <args Callee="std::__array_traits&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::_S_ref(hls::stream&lt;float, 0&gt; const (&amp;) [8], unsigned long) (.31)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 56 Column 0" Caller="std::array&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::operator[](unsigned long)" Caller-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/awq_macro.cpp:114:0" msg_body="Inlining function 'std::array&lt;float, 4ul&gt;::operator[](unsigned long)' into 'read_xi_to_stream(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, unsigned short)'">
+        <args Callee="std::array&lt;float, 4ul&gt;::operator[](unsigned long)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0" Caller="read_xi_to_stream(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, unsigned short)" Caller-DebugLoc="File src/awq_macro.cpp Line 114 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/awq_macro.cpp:114:0" msg_body="Inlining function 'std::array&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::operator[](unsigned long)' into 'read_xi_to_stream(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, unsigned short)'">
+        <args Callee="std::array&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::operator[](unsigned long)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0" Caller="read_xi_to_stream(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, unsigned short)" Caller-DebugLoc="File src/awq_macro.cpp Line 114 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0" msg_body="Inlining function 'std::__array_traits&lt;unsigned int, 4ul&gt;::_S_ref(unsigned int const (&amp;) [4], unsigned long)' into 'std::array&lt;unsigned int, 4ul&gt;::operator[](unsigned long)'">
+        <args Callee="std::__array_traits&lt;unsigned int, 4ul&gt;::_S_ref(unsigned int const (&amp;) [4], unsigned long)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 56 Column 0" Caller="std::array&lt;unsigned int, 4ul&gt;::operator[](unsigned long)" Caller-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0" msg_body="Inlining function 'std::__array_traits&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::_S_ref(hls::stream&lt;unsigned int, 0&gt; const (&amp;) [8], unsigned long)' into 'std::array&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::operator[](unsigned long) (.28)'">
+        <args Callee="std::__array_traits&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::_S_ref(hls::stream&lt;unsigned int, 0&gt; const (&amp;) [8], unsigned long)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 56 Column 0" Caller="std::array&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::operator[](unsigned long) (.28)" Caller-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0" msg_body="Inlining function 'std::__array_traits&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::_S_ref(hls::stream&lt;float, 0&gt; const (&amp;) [8], unsigned long)' into 'std::array&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::operator[](unsigned long) (.30)'">
+        <args Callee="std::__array_traits&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::_S_ref(hls::stream&lt;float, 0&gt; const (&amp;) [8], unsigned long)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 56 Column 0" Caller="std::array&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::operator[](unsigned long) (.30)" Caller-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0" msg_body="Inlining function 'std::__array_traits&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::_S_ref(hls::stream&lt;unsigned int, 0&gt; const (&amp;) [8], unsigned long) (.29)' into 'std::array&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::operator[](unsigned long)'">
+        <args Callee="std::__array_traits&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::_S_ref(hls::stream&lt;unsigned int, 0&gt; const (&amp;) [8], unsigned long) (.29)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 56 Column 0" Caller="std::array&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::operator[](unsigned long)" Caller-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/awq_macro.cpp:227:0" msg_body="Inlining function 'std::array&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::operator[](unsigned long) (.30)' into 'compute_mac(hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;&amp;, ap_uint&lt;4&gt;*, float*, float*)'">
+        <args Callee="std::array&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;::operator[](unsigned long) (.30)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0" Caller="compute_mac(hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;&amp;, ap_uint&lt;4&gt;*, float*, float*)" Caller-DebugLoc="File src/awq_macro.cpp Line 227 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/awq_macro.cpp:227:0" msg_body="Inlining function 'std::array&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::operator[](unsigned long)' into 'compute_mac(hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;&amp;, ap_uint&lt;4&gt;*, float*, float*)'">
+        <args Callee="std::array&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::operator[](unsigned long)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0" Caller="compute_mac(hls::vector&lt;hls::stream&lt;float, 0&gt;, 8ul&gt;&amp;, hls::vector&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;&amp;, ap_uint&lt;4&gt;*, float*, float*)" Caller-DebugLoc="File src/awq_macro.cpp Line 227 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Inlining function 'std::array&lt;unsigned int, 4ul&gt;::operator[](unsigned long)' into 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)'">
+        <args Callee="std::array&lt;unsigned int, 4ul&gt;::operator[](unsigned long)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0" Caller="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)" Caller-DebugLoc="File src/awq_macro.cpp Line 272 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Inlining function 'half_to_float(unsigned short)' into 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)'">
+        <args Callee="half_to_float(unsigned short)" Callee-DebugLoc="File src/awq_macro.cpp Line 16 Column 0" Caller="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)" Caller-DebugLoc="File src/awq_macro.cpp Line 272 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Inlining function 'std::array&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::operator[](unsigned long) (.28)' into 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)'">
+        <args Callee="std::array&lt;hls::stream&lt;unsigned int, 0&gt;, 8ul&gt;::operator[](unsigned long) (.28)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0" Caller="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)" Caller-DebugLoc="File src/awq_macro.cpp Line 272 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Inlining function 'std::array&lt;float, 4ul&gt;::operator[](unsigned long)' into 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)'">
+        <args Callee="std::array&lt;float, 4ul&gt;::operator[](unsigned long)" Callee-DebugLoc="File /home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0" Caller="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)" Caller-DebugLoc="File src/awq_macro.cpp Line 272 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:351:26" msg_body="The program may have out of bound array access on variable 'arrayidx77'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:351:26" msg_body="The program may have out of bound array access on variable 'arrayidx77.1'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:351:26" msg_body="The program may have out of bound array access on variable 'arrayidx77.2'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:351:26" msg_body="The program may have out of bound array access on variable 'arrayidx77.3'"/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:228:11" msg_body="Applying array_partition to 'pout_temp': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="pout_temp"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:291:16" msg_body="Applying array_partition to 'qzeros0': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="qzeros0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:292:16" msg_body="Applying array_partition to 'qzeros1': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="qzeros1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:293:16" msg_body="Applying array_partition to 'qzeros2': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="qzeros2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:294:16" msg_body="Applying array_partition to 'qzeros3': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="qzeros3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:295:11" msg_body="Applying array_partition to 'qscale0': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="qscale0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:296:11" msg_body="Applying array_partition to 'qscale1': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="qscale1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:297:11" msg_body="Applying array_partition to 'qscale2': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="qscale2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:298:11" msg_body="Applying array_partition to 'qscale3': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="qscale3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:299:11" msg_body="Applying array_partition to 'pout_local0': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="pout_local0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:300:11" msg_body="Applying array_partition to 'pout_local1': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="pout_local1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:301:11" msg_body="Applying array_partition to 'pout_local2': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="pout_local2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/awq_macro.cpp:302:11" msg_body="Applying array_partition to 'pout_local3': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="pout_local3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating scalar variable 'out' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="scalar" Name="out"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating scalar variable 'xi' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="scalar" Name="xi"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating scalar variable 'mro0' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="scalar" Name="mro0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating scalar variable 'mro1' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="scalar" Name="mro1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating scalar variable 'mro2' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="scalar" Name="mro2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating scalar variable 'mro3' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="scalar" Name="mro3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/awq_macro.cpp:140:30" msg_body="Aggregating scalar variable 'mro_vec1.i' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="scalar" Name="mro_vec1.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/awq_macro.cpp:140:30" msg_body="Aggregating scalar variable 'mro_vec1.i27' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="scalar" Name="mro_vec1.i27"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/awq_macro.cpp:140:30" msg_body="Aggregating scalar variable 'mro_vec1.i222' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="scalar" Name="mro_vec1.i222"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/awq_macro.cpp:140:30" msg_body="Aggregating scalar variable 'mro_vec1.i417' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="scalar" Name="mro_vec1.i417"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:118:29" msg_body="Ignore address on register port 'xi0'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:139:38" msg_body="Ignore address on register port 'mro0'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:140:41" msg_body="Ignore address on register port 'mro0'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:156:40" msg_body="Ignore address on register port 'mro0'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:139:38" msg_body="Ignore address on register port 'mro1'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:140:41" msg_body="Ignore address on register port 'mro1'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:156:40" msg_body="Ignore address on register port 'mro1'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:139:38" msg_body="Ignore address on register port 'mro2'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:140:41" msg_body="Ignore address on register port 'mro2'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:156:40" msg_body="Ignore address on register port 'mro2'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:139:38" msg_body="Ignore address on register port 'mro3'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:140:41" msg_body="Ignore address on register port 'mro3'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:156:40" msg_body="Ignore address on register port 'mro3'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="src/awq_macro.cpp:353:26" msg_body="Ignore address on register port 'out'"/>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-282" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating variable 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::xi0_s' with 'compact=none' mode">
+        <args Name="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::xi0_s"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-282" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating variable 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::xi1_s' with 'compact=none' mode">
+        <args Name="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::xi1_s"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-282" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating variable 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::xi2_s' with 'compact=none' mode">
+        <args Name="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::xi2_s"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-282" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating variable 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::xi3_s' with 'compact=none' mode">
+        <args Name="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::xi3_s"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-282" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating variable 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::mro0_s' with 'compact=none' mode">
+        <args Name="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::mro0_s"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-282" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating variable 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::mro1_s' with 'compact=none' mode">
+        <args Name="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::mro1_s"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-282" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating variable 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::mro2_s' with 'compact=none' mode">
+        <args Name="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::mro2_s"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-282" msg_severity="INFO" msg_loc="src/awq_macro.cpp:272:0" msg_body="Aggregating variable 'Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::mro3_s' with 'compact=none' mode">
+        <args Name="Macro_MAC_Acc4_top(hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;float, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, hls::vector&lt;unsigned int, 4ul&gt;*, unsigned short)::mro3_s"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-455" msg_severity="INFO" msg_loc="src/awq_macro.cpp:318:20" msg_body="Changing loop 'Loop_VITIS_LOOP_318_1_proc' (src/awq_macro.cpp:318:20) to a process function for dataflow in function 'Macro_MAC_Acc4_top'">
+        <args LoopLoc="src/awq_macro.cpp:318:20" LoopName="Loop_VITIS_LOOP_318_1_proc" Name="Macro_MAC_Acc4_top"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-455" msg_severity="INFO" msg_loc="src/awq_macro.cpp:324:23" msg_body="Changing loop 'Loop_VITIS_LOOP_324_2_proc' (src/awq_macro.cpp:324:23) to a process function for dataflow in function 'Macro_MAC_Acc4_top'">
+        <args LoopLoc="src/awq_macro.cpp:324:23" LoopName="Loop_VITIS_LOOP_324_2_proc" Name="Macro_MAC_Acc4_top"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-455" msg_severity="INFO" msg_loc="src/awq_macro.cpp:337:23" msg_body="Changing loop 'Loop_VITIS_LOOP_337_3_proc' (src/awq_macro.cpp:337:23) to a process function for dataflow in function 'Macro_MAC_Acc4_top'">
+        <args LoopLoc="src/awq_macro.cpp:337:23" LoopName="Loop_VITIS_LOOP_337_3_proc" Name="Macro_MAC_Acc4_top"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

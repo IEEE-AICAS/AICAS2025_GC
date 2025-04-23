@@ -1,0 +1,163 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'Macro_MAC_Acc4_top'" level="0">
+<item name = "Date">Fri Mar 28 16:44:21 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">prjhls_awqmul</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 3.520 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2742, 2742, 13.710 us, 13.710 us, 2732, 2732, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="entry_proc_U0">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="Loop_VITIS_LOOP_324_2_proc_U0">Loop_VITIS_LOOP_324_2_proc, 2731, 2731, 13.655 us, 13.655 us, 2731, 2731, no</column>
+<column name="Loop_VITIS_LOOP_337_3_proc_U0">Loop_VITIS_LOOP_337_3_proc, 9, 9, 45.000 ns, 45.000 ns, 8, 8, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 6, -</column>
+<column name="FIFO">-, -, 3762, 2546, -</column>
+<column name="Instance">-, 384, 106642, 93992, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 9, -</column>
+<column name="Register">-, -, 1, -, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">0, 30, 47, 82, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="Loop_VITIS_LOOP_324_2_proc_U0">Loop_VITIS_LOOP_324_2_proc, 0, 384, 106497, 93138, 0</column>
+<column name="Loop_VITIS_LOOP_337_3_proc_U0">Loop_VITIS_LOOP_337_3_proc, 0, 0, 142, 780, 0</column>
+<column name="entry_proc_U0">entry_proc, 0, 0, 3, 74, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="mro0_c_U">0, 99, 0, -, 3, 128, 384</column>
+<column name="mro1_c_U">0, 99, 0, -, 3, 128, 384</column>
+<column name="mro2_c_U">0, 99, 0, -, 3, 128, 384</column>
+<column name="mro3_c_U">0, 99, 0, -, 3, 128, 384</column>
+<column name="pout_local0_1_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local0_2_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local0_3_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local0_4_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local0_5_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local0_6_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local0_7_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local0_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local1_1_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local1_2_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local1_3_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local1_4_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local1_5_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local1_6_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local1_7_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local1_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local2_1_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local2_2_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local2_3_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local2_4_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local2_5_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local2_6_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local2_7_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local2_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local3_1_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local3_2_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local3_3_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local3_4_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local3_5_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local3_6_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local3_7_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pout_local3_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="row_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="xi_c_U">0, 99, 0, -, 3, 128, 384</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_channel_done_pout_local3_7">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_pout_local3_7">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_sync_reg_channel_write_pout_local3_7">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_sync_reg_channel_write_pout_local3_7">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="out_r">out, 128, ap_vld, out_r, pointer</column>
+<column name="out_r_ap_vld">out, 1, ap_vld, out_r, pointer</column>
+<column name="xi">in, 128, ap_none, xi, pointer</column>
+<column name="mro0">in, 128, ap_none, mro0, pointer</column>
+<column name="mro1">in, 128, ap_none, mro1, pointer</column>
+<column name="mro2">in, 128, ap_none, mro2, pointer</column>
+<column name="mro3">in, 128, ap_none, mro3, pointer</column>
+<column name="row">in, 16, ap_none, row, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, Macro_MAC_Acc4_top, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, Macro_MAC_Acc4_top, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, Macro_MAC_Acc4_top, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, Macro_MAC_Acc4_top, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, Macro_MAC_Acc4_top, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, Macro_MAC_Acc4_top, return value</column>
+</table>
+</item>
+</section>
+</profile>

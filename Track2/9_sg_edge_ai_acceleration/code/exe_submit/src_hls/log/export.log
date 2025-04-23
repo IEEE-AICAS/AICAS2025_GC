@@ -1,0 +1,72 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2.1 (64-bit)
+  **** SW Build 5238294 on Nov  8 2024
+  **** IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+  **** SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+  **** Start of session at: Tue Feb  4 01:49:35 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/App/EDA/Xilinx/Vitis/2024.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'cad' on host 'openeda' (Linux_x86_64 version 6.8.0-52-generic) on Tue Feb 04 01:49:37 +08 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/cad/prj_eda/fpga/hls_matrix_operation'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'script/export.tcl'
+INFO: [HLS 200-1510] Running: open_project kv260_hls_project 
+INFO: [HLS 200-10] Opening project '/home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project'.
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Opening solution '/home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sfvc784-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog -output ./ip_repo 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+WARNING: /home/App/EDA/Xilinx/Vivado/2024.2/tps/lnx64/jre11.0.16_1 does not exist.
+
+****** Vivado v2024.2.1 (64-bit)
+  **** SW Build 5266912 on Sun Dec 15 09:03:31 MST 2024
+  **** IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+  **** SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+  **** Start of session at: Tue Feb  4 01:49:43 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1/solution1_data.json outdir=/home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1/impl/ip srcdir=/home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1 sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to /home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1/impl/ip/misc
+INFO: Copied 6 verilog file(s) to /home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1/impl/ip/hdl/verilog
+INFO: Copied 6 vhdl file(s) to /home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to /home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1/impl/ip/drivers
+Generating 1 subcores in /home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1/impl/ip/hdl/ip.tmp:
+impl/misc/my_adder4_fadd_32ns_32ns_32_10_full_dsp_1_ip.tcl
+INFO: Using COE_DIR=/home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1/impl/ip/hdl/verilog
+INFO: Generating my_adder4_fadd_32ns_32ns_32_10_full_dsp_1_ip via file impl/misc/my_adder4_fadd_32ns_32ns_32_10_full_dsp_1_ip.tcl
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/App/EDA/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'my_adder4_fadd_32ns_32ns_32_10_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'my_adder4_fadd_32ns_32ns_32_10_full_dsp_1_ip'...
+INFO: Done generating my_adder4_fadd_32ns_32ns_32_10_full_dsp_1_ip via file impl/misc/my_adder4_fadd_32ns_32ns_32_10_full_dsp_1_ip.tcl
+INFO: Import ports from HDL: /home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1/impl/ip/hdl/vhdl/my_adder4.vhd (my_adder4)
+INFO: Add axi4lite interface s_axi_CTRL_BUS
+INFO: Add axi4lite interface s_axi_control
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/App/EDA/Xilinx/Vivado/2024.2/data/ip'.
+INFO: Add axi4full interface m_axi_AXI_PORT
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1/impl/ip/component.xml
+INFO: Created IP archive /home/cad/prj_eda/fpga/hls_matrix_operation/kv260_hls_project/solution1/impl/ip/xilinx_com_hls_my_adder4_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  4 01:49:52 2025...
+INFO: [HLS 200-802] Generated output file ip_repo.zip
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:14; Allocated memory: 6.875 MB.
+INFO: [HLS 200-1510] Running: close_solution 
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 17.76 seconds. Total CPU system time: 1.4 seconds. Total elapsed time: 20.38 seconds; peak allocated memory: 327.094 MB.

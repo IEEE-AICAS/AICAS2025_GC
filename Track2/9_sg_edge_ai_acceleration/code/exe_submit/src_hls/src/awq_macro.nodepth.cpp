@@ -1,0 +1,337 @@
+//awq_macro.cpp
+#include "awq_macro.h"
+#include <ap_int.h>       // 用于 ap_uint 类型
+#include <hls_stream.h>   // 用于 hls::stream 类型
+#include <hls_vector.h>
+#include "iostream"
+
+#define UR_PRA (8)
+// #define S_DEPTH (_MACRO_H/UR_PRA)
+
+/*******************************************************
+ *                 Reference Design
+ *******************************************************/
+
+// 将半精度浮点数转换为单精度浮点数
+float half_to_float(uint16_t h) {
+    uint32_t f = ((h & 0x8000) << 16) |
+                 (((h & 0x7c00) + 0x1C000) << 13) |
+                 ((h & 0x03FF) << 13);
+    return *reinterpret_cast<float*>(&f);
+}
+
+// 将 32 位无符号整数拆分为 8 个 4 位无符号整数（参考版本）
+static void split_uint32_to_uint4(uint8_t out[8], uint32_t in) {
+    const uint8_t reverse_order[8] = {0, 4, 1, 5, 2, 6, 3, 7};
+    for (uint8_t i = 0; i < 8; ++i) {
+        uint8_t pos = reverse_order[i];
+        uint8_t shift = 4 * pos;
+        out[i] = (in >> shift) & 0x0F;
+    }
+}
+
+static void _Macro_MAC_ref(
+    float *xo,
+    float *xi,
+    uint32_t *awq_macro
+) {
+    float qscale[_MACRO_W];
+    uint8_t qzero[_MACRO_W];
+
+    uint32_t *pzero   = (uint32_t*)(awq_macro);
+    uint16_t *pscale  = (uint16_t*)(awq_macro + 4);
+    uint32_t *pweight = (uint32_t*)(awq_macro + 8);
+
+    for (uint8_t j = 0; j < _MACRO_W; j++) {
+        qscale[j] = half_to_float(pscale[j]);
+    }
+    split_uint32_to_uint4(qzero, *pzero);
+
+    for (uint16_t i = 0; i < _MACRO_H; i++) {
+        uint8_t w_uint4[_MACRO_W];
+        split_uint32_to_uint4(w_uint4, pweight[i]);
+
+        float xi_val = xi[i];
+        for (uint8_t j = 0; j < _MACRO_W; j++) {
+            float weight = ((float)w_uint4[j] - (float)qzero[j]) * qscale[j];
+            xo[j] += weight * xi_val;
+        }
+    }
+}
+
+// 参考顶层函数（保留用于比较）
+void Macro_MAC_Acc4_ref(
+    __uint128_t out_x4[8],
+    __uint128_t *xi_part,
+    __uint128_t *macro0,
+    __uint128_t *macro1,
+    __uint128_t *macro2,
+    __uint128_t *macro3,
+    uint16_t row
+) {
+    float *pout = (float *)out_x4;
+    float *pxi  = (float *)xi_part;
+    uint32_t *pm0 = (uint32_t *)macro0;
+    uint32_t *pm1 = (uint32_t *)macro1;
+    uint32_t *pm2 = (uint32_t *)macro2;
+    uint32_t *pm3 = (uint32_t *)macro3;
+
+    for (uint8_t i = 0; i < 32; i++) {
+        pout[i] = 0.0f;
+    }
+
+    for (uint16_t i = 0; i < row; i++) {
+        _Macro_MAC_ref(&pout[0],  pxi + i * _MACRO_H, pm0 + i * _MACRO_SIZE_U32);
+        _Macro_MAC_ref(&pout[8],  pxi + i * _MACRO_H, pm1 + i * _MACRO_SIZE_U32);
+        _Macro_MAC_ref(&pout[16], pxi + i * _MACRO_H, pm2 + i * _MACRO_SIZE_U32);
+        _Macro_MAC_ref(&pout[24], pxi + i * _MACRO_H, pm3 + i * _MACRO_SIZE_U32);
+    }
+}
+
+
+/*******************************************************
+ *                HLS Implementation
+ *******************************************************/
+// 将 32 位无符号整数拆分为 8 个 4 位无符号整数（HLS 版本）
+static void split_uint32_to_uint4_hls(ap_uint<4> output[8], ap_uint<32> value) {
+    #pragma HLS INLINE
+    output[0] = value(3, 0);
+    output[1] = value(19, 16);
+    output[2] = value(7, 4);
+    output[3] = value(23, 20);
+    output[4] = value(11, 8);
+    output[5] = value(27, 24);
+    output[6] = value(15, 12);
+    output[7] = value(31, 28);
+}
+
+
+
+
+void read_xi_to_stream(hls::vector<float, 4> *xi0,
+    hls::vector<hls::stream<float>,UR_PRA>  &xi0_s,
+    hls::vector<hls::stream<float>,UR_PRA>  &xi1_s, 
+    hls::vector<hls::stream<float>,UR_PRA>  &xi2_s, 
+    hls::vector<hls::stream<float>,UR_PRA>  &xi3_s, 
+    uint16_t row
+) {
+    uint16_t bias =  row*_MACRO_H/4; 
+    for (int i =0; i<_MACRO_H/4; i++){
+        #pragma HLS PIPELINE II=1
+        hls::vector<float, 4> xi = xi0[bias+i];
+        for (int q = 0; q < 4; q++) {
+            #pragma HLS UNROLL
+            uint8_t vbias = (i*4 + q) % UR_PRA;
+            xi0_s[vbias].write(xi[q]);
+            xi1_s[vbias].write(xi[q]);
+            xi2_s[vbias].write(xi[q]);
+            xi3_s[vbias].write(xi[q]);
+        }
+    }
+}
+
+void read_mro_to_components(
+    hls::vector<uint32_t, 4> *mro,
+    ap_uint<4> qzeros[8],
+    float qscale[8],
+    hls::vector<hls::stream<uint32_t>,UR_PRA> &mro_s,
+    uint16_t mrow
+) {
+    #pragma HLS INLINE
+    // Read 4 vectors (16 uint32_t) for row mrow
+    hls::vector<uint32_t, 4> mro_vec0 = mro[mrow * _MACRO_SIZE_U128];
+    hls::vector<uint32_t, 4> mro_vec1 = mro[mrow * _MACRO_SIZE_U128 + 1];
+    hls::vector<uint32_t, 4> *pmro_vec2 = &mro[mrow * _MACRO_SIZE_U128 + 2];
+    // Extract pzero and compute qzeros
+    uint32_t pzero_val = mro_vec0[0];
+    split_uint32_to_uint4_hls(qzeros, pzero_val);
+    // Extract pscale and compute qscale
+    for (int j = 0; j < 4; j++) {
+        uint32_t val = mro_vec1[j];
+        uint16_t low = val & 0xFFFF;
+        uint16_t high = (val >> 16) & 0xFFFF;
+        qscale[2 * j] = half_to_float(low);
+        qscale[2 * j + 1] = half_to_float(high);
+    }
+    // Write pweight to mro_s stream
+    for(int j=0;j<_MACRO_H/4;j++){
+        #pragma HLS PIPELINE II=1
+        hls::vector<uint32_t, 4> mro_weight = pmro_vec2[j];
+        for (int q = 0; q < 4; q++) {
+            #pragma HLS UNROLL
+            uint8_t vbias = (j*4 + q) % UR_PRA;
+            mro_s[vbias].write(mro_weight[q]);
+        }
+    }
+}
+
+void compute_mac_sub(
+    hls::stream<float>      &xi_s,
+    hls::stream<uint32_t>   &mro_s,
+    ap_uint<4>              qzeros[_MACRO_W],
+    float                   qscale[_MACRO_W],
+    float                   pout_temp[_MACRO_W]
+){
+    lp_cmp_sub_h:for (int m = 0; m < _MACRO_H/UR_PRA; m++) {
+        #pragma HLS PIPELINE II=1
+        ap_uint<4> w_uint4[_MACRO_W];
+        #pragma HLS ARRAY_PARTITION variable=w_uint4 complete
+        split_uint32_to_uint4_hls(w_uint4, mro_s.read());
+        float xi_val = xi_s.read();
+        lp_cmp_mac_a:for (int j = 0; j < _MACRO_W; j++) {
+            #pragma HLS UNROLL
+            float scaled_xi  = xi_val * qscale[j];
+            ap_int<5> w_ubias =  w_uint4[j] - qzeros[j];
+            pout_temp[j] += scaled_xi  * (float)w_ubias;
+        }
+    }
+}
+
+void compute_mac(
+    hls::vector<hls::stream<float>,UR_PRA>      &xi_s,
+    hls::vector<hls::stream<uint32_t>,UR_PRA>   &mro_s,
+    ap_uint<4>                                  qzeros[_MACRO_W],
+    float                                       qscale[_MACRO_W],
+    float                                       pout_local[_MACRO_W]
+) {
+    float pout_temp[UR_PRA][_MACRO_W] = {0.0f};
+    #pragma HLS ARRAY_PARTITION variable=pout_temp dim=0 complete
+    for(uint8_t i = 0; i<UR_PRA; i++){
+        #pragma HLS UNROLL
+        compute_mac_sub(xi_s[i],mro_s[i],qzeros,qscale,pout_temp[i]);
+    }
+    // lp_cmp_mac_cplocal:for (int j = 0; j < _MACRO_W; j++) {
+    //     #pragma HLS PIPELINE II=1
+    //     pout_local[j] += ((pout_temp[0][j]+pout_temp[1][j])
+    //                     +(pout_temp[2][j]+pout_temp[3][j]))+
+    //                     ((pout_temp[4][j]+pout_temp[5][j])
+    //                     +(pout_temp[6][j]+pout_temp[7][j]));
+    // }
+    lp_cmp_mac_cplocal:for (int j = 0; j < _MACRO_W; j++) {
+        #pragma HLS PIPELINE II=1
+        #pragma HLS LATENCY max=3  // 约束关键路径
+        
+        // 采用三级流水加法树
+        float stage1[4];
+        #pragma HLS ARRAY_PARTITION variable=stage1 complete
+        #pragma HLS BIND_OP variable=stage1 op=add impl=fabric  // 使用布线资源
+        
+        float stage2[2];
+        #pragma HLS ARRAY_PARTITION variable=stage2 complete
+        #pragma HLS BIND_OP variable=stage2 op=add impl=dsp
+        
+        float final_sum;
+        #pragma HLS BIND_OP variable=final_sum op=add impl=dsp
+        // 第一级：4组并行加法
+        stage1[0] = pout_temp[0][j] + pout_temp[1][j];
+        stage1[1] = pout_temp[2][j] + pout_temp[3][j];
+        stage1[2] = pout_temp[4][j] + pout_temp[5][j];
+        stage1[3] = pout_temp[6][j] + pout_temp[7][j];
+        // 第二级：2组并行加法
+        stage2[0] = stage1[0] + stage1[1];
+        stage2[1] = stage1[2] + stage1[3];
+        // 第三级：最终求和
+        final_sum = stage2[0] + stage2[1];
+        pout_local[j] += final_sum;
+    }
+}
+
+
+
+void Macro_MAC_Acc4_top(
+    hls::vector<float,    4 >   *out,
+    hls::vector<float,    4 >   *xi,
+    hls::vector<uint32_t, 4 >   *mro0,
+    hls::vector<uint32_t, 4 >   *mro1,
+    hls::vector<uint32_t, 4 >   *mro2,
+    hls::vector<uint32_t, 4 >   *mro3,
+    uint16_t row //TEST WITH 14;
+){
+    #pragma HLS INTERFACE m_axi port=out  depth=8 offset=slave bundle=gmem0 name=out_pr
+    #pragma HLS INTERFACE m_axi port=xi   depth=1216 offset=slave bundle=gmem1 name=xi_r
+    #pragma HLS INTERFACE m_axi port=mro0 depth=256 offset=slave bundle=gmem0 name=mro0_r
+    #pragma HLS INTERFACE m_axi port=mro1 depth=256 offset=slave bundle=gmem1 name=mro1_r
+    #pragma HLS INTERFACE m_axi port=mro2 depth=256 offset=slave bundle=gmem2 name=mro2_r
+    #pragma HLS INTERFACE m_axi port=mro3 depth=256 offset=slave bundle=gmem3 name=mro3_r
+
+    // #pragma HLS INTERFACE m_axi port=out  depth=8 offset=slave bundle=gmem0 name=out_pr
+    // #pragma HLS INTERFACE m_axi port=xi   depth=1216 offset=slave bundle=gmem1 name=xi_r
+    // #pragma HLS INTERFACE m_axi port=mro0 depth=1368 offset=slave bundle=gmem0 name=mro0_r
+    // #pragma HLS INTERFACE m_axi port=mro1 depth=1368 offset=slave bundle=gmem1 name=mro1_r
+    // #pragma HLS INTERFACE m_axi port=mro2 depth=1368 offset=slave bundle=gmem2 name=mro2_r
+    // #pragma HLS INTERFACE m_axi port=mro3 depth=1368 offset=slave bundle=gmem3 name=mro3_r
+    #pragma HLS INTERFACE s_axilite port=return
+    #pragma HLS INTERFACE s_axilite port=row
+    // ##############SPLIT THE MACRO STREAM INTO 4 -> hls::vector####################
+    static hls::vector<hls::stream<uint32_t>, UR_PRA> mro0_s;    
+    static hls::vector<hls::stream<uint32_t>, UR_PRA> mro1_s;    
+    static hls::vector<hls::stream<uint32_t>, UR_PRA> mro2_s;    
+    static hls::vector<hls::stream<uint32_t>, UR_PRA> mro3_s;
+    static hls::vector<hls::stream<float>, UR_PRA> xi0_s;
+    static hls::vector<hls::stream<float>, UR_PRA> xi1_s;
+    static hls::vector<hls::stream<float>, UR_PRA> xi2_s;
+    static hls::vector<hls::stream<float>, UR_PRA> xi3_s;
+    
+    ap_uint<4> qzeros0[8];  
+    ap_uint<4> qzeros1[8];  
+    ap_uint<4> qzeros2[8];  
+    ap_uint<4> qzeros3[8];
+    float qscale0[8];
+    float qscale1[8];  
+    float qscale2[8];  
+    float qscale3[8];  
+    float pout_local0[8];
+    float pout_local1[8];
+    float pout_local2[8];
+    float pout_local3[8];
+    #pragma HLS ARRAY_PARTITION variable=qzeros0 complete dim=1
+    #pragma HLS ARRAY_PARTITION variable=qzeros1 complete dim=1
+    #pragma HLS ARRAY_PARTITION variable=qzeros2 complete dim=1
+    #pragma HLS ARRAY_PARTITION variable=qzeros3 complete dim=1
+    #pragma HLS ARRAY_PARTITION variable=qscale0 complete dim=1
+    #pragma HLS ARRAY_PARTITION variable=qscale1 complete dim=1
+    #pragma HLS ARRAY_PARTITION variable=qscale2 complete dim=1
+    #pragma HLS ARRAY_PARTITION variable=qscale3 complete dim=1
+
+    #pragma HLS DATAFLOW
+
+    for (int j = 0; j < 8; j++) {
+        pout_local0[j] = 0.0f;
+        pout_local1[j] = 0.0f;
+        pout_local2[j] = 0.0f;
+        pout_local3[j] = 0.0f;
+    }
+    // std::cout << "[INFO]: Simulation Running ..." << std::endl;
+    for (uint16_t i = 0; i < row; i++) {
+        #pragma HLS LOOP_TRIPCOUNT min=14 max=14
+        read_xi_to_stream(xi,xi0_s,xi1_s,xi2_s,xi3_s,i);
+        read_mro_to_components(mro0, qzeros0, qscale0, mro0_s, i);
+        read_mro_to_components(mro1, qzeros1, qscale1, mro1_s, i);
+        read_mro_to_components(mro2, qzeros2, qscale2, mro2_s, i);
+        read_mro_to_components(mro3, qzeros3, qscale3, mro3_s, i);
+        compute_mac(xi0_s, mro0_s, qzeros0, qscale0, pout_local0);
+        compute_mac(xi1_s, mro1_s, qzeros1, qscale1, pout_local1);
+        compute_mac(xi2_s, mro2_s, qzeros2, qscale2, pout_local2);
+        compute_mac(xi3_s, mro3_s, qzeros3, qscale3, pout_local3);
+    }
+
+    for (int ch = 0; ch < 4; ++ch) {  
+        for (int group = 0; group < 2; ++group) { 
+            #pragma HLS PIPELINE II=1
+            const int out_idx = ch * 2 + group;  
+            const int data_base = group * 4;      
+            hls::vector<float,4> vec;
+            float* pout = nullptr;
+            switch (ch) {
+                case 0: pout = pout_local0; break;
+                case 1: pout = pout_local1; break;
+                case 2: pout = pout_local2; break;
+                case 3: pout = pout_local3; break;
+            }
+            for (int q = 0; q < 4; ++q) {
+                vec[q] = pout[data_base + q];
+            }
+            out[out_idx] = vec;
+        }
+    }
+}

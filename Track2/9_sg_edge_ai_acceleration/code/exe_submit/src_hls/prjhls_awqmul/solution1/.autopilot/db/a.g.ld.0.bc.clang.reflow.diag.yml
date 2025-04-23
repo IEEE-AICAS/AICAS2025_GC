@@ -1,0 +1,2260 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayIN3hls6streamIfLi0EEELm8EEixEm
+Args:            
+  - Callee:          'std::__array_traits<hls::stream<float, 0>, 8ul>::_S_ref(hls::stream<float, 0> const (&) [8], unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        _ZN3hls6vectorINS_6streamIfLi0EEELm8EEixEm
+Args:            
+  - Callee:          'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'hls::vector<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayIfLm4EEixEm
+Args:            
+  - Callee:          'std::__array_traits<float, 4ul>::_S_ref(float const (&) [4], unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'std::array<float, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        _ZN3hls6vectorIfLm4EEixEm
+Args:            
+  - Callee:          'std::array<float, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'hls::vector<float, 4ul>::operator[](unsigned long)'
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 122, Column: 13 }
+Function:        _Z17read_xi_to_streamPN3hls6vectorIfLm4EEERNS0_INS_6streamIfLi0EEELm8EEES6_S6_S6_t
+Args:            
+  - Callee:          'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'read_xi_to_stream(hls::vector<float, 4ul>*, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 114, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 122, Column: 32 }
+Function:        _Z17read_xi_to_streamPN3hls6vectorIfLm4EEERNS0_INS_6streamIfLi0EEELm8EEES6_S6_S6_t
+Args:            
+  - Callee:          'std::array<float, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'read_xi_to_stream(hls::vector<float, 4ul>*, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 114, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayIjLm4EEixEm
+Args:            
+  - Callee:          'std::__array_traits<unsigned int, 4ul>::_S_ref(unsigned int const (&) [4], unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'std::array<unsigned int, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        _ZN3hls6vectorIjLm4EEixEm
+Args:            
+  - Callee:          'std::array<unsigned int, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'hls::vector<unsigned int, 4ul>::operator[](unsigned long)'
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayIN3hls6streamIjLi0EEELm8EEixEm
+Args:            
+  - Callee:          'std::__array_traits<hls::stream<unsigned int, 0>, 8ul>::_S_ref(hls::stream<unsigned int, 0> const (&) [8], unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        _ZN3hls6vectorINS_6streamIjLi0EEELm8EEixEm
+Args:            
+  - Callee:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'hls::vector<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 143, Column: 26 }
+Function:        _Z22read_mro_to_componentsPN3hls6vectorIjLm4EEEP7ap_uintILi4EEPfRNS0_INS_6streamIjLi0EEELm8EEEt
+Args:            
+  - Callee:          'std::array<unsigned int, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'read_mro_to_components(hls::vector<unsigned int, 4ul>*, ap_uint<4>*, float*, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 136, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 144, Column: 5 }
+Function:        _Z22read_mro_to_componentsPN3hls6vectorIjLm4EEEP7ap_uintILi4EEPfRNS0_INS_6streamIjLi0EEELm8EEEt
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'split_uint32_to_uint4_hls(ap_uint<4>*, ap_uint<32>)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 96, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'read_mro_to_components(hls::vector<unsigned int, 4ul>*, ap_uint<4>*, float*, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 136, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z22read_mro_to_componentsPN3hls6vectorIjLm4EEEP7ap_uintILi4EEPfRNS0_INS_6streamIjLi0EEELm8EEEt
+Args:            
+  - Callee:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'read_mro_to_components(hls::vector<unsigned int, 4ul>*, ap_uint<4>*, float*, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 136, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 150, Column: 25 }
+Function:        _Z22read_mro_to_componentsPN3hls6vectorIjLm4EEEP7ap_uintILi4EEPfRNS0_INS_6streamIjLi0EEELm8EEEt
+Args:            
+  - Callee:          'half_to_float(unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'read_mro_to_components(hls::vector<unsigned int, 4ul>*, ap_uint<4>*, float*, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 136, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 201, Column: 2 }
+Function:        _Z15compute_mac_subRN3hls6streamIfLi0EEERNS0_IjLi0EEEP7ap_uintILi4EEPfS8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'split_uint32_to_uint4_hls(ap_uint<4>*, ap_uint<32>)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 96, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute_mac_sub(hls::stream<float, 0>&, hls::stream<unsigned int, 0>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 193, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 18 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - Callee:          'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 26 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - Callee:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 2 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - Callee:          'compute_mac_sub(hls::stream<float, 0>&, hls::stream<unsigned int, 0>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 193, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 326, Column: 2 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          'read_xi_to_stream(hls::vector<float, 4ul>*, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 114, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 327, Column: 9 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'read_mro_to_components(hls::vector<unsigned int, 4ul>*, ap_uint<4>*, float*, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 136, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 151, Column: 29 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          'half_to_float(unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 331, Column: 9 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 351, Column: 17 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          'std::array<float, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 143, Column: 26 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          'std::array<unsigned int, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 350, Column: 31 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_350_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 157, Column: 27 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_157_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 157, Column: 27 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_157_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 157, Column: 27 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_157_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 157, Column: 27 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_157_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 207, Column: 16 }
+Function:        _Z15compute_mac_subRN3hls6streamIfLi0EEERNS0_IjLi0EEEP7ap_uintILi4EEPfS8_.6
+Args:            
+  - String:          'Loop '''
+  - LoopName:        lp_precompute
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 213, Column: 22 }
+Function:        _Z15compute_mac_subRN3hls6streamIfLi0EEERNS0_IjLi0EEEP7ap_uintILi4EEPfS8_.6
+Args:            
+  - String:          'Loop '''
+  - LoopName:        lp_cmp_mac_a
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 119, Column: 27 }
+Function:        _Z17read_xi_to_streamPN3hls6vectorIfLm4EEERNS0_INS_6streamIfLi0EEELm8EEES6_S6_S6_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_119_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_350_5
+  - String:          ''' ('
+  - LoopLoc:         'src/awq_macro.cpp:350:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          Macro_MAC_Acc4_top
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_157_3
+  - String:          ''' ('
+  - LoopLoc:         'src/awq_macro.cpp:157:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          Macro_MAC_Acc4_top
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_157_3
+  - String:          ''' ('
+  - LoopLoc:         'src/awq_macro.cpp:157:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          Macro_MAC_Acc4_top
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_157_3
+  - String:          ''' ('
+  - LoopLoc:         'src/awq_macro.cpp:157:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          Macro_MAC_Acc4_top
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_157_3
+  - String:          ''' ('
+  - LoopLoc:         'src/awq_macro.cpp:157:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          Macro_MAC_Acc4_top
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_230_1
+  - String:          ''' ('
+  - LoopLoc:         'src/awq_macro.cpp:230:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_mac
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 193, Column: 0 }
+Function:        _Z15compute_mac_subRN3hls6streamIfLi0EEERNS0_IjLi0EEEP7ap_uintILi4EEPfS8_.6
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        lp_precompute
+  - String:          ''' ('
+  - LoopLoc:         'src/awq_macro.cpp:207:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_mac_sub
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 193, Column: 0 }
+Function:        _Z15compute_mac_subRN3hls6streamIfLi0EEERNS0_IjLi0EEEP7ap_uintILi4EEPfS8_.6
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        lp_cmp_mac_a
+  - String:          ''' ('
+  - LoopLoc:         'src/awq_macro.cpp:213:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_mac_sub
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/awq_macro.cpp, Line: 114, Column: 0 }
+Function:        _Z17read_xi_to_streamPN3hls6vectorIfLm4EEERNS0_INS_6streamIfLi0EEELm8EEES6_S6_S6_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_119_2
+  - String:          ''' ('
+  - LoopLoc:         'src/awq_macro.cpp:119:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          read_xi_to_stream
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayIN3hls6streamIjLi0EEELm8EEixEm
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::__array_traits<hls::stream<unsigned int, 0>, 8ul>::_S_ref(hls::stream<unsigned int, 0> const (&) [8], unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 18 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 18 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 18 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 18 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 18 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 18 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 18 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 18 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayIN3hls6streamIfLi0EEELm8EEixEm
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'std::__array_traits<hls::stream<float, 0>, 8ul>::_S_ref(hls::stream<float, 0> const (&) [8], unsigned long)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayIN3hls6streamIfLi0EEELm8EEixEm
+Args:            
+  - Callee:          'std::__array_traits<hls::stream<float, 0>, 8ul>::_S_ref(hls::stream<float, 0> const (&) [8], unsigned long) (.31)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayIfLm4EEixEm
+Args:            
+  - Callee:          'std::__array_traits<float, 4ul>::_S_ref(float const (&) [4], unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'std::array<float, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 122, Column: 13 }
+Function:        _Z17read_xi_to_streamPN3hls6vectorIfLm4EEERNS0_INS_6streamIfLi0EEELm8EEES6_S6_S6_t
+Args:            
+  - Callee:          'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'read_xi_to_stream(hls::vector<float, 4ul>*, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 114, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 122, Column: 32 }
+Function:        _Z17read_xi_to_streamPN3hls6vectorIfLm4EEERNS0_INS_6streamIfLi0EEELm8EEES6_S6_S6_t
+Args:            
+  - Callee:          'std::array<float, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'read_xi_to_stream(hls::vector<float, 4ul>*, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 114, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayIjLm4EEixEm
+Args:            
+  - Callee:          'std::__array_traits<unsigned int, 4ul>::_S_ref(unsigned int const (&) [4], unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'std::array<unsigned int, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayIN3hls6streamIjLi0EEELm8EEixEm.28
+Args:            
+  - Callee:          'std::__array_traits<hls::stream<unsigned int, 0>, 8ul>::_S_ref(hls::stream<unsigned int, 0> const (&) [8], unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long) (.28)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayIN3hls6streamIfLi0EEELm8EEixEm.30
+Args:            
+  - Callee:          'std::__array_traits<hls::stream<float, 0>, 8ul>::_S_ref(hls::stream<float, 0> const (&) [8], unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long) (.30)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayIN3hls6streamIjLi0EEELm8EEixEm
+Args:            
+  - Callee:          'std::__array_traits<hls::stream<unsigned int, 0>, 8ul>::_S_ref(hls::stream<unsigned int, 0> const (&) [8], unsigned long) (.29)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 18 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - Callee:          'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long) (.30)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 26 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - Callee:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 2 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - Callee:          'compute_mac_sub(hls::stream<float, 0>&, hls::stream<unsigned int, 0>&, ap_uint<4>*, float*, float*) (.6)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 193, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 326, Column: 2 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          'read_xi_to_stream(hls::vector<float, 4ul>*, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 114, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 143, Column: 26 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          'std::array<unsigned int, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 150, Column: 25 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          'half_to_float(unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 160, Column: 13 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long) (.28)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 331, Column: 9 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 351, Column: 17 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          'std::array<float, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_Macro_MAC_Acc4_top_ir
+Args:            
+  - Callee:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_Macro_MAC_Acc4_top_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 0 }
+Function:        _ZNSt5arrayIfLm4EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::__array_traits<float, 4ul>::_S_ref(float const (&) [4], unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::array<float, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 0 }
+Function:        _ZNSt5arrayIN3hls6streamIfLi0EEELm8EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::__array_traits<hls::stream<float, 0>, 8ul>::_S_ref(hls::stream<float, 0> const (&) [8], unsigned long) (.31)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 114, Column: 0 }
+Function:        _Z17read_xi_to_streamPN3hls6vectorIfLm4EEERNS0_INS_6streamIfLi0EEELm8EEES6_S6_S6_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<float, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'read_xi_to_stream(hls::vector<float, 4ul>*, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 114, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 114, Column: 0 }
+Function:        _Z17read_xi_to_streamPN3hls6vectorIfLm4EEERNS0_INS_6streamIfLi0EEELm8EEES6_S6_S6_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'read_xi_to_stream(hls::vector<float, 4ul>*, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 114, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 0 }
+Function:        _ZNSt5arrayIjLm4EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::__array_traits<unsigned int, 4ul>::_S_ref(unsigned int const (&) [4], unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::array<unsigned int, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 0 }
+Function:        _ZNSt5arrayIN3hls6streamIjLi0EEELm8EEixEm.28
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::__array_traits<hls::stream<unsigned int, 0>, 8ul>::_S_ref(hls::stream<unsigned int, 0> const (&) [8], unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long) (.28)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 0 }
+Function:        _ZNSt5arrayIN3hls6streamIfLi0EEELm8EEixEm.30
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::__array_traits<hls::stream<float, 0>, 8ul>::_S_ref(hls::stream<float, 0> const (&) [8], unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long) (.30)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 0 }
+Function:        _ZNSt5arrayIN3hls6streamIjLi0EEELm8EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::__array_traits<hls::stream<unsigned int, 0>, 8ul>::_S_ref(hls::stream<unsigned int, 0> const (&) [8], unsigned long) (.29)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long) (.30)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<unsigned int, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'half_to_float(unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long) (.28)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<float, 4ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: src/awq_macro.cpp, Line: 351, Column: 26 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          The program may have out of bound array access
+  - String:          ' on variable '''
+  - String:          arrayidx77
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: src/awq_macro.cpp, Line: 351, Column: 26 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          The program may have out of bound array access
+  - String:          ' on variable '''
+  - String:          arrayidx77.1
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: src/awq_macro.cpp, Line: 351, Column: 26 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          The program may have out of bound array access
+  - String:          ' on variable '''
+  - String:          arrayidx77.2
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: src/awq_macro.cpp, Line: 351, Column: 26 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          The program may have out of bound array access
+  - String:          ' on variable '''
+  - String:          arrayidx77.3
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 228, Column: 11 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          pout_temp
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 291, Column: 16 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          qzeros0
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 292, Column: 16 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          qzeros1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 293, Column: 16 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          qzeros2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 294, Column: 16 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          qzeros3
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 295, Column: 11 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          qscale0
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 296, Column: 11 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          qscale1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 297, Column: 11 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          qscale2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 298, Column: 11 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          qscale3
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 299, Column: 11 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          pout_local0
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 300, Column: 11 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          pout_local1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 301, Column: 11 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          pout_local2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/awq_macro.cpp, Line: 302, Column: 11 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          pout_local3
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            out
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            xi
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            mro0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            mro1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            mro2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            mro3
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/awq_macro.cpp, Line: 140, Column: 30 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            mro_vec1.i
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/awq_macro.cpp, Line: 140, Column: 30 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            mro_vec1.i27
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/awq_macro.cpp, Line: 140, Column: 30 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            mro_vec1.i222
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/awq_macro.cpp, Line: 140, Column: 30 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            mro_vec1.i417
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '128'
+  - String:          '-bits'
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 118, Column: 29 }
+Function:        _Z17read_xi_to_streamPN3hls6vectorIfLm4EEERNS0_INS_6streamIfLi0EEELm8EEES6_S6_S6_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          xi0
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 139, Column: 38 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          mro0
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 140, Column: 41 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          mro0
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 156, Column: 40 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          mro0
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 139, Column: 38 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          mro1
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 140, Column: 41 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          mro1
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 156, Column: 40 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          mro1
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 139, Column: 38 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          mro2
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 140, Column: 41 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          mro2
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 156, Column: 40 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          mro2
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 139, Column: 38 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          mro3
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 140, Column: 41 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          mro3
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 156, Column: 40 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          mro3
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: src/awq_macro.cpp, Line: 353, Column: 26 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          out
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         ''
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_318_1
+  - String:          '> at '
+  - LoopLoc:         'src/awq_macro.cpp:318:20'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_146_1
+  - String:          '> at '
+  - LoopLoc:         'src/awq_macro.cpp:146:23'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_146_1
+  - String:          '> at '
+  - LoopLoc:         'src/awq_macro.cpp:146:23'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_146_1
+  - String:          '> at '
+  - LoopLoc:         'src/awq_macro.cpp:146:23'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_146_1
+  - String:          '> at '
+  - LoopLoc:         'src/awq_macro.cpp:146:23'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::xi0_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::xi1_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::xi2_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::xi3_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::mro0_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::mro1_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::mro2_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::mro3_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::xi0_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::mro0_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::xi1_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::mro1_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::xi2_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::mro2_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::xi3_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-supported-subset
+Name:            AggrSuccInHLSGen
+DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Aggregating variable '''
+  - Name:            'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::mro3_s'
+  - String:          ''' with ''compact=none'' mode'
+...
+--- !Passed
+Pass:            reflow-extract-cfg-in-dataflow
+Name:            LoopExtractionForDataflow
+DebugLoc:        { File: src/awq_macro.cpp, Line: 318, Column: 20 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Changing loop '''
+  - LoopName:        Loop_VITIS_LOOP_318_1_proc
+  - String:          ''' ('
+  - LoopLoc:         'src/awq_macro.cpp:318:20'
+  - String:          ') to a process function for dataflow in function '''
+  - Name:            Macro_MAC_Acc4_top
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-extract-cfg-in-dataflow
+Name:            LoopExtractionForDataflow
+DebugLoc:        { File: src/awq_macro.cpp, Line: 324, Column: 23 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Changing loop '''
+  - LoopName:        Loop_VITIS_LOOP_324_2_proc
+  - String:          ''' ('
+  - LoopLoc:         'src/awq_macro.cpp:324:23'
+  - String:          ') to a process function for dataflow in function '''
+  - Name:            Macro_MAC_Acc4_top
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-extract-cfg-in-dataflow
+Name:            LoopExtractionForDataflow
+DebugLoc:        { File: src/awq_macro.cpp, Line: 337, Column: 23 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - String:          'Changing loop '''
+  - LoopName:        Loop_VITIS_LOOP_337_3_proc
+  - String:          ''' ('
+  - LoopLoc:         'src/awq_macro.cpp:337:23'
+  - String:          ') to a process function for dataflow in function '''
+  - Name:            Macro_MAC_Acc4_top
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 232, Column: 2 }
+Function:        _Z11compute_macRN3hls6vectorINS_6streamIfLi0EEELm8EEERNS0_INS1_IjLi0EEELm8EEEP7ap_uintILi4EEPfSB_
+Args:            
+  - Callee:          'compute_mac_sub(hls::stream<float, 0>&, hls::stream<unsigned int, 0>&, ap_uint<4>*, float*, float*) (.6.37.38)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 193, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 326, Column: 2 }
+Function:        Loop_VITIS_LOOP_324_2_proc
+Args:            
+  - Callee:          'read_xi_to_stream(hls::vector<float, 4ul>*, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 114, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          Loop_VITIS_LOOP_324_2_proc
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 331, Column: 9 }
+Function:        Loop_VITIS_LOOP_324_2_proc
+Args:            
+  - Callee:          'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 227, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          Loop_VITIS_LOOP_324_2_proc
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 318, Column: 29 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          Loop_VITIS_LOOP_318_1_proc
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 0, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 319, Column: 24 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          Block_entry_proc
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 0, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 324, Column: 37 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          Loop_VITIS_LOOP_324_2_proc
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 0, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/awq_macro.cpp, Line: 337, Column: 32 }
+Function:        _Z18Macro_MAC_Acc4_topPN3hls6vectorIfLm4EEES2_PNS0_IjLm4EEES4_S4_S4_t
+Args:            
+  - Callee:          Loop_VITIS_LOOP_337_3_proc
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 0, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)'
+    DebugLoc:        { File: src/awq_macro.cpp, Line: 272, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

@@ -1,0 +1,2456 @@
+{
+  "global": {
+    "dim": 896,
+    "hidden_dim": 4864,
+    "n_layers": 24,
+    "n_heads": 14,
+    "n_kv_heads": 2,
+    "vocab_size": 151936,
+    "seq_len": 32768
+  },
+  "layer_structure": [
+    {
+      "param_name": "self_attn.q_proj",
+      "submodules": {
+        "macro": {
+          "data_type": "awq_macro",
+          "shape": [
+            14,
+            112
+          ]
+        },
+        "bias": {
+          "data_type": "float16",
+          "shape": [
+            896
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "self_attn.k_proj",
+      "submodules": {
+        "macro": {
+          "data_type": "awq_macro",
+          "shape": [
+            14,
+            16
+          ]
+        },
+        "bias": {
+          "data_type": "float16",
+          "shape": [
+            128
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "self_attn.v_proj",
+      "submodules": {
+        "macro": {
+          "data_type": "awq_macro",
+          "shape": [
+            14,
+            16
+          ]
+        },
+        "bias": {
+          "data_type": "float16",
+          "shape": [
+            128
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "self_attn.o_proj",
+      "submodules": {
+        "macro": {
+          "data_type": "awq_macro",
+          "shape": [
+            14,
+            112
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "mlp.gate_proj",
+      "submodules": {
+        "macro": {
+          "data_type": "awq_macro",
+          "shape": [
+            14,
+            608
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "mlp.up_proj",
+      "submodules": {
+        "macro": {
+          "data_type": "awq_macro",
+          "shape": [
+            14,
+            608
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "mlp.down_proj",
+      "submodules": {
+        "macro": {
+          "data_type": "awq_macro",
+          "shape": [
+            76,
+            112
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "input_layernorm.weight",
+      "data_type": "float16",
+      "shape": [
+        896
+      ]
+    },
+    {
+      "param_name": "post_attention_layernorm.weight",
+      "data_type": "float16",
+      "shape": [
+        896
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "layer_index": 0,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 0,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 451584,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 453376,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 517888,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 518144,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 582656,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 582912,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 1034496,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 3485952,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 5937408,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 8388864,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 8390656,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 1,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 8392448,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 8844032,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 8845824,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 8910336,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 8910592,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 8975104,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 8975360,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 9426944,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 11878400,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 14329856,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 16781312,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 16783104,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 2,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 16784896,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 17236480,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 17238272,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 17302784,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 17303040,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 17367552,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 17367808,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 17819392,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 20270848,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 22722304,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 25173760,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 25175552,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 3,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 25177344,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 25628928,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 25630720,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 25695232,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 25695488,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 25760000,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 25760256,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 26211840,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 28663296,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 31114752,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 33566208,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 33568000,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 4,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 33569792,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 34021376,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 34023168,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 34087680,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 34087936,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 34152448,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 34152704,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 34604288,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 37055744,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 39507200,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 41958656,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 41960448,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 5,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 41962240,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 42413824,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 42415616,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 42480128,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 42480384,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 42544896,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 42545152,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 42996736,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 45448192,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 47899648,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 50351104,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 50352896,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 6,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 50354688,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 50806272,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 50808064,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 50872576,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 50872832,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 50937344,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 50937600,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 51389184,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 53840640,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 56292096,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 58743552,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 58745344,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 7,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 58747136,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 59198720,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 59200512,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 59265024,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 59265280,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 59329792,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 59330048,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 59781632,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 62233088,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 64684544,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 67136000,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 67137792,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 8,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 67139584,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 67591168,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 67592960,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 67657472,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 67657728,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 67722240,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 67722496,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 68174080,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 70625536,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 73076992,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 75528448,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 75530240,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 9,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 75532032,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 75983616,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 75985408,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 76049920,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 76050176,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 76114688,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 76114944,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 76566528,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 79017984,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 81469440,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 83920896,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 83922688,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 10,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 83924480,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 84376064,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 84377856,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 84442368,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 84442624,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 84507136,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 84507392,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 84958976,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 87410432,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 89861888,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 92313344,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 92315136,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 11,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 92316928,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 92768512,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 92770304,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 92834816,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 92835072,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 92899584,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 92899840,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 93351424,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 95802880,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 98254336,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 100705792,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 100707584,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 12,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 100709376,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 101160960,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 101162752,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 101227264,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 101227520,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 101292032,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 101292288,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 101743872,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 104195328,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 106646784,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 109098240,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 109100032,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 13,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 109101824,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 109553408,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 109555200,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 109619712,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 109619968,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 109684480,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 109684736,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 110136320,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 112587776,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 115039232,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 117490688,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 117492480,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 14,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 117494272,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 117945856,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 117947648,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 118012160,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 118012416,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 118076928,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 118077184,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 118528768,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 120980224,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 123431680,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 125883136,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 125884928,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 15,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 125886720,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 126338304,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 126340096,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 126404608,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 126404864,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 126469376,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 126469632,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 126921216,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 129372672,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 131824128,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 134275584,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 134277376,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 16,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 134279168,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 134730752,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 134732544,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 134797056,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 134797312,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 134861824,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 134862080,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 135313664,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 137765120,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 140216576,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 142668032,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 142669824,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 17,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 142671616,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 143123200,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 143124992,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 143189504,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 143189760,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 143254272,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 143254528,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 143706112,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 146157568,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 148609024,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 151060480,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 151062272,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 18,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 151064064,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 151515648,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 151517440,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 151581952,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 151582208,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 151646720,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 151646976,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 152098560,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 154550016,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 157001472,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 159452928,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 159454720,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 19,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 159456512,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 159908096,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 159909888,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 159974400,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 159974656,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 160039168,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 160039424,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 160491008,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 162942464,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 165393920,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 167845376,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 167847168,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 20,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 167848960,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 168300544,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 168302336,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 168366848,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 168367104,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 168431616,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 168431872,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 168883456,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 171334912,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 173786368,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 176237824,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 176239616,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 21,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 176241408,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 176692992,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 176694784,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 176759296,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 176759552,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 176824064,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 176824320,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 177275904,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 179727360,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 182178816,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 184630272,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 184632064,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 22,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 184633856,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 185085440,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 185087232,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 185151744,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 185152000,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 185216512,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 185216768,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 185668352,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 188119808,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 190571264,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 193022720,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 193024512,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    },
+    {
+      "layer_index": 23,
+      "data": [
+        {
+          "param_name": "self_attn.q_proj",
+          "submodules": {
+            "macro": {
+              "offset": 193026304,
+              "size": 451584
+            },
+            "bias": {
+              "offset": 193477888,
+              "size": 1792
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.k_proj",
+          "submodules": {
+            "macro": {
+              "offset": 193479680,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 193544192,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.v_proj",
+          "submodules": {
+            "macro": {
+              "offset": 193544448,
+              "size": 64512
+            },
+            "bias": {
+              "offset": 193608960,
+              "size": 256
+            }
+          }
+        },
+        {
+          "param_name": "self_attn.o_proj",
+          "submodules": {
+            "macro": {
+              "offset": 193609216,
+              "size": 451584
+            }
+          }
+        },
+        {
+          "param_name": "mlp.gate_proj",
+          "submodules": {
+            "macro": {
+              "offset": 194060800,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.up_proj",
+          "submodules": {
+            "macro": {
+              "offset": 196512256,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "mlp.down_proj",
+          "submodules": {
+            "macro": {
+              "offset": 198963712,
+              "size": 2451456
+            }
+          }
+        },
+        {
+          "param_name": "input_layernorm.weight",
+          "offset": 201415168,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        },
+        {
+          "param_name": "post_attention_layernorm.weight",
+          "offset": 201416960,
+          "size": 1792,
+          "shape": [
+            896
+          ]
+        }
+      ]
+    }
+  ],
+  "norm": {
+    "weight": {
+      "offset": 201418752,
+      "size": 1792,
+      "data_type": "float16",
+      "shape": [
+        896
+      ]
+    }
+  },
+  "token_embedding": {
+    "weight": {
+      "offset": 201420544,
+      "size": 272269312,
+      "data_type": "float16",
+      "shape": [
+        151936,
+        896
+      ]
+    }
+  }
+}

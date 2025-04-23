@@ -1,0 +1,273 @@
+
+
+================================================================
+== Vitis HLS Report for 'read_xi_to_stream'
+================================================================
+* Date:           Fri Mar 28 16:44:20 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        prjhls_awqmul
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  1.825 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |       18|       18|  90.000 ns|  90.000 ns|   17|   17|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_116_1  |       16|       16|         2|          1|          1|    16|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      41|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|     324|    -|
+|Register         |        -|     -|     138|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     138|     365|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln116_fu_422_p2                    |         +|   0|  0|  12|           5|           1|
+    |ap_block_pp0_stage0_01001_grp1         |       and|   0|  0|   2|           1|           1|
+    |icmp_ln116_fu_416_p2                   |      icmp|   0|  0|  13|           5|           6|
+    |icmp_ln122_fu_440_p2                   |      icmp|   0|  0|  10|           3|           2|
+    |ap_block_state2_pp0_stage0_iter1_grp1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                          |       xor|   0|  0|   2|           1|           2|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                  |          |   0|  0|  41|          16|          13|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1     |   9|          2|    5|         10|
+    |i_fu_124                 |   9|          2|    5|         10|
+    |xi0_s_M_elems_V_0_blk_n  |   9|          2|    1|          2|
+    |xi0_s_M_elems_V_1_blk_n  |   9|          2|    1|          2|
+    |xi0_s_M_elems_V_2_blk_n  |   9|          2|    1|          2|
+    |xi0_s_M_elems_V_3_blk_n  |   9|          2|    1|          2|
+    |xi0_s_M_elems_V_4_blk_n  |   9|          2|    1|          2|
+    |xi0_s_M_elems_V_5_blk_n  |   9|          2|    1|          2|
+    |xi0_s_M_elems_V_6_blk_n  |   9|          2|    1|          2|
+    |xi0_s_M_elems_V_7_blk_n  |   9|          2|    1|          2|
+    |xi1_s_M_elems_V_0_blk_n  |   9|          2|    1|          2|
+    |xi1_s_M_elems_V_1_blk_n  |   9|          2|    1|          2|
+    |xi1_s_M_elems_V_2_blk_n  |   9|          2|    1|          2|
+    |xi1_s_M_elems_V_3_blk_n  |   9|          2|    1|          2|
+    |xi1_s_M_elems_V_4_blk_n  |   9|          2|    1|          2|
+    |xi1_s_M_elems_V_5_blk_n  |   9|          2|    1|          2|
+    |xi1_s_M_elems_V_6_blk_n  |   9|          2|    1|          2|
+    |xi1_s_M_elems_V_7_blk_n  |   9|          2|    1|          2|
+    |xi2_s_M_elems_V_0_blk_n  |   9|          2|    1|          2|
+    |xi2_s_M_elems_V_1_blk_n  |   9|          2|    1|          2|
+    |xi2_s_M_elems_V_2_blk_n  |   9|          2|    1|          2|
+    |xi2_s_M_elems_V_3_blk_n  |   9|          2|    1|          2|
+    |xi2_s_M_elems_V_4_blk_n  |   9|          2|    1|          2|
+    |xi2_s_M_elems_V_5_blk_n  |   9|          2|    1|          2|
+    |xi2_s_M_elems_V_6_blk_n  |   9|          2|    1|          2|
+    |xi2_s_M_elems_V_7_blk_n  |   9|          2|    1|          2|
+    |xi3_s_M_elems_V_0_blk_n  |   9|          2|    1|          2|
+    |xi3_s_M_elems_V_1_blk_n  |   9|          2|    1|          2|
+    |xi3_s_M_elems_V_2_blk_n  |   9|          2|    1|          2|
+    |xi3_s_M_elems_V_3_blk_n  |   9|          2|    1|          2|
+    |xi3_s_M_elems_V_4_blk_n  |   9|          2|    1|          2|
+    |xi3_s_M_elems_V_5_blk_n  |   9|          2|    1|          2|
+    |xi3_s_M_elems_V_6_blk_n  |   9|          2|    1|          2|
+    |xi3_s_M_elems_V_7_blk_n  |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 324|         72|   44|         88|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |bitcast_ln118_1_reg_470  |  32|   0|   32|          0|
+    |bitcast_ln118_2_reg_482  |  32|   0|   32|          0|
+    |bitcast_ln118_3_reg_494  |  32|   0|   32|          0|
+    |bitcast_ln118_reg_458    |  32|   0|   32|          0|
+    |i_fu_124                 |   5|   0|    5|          0|
+    |icmp_ln122_reg_513       |   1|   0|    1|          0|
+    |trunc_ln121_reg_509      |   1|   0|    1|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 138|   0|  138|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++--------------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|  read_xi_to_stream|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|  read_xi_to_stream|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|  read_xi_to_stream|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|  read_xi_to_stream|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|  read_xi_to_stream|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|  read_xi_to_stream|  return value|
+|xi0_s_M_elems_V_0_din     |  out|   32|     ap_fifo|  xi0_s_M_elems_V_0|       pointer|
+|xi0_s_M_elems_V_0_full_n  |   in|    1|     ap_fifo|  xi0_s_M_elems_V_0|       pointer|
+|xi0_s_M_elems_V_0_write   |  out|    1|     ap_fifo|  xi0_s_M_elems_V_0|       pointer|
+|xi0_s_M_elems_V_4_din     |  out|   32|     ap_fifo|  xi0_s_M_elems_V_4|       pointer|
+|xi0_s_M_elems_V_4_full_n  |   in|    1|     ap_fifo|  xi0_s_M_elems_V_4|       pointer|
+|xi0_s_M_elems_V_4_write   |  out|    1|     ap_fifo|  xi0_s_M_elems_V_4|       pointer|
+|xi1_s_M_elems_V_0_din     |  out|   32|     ap_fifo|  xi1_s_M_elems_V_0|       pointer|
+|xi1_s_M_elems_V_0_full_n  |   in|    1|     ap_fifo|  xi1_s_M_elems_V_0|       pointer|
+|xi1_s_M_elems_V_0_write   |  out|    1|     ap_fifo|  xi1_s_M_elems_V_0|       pointer|
+|xi1_s_M_elems_V_4_din     |  out|   32|     ap_fifo|  xi1_s_M_elems_V_4|       pointer|
+|xi1_s_M_elems_V_4_full_n  |   in|    1|     ap_fifo|  xi1_s_M_elems_V_4|       pointer|
+|xi1_s_M_elems_V_4_write   |  out|    1|     ap_fifo|  xi1_s_M_elems_V_4|       pointer|
+|xi2_s_M_elems_V_0_din     |  out|   32|     ap_fifo|  xi2_s_M_elems_V_0|       pointer|
+|xi2_s_M_elems_V_0_full_n  |   in|    1|     ap_fifo|  xi2_s_M_elems_V_0|       pointer|
+|xi2_s_M_elems_V_0_write   |  out|    1|     ap_fifo|  xi2_s_M_elems_V_0|       pointer|
+|xi2_s_M_elems_V_4_din     |  out|   32|     ap_fifo|  xi2_s_M_elems_V_4|       pointer|
+|xi2_s_M_elems_V_4_full_n  |   in|    1|     ap_fifo|  xi2_s_M_elems_V_4|       pointer|
+|xi2_s_M_elems_V_4_write   |  out|    1|     ap_fifo|  xi2_s_M_elems_V_4|       pointer|
+|xi3_s_M_elems_V_0_din     |  out|   32|     ap_fifo|  xi3_s_M_elems_V_0|       pointer|
+|xi3_s_M_elems_V_0_full_n  |   in|    1|     ap_fifo|  xi3_s_M_elems_V_0|       pointer|
+|xi3_s_M_elems_V_0_write   |  out|    1|     ap_fifo|  xi3_s_M_elems_V_0|       pointer|
+|xi3_s_M_elems_V_4_din     |  out|   32|     ap_fifo|  xi3_s_M_elems_V_4|       pointer|
+|xi3_s_M_elems_V_4_full_n  |   in|    1|     ap_fifo|  xi3_s_M_elems_V_4|       pointer|
+|xi3_s_M_elems_V_4_write   |  out|    1|     ap_fifo|  xi3_s_M_elems_V_4|       pointer|
+|xi0_s_M_elems_V_1_din     |  out|   32|     ap_fifo|  xi0_s_M_elems_V_1|       pointer|
+|xi0_s_M_elems_V_1_full_n  |   in|    1|     ap_fifo|  xi0_s_M_elems_V_1|       pointer|
+|xi0_s_M_elems_V_1_write   |  out|    1|     ap_fifo|  xi0_s_M_elems_V_1|       pointer|
+|xi0_s_M_elems_V_5_din     |  out|   32|     ap_fifo|  xi0_s_M_elems_V_5|       pointer|
+|xi0_s_M_elems_V_5_full_n  |   in|    1|     ap_fifo|  xi0_s_M_elems_V_5|       pointer|
+|xi0_s_M_elems_V_5_write   |  out|    1|     ap_fifo|  xi0_s_M_elems_V_5|       pointer|
+|xi1_s_M_elems_V_1_din     |  out|   32|     ap_fifo|  xi1_s_M_elems_V_1|       pointer|
+|xi1_s_M_elems_V_1_full_n  |   in|    1|     ap_fifo|  xi1_s_M_elems_V_1|       pointer|
+|xi1_s_M_elems_V_1_write   |  out|    1|     ap_fifo|  xi1_s_M_elems_V_1|       pointer|
+|xi1_s_M_elems_V_5_din     |  out|   32|     ap_fifo|  xi1_s_M_elems_V_5|       pointer|
+|xi1_s_M_elems_V_5_full_n  |   in|    1|     ap_fifo|  xi1_s_M_elems_V_5|       pointer|
+|xi1_s_M_elems_V_5_write   |  out|    1|     ap_fifo|  xi1_s_M_elems_V_5|       pointer|
+|xi2_s_M_elems_V_1_din     |  out|   32|     ap_fifo|  xi2_s_M_elems_V_1|       pointer|
+|xi2_s_M_elems_V_1_full_n  |   in|    1|     ap_fifo|  xi2_s_M_elems_V_1|       pointer|
+|xi2_s_M_elems_V_1_write   |  out|    1|     ap_fifo|  xi2_s_M_elems_V_1|       pointer|
+|xi2_s_M_elems_V_5_din     |  out|   32|     ap_fifo|  xi2_s_M_elems_V_5|       pointer|
+|xi2_s_M_elems_V_5_full_n  |   in|    1|     ap_fifo|  xi2_s_M_elems_V_5|       pointer|
+|xi2_s_M_elems_V_5_write   |  out|    1|     ap_fifo|  xi2_s_M_elems_V_5|       pointer|
+|xi3_s_M_elems_V_1_din     |  out|   32|     ap_fifo|  xi3_s_M_elems_V_1|       pointer|
+|xi3_s_M_elems_V_1_full_n  |   in|    1|     ap_fifo|  xi3_s_M_elems_V_1|       pointer|
+|xi3_s_M_elems_V_1_write   |  out|    1|     ap_fifo|  xi3_s_M_elems_V_1|       pointer|
+|xi3_s_M_elems_V_5_din     |  out|   32|     ap_fifo|  xi3_s_M_elems_V_5|       pointer|
+|xi3_s_M_elems_V_5_full_n  |   in|    1|     ap_fifo|  xi3_s_M_elems_V_5|       pointer|
+|xi3_s_M_elems_V_5_write   |  out|    1|     ap_fifo|  xi3_s_M_elems_V_5|       pointer|
+|xi0_s_M_elems_V_2_din     |  out|   32|     ap_fifo|  xi0_s_M_elems_V_2|       pointer|
+|xi0_s_M_elems_V_2_full_n  |   in|    1|     ap_fifo|  xi0_s_M_elems_V_2|       pointer|
+|xi0_s_M_elems_V_2_write   |  out|    1|     ap_fifo|  xi0_s_M_elems_V_2|       pointer|
+|xi0_s_M_elems_V_6_din     |  out|   32|     ap_fifo|  xi0_s_M_elems_V_6|       pointer|
+|xi0_s_M_elems_V_6_full_n  |   in|    1|     ap_fifo|  xi0_s_M_elems_V_6|       pointer|
+|xi0_s_M_elems_V_6_write   |  out|    1|     ap_fifo|  xi0_s_M_elems_V_6|       pointer|
+|xi1_s_M_elems_V_2_din     |  out|   32|     ap_fifo|  xi1_s_M_elems_V_2|       pointer|
+|xi1_s_M_elems_V_2_full_n  |   in|    1|     ap_fifo|  xi1_s_M_elems_V_2|       pointer|
+|xi1_s_M_elems_V_2_write   |  out|    1|     ap_fifo|  xi1_s_M_elems_V_2|       pointer|
+|xi1_s_M_elems_V_6_din     |  out|   32|     ap_fifo|  xi1_s_M_elems_V_6|       pointer|
+|xi1_s_M_elems_V_6_full_n  |   in|    1|     ap_fifo|  xi1_s_M_elems_V_6|       pointer|
+|xi1_s_M_elems_V_6_write   |  out|    1|     ap_fifo|  xi1_s_M_elems_V_6|       pointer|
+|xi2_s_M_elems_V_2_din     |  out|   32|     ap_fifo|  xi2_s_M_elems_V_2|       pointer|
+|xi2_s_M_elems_V_2_full_n  |   in|    1|     ap_fifo|  xi2_s_M_elems_V_2|       pointer|
+|xi2_s_M_elems_V_2_write   |  out|    1|     ap_fifo|  xi2_s_M_elems_V_2|       pointer|
+|xi2_s_M_elems_V_6_din     |  out|   32|     ap_fifo|  xi2_s_M_elems_V_6|       pointer|
+|xi2_s_M_elems_V_6_full_n  |   in|    1|     ap_fifo|  xi2_s_M_elems_V_6|       pointer|
+|xi2_s_M_elems_V_6_write   |  out|    1|     ap_fifo|  xi2_s_M_elems_V_6|       pointer|
+|xi3_s_M_elems_V_2_din     |  out|   32|     ap_fifo|  xi3_s_M_elems_V_2|       pointer|
+|xi3_s_M_elems_V_2_full_n  |   in|    1|     ap_fifo|  xi3_s_M_elems_V_2|       pointer|
+|xi3_s_M_elems_V_2_write   |  out|    1|     ap_fifo|  xi3_s_M_elems_V_2|       pointer|
+|xi3_s_M_elems_V_6_din     |  out|   32|     ap_fifo|  xi3_s_M_elems_V_6|       pointer|
+|xi3_s_M_elems_V_6_full_n  |   in|    1|     ap_fifo|  xi3_s_M_elems_V_6|       pointer|
+|xi3_s_M_elems_V_6_write   |  out|    1|     ap_fifo|  xi3_s_M_elems_V_6|       pointer|
+|xi0_s_M_elems_V_7_din     |  out|   32|     ap_fifo|  xi0_s_M_elems_V_7|       pointer|
+|xi0_s_M_elems_V_7_full_n  |   in|    1|     ap_fifo|  xi0_s_M_elems_V_7|       pointer|
+|xi0_s_M_elems_V_7_write   |  out|    1|     ap_fifo|  xi0_s_M_elems_V_7|       pointer|
+|xi1_s_M_elems_V_7_din     |  out|   32|     ap_fifo|  xi1_s_M_elems_V_7|       pointer|
+|xi1_s_M_elems_V_7_full_n  |   in|    1|     ap_fifo|  xi1_s_M_elems_V_7|       pointer|
+|xi1_s_M_elems_V_7_write   |  out|    1|     ap_fifo|  xi1_s_M_elems_V_7|       pointer|
+|xi2_s_M_elems_V_7_din     |  out|   32|     ap_fifo|  xi2_s_M_elems_V_7|       pointer|
+|xi2_s_M_elems_V_7_full_n  |   in|    1|     ap_fifo|  xi2_s_M_elems_V_7|       pointer|
+|xi2_s_M_elems_V_7_write   |  out|    1|     ap_fifo|  xi2_s_M_elems_V_7|       pointer|
+|xi3_s_M_elems_V_7_din     |  out|   32|     ap_fifo|  xi3_s_M_elems_V_7|       pointer|
+|xi3_s_M_elems_V_7_full_n  |   in|    1|     ap_fifo|  xi3_s_M_elems_V_7|       pointer|
+|xi3_s_M_elems_V_7_write   |  out|    1|     ap_fifo|  xi3_s_M_elems_V_7|       pointer|
+|xi0_s_M_elems_V_3_din     |  out|   32|     ap_fifo|  xi0_s_M_elems_V_3|       pointer|
+|xi0_s_M_elems_V_3_full_n  |   in|    1|     ap_fifo|  xi0_s_M_elems_V_3|       pointer|
+|xi0_s_M_elems_V_3_write   |  out|    1|     ap_fifo|  xi0_s_M_elems_V_3|       pointer|
+|xi1_s_M_elems_V_3_din     |  out|   32|     ap_fifo|  xi1_s_M_elems_V_3|       pointer|
+|xi1_s_M_elems_V_3_full_n  |   in|    1|     ap_fifo|  xi1_s_M_elems_V_3|       pointer|
+|xi1_s_M_elems_V_3_write   |  out|    1|     ap_fifo|  xi1_s_M_elems_V_3|       pointer|
+|xi2_s_M_elems_V_3_din     |  out|   32|     ap_fifo|  xi2_s_M_elems_V_3|       pointer|
+|xi2_s_M_elems_V_3_full_n  |   in|    1|     ap_fifo|  xi2_s_M_elems_V_3|       pointer|
+|xi2_s_M_elems_V_3_write   |  out|    1|     ap_fifo|  xi2_s_M_elems_V_3|       pointer|
+|xi3_s_M_elems_V_3_din     |  out|   32|     ap_fifo|  xi3_s_M_elems_V_3|       pointer|
+|xi3_s_M_elems_V_3_full_n  |   in|    1|     ap_fifo|  xi3_s_M_elems_V_3|       pointer|
+|xi3_s_M_elems_V_3_write   |  out|    1|     ap_fifo|  xi3_s_M_elems_V_3|       pointer|
+|p_read                    |   in|  128|     ap_none|             p_read|        scalar|
++--------------------------+-----+-----+------------+-------------------+--------------+
+

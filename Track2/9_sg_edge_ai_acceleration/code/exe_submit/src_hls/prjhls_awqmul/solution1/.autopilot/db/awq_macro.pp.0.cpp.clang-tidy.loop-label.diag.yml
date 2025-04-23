@@ -1,0 +1,553 @@
+---
+MainSourceFile:  /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          286572
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          287038
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          287505
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          571423
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_127_1:  '
+    FileOffset:      127
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1468138
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_127_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_143_1:  '
+    FileOffset:      143
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1468585
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_143_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_169_1:  '
+    FileOffset:      169
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1469115
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_169_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_170_1:  '
+    FileOffset:      170
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1469450
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_170_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_198_1:  '
+    FileOffset:      198
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1470288
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_198_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_199_1:  '
+    FileOffset:      199
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1470661
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_199_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_200_1:  '
+    FileOffset:      200
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1471034
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_200_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_201_1:  '
+    FileOffset:      201
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1471407
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_201_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_202_1:  '
+    FileOffset:      202
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1471780
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_202_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_203_1:  '
+    FileOffset:      203
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1472153
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_203_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_204_1:  '
+    FileOffset:      204
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1472526
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_204_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_205_1:  '
+    FileOffset:      205
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1472899
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_205_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_206_1:  '
+    FileOffset:      206
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1473273
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_206_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_207_1:  '
+    FileOffset:      207
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1473648
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_222_1:  '
+    FileOffset:      222
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1474096
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_222_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_223_1:  '
+    FileOffset:      223
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1474450
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_223_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_224_1:  '
+    FileOffset:      224
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1474803
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_224_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_225_1:  '
+    FileOffset:      225
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1475155
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_225_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_226_1:  '
+    FileOffset:      226
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1475508
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_226_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_256_1:  '
+    FileOffset:      256
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1475991
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_256_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_257_1:  '
+    FileOffset:      257
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1476432
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_257_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_258_1:  '
+    FileOffset:      258
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1476875
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_258_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_259_1:  '
+    FileOffset:      259
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1477318
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_259_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_260_1:  '
+    FileOffset:      260
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1477761
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_260_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_261_1:  '
+    FileOffset:      261
+    FilePath:        /home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1478203
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_261_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_26_1:  '
+    FileOffset:      26
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1723175
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_26_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_45_1:  '
+    FileOffset:      45
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1723628
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_45_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_50_2:  '
+    FileOffset:      50
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1723768
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_50_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_55_3:  '
+    FileOffset:      55
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1723936
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_55_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_79_1:  '
+    FileOffset:      79
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1724547
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_79_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_83_2:  '
+    FileOffset:      83
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1724617
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_83_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_116_1:  '
+    FileOffset:      116
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1725641
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_116_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_119_2:  '
+    FileOffset:      119
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1725751
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_119_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_146_1:  '
+    FileOffset:      146
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1726525
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_146_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_154_2:  '
+    FileOffset:      154
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1726778
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_154_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_157_3:  '
+    FileOffset:      157
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1726896
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_157_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_230_1:  '
+    FileOffset:      230
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1728241
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_230_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, add + fabric is invalid combination for bind_op'
+    FileOffset:      242
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, add + dsp is invalid combination for bind_op'
+    FileOffset:      246
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, add + dsp is invalid combination for bind_op'
+    FileOffset:      249
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    Message:         ' hls::vector type top function variable out requires aggregation'
+    FileOffset:      265
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1729500
+        Length:          0
+        ReplacementText: '
+#pragma HLS aggregate variable = out
+'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    Message:         ' hls::vector type top function variable out requires align attribute'
+    FileOffset:      265
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1729299
+        Length:          0
+        ReplacementText: ' __attribute__((align_value(alignof(hls::vector<float, 4>)))) '
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    Message:         ' hls::vector type top function variable xi requires aggregation'
+    FileOffset:      266
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1729500
+        Length:          0
+        ReplacementText: '
+#pragma HLS aggregate variable = xi
+'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    Message:         ' hls::vector type top function variable xi requires align attribute'
+    FileOffset:      266
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1729331
+        Length:          0
+        ReplacementText: ' __attribute__((align_value(alignof(hls::vector<float, 4>)))) '
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    Message:         ' hls::vector type top function variable mro0 requires aggregation'
+    FileOffset:      267
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1729500
+        Length:          0
+        ReplacementText: '
+#pragma HLS aggregate variable = mro0
+'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    Message:         ' hls::vector type top function variable mro0 requires align attribute'
+    FileOffset:      267
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1729368
+        Length:          0
+        ReplacementText: ' __attribute__((align_value(alignof(hls::vector<uint32_t, 4>)))) '
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    Message:         ' hls::vector type top function variable mro1 requires aggregation'
+    FileOffset:      268
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1729500
+        Length:          0
+        ReplacementText: '
+#pragma HLS aggregate variable = mro1
+'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    Message:         ' hls::vector type top function variable mro1 requires align attribute'
+    FileOffset:      268
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1729405
+        Length:          0
+        ReplacementText: ' __attribute__((align_value(alignof(hls::vector<uint32_t, 4>)))) '
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    Message:         ' hls::vector type top function variable mro2 requires aggregation'
+    FileOffset:      269
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1729500
+        Length:          0
+        ReplacementText: '
+#pragma HLS aggregate variable = mro2
+'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    Message:         ' hls::vector type top function variable mro2 requires align attribute'
+    FileOffset:      269
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1729442
+        Length:          0
+        ReplacementText: ' __attribute__((align_value(alignof(hls::vector<uint32_t, 4>)))) '
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    Message:         ' hls::vector type top function variable mro3 requires aggregation'
+    FileOffset:      270
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1729500
+        Length:          0
+        ReplacementText: '
+#pragma HLS aggregate variable = mro3
+'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    Message:         ' hls::vector type top function variable mro3 requires align attribute'
+    FileOffset:      270
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1729479
+        Length:          0
+        ReplacementText: ' __attribute__((align_value(alignof(hls::vector<uint32_t, 4>)))) '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_318_1:  '
+    FileOffset:      318
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1731166
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_318_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_324_2:  '
+    FileOffset:      324
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1731330
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_324_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_337_3:  '
+    FileOffset:      337
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1732005
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_337_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_338_4:  '
+    FileOffset:      338
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1732046
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_338_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_350_5:  '
+    FileOffset:      350
+    FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/src/awq_macro.cpp
+    Replacements:    
+      - FilePath:        /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp
+        Offset:          1732525
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_350_5: '
+...

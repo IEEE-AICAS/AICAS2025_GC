@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "random": "cpp",
+        "cmath": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp",
+        "ctime": "cpp",
+        "cstdlib": "cpp",
+        "limits": "cpp",
+        "array": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "cstdint": "cpp",
+        "*.tcc": "cpp",
+        "ostream": "cpp"
+    }
+}

@@ -13,3 +13,5 @@ Track2/8_json_team/hardware/project_1.gen/sources_1/bd/system/ip/system_Top_0_0/
 Track2/8_json_team/hardware/project_1.runs/impl_1/system_wrapper_routed.dcp
 Track2/8_json_team/model/model.bin
 Track2/8_json_team/pynq/model/model.bin
+Track2/9_sg_edge_ai_acceleration/code/exe_submit/params_awq64/fullmodel_combined.bin
+Track2/9_sg_edge_ai_acceleration/code/exe_submit/params/fullmodel_combined.bin

@@ -1,0 +1,153 @@
+{
+  "dim": 896,
+  "hidden_dim": 4864,
+  "n_layers": 24,
+  "n_heads": 14,
+  "n_kv_heads": 2,
+  "vocab_size": 151936,
+  "seq_len": 32768,
+  "params": {
+    "Layer0": [
+      {
+        "param_name": "self_attn.q_proj",
+        "submodules": {
+          "macro": {
+            "data_type": "awq_macro",
+            "shape": [
+              7,
+              112
+            ],
+            "offset": 0,
+            "size": 426496
+          },
+          "bias": {
+            "data_type": "float16",
+            "shape": [
+              896
+            ],
+            "offset": 426496,
+            "size": 1792
+          }
+        }
+      },
+      {
+        "param_name": "self_attn.k_proj",
+        "submodules": {
+          "macro": {
+            "data_type": "awq_macro",
+            "shape": [
+              7,
+              16
+            ],
+            "offset": 428288,
+            "size": 60928
+          },
+          "bias": {
+            "data_type": "float16",
+            "shape": [
+              128
+            ],
+            "offset": 489216,
+            "size": 256
+          }
+        }
+      },
+      {
+        "param_name": "self_attn.v_proj",
+        "submodules": {
+          "macro": {
+            "data_type": "awq_macro",
+            "shape": [
+              7,
+              16
+            ],
+            "offset": 489472,
+            "size": 60928
+          },
+          "bias": {
+            "data_type": "float16",
+            "shape": [
+              128
+            ],
+            "offset": 550400,
+            "size": 256
+          }
+        }
+      },
+      {
+        "param_name": "self_attn.o_proj",
+        "submodules": {
+          "macro": {
+            "data_type": "awq_macro",
+            "shape": [
+              7,
+              112
+            ],
+            "offset": 550656,
+            "size": 426496
+          }
+        }
+      },
+      {
+        "param_name": "mlp.gate_proj",
+        "submodules": {
+          "macro": {
+            "data_type": "awq_macro",
+            "shape": [
+              7,
+              608
+            ],
+            "offset": 977152,
+            "size": 2315264
+          }
+        }
+      },
+      {
+        "param_name": "mlp.up_proj",
+        "submodules": {
+          "macro": {
+            "data_type": "awq_macro",
+            "shape": [
+              7,
+              608
+            ],
+            "offset": 3292416,
+            "size": 2315264
+          }
+        }
+      },
+      {
+        "param_name": "mlp.down_proj",
+        "submodules": {
+          "macro": {
+            "data_type": "awq_macro",
+            "shape": [
+              38,
+              112
+            ],
+            "offset": 5607680,
+            "size": 2315264
+          }
+        }
+      },
+      {
+        "param_name": "input_layernorm.weight",
+        "data_type": "float16",
+        "offset": 7922944,
+        "size": 1792,
+        "shape": [
+          896
+        ]
+      },
+      {
+        "param_name": "post_attention_layernorm.weight",
+        "data_type": "float16",
+        "offset": 7924736,
+        "size": 1792,
+        "shape": [
+          896
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,594 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute_mac_sub'
+================================================================
+* Date:           Fri Mar 28 16:44:19 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        prjhls_awqmul
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.375 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       59|       59|  0.295 us|  0.295 us|   45|   45|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- lp_cmp_sub_h  |       57|       57|        23|          5|          1|     8|       yes|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 5, depth = 23
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 23
+* Pipeline : 1
+  Pipeline-0 : II = 5, D = 23, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.65>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%m = alloca i32 1" [src/awq_macro.cpp:194]   --->   Operation 26 'alloca' 'm' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%pout_temp_0_0 = alloca i32 1"   --->   Operation 27 'alloca' 'pout_temp_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%pout_temp_1_0 = alloca i32 1"   --->   Operation 28 'alloca' 'pout_temp_1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%pout_temp_2_0 = alloca i32 1"   --->   Operation 29 'alloca' 'pout_temp_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%pout_temp_3_0 = alloca i32 1"   --->   Operation 30 'alloca' 'pout_temp_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%pout_temp_4_0 = alloca i32 1"   --->   Operation 31 'alloca' 'pout_temp_4_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%pout_temp_5_0 = alloca i32 1"   --->   Operation 32 'alloca' 'pout_temp_5_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%pout_temp_6_0 = alloca i32 1"   --->   Operation 33 'alloca' 'pout_temp_6_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%pout_temp_7_0 = alloca i32 1"   --->   Operation 34 'alloca' 'pout_temp_7_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mro_s_0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %xi_s_0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%qscale_7_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %qscale_7_val" [src/awq_macro.cpp:189]   --->   Operation 37 'read' 'qscale_7_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%qscale_6_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %qscale_6_val" [src/awq_macro.cpp:189]   --->   Operation 38 'read' 'qscale_6_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%qscale_5_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %qscale_5_val" [src/awq_macro.cpp:189]   --->   Operation 39 'read' 'qscale_5_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%qscale_4_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %qscale_4_val" [src/awq_macro.cpp:189]   --->   Operation 40 'read' 'qscale_4_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%qscale_3_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %qscale_3_val" [src/awq_macro.cpp:189]   --->   Operation 41 'read' 'qscale_3_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%qscale_2_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %qscale_2_val" [src/awq_macro.cpp:189]   --->   Operation 42 'read' 'qscale_2_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%qscale_1_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %qscale_1_val" [src/awq_macro.cpp:189]   --->   Operation 43 'read' 'qscale_1_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%qscale_0_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %qscale_0_val" [src/awq_macro.cpp:189]   --->   Operation 44 'read' 'qscale_0_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%qzeros_7_val_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %qzeros_7_val" [src/awq_macro.cpp:189]   --->   Operation 45 'read' 'qzeros_7_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%qzeros_6_val_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %qzeros_6_val" [src/awq_macro.cpp:189]   --->   Operation 46 'read' 'qzeros_6_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%qzeros_5_val_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %qzeros_5_val" [src/awq_macro.cpp:189]   --->   Operation 47 'read' 'qzeros_5_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%qzeros_4_val_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %qzeros_4_val" [src/awq_macro.cpp:189]   --->   Operation 48 'read' 'qzeros_4_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%qzeros_3_val_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %qzeros_3_val" [src/awq_macro.cpp:189]   --->   Operation 49 'read' 'qzeros_3_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%qzeros_2_val_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %qzeros_2_val" [src/awq_macro.cpp:189]   --->   Operation 50 'read' 'qzeros_2_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%qzeros_1_val_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %qzeros_1_val" [src/awq_macro.cpp:189]   --->   Operation 51 'read' 'qzeros_1_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%qzeros_0_val_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %qzeros_0_val" [src/awq_macro.cpp:189]   --->   Operation 52 'read' 'qzeros_0_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%conv3_i13_i = zext i4 %qzeros_0_val_read" [src/awq_macro.cpp:189]   --->   Operation 53 'zext' 'conv3_i13_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%conv3_i13_i_1 = zext i4 %qzeros_1_val_read" [src/awq_macro.cpp:189]   --->   Operation 54 'zext' 'conv3_i13_i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%conv3_i13_i_2 = zext i4 %qzeros_2_val_read" [src/awq_macro.cpp:189]   --->   Operation 55 'zext' 'conv3_i13_i_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%conv3_i13_i_3 = zext i4 %qzeros_3_val_read" [src/awq_macro.cpp:189]   --->   Operation 56 'zext' 'conv3_i13_i_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%conv3_i13_i_4 = zext i4 %qzeros_4_val_read" [src/awq_macro.cpp:189]   --->   Operation 57 'zext' 'conv3_i13_i_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%conv3_i13_i_5 = zext i4 %qzeros_5_val_read" [src/awq_macro.cpp:189]   --->   Operation 58 'zext' 'conv3_i13_i_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%conv3_i13_i_6 = zext i4 %qzeros_6_val_read" [src/awq_macro.cpp:189]   --->   Operation 59 'zext' 'conv3_i13_i_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%conv3_i13_i_7 = zext i4 %qzeros_7_val_read" [src/awq_macro.cpp:189]   --->   Operation 60 'zext' 'conv3_i13_i_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 0, i32 %pout_temp_7_0"   --->   Operation 61 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 62 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 0, i32 %pout_temp_6_0"   --->   Operation 62 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 63 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 0, i32 %pout_temp_5_0"   --->   Operation 63 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 64 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 0, i32 %pout_temp_4_0"   --->   Operation 64 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 65 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 0, i32 %pout_temp_3_0"   --->   Operation 65 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 66 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 0, i32 %pout_temp_2_0"   --->   Operation 66 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 67 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 0, i32 %pout_temp_1_0"   --->   Operation 67 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 68 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 0, i32 %pout_temp_0_0"   --->   Operation 68 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 69 [1/1] (0.42ns)   --->   "%store_ln194 = store i4 0, i4 %m" [src/awq_macro.cpp:194]   --->   Operation 69 'store' 'store_ln194' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%br_ln194 = br void %lp_precompute" [src/awq_macro.cpp:194]   --->   Operation 70 'br' 'br_ln194' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%m_1 = load i4 %m" [src/awq_macro.cpp:194]   --->   Operation 71 'load' 'm_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.79ns)   --->   "%icmp_ln194 = icmp_eq  i4 %m_1, i4 8" [src/awq_macro.cpp:194]   --->   Operation 72 'icmp' 'icmp_ln194' <Predicate = true> <Delay = 0.79> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 73 [1/1] (0.79ns)   --->   "%m_2 = add i4 %m_1, i4 1" [src/awq_macro.cpp:194]   --->   Operation 73 'add' 'm_2' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln194 = br i1 %icmp_ln194, void %lp_precompute.split, void %for.end28" [src/awq_macro.cpp:194]   --->   Operation 74 'br' 'br_ln194' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.42ns)   --->   "%store_ln194 = store i4 %m_2, i4 %m" [src/awq_macro.cpp:194]   --->   Operation 75 'store' 'store_ln194' <Predicate = (!icmp_ln194)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 2.62>
+ST_2 : Operation 76 [1/1] ( I:1.82ns O:1.82ns )   --->   "%value = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %mro_s_0" [src/awq_macro.cpp:201]   --->   Operation 76 'read' 'value' <Predicate = (!icmp_ln194)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%trunc_ln98 = trunc i32 %value" [src/awq_macro.cpp:98->src/awq_macro.cpp:201]   --->   Operation 77 'trunc' 'trunc_ln98' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i4 @_ssdm_op_PartSelect.i4.i32.i32, i32 %value, i32 16" [src/awq_macro.cpp:99->src/awq_macro.cpp:201]   --->   Operation 78 'partselect' 'tmp_1' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i4 @_ssdm_op_PartSelect.i4.i32.i32, i32 %value, i32 4" [src/awq_macro.cpp:100->src/awq_macro.cpp:201]   --->   Operation 79 'partselect' 'tmp_2' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i4 @_ssdm_op_PartSelect.i4.i32.i32, i32 %value, i32 20" [src/awq_macro.cpp:101->src/awq_macro.cpp:201]   --->   Operation 80 'partselect' 'tmp_3' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i4 @_ssdm_op_PartSelect.i4.i32.i32, i32 %value, i32 8" [src/awq_macro.cpp:102->src/awq_macro.cpp:201]   --->   Operation 81 'partselect' 'tmp_4' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_5 = partselect i4 @_ssdm_op_PartSelect.i4.i32.i32, i32 %value, i32 24" [src/awq_macro.cpp:103->src/awq_macro.cpp:201]   --->   Operation 82 'partselect' 'tmp_5' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%tmp_6 = partselect i4 @_ssdm_op_PartSelect.i4.i32.i32, i32 %value, i32 12" [src/awq_macro.cpp:104->src/awq_macro.cpp:201]   --->   Operation 83 'partselect' 'tmp_6' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_7 = partselect i4 @_ssdm_op_PartSelect.i4.i32.i32, i32 %value, i32 28" [src/awq_macro.cpp:105->src/awq_macro.cpp:201]   --->   Operation 84 'partselect' 'tmp_7' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] ( I:1.82ns O:1.82ns )   --->   "%xi_val = read i32 @_ssdm_op_Read.ap_fifo.volatile.floatP0A, i32 %xi_s_0" [src/awq_macro.cpp:202]   --->   Operation 85 'read' 'xi_val' <Predicate = (!icmp_ln194)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%zext_ln215 = zext i4 %trunc_ln98" [src/awq_macro.cpp:215]   --->   Operation 86 'zext' 'zext_ln215' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.79ns)   --->   "%w_ubias = sub i5 %zext_ln215, i5 %conv3_i13_i" [src/awq_macro.cpp:215]   --->   Operation 87 'sub' 'w_ubias' <Predicate = (!icmp_ln194)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%zext_ln215_1 = zext i4 %tmp_1" [src/awq_macro.cpp:215]   --->   Operation 88 'zext' 'zext_ln215_1' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 89 [1/1] (0.79ns)   --->   "%w_ubias_1 = sub i5 %zext_ln215_1, i5 %conv3_i13_i_1" [src/awq_macro.cpp:215]   --->   Operation 89 'sub' 'w_ubias_1' <Predicate = (!icmp_ln194)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%zext_ln215_2 = zext i4 %tmp_2" [src/awq_macro.cpp:215]   --->   Operation 90 'zext' 'zext_ln215_2' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.79ns)   --->   "%w_ubias_2 = sub i5 %zext_ln215_2, i5 %conv3_i13_i_2" [src/awq_macro.cpp:215]   --->   Operation 91 'sub' 'w_ubias_2' <Predicate = (!icmp_ln194)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%zext_ln215_3 = zext i4 %tmp_3" [src/awq_macro.cpp:215]   --->   Operation 92 'zext' 'zext_ln215_3' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.79ns)   --->   "%w_ubias_3 = sub i5 %zext_ln215_3, i5 %conv3_i13_i_3" [src/awq_macro.cpp:215]   --->   Operation 93 'sub' 'w_ubias_3' <Predicate = (!icmp_ln194)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%zext_ln215_4 = zext i4 %tmp_4" [src/awq_macro.cpp:215]   --->   Operation 94 'zext' 'zext_ln215_4' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 95 [1/1] (0.79ns)   --->   "%w_ubias_4 = sub i5 %zext_ln215_4, i5 %conv3_i13_i_4" [src/awq_macro.cpp:215]   --->   Operation 95 'sub' 'w_ubias_4' <Predicate = (!icmp_ln194)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%zext_ln215_5 = zext i4 %tmp_5" [src/awq_macro.cpp:215]   --->   Operation 96 'zext' 'zext_ln215_5' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 97 [1/1] (0.79ns)   --->   "%w_ubias_5 = sub i5 %zext_ln215_5, i5 %conv3_i13_i_5" [src/awq_macro.cpp:215]   --->   Operation 97 'sub' 'w_ubias_5' <Predicate = (!icmp_ln194)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%zext_ln215_6 = zext i4 %tmp_6" [src/awq_macro.cpp:215]   --->   Operation 98 'zext' 'zext_ln215_6' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.79ns)   --->   "%w_ubias_6 = sub i5 %zext_ln215_6, i5 %conv3_i13_i_6" [src/awq_macro.cpp:215]   --->   Operation 99 'sub' 'w_ubias_6' <Predicate = (!icmp_ln194)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%zext_ln215_7 = zext i4 %tmp_7" [src/awq_macro.cpp:215]   --->   Operation 100 'zext' 'zext_ln215_7' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_2 : Operation 101 [1/1] (0.79ns)   --->   "%w_ubias_7 = sub i5 %zext_ln215_7, i5 %conv3_i13_i_7" [src/awq_macro.cpp:215]   --->   Operation 101 'sub' 'w_ubias_7' <Predicate = (!icmp_ln194)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 3.22>
+ST_3 : Operation 102 [5/5] (3.17ns)   --->   "%mul = fmul i32 %xi_val, i32 %qscale_0_val_read" [src/awq_macro.cpp:209]   --->   Operation 102 'fmul' 'mul' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 103 [5/5] (3.17ns)   --->   "%mul_1 = fmul i32 %xi_val, i32 %qscale_1_val_read" [src/awq_macro.cpp:209]   --->   Operation 103 'fmul' 'mul_1' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 104 [5/5] (3.17ns)   --->   "%mul_2 = fmul i32 %xi_val, i32 %qscale_2_val_read" [src/awq_macro.cpp:209]   --->   Operation 104 'fmul' 'mul_2' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 105 [5/5] (3.17ns)   --->   "%mul_3 = fmul i32 %xi_val, i32 %qscale_3_val_read" [src/awq_macro.cpp:209]   --->   Operation 105 'fmul' 'mul_3' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "%sext_ln216 = sext i5 %w_ubias" [src/awq_macro.cpp:216]   --->   Operation 106 'sext' 'sext_ln216' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_3 : Operation 107 [6/6] (3.22ns)   --->   "%conv = sitofp i32 %sext_ln216" [src/awq_macro.cpp:216]   --->   Operation 107 'sitofp' 'conv' <Predicate = (!icmp_ln194)> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 108 [1/1] (0.00ns)   --->   "%sext_ln216_1 = sext i5 %w_ubias_1" [src/awq_macro.cpp:216]   --->   Operation 108 'sext' 'sext_ln216_1' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_3 : Operation 109 [6/6] (3.22ns)   --->   "%conv_1 = sitofp i32 %sext_ln216_1" [src/awq_macro.cpp:216]   --->   Operation 109 'sitofp' 'conv_1' <Predicate = (!icmp_ln194)> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 3.22>
+ST_4 : Operation 110 [4/5] (3.17ns)   --->   "%mul = fmul i32 %xi_val, i32 %qscale_0_val_read" [src/awq_macro.cpp:209]   --->   Operation 110 'fmul' 'mul' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 111 [4/5] (3.17ns)   --->   "%mul_1 = fmul i32 %xi_val, i32 %qscale_1_val_read" [src/awq_macro.cpp:209]   --->   Operation 111 'fmul' 'mul_1' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 112 [4/5] (3.17ns)   --->   "%mul_2 = fmul i32 %xi_val, i32 %qscale_2_val_read" [src/awq_macro.cpp:209]   --->   Operation 112 'fmul' 'mul_2' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 113 [4/5] (3.17ns)   --->   "%mul_3 = fmul i32 %xi_val, i32 %qscale_3_val_read" [src/awq_macro.cpp:209]   --->   Operation 113 'fmul' 'mul_3' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 114 [5/5] (3.17ns)   --->   "%mul_4 = fmul i32 %xi_val, i32 %qscale_4_val_read" [src/awq_macro.cpp:209]   --->   Operation 114 'fmul' 'mul_4' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 115 [5/5] (3.17ns)   --->   "%mul_5 = fmul i32 %xi_val, i32 %qscale_5_val_read" [src/awq_macro.cpp:209]   --->   Operation 115 'fmul' 'mul_5' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 116 [5/5] (3.17ns)   --->   "%mul_6 = fmul i32 %xi_val, i32 %qscale_6_val_read" [src/awq_macro.cpp:209]   --->   Operation 116 'fmul' 'mul_6' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 117 [5/5] (3.17ns)   --->   "%mul_7 = fmul i32 %xi_val, i32 %qscale_7_val_read" [src/awq_macro.cpp:209]   --->   Operation 117 'fmul' 'mul_7' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 118 [5/6] (3.22ns)   --->   "%conv = sitofp i32 %sext_ln216" [src/awq_macro.cpp:216]   --->   Operation 118 'sitofp' 'conv' <Predicate = (!icmp_ln194)> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 119 [5/6] (3.22ns)   --->   "%conv_1 = sitofp i32 %sext_ln216_1" [src/awq_macro.cpp:216]   --->   Operation 119 'sitofp' 'conv_1' <Predicate = (!icmp_ln194)> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 120 [1/1] (0.00ns)   --->   "%sext_ln216_2 = sext i5 %w_ubias_2" [src/awq_macro.cpp:216]   --->   Operation 120 'sext' 'sext_ln216_2' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_4 : Operation 121 [6/6] (3.22ns)   --->   "%conv_2 = sitofp i32 %sext_ln216_2" [src/awq_macro.cpp:216]   --->   Operation 121 'sitofp' 'conv_2' <Predicate = (!icmp_ln194)> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 122 [1/1] (0.00ns)   --->   "%sext_ln216_3 = sext i5 %w_ubias_3" [src/awq_macro.cpp:216]   --->   Operation 122 'sext' 'sext_ln216_3' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_4 : Operation 123 [6/6] (3.22ns)   --->   "%conv_3 = sitofp i32 %sext_ln216_3" [src/awq_macro.cpp:216]   --->   Operation 123 'sitofp' 'conv_3' <Predicate = (!icmp_ln194)> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 3.22>
+ST_5 : Operation 124 [3/5] (3.17ns)   --->   "%mul = fmul i32 %xi_val, i32 %qscale_0_val_read" [src/awq_macro.cpp:209]   --->   Operation 124 'fmul' 'mul' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 125 [3/5] (3.17ns)   --->   "%mul_1 = fmul i32 %xi_val, i32 %qscale_1_val_read" [src/awq_macro.cpp:209]   --->   Operation 125 'fmul' 'mul_1' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 126 [3/5] (3.17ns)   --->   "%mul_2 = fmul i32 %xi_val, i32 %qscale_2_val_read" [src/awq_macro.cpp:209]   --->   Operation 126 'fmul' 'mul_2' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 127 [3/5] (3.17ns)   --->   "%mul_3 = fmul i32 %xi_val, i32 %qscale_3_val_read" [src/awq_macro.cpp:209]   --->   Operation 127 'fmul' 'mul_3' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 128 [4/5] (3.17ns)   --->   "%mul_4 = fmul i32 %xi_val, i32 %qscale_4_val_read" [src/awq_macro.cpp:209]   --->   Operation 128 'fmul' 'mul_4' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 129 [4/5] (3.17ns)   --->   "%mul_5 = fmul i32 %xi_val, i32 %qscale_5_val_read" [src/awq_macro.cpp:209]   --->   Operation 129 'fmul' 'mul_5' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 130 [4/5] (3.17ns)   --->   "%mul_6 = fmul i32 %xi_val, i32 %qscale_6_val_read" [src/awq_macro.cpp:209]   --->   Operation 130 'fmul' 'mul_6' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 131 [4/5] (3.17ns)   --->   "%mul_7 = fmul i32 %xi_val, i32 %qscale_7_val_read" [src/awq_macro.cpp:209]   --->   Operation 131 'fmul' 'mul_7' <Predicate = (!icmp_ln194)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 132 [4/6] (3.22ns)   --->   "%conv = sitofp i32 %sext_ln216" [src/awq_macro.cpp:216]   --->   Operation 132 'sitofp' 'conv' <Predicate = (!icmp_ln194)> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 133 [4/6] (3.22ns)   --->   "%conv_1 = sitofp i32 %sext_ln216_1" [src/awq_macro.cpp:216]   --->   Operation 133 'sitofp' 'conv_1' <Predicate = (!icmp_ln194)> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 134 [5/6] (3.22ns)   --->   "%conv_2 = sitofp i32 %sext_ln216_2" [src/awq_macro.cpp:216]   --->   Operation 134 'sitofp' 'conv_2' <Predicate = (!icmp_ln194)> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 135 [5/6] (3.22ns)   --->   "%conv_3 = sitofp i32 %sext_ln216_3" [src/awq_macro.cpp:216]   --->   Operation 135 'sitofp' 'conv_3' <Predicate = (!icmp_ln194)> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 136 [1/1] (0.00ns)   --->   "%sext_ln216_4 = sext i5 %w_ubias_4" [src/awq_macro.cpp:216]   --->   Operation 136 'sext' 'sext_ln216_4' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_5 : Operation 137 [6/6] (3.22ns)   --->   "%conv_4 = sitofp i32 %sext_ln216_4" [src/awq_macro.cpp:216]   --->   Operation 137 'sitofp' 'conv_4' <Predicate = (!icmp_ln194)> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 138 [1/1] (0.00ns)   --->   "%sext_ln216_5 = sext i5 %w_ubias_5" [src/awq_macro.cpp:216]   --->   Operation 138 'sext' 'sext_ln216_5' <Predicate = (!icmp_ln194)> <Delay = 0.00>
+ST_5 : Operation 139 [6/6] (3.22ns)   --->   "%conv_5 = sitofp i32 %sext_ln216_5" [src/awq_macro.cpp:216]   --->   Operation 139 'sitofp' 'conv_5' <Predicate = (!icmp_ln194)> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 3.22>
+ST_6 : Operation 140 [2/5] (3.17ns)   --->   "%mul = fmul i32 %xi_val, i32 %qscale_0_val_read" [src/awq_macro.cpp:209]   --->   Operation 140 'fmul' 'mul' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 141 [2/5] (3.17ns)   --->   "%mul_1 = fmul i32 %xi_val, i32 %qscale_1_val_read" [src/awq_macro.cpp:209]   --->   Operation 141 'fmul' 'mul_1' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 142 [2/5] (3.17ns)   --->   "%mul_2 = fmul i32 %xi_val, i32 %qscale_2_val_read" [src/awq_macro.cpp:209]   --->   Operation 142 'fmul' 'mul_2' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 143 [2/5] (3.17ns)   --->   "%mul_3 = fmul i32 %xi_val, i32 %qscale_3_val_read" [src/awq_macro.cpp:209]   --->   Operation 143 'fmul' 'mul_3' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 144 [3/5] (3.17ns)   --->   "%mul_4 = fmul i32 %xi_val, i32 %qscale_4_val_read" [src/awq_macro.cpp:209]   --->   Operation 144 'fmul' 'mul_4' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 145 [3/5] (3.17ns)   --->   "%mul_5 = fmul i32 %xi_val, i32 %qscale_5_val_read" [src/awq_macro.cpp:209]   --->   Operation 145 'fmul' 'mul_5' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 146 [3/5] (3.17ns)   --->   "%mul_6 = fmul i32 %xi_val, i32 %qscale_6_val_read" [src/awq_macro.cpp:209]   --->   Operation 146 'fmul' 'mul_6' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 147 [3/5] (3.17ns)   --->   "%mul_7 = fmul i32 %xi_val, i32 %qscale_7_val_read" [src/awq_macro.cpp:209]   --->   Operation 147 'fmul' 'mul_7' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 148 [3/6] (3.22ns)   --->   "%conv = sitofp i32 %sext_ln216" [src/awq_macro.cpp:216]   --->   Operation 148 'sitofp' 'conv' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 149 [3/6] (3.22ns)   --->   "%conv_1 = sitofp i32 %sext_ln216_1" [src/awq_macro.cpp:216]   --->   Operation 149 'sitofp' 'conv_1' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 150 [4/6] (3.22ns)   --->   "%conv_2 = sitofp i32 %sext_ln216_2" [src/awq_macro.cpp:216]   --->   Operation 150 'sitofp' 'conv_2' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 151 [4/6] (3.22ns)   --->   "%conv_3 = sitofp i32 %sext_ln216_3" [src/awq_macro.cpp:216]   --->   Operation 151 'sitofp' 'conv_3' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 152 [5/6] (3.22ns)   --->   "%conv_4 = sitofp i32 %sext_ln216_4" [src/awq_macro.cpp:216]   --->   Operation 152 'sitofp' 'conv_4' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 153 [5/6] (3.22ns)   --->   "%conv_5 = sitofp i32 %sext_ln216_5" [src/awq_macro.cpp:216]   --->   Operation 153 'sitofp' 'conv_5' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 154 [1/1] (0.00ns)   --->   "%sext_ln216_6 = sext i5 %w_ubias_6" [src/awq_macro.cpp:216]   --->   Operation 154 'sext' 'sext_ln216_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 155 [6/6] (3.22ns)   --->   "%conv_6 = sitofp i32 %sext_ln216_6" [src/awq_macro.cpp:216]   --->   Operation 155 'sitofp' 'conv_6' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 156 [1/1] (0.00ns)   --->   "%sext_ln216_7 = sext i5 %w_ubias_7" [src/awq_macro.cpp:216]   --->   Operation 156 'sext' 'sext_ln216_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 157 [6/6] (3.22ns)   --->   "%conv_7 = sitofp i32 %sext_ln216_7" [src/awq_macro.cpp:216]   --->   Operation 157 'sitofp' 'conv_7' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 3.22>
+ST_7 : Operation 158 [1/5] (3.17ns)   --->   "%mul = fmul i32 %xi_val, i32 %qscale_0_val_read" [src/awq_macro.cpp:209]   --->   Operation 158 'fmul' 'mul' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 159 [1/5] (3.17ns)   --->   "%mul_1 = fmul i32 %xi_val, i32 %qscale_1_val_read" [src/awq_macro.cpp:209]   --->   Operation 159 'fmul' 'mul_1' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 160 [1/5] (3.17ns)   --->   "%mul_2 = fmul i32 %xi_val, i32 %qscale_2_val_read" [src/awq_macro.cpp:209]   --->   Operation 160 'fmul' 'mul_2' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 161 [1/5] (3.17ns)   --->   "%mul_3 = fmul i32 %xi_val, i32 %qscale_3_val_read" [src/awq_macro.cpp:209]   --->   Operation 161 'fmul' 'mul_3' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 162 [2/5] (3.17ns)   --->   "%mul_4 = fmul i32 %xi_val, i32 %qscale_4_val_read" [src/awq_macro.cpp:209]   --->   Operation 162 'fmul' 'mul_4' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 163 [2/5] (3.17ns)   --->   "%mul_5 = fmul i32 %xi_val, i32 %qscale_5_val_read" [src/awq_macro.cpp:209]   --->   Operation 163 'fmul' 'mul_5' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 164 [2/5] (3.17ns)   --->   "%mul_6 = fmul i32 %xi_val, i32 %qscale_6_val_read" [src/awq_macro.cpp:209]   --->   Operation 164 'fmul' 'mul_6' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 165 [2/5] (3.17ns)   --->   "%mul_7 = fmul i32 %xi_val, i32 %qscale_7_val_read" [src/awq_macro.cpp:209]   --->   Operation 165 'fmul' 'mul_7' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 166 [2/6] (3.22ns)   --->   "%conv = sitofp i32 %sext_ln216" [src/awq_macro.cpp:216]   --->   Operation 166 'sitofp' 'conv' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 167 [2/6] (3.22ns)   --->   "%conv_1 = sitofp i32 %sext_ln216_1" [src/awq_macro.cpp:216]   --->   Operation 167 'sitofp' 'conv_1' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 168 [3/6] (3.22ns)   --->   "%conv_2 = sitofp i32 %sext_ln216_2" [src/awq_macro.cpp:216]   --->   Operation 168 'sitofp' 'conv_2' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 169 [3/6] (3.22ns)   --->   "%conv_3 = sitofp i32 %sext_ln216_3" [src/awq_macro.cpp:216]   --->   Operation 169 'sitofp' 'conv_3' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 170 [4/6] (3.22ns)   --->   "%conv_4 = sitofp i32 %sext_ln216_4" [src/awq_macro.cpp:216]   --->   Operation 170 'sitofp' 'conv_4' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 171 [4/6] (3.22ns)   --->   "%conv_5 = sitofp i32 %sext_ln216_5" [src/awq_macro.cpp:216]   --->   Operation 171 'sitofp' 'conv_5' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 172 [5/6] (3.22ns)   --->   "%conv_6 = sitofp i32 %sext_ln216_6" [src/awq_macro.cpp:216]   --->   Operation 172 'sitofp' 'conv_6' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 173 [5/6] (3.22ns)   --->   "%conv_7 = sitofp i32 %sext_ln216_7" [src/awq_macro.cpp:216]   --->   Operation 173 'sitofp' 'conv_7' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 3.22>
+ST_8 : Operation 174 [1/5] (3.17ns)   --->   "%mul_4 = fmul i32 %xi_val, i32 %qscale_4_val_read" [src/awq_macro.cpp:209]   --->   Operation 174 'fmul' 'mul_4' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 175 [1/5] (3.17ns)   --->   "%mul_5 = fmul i32 %xi_val, i32 %qscale_5_val_read" [src/awq_macro.cpp:209]   --->   Operation 175 'fmul' 'mul_5' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 176 [1/5] (3.17ns)   --->   "%mul_6 = fmul i32 %xi_val, i32 %qscale_6_val_read" [src/awq_macro.cpp:209]   --->   Operation 176 'fmul' 'mul_6' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 177 [1/5] (3.17ns)   --->   "%mul_7 = fmul i32 %xi_val, i32 %qscale_7_val_read" [src/awq_macro.cpp:209]   --->   Operation 177 'fmul' 'mul_7' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 178 [1/6] (3.22ns)   --->   "%conv = sitofp i32 %sext_ln216" [src/awq_macro.cpp:216]   --->   Operation 178 'sitofp' 'conv' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 179 [1/6] (3.22ns)   --->   "%conv_1 = sitofp i32 %sext_ln216_1" [src/awq_macro.cpp:216]   --->   Operation 179 'sitofp' 'conv_1' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 180 [2/6] (3.22ns)   --->   "%conv_2 = sitofp i32 %sext_ln216_2" [src/awq_macro.cpp:216]   --->   Operation 180 'sitofp' 'conv_2' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 181 [2/6] (3.22ns)   --->   "%conv_3 = sitofp i32 %sext_ln216_3" [src/awq_macro.cpp:216]   --->   Operation 181 'sitofp' 'conv_3' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 182 [3/6] (3.22ns)   --->   "%conv_4 = sitofp i32 %sext_ln216_4" [src/awq_macro.cpp:216]   --->   Operation 182 'sitofp' 'conv_4' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 183 [3/6] (3.22ns)   --->   "%conv_5 = sitofp i32 %sext_ln216_5" [src/awq_macro.cpp:216]   --->   Operation 183 'sitofp' 'conv_5' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 184 [4/6] (3.22ns)   --->   "%conv_6 = sitofp i32 %sext_ln216_6" [src/awq_macro.cpp:216]   --->   Operation 184 'sitofp' 'conv_6' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 185 [4/6] (3.22ns)   --->   "%conv_7 = sitofp i32 %sext_ln216_7" [src/awq_macro.cpp:216]   --->   Operation 185 'sitofp' 'conv_7' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 3.22>
+ST_9 : Operation 186 [1/6] (3.22ns)   --->   "%conv_2 = sitofp i32 %sext_ln216_2" [src/awq_macro.cpp:216]   --->   Operation 186 'sitofp' 'conv_2' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 187 [1/6] (3.22ns)   --->   "%conv_3 = sitofp i32 %sext_ln216_3" [src/awq_macro.cpp:216]   --->   Operation 187 'sitofp' 'conv_3' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 188 [2/6] (3.22ns)   --->   "%conv_4 = sitofp i32 %sext_ln216_4" [src/awq_macro.cpp:216]   --->   Operation 188 'sitofp' 'conv_4' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 189 [2/6] (3.22ns)   --->   "%conv_5 = sitofp i32 %sext_ln216_5" [src/awq_macro.cpp:216]   --->   Operation 189 'sitofp' 'conv_5' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 190 [3/6] (3.22ns)   --->   "%conv_6 = sitofp i32 %sext_ln216_6" [src/awq_macro.cpp:216]   --->   Operation 190 'sitofp' 'conv_6' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 191 [3/6] (3.22ns)   --->   "%conv_7 = sitofp i32 %sext_ln216_7" [src/awq_macro.cpp:216]   --->   Operation 191 'sitofp' 'conv_7' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 3.22>
+ST_10 : Operation 192 [5/5] (3.17ns)   --->   "%mul1 = fmul i32 %mul, i32 %conv" [src/awq_macro.cpp:216]   --->   Operation 192 'fmul' 'mul1' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 193 [5/5] (3.17ns)   --->   "%mul20_1 = fmul i32 %mul_1, i32 %conv_1" [src/awq_macro.cpp:216]   --->   Operation 193 'fmul' 'mul20_1' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 194 [5/5] (3.17ns)   --->   "%mul20_2 = fmul i32 %mul_2, i32 %conv_2" [src/awq_macro.cpp:216]   --->   Operation 194 'fmul' 'mul20_2' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 195 [5/5] (3.17ns)   --->   "%mul20_3 = fmul i32 %mul_3, i32 %conv_3" [src/awq_macro.cpp:216]   --->   Operation 195 'fmul' 'mul20_3' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 196 [1/6] (3.22ns)   --->   "%conv_4 = sitofp i32 %sext_ln216_4" [src/awq_macro.cpp:216]   --->   Operation 196 'sitofp' 'conv_4' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 197 [1/6] (3.22ns)   --->   "%conv_5 = sitofp i32 %sext_ln216_5" [src/awq_macro.cpp:216]   --->   Operation 197 'sitofp' 'conv_5' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 198 [2/6] (3.22ns)   --->   "%conv_6 = sitofp i32 %sext_ln216_6" [src/awq_macro.cpp:216]   --->   Operation 198 'sitofp' 'conv_6' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 199 [2/6] (3.22ns)   --->   "%conv_7 = sitofp i32 %sext_ln216_7" [src/awq_macro.cpp:216]   --->   Operation 199 'sitofp' 'conv_7' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 3.22>
+ST_11 : Operation 200 [4/5] (3.17ns)   --->   "%mul1 = fmul i32 %mul, i32 %conv" [src/awq_macro.cpp:216]   --->   Operation 200 'fmul' 'mul1' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 201 [4/5] (3.17ns)   --->   "%mul20_1 = fmul i32 %mul_1, i32 %conv_1" [src/awq_macro.cpp:216]   --->   Operation 201 'fmul' 'mul20_1' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 202 [4/5] (3.17ns)   --->   "%mul20_2 = fmul i32 %mul_2, i32 %conv_2" [src/awq_macro.cpp:216]   --->   Operation 202 'fmul' 'mul20_2' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 203 [4/5] (3.17ns)   --->   "%mul20_3 = fmul i32 %mul_3, i32 %conv_3" [src/awq_macro.cpp:216]   --->   Operation 203 'fmul' 'mul20_3' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 204 [5/5] (3.17ns)   --->   "%mul20_4 = fmul i32 %mul_4, i32 %conv_4" [src/awq_macro.cpp:216]   --->   Operation 204 'fmul' 'mul20_4' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 205 [5/5] (3.17ns)   --->   "%mul20_5 = fmul i32 %mul_5, i32 %conv_5" [src/awq_macro.cpp:216]   --->   Operation 205 'fmul' 'mul20_5' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 206 [1/6] (3.22ns)   --->   "%conv_6 = sitofp i32 %sext_ln216_6" [src/awq_macro.cpp:216]   --->   Operation 206 'sitofp' 'conv_6' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 207 [1/6] (3.22ns)   --->   "%conv_7 = sitofp i32 %sext_ln216_7" [src/awq_macro.cpp:216]   --->   Operation 207 'sitofp' 'conv_7' <Predicate = true> <Delay = 3.22> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'uitofp' 'sitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 3.17>
+ST_12 : Operation 208 [3/5] (3.17ns)   --->   "%mul1 = fmul i32 %mul, i32 %conv" [src/awq_macro.cpp:216]   --->   Operation 208 'fmul' 'mul1' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 209 [3/5] (3.17ns)   --->   "%mul20_1 = fmul i32 %mul_1, i32 %conv_1" [src/awq_macro.cpp:216]   --->   Operation 209 'fmul' 'mul20_1' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 210 [3/5] (3.17ns)   --->   "%mul20_2 = fmul i32 %mul_2, i32 %conv_2" [src/awq_macro.cpp:216]   --->   Operation 210 'fmul' 'mul20_2' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 211 [3/5] (3.17ns)   --->   "%mul20_3 = fmul i32 %mul_3, i32 %conv_3" [src/awq_macro.cpp:216]   --->   Operation 211 'fmul' 'mul20_3' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 212 [4/5] (3.17ns)   --->   "%mul20_4 = fmul i32 %mul_4, i32 %conv_4" [src/awq_macro.cpp:216]   --->   Operation 212 'fmul' 'mul20_4' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 213 [4/5] (3.17ns)   --->   "%mul20_5 = fmul i32 %mul_5, i32 %conv_5" [src/awq_macro.cpp:216]   --->   Operation 213 'fmul' 'mul20_5' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 214 [5/5] (3.17ns)   --->   "%mul20_6 = fmul i32 %mul_6, i32 %conv_6" [src/awq_macro.cpp:216]   --->   Operation 214 'fmul' 'mul20_6' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 215 [5/5] (3.17ns)   --->   "%mul20_7 = fmul i32 %mul_7, i32 %conv_7" [src/awq_macro.cpp:216]   --->   Operation 215 'fmul' 'mul20_7' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 3.17>
+ST_13 : Operation 216 [2/5] (3.17ns)   --->   "%mul1 = fmul i32 %mul, i32 %conv" [src/awq_macro.cpp:216]   --->   Operation 216 'fmul' 'mul1' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 217 [2/5] (3.17ns)   --->   "%mul20_1 = fmul i32 %mul_1, i32 %conv_1" [src/awq_macro.cpp:216]   --->   Operation 217 'fmul' 'mul20_1' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 218 [2/5] (3.17ns)   --->   "%mul20_2 = fmul i32 %mul_2, i32 %conv_2" [src/awq_macro.cpp:216]   --->   Operation 218 'fmul' 'mul20_2' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 219 [2/5] (3.17ns)   --->   "%mul20_3 = fmul i32 %mul_3, i32 %conv_3" [src/awq_macro.cpp:216]   --->   Operation 219 'fmul' 'mul20_3' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 220 [3/5] (3.17ns)   --->   "%mul20_4 = fmul i32 %mul_4, i32 %conv_4" [src/awq_macro.cpp:216]   --->   Operation 220 'fmul' 'mul20_4' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 221 [3/5] (3.17ns)   --->   "%mul20_5 = fmul i32 %mul_5, i32 %conv_5" [src/awq_macro.cpp:216]   --->   Operation 221 'fmul' 'mul20_5' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 222 [4/5] (3.17ns)   --->   "%mul20_6 = fmul i32 %mul_6, i32 %conv_6" [src/awq_macro.cpp:216]   --->   Operation 222 'fmul' 'mul20_6' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 223 [4/5] (3.17ns)   --->   "%mul20_7 = fmul i32 %mul_7, i32 %conv_7" [src/awq_macro.cpp:216]   --->   Operation 223 'fmul' 'mul20_7' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 3.17>
+ST_14 : Operation 224 [1/5] (3.17ns)   --->   "%mul1 = fmul i32 %mul, i32 %conv" [src/awq_macro.cpp:216]   --->   Operation 224 'fmul' 'mul1' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 225 [1/5] (3.17ns)   --->   "%mul20_1 = fmul i32 %mul_1, i32 %conv_1" [src/awq_macro.cpp:216]   --->   Operation 225 'fmul' 'mul20_1' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 226 [1/5] (3.17ns)   --->   "%mul20_2 = fmul i32 %mul_2, i32 %conv_2" [src/awq_macro.cpp:216]   --->   Operation 226 'fmul' 'mul20_2' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 227 [1/5] (3.17ns)   --->   "%mul20_3 = fmul i32 %mul_3, i32 %conv_3" [src/awq_macro.cpp:216]   --->   Operation 227 'fmul' 'mul20_3' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 228 [2/5] (3.17ns)   --->   "%mul20_4 = fmul i32 %mul_4, i32 %conv_4" [src/awq_macro.cpp:216]   --->   Operation 228 'fmul' 'mul20_4' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 229 [2/5] (3.17ns)   --->   "%mul20_5 = fmul i32 %mul_5, i32 %conv_5" [src/awq_macro.cpp:216]   --->   Operation 229 'fmul' 'mul20_5' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 230 [3/5] (3.17ns)   --->   "%mul20_6 = fmul i32 %mul_6, i32 %conv_6" [src/awq_macro.cpp:216]   --->   Operation 230 'fmul' 'mul20_6' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 231 [3/5] (3.17ns)   --->   "%mul20_7 = fmul i32 %mul_7, i32 %conv_7" [src/awq_macro.cpp:216]   --->   Operation 231 'fmul' 'mul20_7' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 3.17>
+ST_15 : Operation 232 [1/1] (0.00ns)   --->   "%pout_temp_0_0_load = load i32 %pout_temp_0_0" [src/awq_macro.cpp:216]   --->   Operation 232 'load' 'pout_temp_0_0_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 233 [1/1] (0.00ns)   --->   "%pout_temp_1_0_load = load i32 %pout_temp_1_0" [src/awq_macro.cpp:216]   --->   Operation 233 'load' 'pout_temp_1_0_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 234 [6/6] (2.94ns)   --->   "%add = fadd i32 %pout_temp_0_0_load, i32 %mul1" [src/awq_macro.cpp:216]   --->   Operation 234 'fadd' 'add' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 235 [6/6] (2.94ns)   --->   "%add_1 = fadd i32 %pout_temp_1_0_load, i32 %mul20_1" [src/awq_macro.cpp:216]   --->   Operation 235 'fadd' 'add_1' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 236 [1/5] (3.17ns)   --->   "%mul20_4 = fmul i32 %mul_4, i32 %conv_4" [src/awq_macro.cpp:216]   --->   Operation 236 'fmul' 'mul20_4' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 237 [1/5] (3.17ns)   --->   "%mul20_5 = fmul i32 %mul_5, i32 %conv_5" [src/awq_macro.cpp:216]   --->   Operation 237 'fmul' 'mul20_5' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 238 [2/5] (3.17ns)   --->   "%mul20_6 = fmul i32 %mul_6, i32 %conv_6" [src/awq_macro.cpp:216]   --->   Operation 238 'fmul' 'mul20_6' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 239 [2/5] (3.17ns)   --->   "%mul20_7 = fmul i32 %mul_7, i32 %conv_7" [src/awq_macro.cpp:216]   --->   Operation 239 'fmul' 'mul20_7' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 3.17>
+ST_16 : Operation 240 [1/1] (0.00ns)   --->   "%pout_temp_2_0_load = load i32 %pout_temp_2_0" [src/awq_macro.cpp:216]   --->   Operation 240 'load' 'pout_temp_2_0_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 241 [1/1] (0.00ns)   --->   "%pout_temp_3_0_load = load i32 %pout_temp_3_0" [src/awq_macro.cpp:216]   --->   Operation 241 'load' 'pout_temp_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 242 [5/6] (2.94ns)   --->   "%add = fadd i32 %pout_temp_0_0_load, i32 %mul1" [src/awq_macro.cpp:216]   --->   Operation 242 'fadd' 'add' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 243 [5/6] (2.94ns)   --->   "%add_1 = fadd i32 %pout_temp_1_0_load, i32 %mul20_1" [src/awq_macro.cpp:216]   --->   Operation 243 'fadd' 'add_1' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 244 [6/6] (2.94ns)   --->   "%add_2 = fadd i32 %pout_temp_2_0_load, i32 %mul20_2" [src/awq_macro.cpp:216]   --->   Operation 244 'fadd' 'add_2' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 245 [6/6] (2.94ns)   --->   "%add_3 = fadd i32 %pout_temp_3_0_load, i32 %mul20_3" [src/awq_macro.cpp:216]   --->   Operation 245 'fadd' 'add_3' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 246 [1/5] (3.17ns)   --->   "%mul20_6 = fmul i32 %mul_6, i32 %conv_6" [src/awq_macro.cpp:216]   --->   Operation 246 'fmul' 'mul20_6' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 247 [1/5] (3.17ns)   --->   "%mul20_7 = fmul i32 %mul_7, i32 %conv_7" [src/awq_macro.cpp:216]   --->   Operation 247 'fmul' 'mul20_7' <Predicate = true> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 2.94>
+ST_17 : Operation 248 [1/1] (0.00ns)   --->   "%pout_temp_4_0_load = load i32 %pout_temp_4_0" [src/awq_macro.cpp:216]   --->   Operation 248 'load' 'pout_temp_4_0_load' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 249 [1/1] (0.00ns)   --->   "%pout_temp_5_0_load = load i32 %pout_temp_5_0" [src/awq_macro.cpp:216]   --->   Operation 249 'load' 'pout_temp_5_0_load' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 250 [4/6] (2.94ns)   --->   "%add = fadd i32 %pout_temp_0_0_load, i32 %mul1" [src/awq_macro.cpp:216]   --->   Operation 250 'fadd' 'add' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 251 [4/6] (2.94ns)   --->   "%add_1 = fadd i32 %pout_temp_1_0_load, i32 %mul20_1" [src/awq_macro.cpp:216]   --->   Operation 251 'fadd' 'add_1' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 252 [5/6] (2.94ns)   --->   "%add_2 = fadd i32 %pout_temp_2_0_load, i32 %mul20_2" [src/awq_macro.cpp:216]   --->   Operation 252 'fadd' 'add_2' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 253 [5/6] (2.94ns)   --->   "%add_3 = fadd i32 %pout_temp_3_0_load, i32 %mul20_3" [src/awq_macro.cpp:216]   --->   Operation 253 'fadd' 'add_3' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 254 [6/6] (2.94ns)   --->   "%add_4 = fadd i32 %pout_temp_4_0_load, i32 %mul20_4" [src/awq_macro.cpp:216]   --->   Operation 254 'fadd' 'add_4' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 255 [6/6] (2.94ns)   --->   "%add_5 = fadd i32 %pout_temp_5_0_load, i32 %mul20_5" [src/awq_macro.cpp:216]   --->   Operation 255 'fadd' 'add_5' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 2.94>
+ST_18 : Operation 256 [1/1] (0.00ns)   --->   "%pout_temp_6_0_load = load i32 %pout_temp_6_0" [src/awq_macro.cpp:216]   --->   Operation 256 'load' 'pout_temp_6_0_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 257 [1/1] (0.00ns)   --->   "%pout_temp_7_0_load = load i32 %pout_temp_7_0" [src/awq_macro.cpp:216]   --->   Operation 257 'load' 'pout_temp_7_0_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 258 [3/6] (2.94ns)   --->   "%add = fadd i32 %pout_temp_0_0_load, i32 %mul1" [src/awq_macro.cpp:216]   --->   Operation 258 'fadd' 'add' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 259 [3/6] (2.94ns)   --->   "%add_1 = fadd i32 %pout_temp_1_0_load, i32 %mul20_1" [src/awq_macro.cpp:216]   --->   Operation 259 'fadd' 'add_1' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 260 [4/6] (2.94ns)   --->   "%add_2 = fadd i32 %pout_temp_2_0_load, i32 %mul20_2" [src/awq_macro.cpp:216]   --->   Operation 260 'fadd' 'add_2' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 261 [4/6] (2.94ns)   --->   "%add_3 = fadd i32 %pout_temp_3_0_load, i32 %mul20_3" [src/awq_macro.cpp:216]   --->   Operation 261 'fadd' 'add_3' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 262 [5/6] (2.94ns)   --->   "%add_4 = fadd i32 %pout_temp_4_0_load, i32 %mul20_4" [src/awq_macro.cpp:216]   --->   Operation 262 'fadd' 'add_4' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 263 [5/6] (2.94ns)   --->   "%add_5 = fadd i32 %pout_temp_5_0_load, i32 %mul20_5" [src/awq_macro.cpp:216]   --->   Operation 263 'fadd' 'add_5' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 264 [6/6] (2.94ns)   --->   "%add_6 = fadd i32 %pout_temp_6_0_load, i32 %mul20_6" [src/awq_macro.cpp:216]   --->   Operation 264 'fadd' 'add_6' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 265 [6/6] (2.94ns)   --->   "%add_7 = fadd i32 %pout_temp_7_0_load, i32 %mul20_7" [src/awq_macro.cpp:216]   --->   Operation 265 'fadd' 'add_7' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 306 [1/1] (0.00ns)   --->   "%pout_temp_0_0_load_1 = load i32 %pout_temp_0_0" [src/awq_macro.cpp:219]   --->   Operation 306 'load' 'pout_temp_0_0_load_1' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 307 [1/1] (0.00ns)   --->   "%pout_temp_1_0_load_1 = load i32 %pout_temp_1_0" [src/awq_macro.cpp:219]   --->   Operation 307 'load' 'pout_temp_1_0_load_1' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 308 [1/1] (0.00ns)   --->   "%pout_temp_2_0_load_1 = load i32 %pout_temp_2_0" [src/awq_macro.cpp:219]   --->   Operation 308 'load' 'pout_temp_2_0_load_1' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 309 [1/1] (0.00ns)   --->   "%pout_temp_3_0_load_1 = load i32 %pout_temp_3_0" [src/awq_macro.cpp:219]   --->   Operation 309 'load' 'pout_temp_3_0_load_1' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 310 [1/1] (0.00ns)   --->   "%pout_temp_4_0_load_1 = load i32 %pout_temp_4_0" [src/awq_macro.cpp:219]   --->   Operation 310 'load' 'pout_temp_4_0_load_1' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 311 [1/1] (0.00ns)   --->   "%pout_temp_5_0_load_1 = load i32 %pout_temp_5_0" [src/awq_macro.cpp:219]   --->   Operation 311 'load' 'pout_temp_5_0_load_1' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 312 [1/1] (0.00ns)   --->   "%pout_temp_6_0_load_1 = load i32 %pout_temp_6_0" [src/awq_macro.cpp:219]   --->   Operation 312 'load' 'pout_temp_6_0_load_1' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 313 [1/1] (0.00ns)   --->   "%pout_temp_7_0_load_1 = load i32 %pout_temp_7_0" [src/awq_macro.cpp:219]   --->   Operation 313 'load' 'pout_temp_7_0_load_1' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 314 [1/1] (0.00ns) (grouped into LUT with out node mrv_5)   --->   "%mrv = insertvalue i256 <undef>, i32 %pout_temp_0_0_load_1" [src/awq_macro.cpp:219]   --->   Operation 314 'insertvalue' 'mrv' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 315 [1/1] (0.00ns) (grouped into LUT with out node mrv_5)   --->   "%mrv_1 = insertvalue i256 %mrv, i32 %pout_temp_1_0_load_1" [src/awq_macro.cpp:219]   --->   Operation 315 'insertvalue' 'mrv_1' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 316 [1/1] (0.00ns) (grouped into LUT with out node mrv_5)   --->   "%mrv_2 = insertvalue i256 %mrv_1, i32 %pout_temp_2_0_load_1" [src/awq_macro.cpp:219]   --->   Operation 316 'insertvalue' 'mrv_2' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 317 [1/1] (0.00ns) (grouped into LUT with out node mrv_5)   --->   "%mrv_3 = insertvalue i256 %mrv_2, i32 %pout_temp_3_0_load_1" [src/awq_macro.cpp:219]   --->   Operation 317 'insertvalue' 'mrv_3' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 318 [1/1] (0.00ns) (grouped into LUT with out node mrv_5)   --->   "%mrv_4 = insertvalue i256 %mrv_3, i32 %pout_temp_4_0_load_1" [src/awq_macro.cpp:219]   --->   Operation 318 'insertvalue' 'mrv_4' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 319 [1/1] (0.00ns) (out node of the LUT)   --->   "%mrv_5 = insertvalue i256 %mrv_4, i32 %pout_temp_5_0_load_1" [src/awq_macro.cpp:219]   --->   Operation 319 'insertvalue' 'mrv_5' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 320 [1/1] (0.00ns) (grouped into LUT with out node ret_ln219)   --->   "%mrv_6 = insertvalue i256 %mrv_5, i32 %pout_temp_6_0_load_1" [src/awq_macro.cpp:219]   --->   Operation 320 'insertvalue' 'mrv_6' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 321 [1/1] (0.00ns) (grouped into LUT with out node ret_ln219)   --->   "%mrv_7 = insertvalue i256 %mrv_6, i32 %pout_temp_7_0_load_1" [src/awq_macro.cpp:219]   --->   Operation 321 'insertvalue' 'mrv_7' <Predicate = (icmp_ln194)> <Delay = 0.00>
+ST_18 : Operation 322 [1/1] (0.42ns) (out node of the LUT)   --->   "%ret_ln219 = ret i256 %mrv_7" [src/awq_macro.cpp:219]   --->   Operation 322 'ret' 'ret_ln219' <Predicate = (icmp_ln194)> <Delay = 0.42>
+
+State 19 <SV = 18> <Delay = 2.94>
+ST_19 : Operation 266 [2/6] (2.94ns)   --->   "%add = fadd i32 %pout_temp_0_0_load, i32 %mul1" [src/awq_macro.cpp:216]   --->   Operation 266 'fadd' 'add' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 267 [2/6] (2.94ns)   --->   "%add_1 = fadd i32 %pout_temp_1_0_load, i32 %mul20_1" [src/awq_macro.cpp:216]   --->   Operation 267 'fadd' 'add_1' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 268 [3/6] (2.94ns)   --->   "%add_2 = fadd i32 %pout_temp_2_0_load, i32 %mul20_2" [src/awq_macro.cpp:216]   --->   Operation 268 'fadd' 'add_2' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 269 [3/6] (2.94ns)   --->   "%add_3 = fadd i32 %pout_temp_3_0_load, i32 %mul20_3" [src/awq_macro.cpp:216]   --->   Operation 269 'fadd' 'add_3' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 270 [4/6] (2.94ns)   --->   "%add_4 = fadd i32 %pout_temp_4_0_load, i32 %mul20_4" [src/awq_macro.cpp:216]   --->   Operation 270 'fadd' 'add_4' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 271 [4/6] (2.94ns)   --->   "%add_5 = fadd i32 %pout_temp_5_0_load, i32 %mul20_5" [src/awq_macro.cpp:216]   --->   Operation 271 'fadd' 'add_5' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 272 [5/6] (2.94ns)   --->   "%add_6 = fadd i32 %pout_temp_6_0_load, i32 %mul20_6" [src/awq_macro.cpp:216]   --->   Operation 272 'fadd' 'add_6' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 273 [5/6] (2.94ns)   --->   "%add_7 = fadd i32 %pout_temp_7_0_load, i32 %mul20_7" [src/awq_macro.cpp:216]   --->   Operation 273 'fadd' 'add_7' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 3.37>
+ST_20 : Operation 274 [1/6] (2.94ns)   --->   "%add = fadd i32 %pout_temp_0_0_load, i32 %mul1" [src/awq_macro.cpp:216]   --->   Operation 274 'fadd' 'add' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 275 [1/6] (2.94ns)   --->   "%add_1 = fadd i32 %pout_temp_1_0_load, i32 %mul20_1" [src/awq_macro.cpp:216]   --->   Operation 275 'fadd' 'add_1' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 276 [2/6] (2.94ns)   --->   "%add_2 = fadd i32 %pout_temp_2_0_load, i32 %mul20_2" [src/awq_macro.cpp:216]   --->   Operation 276 'fadd' 'add_2' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 277 [2/6] (2.94ns)   --->   "%add_3 = fadd i32 %pout_temp_3_0_load, i32 %mul20_3" [src/awq_macro.cpp:216]   --->   Operation 277 'fadd' 'add_3' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 278 [3/6] (2.94ns)   --->   "%add_4 = fadd i32 %pout_temp_4_0_load, i32 %mul20_4" [src/awq_macro.cpp:216]   --->   Operation 278 'fadd' 'add_4' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 279 [3/6] (2.94ns)   --->   "%add_5 = fadd i32 %pout_temp_5_0_load, i32 %mul20_5" [src/awq_macro.cpp:216]   --->   Operation 279 'fadd' 'add_5' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 280 [4/6] (2.94ns)   --->   "%add_6 = fadd i32 %pout_temp_6_0_load, i32 %mul20_6" [src/awq_macro.cpp:216]   --->   Operation 280 'fadd' 'add_6' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 281 [4/6] (2.94ns)   --->   "%add_7 = fadd i32 %pout_temp_7_0_load, i32 %mul20_7" [src/awq_macro.cpp:216]   --->   Operation 281 'fadd' 'add_7' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 282 [1/1] (0.42ns)   --->   "%store_ln216 = store i32 %add_1, i32 %pout_temp_1_0" [src/awq_macro.cpp:216]   --->   Operation 282 'store' 'store_ln216' <Predicate = true> <Delay = 0.42>
+ST_20 : Operation 283 [1/1] (0.42ns)   --->   "%store_ln216 = store i32 %add, i32 %pout_temp_0_0" [src/awq_macro.cpp:216]   --->   Operation 283 'store' 'store_ln216' <Predicate = true> <Delay = 0.42>
+
+State 21 <SV = 20> <Delay = 3.37>
+ST_21 : Operation 284 [1/6] (2.94ns)   --->   "%add_2 = fadd i32 %pout_temp_2_0_load, i32 %mul20_2" [src/awq_macro.cpp:216]   --->   Operation 284 'fadd' 'add_2' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 285 [1/6] (2.94ns)   --->   "%add_3 = fadd i32 %pout_temp_3_0_load, i32 %mul20_3" [src/awq_macro.cpp:216]   --->   Operation 285 'fadd' 'add_3' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 286 [2/6] (2.94ns)   --->   "%add_4 = fadd i32 %pout_temp_4_0_load, i32 %mul20_4" [src/awq_macro.cpp:216]   --->   Operation 286 'fadd' 'add_4' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 287 [2/6] (2.94ns)   --->   "%add_5 = fadd i32 %pout_temp_5_0_load, i32 %mul20_5" [src/awq_macro.cpp:216]   --->   Operation 287 'fadd' 'add_5' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 288 [3/6] (2.94ns)   --->   "%add_6 = fadd i32 %pout_temp_6_0_load, i32 %mul20_6" [src/awq_macro.cpp:216]   --->   Operation 288 'fadd' 'add_6' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 289 [3/6] (2.94ns)   --->   "%add_7 = fadd i32 %pout_temp_7_0_load, i32 %mul20_7" [src/awq_macro.cpp:216]   --->   Operation 289 'fadd' 'add_7' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 290 [1/1] (0.42ns)   --->   "%store_ln216 = store i32 %add_3, i32 %pout_temp_3_0" [src/awq_macro.cpp:216]   --->   Operation 290 'store' 'store_ln216' <Predicate = true> <Delay = 0.42>
+ST_21 : Operation 291 [1/1] (0.42ns)   --->   "%store_ln216 = store i32 %add_2, i32 %pout_temp_2_0" [src/awq_macro.cpp:216]   --->   Operation 291 'store' 'store_ln216' <Predicate = true> <Delay = 0.42>
+
+State 22 <SV = 21> <Delay = 3.37>
+ST_22 : Operation 292 [1/6] (2.94ns)   --->   "%add_4 = fadd i32 %pout_temp_4_0_load, i32 %mul20_4" [src/awq_macro.cpp:216]   --->   Operation 292 'fadd' 'add_4' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 293 [1/6] (2.94ns)   --->   "%add_5 = fadd i32 %pout_temp_5_0_load, i32 %mul20_5" [src/awq_macro.cpp:216]   --->   Operation 293 'fadd' 'add_5' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 294 [2/6] (2.94ns)   --->   "%add_6 = fadd i32 %pout_temp_6_0_load, i32 %mul20_6" [src/awq_macro.cpp:216]   --->   Operation 294 'fadd' 'add_6' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 295 [2/6] (2.94ns)   --->   "%add_7 = fadd i32 %pout_temp_7_0_load, i32 %mul20_7" [src/awq_macro.cpp:216]   --->   Operation 295 'fadd' 'add_7' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 296 [1/1] (0.42ns)   --->   "%store_ln216 = store i32 %add_5, i32 %pout_temp_5_0" [src/awq_macro.cpp:216]   --->   Operation 296 'store' 'store_ln216' <Predicate = true> <Delay = 0.42>
+ST_22 : Operation 297 [1/1] (0.42ns)   --->   "%store_ln216 = store i32 %add_4, i32 %pout_temp_4_0" [src/awq_macro.cpp:216]   --->   Operation 297 'store' 'store_ln216' <Predicate = true> <Delay = 0.42>
+
+State 23 <SV = 22> <Delay = 3.37>
+ST_23 : Operation 298 [1/1] (0.00ns)   --->   "%specpipeline_ln195 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_8" [src/awq_macro.cpp:195]   --->   Operation 298 'specpipeline' 'specpipeline_ln195' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 299 [1/1] (0.00ns)   --->   "%speclooptripcount_ln194 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8" [src/awq_macro.cpp:194]   --->   Operation 299 'speclooptripcount' 'speclooptripcount_ln194' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 300 [1/1] (0.00ns)   --->   "%specloopname_ln194 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [src/awq_macro.cpp:194]   --->   Operation 300 'specloopname' 'specloopname_ln194' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 301 [1/6] (2.94ns)   --->   "%add_6 = fadd i32 %pout_temp_6_0_load, i32 %mul20_6" [src/awq_macro.cpp:216]   --->   Operation 301 'fadd' 'add_6' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 302 [1/6] (2.94ns)   --->   "%add_7 = fadd i32 %pout_temp_7_0_load, i32 %mul20_7" [src/awq_macro.cpp:216]   --->   Operation 302 'fadd' 'add_7' <Predicate = true> <Delay = 2.94> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 5> <II = 1> <Delay = 2.94> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 303 [1/1] (0.42ns)   --->   "%store_ln216 = store i32 %add_7, i32 %pout_temp_7_0" [src/awq_macro.cpp:216]   --->   Operation 303 'store' 'store_ln216' <Predicate = true> <Delay = 0.42>
+ST_23 : Operation 304 [1/1] (0.42ns)   --->   "%store_ln216 = store i32 %add_6, i32 %pout_temp_6_0" [src/awq_macro.cpp:216]   --->   Operation 304 'store' 'store_ln216' <Predicate = true> <Delay = 0.42>
+ST_23 : Operation 305 [1/1] (0.00ns)   --->   "%br_ln194 = br void %lp_precompute" [src/awq_macro.cpp:194]   --->   Operation 305 'br' 'br_ln194' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 1.651ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln194', src/awq_macro.cpp:194) of constant 0 on local variable 'm', src/awq_macro.cpp:194 [62]  (0.427 ns)
+	'load' operation 4 bit ('m', src/awq_macro.cpp:194) on local variable 'm', src/awq_macro.cpp:194 [65]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln194', src/awq_macro.cpp:194) [66]  (0.797 ns)
+	'store' operation 0 bit ('store_ln194', src/awq_macro.cpp:194) of variable 'm', src/awq_macro.cpp:194 on local variable 'm', src/awq_macro.cpp:194 [155]  (0.427 ns)
+
+ <State 2>: 2.622ns
+The critical path consists of the following:
+	fifo read operation ('value', src/awq_macro.cpp:201) on port 'mro_s_0' (src/awq_macro.cpp:201) [81]  (1.825 ns)
+	'sub' operation 5 bit ('w_ubias', src/awq_macro.cpp:215) [100]  (0.797 ns)
+
+ <State 3>: 3.224ns
+The critical path consists of the following:
+	'sitofp' operation 32 bit ('conv', src/awq_macro.cpp:216) [102]  (3.224 ns)
+
+ <State 4>: 3.224ns
+The critical path consists of the following:
+	'sitofp' operation 32 bit ('conv', src/awq_macro.cpp:216) [102]  (3.224 ns)
+
+ <State 5>: 3.224ns
+The critical path consists of the following:
+	'sitofp' operation 32 bit ('conv', src/awq_macro.cpp:216) [102]  (3.224 ns)
+
+ <State 6>: 3.224ns
+The critical path consists of the following:
+	'sitofp' operation 32 bit ('conv', src/awq_macro.cpp:216) [102]  (3.224 ns)
+
+ <State 7>: 3.224ns
+The critical path consists of the following:
+	'sitofp' operation 32 bit ('conv', src/awq_macro.cpp:216) [102]  (3.224 ns)
+
+ <State 8>: 3.224ns
+The critical path consists of the following:
+	'sitofp' operation 32 bit ('conv', src/awq_macro.cpp:216) [102]  (3.224 ns)
+
+ <State 9>: 3.224ns
+The critical path consists of the following:
+	'sitofp' operation 32 bit ('conv_2', src/awq_macro.cpp:216) [114]  (3.224 ns)
+
+ <State 10>: 3.224ns
+The critical path consists of the following:
+	'sitofp' operation 32 bit ('conv_4', src/awq_macro.cpp:216) [126]  (3.224 ns)
+
+ <State 11>: 3.224ns
+The critical path consists of the following:
+	'sitofp' operation 32 bit ('conv_6', src/awq_macro.cpp:216) [138]  (3.224 ns)
+
+ <State 12>: 3.176ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul1', src/awq_macro.cpp:216) [103]  (3.176 ns)
+
+ <State 13>: 3.176ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul1', src/awq_macro.cpp:216) [103]  (3.176 ns)
+
+ <State 14>: 3.176ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul1', src/awq_macro.cpp:216) [103]  (3.176 ns)
+
+ <State 15>: 3.176ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul20_4', src/awq_macro.cpp:216) [127]  (3.176 ns)
+
+ <State 16>: 3.176ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul20_6', src/awq_macro.cpp:216) [139]  (3.176 ns)
+
+ <State 17>: 2.948ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add', src/awq_macro.cpp:216) [104]  (2.948 ns)
+
+ <State 18>: 2.948ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add', src/awq_macro.cpp:216) [104]  (2.948 ns)
+
+ <State 19>: 2.948ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add', src/awq_macro.cpp:216) [104]  (2.948 ns)
+
+ <State 20>: 3.375ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add_1', src/awq_macro.cpp:216) [110]  (2.948 ns)
+	'store' operation 0 bit ('store_ln216', src/awq_macro.cpp:216) of variable 'add_1', src/awq_macro.cpp:216 on local variable 'pout_temp_1_0' [153]  (0.427 ns)
+
+ <State 21>: 3.375ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add_3', src/awq_macro.cpp:216) [122]  (2.948 ns)
+	'store' operation 0 bit ('store_ln216', src/awq_macro.cpp:216) of variable 'add_3', src/awq_macro.cpp:216 on local variable 'pout_temp_3_0' [151]  (0.427 ns)
+
+ <State 22>: 3.375ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add_5', src/awq_macro.cpp:216) [134]  (2.948 ns)
+	'store' operation 0 bit ('store_ln216', src/awq_macro.cpp:216) of variable 'add_5', src/awq_macro.cpp:216 on local variable 'pout_temp_5_0' [149]  (0.427 ns)
+
+ <State 23>: 3.375ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add_7', src/awq_macro.cpp:216) [146]  (2.948 ns)
+	'store' operation 0 bit ('store_ln216', src/awq_macro.cpp:216) of variable 'add_7', src/awq_macro.cpp:216 on local variable 'pout_temp_7_0' [147]  (0.427 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

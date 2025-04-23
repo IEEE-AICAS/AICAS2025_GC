@@ -1,0 +1,58 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">,  6561, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll, 10029, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,  7489, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,  7185, user inline pragmas are applied</column>
+            <column name="">(4) simplification,  6931, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,  7502, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,  7412, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,  7658, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,  7515, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,  9283, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,  6926, loop and instruction simplification</column>
+            <column name="">(2) parallelization,  6473, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,  6473, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,  6445, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,  6229, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,  6464, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="Macro_MAC_Acc4_top" col1="awq_macro.cpp:264" col2="6561" col3="6931" col4="9283" col5="6445" col6="6464">
+                    <row id="4" col0="read_xi_to_stream" col1="awq_macro.cpp:108" col2="162" col3="77" col4="81" col5="81" col6=""/>
+                    <row id="6" col0="read_mro_to_components" col1="awq_macro.cpp:130" col2="2704" col2_disp="2,704 (4 calls)" col3="" col4="" col5="" col6="">
+                        <row id="2" col0="split_uint32_to_uint4_hls" col1="awq_macro.cpp:96" col2="1892" col2_disp="1,892 (4 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="1" col0="half_to_float" col1="awq_macro.cpp:16" col2="168" col2_disp=" 168 (8 calls)" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="5" col0="compute_mac" col1="awq_macro.cpp:221" col2="3320" col2_disp="3,320 (4 calls)" col3="6072" col3_disp="6,072 (4 calls)" col4="7796" col4_disp="7,796 (4 calls)" col5="5496" col5_disp="5,496 (4 calls)" col6="">
+                        <row id="3" col0="compute_mac_sub" col1="awq_macro.cpp:187" col2="2704" col2_disp="2,704 (4 calls)" col3="5664" col3_disp="5,664 (32 calls)" col4="4928" col4_disp="4,928 (32 calls)" col5="4160" col5_disp="4,160 (32 calls)" col6="">
+                            <row id="2" col0="split_uint32_to_uint4_hls" col1="awq_macro.cpp:96" col2="1892" col2_disp="1,892 (4 calls)" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

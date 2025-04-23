@@ -1,0 +1,172 @@
+
+
+================================================================
+== Vitis HLS Report for 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_13'
+================================================================
+* Date:           Fri Mar 28 16:44:20 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        prjhls_awqmul
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  1.527 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |        6|        6|  30.000 ns|  30.000 ns|    5|    5|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_146_1  |        4|        4|         1|          1|          1|     4|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      22|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|      99|    -|
+|Register         |        -|     -|     261|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     261|     121|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln146_fu_262_p2   |         +|   0|  0|  10|           3|           1|
+    |icmp_ln146_fu_256_p2  |      icmp|   0|  0|  12|           3|           4|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  22|           6|           5|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_done_int         |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j  |   9|          2|    3|          6|
+    |empty_60_fu_76      |   9|          2|   32|         64|
+    |empty_61_fu_80      |   9|          2|   32|         64|
+    |empty_62_fu_84      |   9|          2|   32|         64|
+    |empty_63_fu_88      |   9|          2|   32|         64|
+    |empty_64_fu_92      |   9|          2|   32|         64|
+    |empty_65_fu_96      |   9|          2|   32|         64|
+    |empty_66_fu_100     |   9|          2|   32|         64|
+    |empty_fu_72         |   9|          2|   32|         64|
+    |j_4_fu_68           |   9|          2|    3|          6|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               |  99|         22|  263|        526|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------+----+----+-----+-----------+
+    |       Name      | FF | LUT| Bits| Const Bits|
+    +-----------------+----+----+-----+-----------+
+    |ap_CS_fsm        |   1|   0|    1|          0|
+    |ap_done_reg      |   1|   0|    1|          0|
+    |empty_60_fu_76   |  32|   0|   32|          0|
+    |empty_61_fu_80   |  32|   0|   32|          0|
+    |empty_62_fu_84   |  32|   0|   32|          0|
+    |empty_63_fu_88   |  32|   0|   32|          0|
+    |empty_64_fu_92   |  32|   0|   32|          0|
+    |empty_65_fu_96   |  32|   0|   32|          0|
+    |empty_66_fu_100  |  32|   0|   32|          0|
+    |empty_fu_72      |  32|   0|   32|          0|
+    |j_4_fu_68        |   3|   0|    3|          0|
+    +-----------------+----+----+-----+-----------+
+    |Total            | 261|   0|  261|          0|
+    +-----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |                     Source Object                     |    C Type    |
++--------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|  Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_13|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_13|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_13|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_13|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_13|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_13|  return value|
+|qscale2_7_promoted  |   in|   32|     ap_none|                                     qscale2_7_promoted|        scalar|
+|qscale2_6_promoted  |   in|   32|     ap_none|                                     qscale2_6_promoted|        scalar|
+|qscale2_1_promoted  |   in|   32|     ap_none|                                     qscale2_1_promoted|        scalar|
+|qscale2_0_promoted  |   in|   32|     ap_none|                                     qscale2_0_promoted|        scalar|
+|qscale2_3_promoted  |   in|   32|     ap_none|                                     qscale2_3_promoted|        scalar|
+|qscale2_2_promoted  |   in|   32|     ap_none|                                     qscale2_2_promoted|        scalar|
+|qscale2_5_promoted  |   in|   32|     ap_none|                                     qscale2_5_promoted|        scalar|
+|qscale2_4_promoted  |   in|   32|     ap_none|                                     qscale2_4_promoted|        scalar|
+|p_out               |  out|   32|      ap_vld|                                                  p_out|       pointer|
+|p_out_ap_vld        |  out|    1|      ap_vld|                                                  p_out|       pointer|
+|p_out1              |  out|   32|      ap_vld|                                                 p_out1|       pointer|
+|p_out1_ap_vld       |  out|    1|      ap_vld|                                                 p_out1|       pointer|
+|p_out2              |  out|   32|      ap_vld|                                                 p_out2|       pointer|
+|p_out2_ap_vld       |  out|    1|      ap_vld|                                                 p_out2|       pointer|
+|p_out3              |  out|   32|      ap_vld|                                                 p_out3|       pointer|
+|p_out3_ap_vld       |  out|    1|      ap_vld|                                                 p_out3|       pointer|
+|p_out4              |  out|   32|      ap_vld|                                                 p_out4|       pointer|
+|p_out4_ap_vld       |  out|    1|      ap_vld|                                                 p_out4|       pointer|
+|p_out5              |  out|   32|      ap_vld|                                                 p_out5|       pointer|
+|p_out5_ap_vld       |  out|    1|      ap_vld|                                                 p_out5|       pointer|
+|p_out6              |  out|   32|      ap_vld|                                                 p_out6|       pointer|
+|p_out6_ap_vld       |  out|    1|      ap_vld|                                                 p_out6|       pointer|
+|p_out7              |  out|   32|      ap_vld|                                                 p_out7|       pointer|
+|p_out7_ap_vld       |  out|    1|      ap_vld|                                                 p_out7|       pointer|
++--------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+

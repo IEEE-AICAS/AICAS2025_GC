@@ -1,0 +1,145 @@
+{
+  "0": {
+    "basicblocks": 31,
+    "calls": "1 12 12 7 7 9 12 9 12 9 12 9 12 12 12 7 7 9 12 9 12 9 12 9 12 12 12 7 7 9 12 9 12 9 12 9 12 12 12 7 7 9 12 9 12 9 12 9 12 11 11 11 11 2 2 2 2",
+    "file": "awq_macro.cpp",
+    "fileloc": 264,
+    "instructions": 799,
+    "loads": {
+      "L": 32,
+      "T": 48
+    },
+    "name": "Macro_MAC_Acc4_top",
+    "stores": {
+      "L": 96,
+      "T": 4
+    },
+    "total_instructions": 7489
+  },
+  "1": {
+    "basicblocks": 3,
+    "calls": "8 2 8 8 8 8 2 8 8 8 8 2 8 8 8 8 2 8 8 8",
+    "file": "awq_macro.cpp",
+    "fileloc": 108,
+    "instructions": 118,
+    "loads": {
+      "L": 20
+    },
+    "name": "read_xi_to_stream",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 218
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "11": {
+    "basicblocks": 5,
+    "calls": "8 9 3 8 9 3 8 9 3 8 9 3 8 9 3 8 9 3 8 9 3 8 9 3",
+    "file": "awq_macro.cpp",
+    "fileloc": 221,
+    "instructions": 103,
+    "loads": {
+      "L": 9
+    },
+    "name": "compute_mac",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 1535
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "10",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "5",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "3": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "awq_macro.cpp",
+    "fileloc": 187,
+    "instructions": 169,
+    "loads": {
+      "L": 24
+    },
+    "name": "compute_mac_sub",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 169
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "awq_macro.cpp",
+    "fileloc": 16,
+    "instructions": 14,
+    "name": "half_to_float",
+    "total_instructions": 14
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "6",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "4",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  }
+}

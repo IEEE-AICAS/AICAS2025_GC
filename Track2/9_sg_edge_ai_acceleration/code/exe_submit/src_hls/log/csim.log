@@ -1,0 +1,104 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+  **** SW Build 3854077 on May  4 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/cad_tools/EDA/Xilinx_2023/Vitis_HLS/2023.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/cad_tools/EDA/Xilinx_2023/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'maoyang' on host 'patience' (Linux_x86_64 version 3.10.0-1160.119.1.el7.x86_64) on Thu Mar 27 14:24:31 +08 2025
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls'
+Sourcing Tcl script 'script/run_csim.tcl'
+INFO: [HLS 200-1510] Running: open_project prjhls_awqmul 
+INFO: [HLS 200-10] Opening project '/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul'.
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Opening solution '/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: add_files ./src/awq_macro.cpp -cflags -I./src 
+INFO: [HLS 200-10] Adding design file './src/awq_macro.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files ./src/awq_macro.h -cflags -I./src 
+INFO: [HLS 200-10] Adding design file './src/awq_macro.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ./tb/tb_awq_macro.cpp -cflags -I./src 
+INFO: [HLS 200-10] Adding test bench file './tb/tb_awq_macro.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top Macro_MAC_Acc4_top 
+INFO: [HLS 200-1510] Running: csim_design -clean 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+make[1]: Entering directory `/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/csim/build'
+   Compiling ../../../../tb/tb_awq_macro.cpp in debug mode
+   Compiling ../../../../src/awq_macro.cpp in debug mode
+   Generating csim.exe
+make[1]: Leaving directory `/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/csim/build'
+../../../../tb/tb_awq_macro.cpp: In lambda function:
+../../../../tb/tb_awq_macro.cpp:45:38: warning: narrowing conversion of ‘(i % 8)’ from ‘int’ to ‘uint8_t’ {aka ‘unsigned char’} inside { } [-Wnarrowing]
+                 uint8_t wvals[8] = {i%8, i%8, i%8, i%8, i%8, i%8, i%8, i%8};
+                                     ~^~
+../../../../tb/tb_awq_macro.cpp:45:43: warning: narrowing conversion of ‘(i % 8)’ from ‘int’ to ‘uint8_t’ {aka ‘unsigned char’} inside { } [-Wnarrowing]
+                 uint8_t wvals[8] = {i%8, i%8, i%8, i%8, i%8, i%8, i%8, i%8};
+                                          ~^~
+../../../../tb/tb_awq_macro.cpp:45:48: warning: narrowing conversion of ‘(i % 8)’ from ‘int’ to ‘uint8_t’ {aka ‘unsigned char’} inside { } [-Wnarrowing]
+                 uint8_t wvals[8] = {i%8, i%8, i%8, i%8, i%8, i%8, i%8, i%8};
+                                               ~^~
+../../../../tb/tb_awq_macro.cpp:45:53: warning: narrowing conversion of ‘(i % 8)’ from ‘int’ to ‘uint8_t’ {aka ‘unsigned char’} inside { } [-Wnarrowing]
+                 uint8_t wvals[8] = {i%8, i%8, i%8, i%8, i%8, i%8, i%8, i%8};
+                                                    ~^~
+../../../../tb/tb_awq_macro.cpp:45:58: warning: narrowing conversion of ‘(i % 8)’ from ‘int’ to ‘uint8_t’ {aka ‘unsigned char’} inside { } [-Wnarrowing]
+                 uint8_t wvals[8] = {i%8, i%8, i%8, i%8, i%8, i%8, i%8, i%8};
+                                                         ~^~
+../../../../tb/tb_awq_macro.cpp:45:63: warning: narrowing conversion of ‘(i % 8)’ from ‘int’ to ‘uint8_t’ {aka ‘unsigned char’} inside { } [-Wnarrowing]
+                 uint8_t wvals[8] = {i%8, i%8, i%8, i%8, i%8, i%8, i%8, i%8};
+                                                              ~^~
+../../../../tb/tb_awq_macro.cpp:45:68: warning: narrowing conversion of ‘(i % 8)’ from ‘int’ to ‘uint8_t’ {aka ‘unsigned char’} inside { } [-Wnarrowing]
+                 uint8_t wvals[8] = {i%8, i%8, i%8, i%8, i%8, i%8, i%8, i%8};
+                                                                   ~^~
+../../../../tb/tb_awq_macro.cpp:45:73: warning: narrowing conversion of ‘(i % 8)’ from ‘int’ to ‘uint8_t’ {aka ‘unsigned char’} inside { } [-Wnarrowing]
+                 uint8_t wvals[8] = {i%8, i%8, i%8, i%8, i%8, i%8, i%8, i%8};
+                                                                        ~^~
+[INFO]: Checking at 0: Ref=-448, HLS=-448
+[INFO]: Checking at 1: Ref=64, HLS=64
+[INFO]: Checking at 2: Ref=-320, HLS=-320
+[INFO]: Checking at 3: Ref=192, HLS=192
+[INFO]: Checking at 4: Ref=-192, HLS=-192
+[INFO]: Checking at 5: Ref=320, HLS=320
+[INFO]: Checking at 6: Ref=-64, HLS=-64
+[INFO]: Checking at 7: Ref=448, HLS=448
+[INFO]: Checking at 8: Ref=-448, HLS=-448
+[INFO]: Checking at 9: Ref=64, HLS=64
+[INFO]: Checking at 10: Ref=-320, HLS=-320
+[INFO]: Checking at 11: Ref=192, HLS=192
+[INFO]: Checking at 12: Ref=-192, HLS=-192
+[INFO]: Checking at 13: Ref=320, HLS=320
+[INFO]: Checking at 14: Ref=-64, HLS=-64
+[INFO]: Checking at 15: Ref=448, HLS=448
+[INFO]: Checking at 16: Ref=-448, HLS=-448
+[INFO]: Checking at 17: Ref=64, HLS=64
+[INFO]: Checking at 18: Ref=-320, HLS=-320
+[INFO]: Checking at 19: Ref=192, HLS=192
+[INFO]: Checking at 20: Ref=-192, HLS=-192
+[INFO]: Checking at 21: Ref=320, HLS=320
+[INFO]: Checking at 22: Ref=-64, HLS=-64
+[INFO]: Checking at 23: Ref=448, HLS=448
+[INFO]: Checking at 24: Ref=-448, HLS=-448
+[INFO]: Checking at 25: Ref=64, HLS=64
+[INFO]: Checking at 26: Ref=-320, HLS=-320
+[INFO]: Checking at 27: Ref=192, HLS=192
+[INFO]: Checking at 28: Ref=-192, HLS=-192
+[INFO]: Checking at 29: Ref=320, HLS=320
+[INFO]: Checking at 30: Ref=-64, HLS=-64
+[INFO]: Checking at 31: Ref=448, HLS=448
+TEST PASSED
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 8
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.89 seconds. CPU system time: 0.58 seconds. Elapsed time: 2.45 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: close_solution 
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 4.7 seconds. Total CPU system time: 1.15 seconds. Total elapsed time: 5.63 seconds; peak allocated memory: 1.560 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Mar 27 14:24:36 2025...

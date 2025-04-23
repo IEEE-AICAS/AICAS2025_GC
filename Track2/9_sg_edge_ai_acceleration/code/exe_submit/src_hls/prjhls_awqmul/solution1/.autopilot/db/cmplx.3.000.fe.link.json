@@ -1,0 +1,218 @@
+{
+  "0": {
+    "basicblocks": 52,
+    "calls": "17 17 17 17 8 8 8 8 2 5 5 5 5 4 4 4 4",
+    "file": "awq_macro.cpp",
+    "fileloc": 264,
+    "instructions": 244,
+    "loads": {
+      "G": 8,
+      "L": 2
+    },
+    "name": "Macro_MAC_Acc4_top",
+    "stores": {
+      "G": 8,
+      "L": 5,
+      "T": 1
+    },
+    "total_instructions": 6561
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "array",
+    "fileloc": 94,
+    "instructions": 11,
+    "name": "array",
+    "total_instructions": 12
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "11",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "awq_macro.cpp",
+    "fileloc": 16,
+    "instructions": 21,
+    "loads": {
+      "L": 1
+    },
+    "name": "half_to_float",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 21
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "12",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "15": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "array",
+    "fileloc": 94,
+    "instructions": 11,
+    "name": "array",
+    "total_instructions": 12
+  },
+  "16": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "awq_macro.cpp",
+    "fileloc": 96,
+    "instructions": 129,
+    "loads": {
+      "L": 8
+    },
+    "name": "split_uint32_to_uint4_hls",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 473
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "15",
+    "file": "hls_vector.h",
+    "fileloc": 109,
+    "instructions": 3,
+    "name": "vector",
+    "total_instructions": 15
+  },
+  "18": {
+    "basicblocks": 19,
+    "calls": "16",
+    "file": "awq_macro.cpp",
+    "fileloc": 187,
+    "instructions": 77,
+    "loads": {
+      "L": 3
+    },
+    "name": "compute_mac_sub",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 676
+  },
+  "2": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "awq_macro.cpp",
+    "fileloc": 108,
+    "instructions": 58,
+    "loads": {
+      "L": 1
+    },
+    "name": "read_xi_to_stream",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 162
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "4": {
+    "basicblocks": 13,
+    "calls": "18",
+    "file": "awq_macro.cpp",
+    "fileloc": 221,
+    "instructions": 132,
+    "loads": {
+      "L": 15
+    },
+    "name": "compute_mac",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 830
+  },
+  "5": {
+    "basicblocks": 19,
+    "calls": "16 13 13",
+    "file": "awq_macro.cpp",
+    "fileloc": 130,
+    "instructions": 98,
+    "loads": {
+      "L": 5
+    },
+    "name": "read_mro_to_components",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 676
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "3",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "hls_vector.h",
+    "fileloc": 109,
+    "instructions": 3,
+    "name": "vector",
+    "total_instructions": 15
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  }
+}

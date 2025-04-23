@@ -1,0 +1,10 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="Macro_MAC_Acc4_top" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="Macro_MAC_Acc4_top"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

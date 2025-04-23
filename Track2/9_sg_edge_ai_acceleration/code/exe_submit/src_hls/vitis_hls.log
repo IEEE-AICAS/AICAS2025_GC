@@ -1,0 +1,681 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+  **** SW Build 5238294 on Nov  8 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Fri Mar 28 16:44:02 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/cad_tools/EDA/Xilinx/Vitis/2024.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'maoyang' on host 'patience' (Linux_x86_64 version 3.10.0-1160.119.1.el7.x86_64) on Fri Mar 28 16:44:04 +08 2025
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'script/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset prjhls_awqmul 
+INFO: [HLS 200-10] Creating and opening project '/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul'.
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 
+INFO: [HLS 200-10] Creating and opening solution '/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2lv-c 
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1510] Running: add_files ./src/awq_macro.cpp -cflags -I./src 
+INFO: [HLS 200-10] Adding design file './src/awq_macro.cpp' to the project
+[INFO]: Find ./src/awq_macro.cpp
+INFO: [HLS 200-1510] Running: add_files ./src/awq_macro.h -cflags -I./src 
+INFO: [HLS 200-10] Adding design file './src/awq_macro.h' to the project
+[INFO]: Find ./src/awq_macro.h
+INFO: [HLS 200-1510] Running: set_top Macro_MAC_Acc4_top 
+INFO: [HLS 200-1510] Running: create_clock -period 5 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 743.605 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/awq_macro.cpp' ... 
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (src/awq_macro.cpp:282:51)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (src/awq_macro.cpp:283:51)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (src/awq_macro.cpp:284:51)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (src/awq_macro.cpp:285:51)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (src/awq_macro.cpp:286:48)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (src/awq_macro.cpp:287:48)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (src/awq_macro.cpp:288:48)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (src/awq_macro.cpp:289:48)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (src/awq_macro.cpp:316:9)
+Resolution: For help on HLS 214-114 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 9 issue(s) in file src/awq_macro.cpp
+Resolution: For help on HLS 200-471 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-471.html
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.3 seconds. CPU system time: 0.59 seconds. Elapsed time: 3.88 seconds; current allocated memory: 743.605 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 6,561 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 10,029 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 7,489 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 7,185 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,931 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 7,502 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 7,412 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 7,658 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 7,515 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 9,283 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,926 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,473 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,473 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,445 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,229 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,464 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'split_uint32_to_uint4_hls(ap_uint<4>*, ap_uint<32>)' into 'read_mro_to_components(hls::vector<unsigned int, 4ul>*, ap_uint<4>*, float*, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, unsigned short)' (src/awq_macro.cpp:144:5)
+INFO: [HLS 214-131] Inlining function 'split_uint32_to_uint4_hls(ap_uint<4>*, ap_uint<32>)' into 'compute_mac_sub(hls::stream<float, 0>&, hls::stream<unsigned int, 0>&, ap_uint<4>*, float*, float*)' (src/awq_macro.cpp:201:2)
+INFO: [HLS 214-131] Inlining function 'read_mro_to_components(hls::vector<unsigned int, 4ul>*, ap_uint<4>*, float*, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, unsigned short)' into 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)' (src/awq_macro.cpp:327:9)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_350_5' is marked as complete unroll implied by the pipeline pragma (src/awq_macro.cpp:350:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_157_3' is marked as complete unroll implied by the pipeline pragma (src/awq_macro.cpp:157:27)
+INFO: [HLS 214-291] Loop 'lp_precompute' is marked as complete unroll implied by the pipeline pragma (src/awq_macro.cpp:207:16)
+INFO: [HLS 214-291] Loop 'lp_cmp_mac_a' is marked as complete unroll implied by the pipeline pragma (src/awq_macro.cpp:213:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_119_2' is marked as complete unroll implied by the pipeline pragma (src/awq_macro.cpp:119:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_350_5' (src/awq_macro.cpp:350:31) in function 'Macro_MAC_Acc4_top' completely with a factor of 4 (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_157_3' (src/awq_macro.cpp:157:27) in function 'Macro_MAC_Acc4_top' completely with a factor of 4 (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_230_1' (src/awq_macro.cpp:230:20) in function 'compute_mac' completely with a factor of 8 (src/awq_macro.cpp:227:0)
+INFO: [HLS 214-186] Unrolling loop 'lp_precompute' (src/awq_macro.cpp:207:16) in function 'compute_mac_sub' completely with a factor of 8 (src/awq_macro.cpp:193:0)
+INFO: [HLS 214-186] Unrolling loop 'lp_cmp_mac_a' (src/awq_macro.cpp:213:22) in function 'compute_mac_sub' completely with a factor of 8 (src/awq_macro.cpp:193:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_119_2' (src/awq_macro.cpp:119:27) in function 'read_xi_to_stream' completely with a factor of 4 (src/awq_macro.cpp:114:0)
+WARNING: [HLS 214-366] Duplicating function 'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (src/awq_macro.cpp:160:13)
+WARNING: [HLS 214-366] Duplicating function 'std::__array_traits<hls::stream<unsigned int, 0>, 8ul>::_S_ref(hls::stream<unsigned int, 0> const (&) [8], unsigned long)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:16)
+WARNING: [HLS 214-366] Duplicating function 'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (src/awq_macro.cpp:232:18)
+WARNING: [HLS 214-366] Duplicating function 'std::__array_traits<hls::stream<float, 0>, 8ul>::_S_ref(hls::stream<float, 0> const (&) [8], unsigned long)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:16)
+INFO: [HLS 214-178] Inlining function 'std::__array_traits<float, 4ul>::_S_ref(float const (&) [4], unsigned long)' into 'std::array<float, 4ul>::operator[](unsigned long)' (/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0)
+INFO: [HLS 214-178] Inlining function 'std::__array_traits<hls::stream<float, 0>, 8ul>::_S_ref(hls::stream<float, 0> const (&) [8], unsigned long) (.31)' into 'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)' (/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0)
+INFO: [HLS 214-178] Inlining function 'std::array<float, 4ul>::operator[](unsigned long)' into 'read_xi_to_stream(hls::vector<float, 4ul>*, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, unsigned short)' (src/awq_macro.cpp:114:0)
+INFO: [HLS 214-178] Inlining function 'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long)' into 'read_xi_to_stream(hls::vector<float, 4ul>*, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<float, 0>, 8ul>&, unsigned short)' (src/awq_macro.cpp:114:0)
+INFO: [HLS 214-178] Inlining function 'std::__array_traits<unsigned int, 4ul>::_S_ref(unsigned int const (&) [4], unsigned long)' into 'std::array<unsigned int, 4ul>::operator[](unsigned long)' (/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0)
+INFO: [HLS 214-178] Inlining function 'std::__array_traits<hls::stream<unsigned int, 0>, 8ul>::_S_ref(hls::stream<unsigned int, 0> const (&) [8], unsigned long)' into 'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long) (.28)' (/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0)
+INFO: [HLS 214-178] Inlining function 'std::__array_traits<hls::stream<float, 0>, 8ul>::_S_ref(hls::stream<float, 0> const (&) [8], unsigned long)' into 'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long) (.30)' (/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0)
+INFO: [HLS 214-178] Inlining function 'std::__array_traits<hls::stream<unsigned int, 0>, 8ul>::_S_ref(hls::stream<unsigned int, 0> const (&) [8], unsigned long) (.29)' into 'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)' (/home/cad_tools/EDA/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0)
+INFO: [HLS 214-178] Inlining function 'std::array<hls::stream<float, 0>, 8ul>::operator[](unsigned long) (.30)' into 'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)' (src/awq_macro.cpp:227:0)
+INFO: [HLS 214-178] Inlining function 'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)' into 'compute_mac(hls::vector<hls::stream<float, 0>, 8ul>&, hls::vector<hls::stream<unsigned int, 0>, 8ul>&, ap_uint<4>*, float*, float*)' (src/awq_macro.cpp:227:0)
+INFO: [HLS 214-178] Inlining function 'std::array<unsigned int, 4ul>::operator[](unsigned long)' into 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)' (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-178] Inlining function 'half_to_float(unsigned short)' into 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)' (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-178] Inlining function 'std::array<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long) (.28)' into 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)' (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-178] Inlining function 'std::array<float, 4ul>::operator[](unsigned long)' into 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)' (src/awq_macro.cpp:272:0)
+WARNING: [HLS 214-167] The program may have out of bound array access on variable 'arrayidx77' (src/awq_macro.cpp:351:26)
+WARNING: [HLS 214-167] The program may have out of bound array access on variable 'arrayidx77.1' (src/awq_macro.cpp:351:26)
+WARNING: [HLS 214-167] The program may have out of bound array access on variable 'arrayidx77.2' (src/awq_macro.cpp:351:26)
+WARNING: [HLS 214-167] The program may have out of bound array access on variable 'arrayidx77.3' (src/awq_macro.cpp:351:26)
+INFO: [HLS 214-248] Applying array_partition to 'pout_temp': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (src/awq_macro.cpp:228:11)
+INFO: [HLS 214-248] Applying array_partition to 'qzeros0': Complete partitioning on dimension 1. (src/awq_macro.cpp:291:16)
+INFO: [HLS 214-248] Applying array_partition to 'qzeros1': Complete partitioning on dimension 1. (src/awq_macro.cpp:292:16)
+INFO: [HLS 214-248] Applying array_partition to 'qzeros2': Complete partitioning on dimension 1. (src/awq_macro.cpp:293:16)
+INFO: [HLS 214-248] Applying array_partition to 'qzeros3': Complete partitioning on dimension 1. (src/awq_macro.cpp:294:16)
+INFO: [HLS 214-248] Applying array_partition to 'qscale0': Complete partitioning on dimension 1. (src/awq_macro.cpp:295:11)
+INFO: [HLS 214-248] Applying array_partition to 'qscale1': Complete partitioning on dimension 1. (src/awq_macro.cpp:296:11)
+INFO: [HLS 214-248] Applying array_partition to 'qscale2': Complete partitioning on dimension 1. (src/awq_macro.cpp:297:11)
+INFO: [HLS 214-248] Applying array_partition to 'qscale3': Complete partitioning on dimension 1. (src/awq_macro.cpp:298:11)
+INFO: [HLS 214-248] Applying array_partition to 'pout_local0': Complete partitioning on dimension 1. (src/awq_macro.cpp:299:11)
+INFO: [HLS 214-248] Applying array_partition to 'pout_local1': Complete partitioning on dimension 1. (src/awq_macro.cpp:300:11)
+INFO: [HLS 214-248] Applying array_partition to 'pout_local2': Complete partitioning on dimension 1. (src/awq_macro.cpp:301:11)
+INFO: [HLS 214-248] Applying array_partition to 'pout_local3': Complete partitioning on dimension 1. (src/awq_macro.cpp:302:11)
+INFO: [HLS 214-241] Aggregating scalar variable 'out' with compact=bit mode in 128-bits (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'xi' with compact=bit mode in 128-bits (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'mro0' with compact=bit mode in 128-bits (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'mro1' with compact=bit mode in 128-bits (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'mro2' with compact=bit mode in 128-bits (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'mro3' with compact=bit mode in 128-bits (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'mro_vec1.i' with compact=bit mode in 128-bits (src/awq_macro.cpp:140:30)
+INFO: [HLS 214-241] Aggregating scalar variable 'mro_vec1.i27' with compact=bit mode in 128-bits (src/awq_macro.cpp:140:30)
+INFO: [HLS 214-241] Aggregating scalar variable 'mro_vec1.i222' with compact=bit mode in 128-bits (src/awq_macro.cpp:140:30)
+INFO: [HLS 214-241] Aggregating scalar variable 'mro_vec1.i417' with compact=bit mode in 128-bits (src/awq_macro.cpp:140:30)
+WARNING: [HLS 214-450] Ignore address on register port 'xi0' (src/awq_macro.cpp:118:29)
+WARNING: [HLS 214-450] Ignore address on register port 'mro0' (src/awq_macro.cpp:139:38)
+WARNING: [HLS 214-450] Ignore address on register port 'mro0' (src/awq_macro.cpp:140:41)
+WARNING: [HLS 214-450] Ignore address on register port 'mro0' (src/awq_macro.cpp:156:40)
+WARNING: [HLS 214-450] Ignore address on register port 'mro1' (src/awq_macro.cpp:139:38)
+WARNING: [HLS 214-450] Ignore address on register port 'mro1' (src/awq_macro.cpp:140:41)
+WARNING: [HLS 214-450] Ignore address on register port 'mro1' (src/awq_macro.cpp:156:40)
+WARNING: [HLS 214-450] Ignore address on register port 'mro2' (src/awq_macro.cpp:139:38)
+WARNING: [HLS 214-450] Ignore address on register port 'mro2' (src/awq_macro.cpp:140:41)
+WARNING: [HLS 214-450] Ignore address on register port 'mro2' (src/awq_macro.cpp:156:40)
+WARNING: [HLS 214-450] Ignore address on register port 'mro3' (src/awq_macro.cpp:139:38)
+WARNING: [HLS 214-450] Ignore address on register port 'mro3' (src/awq_macro.cpp:140:41)
+WARNING: [HLS 214-450] Ignore address on register port 'mro3' (src/awq_macro.cpp:156:40)
+WARNING: [HLS 214-450] Ignore address on register port 'out' (src/awq_macro.cpp:353:26)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< unknown> at  
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_318_1> at src/awq_macro.cpp:318:20 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_146_1> at src/awq_macro.cpp:146:23 
+INFO: [HLS 214-282] Aggregating variable 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::xi0_s' with 'compact=none' mode (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-282] Aggregating variable 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::xi1_s' with 'compact=none' mode (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-282] Aggregating variable 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::xi2_s' with 'compact=none' mode (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-282] Aggregating variable 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::xi3_s' with 'compact=none' mode (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-282] Aggregating variable 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::mro0_s' with 'compact=none' mode (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-282] Aggregating variable 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::mro1_s' with 'compact=none' mode (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-282] Aggregating variable 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::mro2_s' with 'compact=none' mode (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-282] Aggregating variable 'Macro_MAC_Acc4_top(hls::vector<float, 4ul>*, hls::vector<float, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, hls::vector<unsigned int, 4ul>*, unsigned short)::mro3_s' with 'compact=none' mode (src/awq_macro.cpp:272:0)
+INFO: [HLS 214-455] Changing loop 'Loop_VITIS_LOOP_318_1_proc' (src/awq_macro.cpp:318:20) to a process function for dataflow in function 'Macro_MAC_Acc4_top' (src/awq_macro.cpp:318:20)
+INFO: [HLS 214-455] Changing loop 'Loop_VITIS_LOOP_324_2_proc' (src/awq_macro.cpp:324:23) to a process function for dataflow in function 'Macro_MAC_Acc4_top' (src/awq_macro.cpp:324:23)
+INFO: [HLS 214-455] Changing loop 'Loop_VITIS_LOOP_337_3_proc' (src/awq_macro.cpp:337:23) to a process function for dataflow in function 'Macro_MAC_Acc4_top' (src/awq_macro.cpp:337:23)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.76 seconds. CPU system time: 0.53 seconds. Elapsed time: 7.47 seconds; current allocated memory: 751.609 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 751.609 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 751.609 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 751.609 MB.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'xi3_s._M_elems.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'xi2_s._M_elems.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'xi1_s._M_elems.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'xi0_s._M_elems.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'mro3_s._M_elems.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'mro2_s._M_elems.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'mro1_s._M_elems.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'mro0_s._M_elems.V' .
+INFO: [XFORM 203-101] Partitioning array 'xi3_s._M_elems.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'xi2_s._M_elems.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'xi1_s._M_elems.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'xi0_s._M_elems.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'mro3_s._M_elems.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'mro2_s._M_elems.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'mro1_s._M_elems.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'mro0_s._M_elems.V' in dimension 1 completely.
+WARNING: [HLS 200-805] An internal stream 'xi3_s._M_elems.V.7' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi3_s._M_elems.V.6' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi3_s._M_elems.V.5' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi3_s._M_elems.V.4' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi3_s._M_elems.V.3' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi3_s._M_elems.V.2' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi3_s._M_elems.V.1' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi3_s._M_elems.V.0' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi2_s._M_elems.V.7' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi2_s._M_elems.V.6' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi2_s._M_elems.V.5' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi2_s._M_elems.V.4' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi2_s._M_elems.V.3' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi2_s._M_elems.V.2' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi2_s._M_elems.V.1' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi2_s._M_elems.V.0' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi1_s._M_elems.V.7' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi1_s._M_elems.V.6' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi1_s._M_elems.V.5' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi1_s._M_elems.V.4' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi1_s._M_elems.V.3' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi1_s._M_elems.V.2' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi1_s._M_elems.V.1' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi1_s._M_elems.V.0' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi0_s._M_elems.V.7' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi0_s._M_elems.V.6' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi0_s._M_elems.V.5' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi0_s._M_elems.V.4' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi0_s._M_elems.V.3' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi0_s._M_elems.V.2' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi0_s._M_elems.V.1' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'xi0_s._M_elems.V.0' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro3_s._M_elems.V.7' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro3_s._M_elems.V.6' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro3_s._M_elems.V.5' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro3_s._M_elems.V.4' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro3_s._M_elems.V.3' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro3_s._M_elems.V.2' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro3_s._M_elems.V.1' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro3_s._M_elems.V.0' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro2_s._M_elems.V.7' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro2_s._M_elems.V.6' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro2_s._M_elems.V.5' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro2_s._M_elems.V.4' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro2_s._M_elems.V.3' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro2_s._M_elems.V.2' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro2_s._M_elems.V.1' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro2_s._M_elems.V.0' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro1_s._M_elems.V.7' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro1_s._M_elems.V.6' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro1_s._M_elems.V.5' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro1_s._M_elems.V.4' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro1_s._M_elems.V.3' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro1_s._M_elems.V.2' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro1_s._M_elems.V.1' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro1_s._M_elems.V.0' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro0_s._M_elems.V.7' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro0_s._M_elems.V.6' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro0_s._M_elems.V.5' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro0_s._M_elems.V.4' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro0_s._M_elems.V.3' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro0_s._M_elems.V.2' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro0_s._M_elems.V.1' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'mro0_s._M_elems.V.0' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [XFORM 203-712] Applying dataflow to function 'Macro_MAC_Acc4_top' (src/awq_macro.cpp:264:1), detected/extracted 4 process function(s): 
+	 'entry_proc'
+	 'Block_entry_proc'
+	 'Loop_VITIS_LOOP_324_2_proc'
+	 'Loop_VITIS_LOOP_337_3_proc'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'compute_mac'... converting 18 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.33 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.34 seconds; current allocated memory: 751.609 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_337_3'(src/awq_macro.cpp:337:23) and 'VITIS_LOOP_338_4'(src/awq_macro.cpp:338:27) in function 'Loop_VITIS_LOOP_337_3_proc' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_337_3' (src/awq_macro.cpp:337:23) in function 'Loop_VITIS_LOOP_337_3_proc'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.39 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.42 seconds; current allocated memory: 879.609 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Macro_MAC_Acc4_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.12 seconds; current allocated memory: 879.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 879.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_xi_to_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_116_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_116_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 879.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 879.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_146_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_146_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_154_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_154_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_146_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_146_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_154_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_154_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_146_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_146_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_24' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_154_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_154_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_146_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_146_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_154_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_154_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_mac_sub' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'lp_cmp_sub_h'.
+WARNING: [HLS 200-880] The II Violation in module 'compute_mac_sub' (loop 'lp_cmp_sub_h'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation 0 bit ('pout_temp_0_0_write_ln216', src/awq_macro.cpp:216) of variable 'add', src/awq_macro.cpp:216 on local variable 'pout_temp_0_0' and 'load' operation 32 bit ('pout_temp_0_0_load', src/awq_macro.cpp:216) on local variable 'pout_temp_0_0'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'compute_mac_sub' (loop 'lp_cmp_sub_h'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation 0 bit ('pout_temp_0_0_write_ln216', src/awq_macro.cpp:216) of variable 'add', src/awq_macro.cpp:216 on local variable 'pout_temp_0_0' and 'load' operation 32 bit ('pout_temp_0_0_load', src/awq_macro.cpp:216) on local variable 'pout_temp_0_0'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'compute_mac_sub' (loop 'lp_cmp_sub_h'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation 0 bit ('pout_temp_0_0_write_ln216', src/awq_macro.cpp:216) of variable 'add', src/awq_macro.cpp:216 on local variable 'pout_temp_0_0' and 'load' operation 32 bit ('pout_temp_0_0_load', src/awq_macro.cpp:216) on local variable 'pout_temp_0_0'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'compute_mac_sub' (loop 'lp_cmp_sub_h'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation 0 bit ('pout_temp_0_0_write_ln216', src/awq_macro.cpp:216) of variable 'add', src/awq_macro.cpp:216 on local variable 'pout_temp_0_0' and 'load' operation 32 bit ('pout_temp_0_0_load', src/awq_macro.cpp:216) on local variable 'pout_temp_0_0'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 5, Depth = 23, loop 'lp_cmp_sub_h'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_mac' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'lp_cmp_mac_cplocal'.
+WARNING: [HLS 200-892] User specified latency constraint cannot be honored in region 'xcl_latency.for.inc53.0' (src/awq_macro.cpp:237). Please consider relaxing the latency upper bound of 2.
+Resolution: For help on HLS 200-892 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-892.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 25, loop 'lp_cmp_mac_cplocal'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_324_2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_337_3_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_337_3_VITIS_LOOP_338_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_337_3_VITIS_LOOP_338_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Macro_MAC_Acc4_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 943.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_xi_to_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'read_xi_to_stream' pipeline 'VITIS_LOOP_116_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_xi_to_stream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_2' pipeline 'VITIS_LOOP_154_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_22' pipeline 'VITIS_LOOP_154_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_22'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_24' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_24' pipeline 'VITIS_LOOP_154_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_24'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_26' pipeline 'VITIS_LOOP_154_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_26'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_mac_sub' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_mac_sub' pipeline 'lp_cmp_sub_h' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_6_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_5_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32s_32_6_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_mac_sub'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_mac' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_6_no_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_32_1_1': 9 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_mac'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_324_2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_324_2_proc'.
+INFO: [RTMG 210-285] Implementing FIFO 'xi3_s_M_elems_V_2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi3_s_M_elems_V_6_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi3_s_M_elems_V_1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi3_s_M_elems_V_5_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi3_s_M_elems_V_0_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi3_s_M_elems_V_4_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi2_s_M_elems_V_2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi2_s_M_elems_V_6_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi2_s_M_elems_V_1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi2_s_M_elems_V_5_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi2_s_M_elems_V_0_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi2_s_M_elems_V_4_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi1_s_M_elems_V_2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi1_s_M_elems_V_6_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi1_s_M_elems_V_1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi1_s_M_elems_V_5_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi1_s_M_elems_V_0_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi1_s_M_elems_V_4_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi0_s_M_elems_V_3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi1_s_M_elems_V_3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi2_s_M_elems_V_3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi3_s_M_elems_V_3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi0_s_M_elems_V_7_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi1_s_M_elems_V_7_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi2_s_M_elems_V_7_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi3_s_M_elems_V_7_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi0_s_M_elems_V_2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi0_s_M_elems_V_6_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi0_s_M_elems_V_1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi0_s_M_elems_V_5_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi0_s_M_elems_V_0_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'xi0_s_M_elems_V_4_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro0_s_M_elems_V_3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro0_s_M_elems_V_2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro0_s_M_elems_V_1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro0_s_M_elems_V_0_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro0_s_M_elems_V_4_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro0_s_M_elems_V_5_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro0_s_M_elems_V_6_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro0_s_M_elems_V_7_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro1_s_M_elems_V_3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro1_s_M_elems_V_2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro1_s_M_elems_V_1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro1_s_M_elems_V_0_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro1_s_M_elems_V_4_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro1_s_M_elems_V_5_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro1_s_M_elems_V_6_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro1_s_M_elems_V_7_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro2_s_M_elems_V_3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro2_s_M_elems_V_2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro2_s_M_elems_V_1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro2_s_M_elems_V_0_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro2_s_M_elems_V_4_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro2_s_M_elems_V_5_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro2_s_M_elems_V_6_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro2_s_M_elems_V_7_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro3_s_M_elems_V_3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro3_s_M_elems_V_2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro3_s_M_elems_V_1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro3_s_M_elems_V_0_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro3_s_M_elems_V_4_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro3_s_M_elems_V_5_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro3_s_M_elems_V_6_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro3_s_M_elems_V_7_U(Macro_MAC_Acc4_top_fifo_w32_d2_S)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.33 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.36 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_337_3_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_337_3_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Macro_MAC_Acc4_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Macro_MAC_Acc4_top/out_r' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Macro_MAC_Acc4_top/xi' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Macro_MAC_Acc4_top/mro0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Macro_MAC_Acc4_top/mro1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Macro_MAC_Acc4_top/mro2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Macro_MAC_Acc4_top/mro3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Macro_MAC_Acc4_top/row' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Macro_MAC_Acc4_top' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w32_d2_S' is changed to 'fifo_w32_d2_S_x' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Macro_MAC_Acc4_top'.
+INFO: [RTMG 210-285] Implementing FIFO 'xi_c_U(Macro_MAC_Acc4_top_fifo_w128_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro0_c_U(Macro_MAC_Acc4_top_fifo_w128_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro1_c_U(Macro_MAC_Acc4_top_fifo_w128_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro2_c_U(Macro_MAC_Acc4_top_fifo_w128_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'mro3_c_U(Macro_MAC_Acc4_top_fifo_w128_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'row_c_U(Macro_MAC_Acc4_top_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local0_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local0_1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local0_2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local0_3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local0_4_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local0_5_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local0_6_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local0_7_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local1_1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local1_2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local1_3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local1_4_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local1_5_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local1_6_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local1_7_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local2_1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local2_2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local2_3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local2_4_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local2_5_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local2_6_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local2_7_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local3_1_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local3_2_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local3_3_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local3_4_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local3_5_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local3_6_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pout_local3_7_U(Macro_MAC_Acc4_top_fifo_w32_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Loop_VITIS_LOOP_324_2_proc_U0_U(Macro_MAC_Acc4_top_start_for_Loop_VITIS_LOOP_324_2_proc_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.27 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.3 seconds; current allocated memory: 943.609 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.5 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.52 seconds; current allocated memory: 1007.609 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Macro_MAC_Acc4_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for Macro_MAC_Acc4_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 284.06 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:16; Allocated memory: 264.004 MB.
+INFO: [HLS 200-1510] Running: close_solution 
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 14.06 seconds. Total CPU system time: 1.81 seconds. Total elapsed time: 19.82 seconds; peak allocated memory: 1007.609 MB.

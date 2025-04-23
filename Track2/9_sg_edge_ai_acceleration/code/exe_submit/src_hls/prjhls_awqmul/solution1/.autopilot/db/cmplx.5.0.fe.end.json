@@ -1,0 +1,254 @@
+{
+    "1": {
+        "name": "Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_11",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "146",
+        "instructions": "67",
+        "total_instructions": "67",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "9"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "Macro_MAC_Acc4_top",
+        "file": "awq_macro.cpp",
+        "fileloc": "264",
+        "instructions": "135",
+        "total_instructions": "6930",
+        "calls": "2 12 13",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "entry_proc",
+        "file": "awq_macro.cpp",
+        "fileloc": "0",
+        "instructions": "19",
+        "total_instructions": "19",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "3": {
+        "name": "Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_2",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "154",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "16",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_26",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "154",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "16",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_22",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "154",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "16",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_15",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "146",
+        "instructions": "67",
+        "total_instructions": "67",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "9"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "read_xi_to_stream",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "116",
+        "instructions": "128",
+        "total_instructions": "128",
+        "calls": "",
+        "basicblocks": "43",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "compute_mac",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "226",
+        "instructions": "163",
+        "total_instructions": "1387",
+        "calls": "14 14 14 14 14 14 14 14",
+        "basicblocks": "13",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_1",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "146",
+        "instructions": "67",
+        "total_instructions": "67",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "9"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_24",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "154",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "16",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "11": {
+        "name": "Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_146_13",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "146",
+        "instructions": "67",
+        "total_instructions": "67",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "9"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "12": {
+        "name": "Loop_VITIS_LOOP_324_2_proc",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "96",
+        "instructions": "545",
+        "total_instructions": "6681",
+        "calls": "7 9 3 1 5 11 10 6 4 8 8 8 8",
+        "basicblocks": "4",
+        "loads": {
+            "L": "97"
+        },
+        "stores": {
+            "L": "66"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "13": {
+        "name": "Loop_VITIS_LOOP_337_3_proc",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "337",
+        "instructions": "95",
+        "total_instructions": "95",
+        "calls": "",
+        "basicblocks": "8",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "14": {
+        "name": "compute_mac_sub",
+        "file": "src\/awq_macro.cpp",
+        "fileloc": "188",
+        "instructions": "153",
+        "total_instructions": "153",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "17"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

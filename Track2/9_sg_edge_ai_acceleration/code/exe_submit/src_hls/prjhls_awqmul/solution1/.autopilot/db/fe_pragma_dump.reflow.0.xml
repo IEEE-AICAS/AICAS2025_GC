@@ -1,0 +1,83 @@
+<pragmas>
+<pragma file="src/awq_macro.cpp" line="137" pragmaType="inline" parentfunction="read_mro_to_components" off="0" region="0" recursive="0"/>
+<pragma file="src/awq_macro.cpp" line="155" pragmaType="pipeline" parentfunction="read_mro_to_components" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/awq_macro.cpp" line="158" pragmaType="unroll" parentfunction="read_mro_to_components" factor="-1" skip_exit_check="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="pragma" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="aggregate" parentfunction="pragma" compact="3" variable="this"/>
+<pragma file="src/awq_macro.cpp" line="117" pragmaType="pipeline" parentfunction="read_xi_to_stream" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/awq_macro.cpp" line="120" pragmaType="unroll" parentfunction="read_xi_to_stream" factor="-1" skip_exit_check="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::vector<hls::stream<float, 0>, 8ul>::operator[](unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::vector<float, 4ul>::operator[](unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<unsigned int, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="ssdm_int<32, false>::ssdm_int(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::vector<hls::stream<unsigned int, 0>, 8ul>::operator[](unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="pragma" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="aggregate" parentfunction="pragma" compact="3" variable="this"/>
+<pragma file="src/awq_macro.cpp" line="316" pragmaType="dataflow" parentfunction="Macro_MAC_Acc4_top" disable_start_propagation="0"/>
+<pragma file="src/awq_macro.cpp" line="339" pragmaType="pipeline" parentfunction="Macro_MAC_Acc4_top" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/awq_macro.cpp" line="325" pragmaType="loop_tripcount" parentfunction="Macro_MAC_Acc4_top" min="14" max="14" avg="14"/>
+<pragma file="src/awq_macro.cpp" line="273" pragmaType="aggregate" parentfunction="Macro_MAC_Acc4_top" compact="3" variable="out"/>
+<pragma file="src/awq_macro.cpp" line="275" pragmaType="aggregate" parentfunction="Macro_MAC_Acc4_top" compact="3" variable="xi"/>
+<pragma file="src/awq_macro.cpp" line="277" pragmaType="aggregate" parentfunction="Macro_MAC_Acc4_top" compact="3" variable="mro0"/>
+<pragma file="src/awq_macro.cpp" line="279" pragmaType="aggregate" parentfunction="Macro_MAC_Acc4_top" compact="3" variable="mro1"/>
+<pragma file="src/awq_macro.cpp" line="281" pragmaType="aggregate" parentfunction="Macro_MAC_Acc4_top" compact="3" variable="mro2"/>
+<pragma file="src/awq_macro.cpp" line="283" pragmaType="aggregate" parentfunction="Macro_MAC_Acc4_top" compact="3" variable="mro3"/>
+<pragma file="src/awq_macro.cpp" line="303" pragmaType="array_partition" parentfunction="Macro_MAC_Acc4_top" dim="1" factor="0" mode="complete" dynamic="0" variable="qzeros0"/>
+<pragma file="src/awq_macro.cpp" line="304" pragmaType="array_partition" parentfunction="Macro_MAC_Acc4_top" dim="1" factor="0" mode="complete" dynamic="0" variable="qzeros1"/>
+<pragma file="src/awq_macro.cpp" line="305" pragmaType="array_partition" parentfunction="Macro_MAC_Acc4_top" dim="1" factor="0" mode="complete" dynamic="0" variable="qzeros2"/>
+<pragma file="src/awq_macro.cpp" line="306" pragmaType="array_partition" parentfunction="Macro_MAC_Acc4_top" dim="1" factor="0" mode="complete" dynamic="0" variable="qzeros3"/>
+<pragma file="src/awq_macro.cpp" line="307" pragmaType="array_partition" parentfunction="Macro_MAC_Acc4_top" dim="1" factor="0" mode="complete" dynamic="0" variable="qscale0"/>
+<pragma file="src/awq_macro.cpp" line="308" pragmaType="array_partition" parentfunction="Macro_MAC_Acc4_top" dim="1" factor="0" mode="complete" dynamic="0" variable="qscale1"/>
+<pragma file="src/awq_macro.cpp" line="309" pragmaType="array_partition" parentfunction="Macro_MAC_Acc4_top" dim="1" factor="0" mode="complete" dynamic="0" variable="qscale2"/>
+<pragma file="src/awq_macro.cpp" line="310" pragmaType="array_partition" parentfunction="Macro_MAC_Acc4_top" dim="1" factor="0" mode="complete" dynamic="0" variable="qscale3"/>
+<pragma file="src/awq_macro.cpp" line="311" pragmaType="array_partition" parentfunction="Macro_MAC_Acc4_top" dim="1" factor="0" mode="complete" dynamic="0" variable="pout_local0"/>
+<pragma file="src/awq_macro.cpp" line="312" pragmaType="array_partition" parentfunction="Macro_MAC_Acc4_top" dim="1" factor="0" mode="complete" dynamic="0" variable="pout_local1"/>
+<pragma file="src/awq_macro.cpp" line="313" pragmaType="array_partition" parentfunction="Macro_MAC_Acc4_top" dim="1" factor="0" mode="complete" dynamic="0" variable="pout_local2"/>
+<pragma file="src/awq_macro.cpp" line="314" pragmaType="array_partition" parentfunction="Macro_MAC_Acc4_top" dim="1" factor="0" mode="complete" dynamic="0" variable="pout_local3"/>
+<pragma file="src/awq_macro.cpp" line="236" pragmaType="pipeline" parentfunction="compute_mac" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/awq_macro.cpp" line="231" pragmaType="unroll" parentfunction="compute_mac" factor="-1" skip_exit_check="0"/>
+<pragma file="src/awq_macro.cpp" line="229" pragmaType="array_partition" parentfunction="compute_mac" dim="0" factor="0" mode="complete" dynamic="0" variable="pout_temp"/>
+<pragma file="src/awq_macro.cpp" line="237" pragmaType="latency" parentfunction="compute_mac" min="0" max="2"/>
+<pragma file="src/awq_macro.cpp" line="241" pragmaType="array_partition" parentfunction="compute_mac" dim="1" factor="0" mode="complete" dynamic="0" variable="stage1"/>
+<pragma file="src/awq_macro.cpp" line="245" pragmaType="array_partition" parentfunction="compute_mac" dim="1" factor="0" mode="complete" dynamic="0" variable="stage2"/>
+<pragma file="src/awq_macro.cpp" line="242" pragmaType="bind_op" parentfunction="compute_mac" op="8" impl="4" latency="-1"/>
+<pragma file="src/awq_macro.cpp" line="242" pragmaType="bind_op" parentfunction="compute_mac" op="8" impl="4" latency="-1"/>
+<pragma file="src/awq_macro.cpp" line="242" pragmaType="bind_op" parentfunction="compute_mac" op="8" impl="4" latency="-1"/>
+<pragma file="src/awq_macro.cpp" line="242" pragmaType="bind_op" parentfunction="compute_mac" op="8" impl="4" latency="-1"/>
+<pragma file="src/awq_macro.cpp" line="246" pragmaType="bind_op" parentfunction="compute_mac" op="8" impl="3" latency="-1"/>
+<pragma file="src/awq_macro.cpp" line="246" pragmaType="bind_op" parentfunction="compute_mac" op="8" impl="3" latency="-1"/>
+<pragma file="src/awq_macro.cpp" line="249" pragmaType="bind_op" parentfunction="compute_mac" op="8" impl="3" latency="-1"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<5>::ap_int<5, true>(ap_int_base<5, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/cad_tools/EDA/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="_ZN8ssdm_intILi5ELb1EEC2EDq5_i" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::RType<4, false>::minus operator-<4, false, 4, false>(ap_int_base<4, false> const&, ap_int_base<4, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, true>::operator long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, true>::ap_int_base<4, false>(ap_int_base<4, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="src/awq_macro.cpp" line="195" pragmaType="pipeline" parentfunction="compute_mac_sub" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/awq_macro.cpp" line="208" pragmaType="unroll" parentfunction="compute_mac_sub" factor="-1" skip_exit_check="0"/>
+<pragma file="src/awq_macro.cpp" line="214" pragmaType="unroll" parentfunction="compute_mac_sub" factor="-1" skip_exit_check="0"/>
+<pragma file="src/awq_macro.cpp" line="198" pragmaType="array_partition" parentfunction="compute_mac_sub" dim="1" factor="0" mode="complete" dynamic="0" variable="w_uint4"/>
+<pragma file="src/awq_macro.cpp" line="206" pragmaType="array_partition" parentfunction="compute_mac_sub" dim="1" factor="0" mode="complete" dynamic="0" variable="scaled_xi"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="pragma" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="aggregate" parentfunction="pragma" compact="3" variable="this"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::operator()(int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<4>::ap_uint<32, false>(ap_range_ref<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::ap_int_base<32, false>(ap_range_ref<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::vector<unsigned int, 4ul>::operator[](unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="src/awq_macro.cpp" line="97" pragmaType="inline" parentfunction="split_uint32_to_uint4_hls" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="pragma" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="aggregate" parentfunction="pragma" compact="3" variable="this"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<float, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<32, false>::ap_range_ref(ap_int_base<32, false>*, int, int)" off="0" region="0" recursive="0"/>
+</pragmas>

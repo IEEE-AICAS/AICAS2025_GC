@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'Macro_MAC_Acc4_top'" level="0">
+<item name = "Date">Fri Mar 28 16:44:20 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">prjhls_awqmul</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 3.520 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2742, 2742, 13.710 us, 13.710 us, 2732, 2732, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="call_ln316_entry_proc_fu_228">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_Loop_VITIS_LOOP_324_2_proc_fu_250">Loop_VITIS_LOOP_324_2_proc, 2731, 2731, 13.655 us, 13.655 us, 2731, 2731, no</column>
+<column name="grp_Loop_VITIS_LOOP_337_3_proc_fu_452">Loop_VITIS_LOOP_337_3_proc, 9, 9, 45.000 ns, 45.000 ns, 8, 8, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

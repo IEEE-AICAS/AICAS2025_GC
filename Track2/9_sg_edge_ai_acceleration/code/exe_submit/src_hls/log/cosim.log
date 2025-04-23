@@ -1,0 +1,67 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+  **** SW Build 3854077 on May  4 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/cad_tools/EDA/Xilinx_2023/Vitis_HLS/2023.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/cad_tools/EDA/Xilinx_2023/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'maoyang' on host 'patience' (Linux_x86_64 version 3.10.0-1160.119.1.el7.x86_64) on Thu Mar 27 14:52:16 +08 2025
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls'
+Sourcing Tcl script 'script/run_cosim.tcl'
+INFO: [HLS 200-1510] Running: open_project prjhls_awqmul 
+INFO: [HLS 200-10] Opening project '/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul'.
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Opening solution '/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2lv-c 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: add_files ./src/awq_macro.cpp -cflags -I./src 
+INFO: [HLS 200-10] Adding design file './src/awq_macro.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files ./src/awq_macro.h -cflags -I./src 
+INFO: [HLS 200-10] Adding design file './src/awq_macro.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ./tb/tb_awq_macro.cpp -cflags -I./src 
+INFO: [HLS 200-10] Adding test bench file './tb/tb_awq_macro.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top Macro_MAC_Acc4_top 
+INFO: [HLS 200-1510] Running: cosim_design -rtl verilog -tool xsim 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+make[1]: Entering directory `/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/sim/wrapc'
+   Build using "/home/cad_tools/EDA/Xilinx_2023/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling tb_awq_macro.cpp_pre.cpp.tb.cpp
+   Compiling awq_macro.cpp_pre.cpp.tb.cpp
+   Compiling apatb_Macro_MAC_Acc4_top.cpp
+   Compiling apatb_Macro_MAC_Acc4_top_ir.ll
+   Generating cosim.tv.exe
+make[1]: Leaving directory `/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/sim/wrapc'
+INFO: [COSIM 212-302] Starting C TB testing ... 
+ERROR: System received a signal named SIGSEGV and the program has to stop immediately!
+This signal was generated when a program tries to read or write outside the memory that is allocated for it, or to write memory that can only be read.
+Possible cause of this problem may be:
+  1) Missing depth information for one or more pointers to arrays in the interface;
+  2) Insufficient depth setting for array argument(s);
+  3) Excessive depth setting for array argument(s), that exceeds the maximum virtual memory size for the process;
+  4) Null pointer etc.
+Current execution stopped during CodeState = CALL_C_DUT.
+You can search CodeState variable name in apatb*.cpp file under ./sim/wrapc dir to locate the position.
+
+ERROR: [COSIM 212-360] Aborting co-simulation: C TB simulation failed.
+ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 7.2 seconds. CPU system time: 1.39 seconds. Elapsed time: 9.01 seconds; current allocated memory: 0.000 MB.
+command 'ap_source' returned error code
+    while executing
+"source script/run_cosim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $arg] "
+
+INFO: [HLS 200-112] Total CPU user time: 10.21 seconds. Total CPU system time: 1.97 seconds. Total elapsed time: 12.38 seconds; peak allocated memory: 1.560 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Mar 27 14:52:28 2025...

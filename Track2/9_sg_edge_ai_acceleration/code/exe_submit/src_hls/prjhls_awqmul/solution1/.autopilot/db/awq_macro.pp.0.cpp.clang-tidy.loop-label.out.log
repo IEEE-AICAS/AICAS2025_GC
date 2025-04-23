@@ -1,0 +1,317 @@
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:2437:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:2437:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:2451:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:2451:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:2465:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:2465:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:4099:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:4099:7: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25832:5: warning: Added loop label VITIS_LOOP_127_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < N; ++i) {
+    ^~~
+    VITIS_LOOP_127_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25832:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25848:5: warning: Added loop label VITIS_LOOP_143_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < N; ++i) {
+    ^~~
+    VITIS_LOOP_143_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25848:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25864:75: warning: Added loop label VITIS_LOOP_169_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator ++() { pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                          ^~~
+                                                                          VITIS_LOOP_169_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25864:75: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25869:75: warning: Added loop label VITIS_LOOP_170_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator --() { pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                          ^~~
+                                                                          VITIS_LOOP_170_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25869:75: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25878:106: warning: Added loop label VITIS_LOOP_198_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator +=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_198_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25878:106: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25883:106: warning: Added loop label VITIS_LOOP_199_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator -=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_199_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25883:106: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25888:106: warning: Added loop label VITIS_LOOP_200_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator *=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_200_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25888:106: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25893:106: warning: Added loop label VITIS_LOOP_201_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator /=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_201_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25893:106: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25898:106: warning: Added loop label VITIS_LOOP_202_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator %=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_202_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25898:106: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25903:106: warning: Added loop label VITIS_LOOP_203_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator &=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_203_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25903:106: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25908:106: warning: Added loop label VITIS_LOOP_204_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator |=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_204_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25908:106: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25913:106: warning: Added loop label VITIS_LOOP_205_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator ^=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_205_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25913:106: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25918:107: warning: Added loop label VITIS_LOOP_206_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator <<=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                          ^~~
+                                                                                                          VITIS_LOOP_206_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25918:107: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25923:107: warning: Added loop label VITIS_LOOP_207_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator >>=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                          ^~~
+                                                                                                          VITIS_LOOP_207_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25923:107: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25929:91: warning: Added loop label VITIS_LOOP_222_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_add() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_222_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25929:91: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25934:92: warning: Added loop label VITIS_LOOP_223_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_mult() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                           ^~~
+                                                                                           VITIS_LOOP_223_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25934:92: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25939:91: warning: Added loop label VITIS_LOOP_224_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_and() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_224_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25939:91: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25944:90: warning: Added loop label VITIS_LOOP_225_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_or() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                         ^~~
+                                                                                         VITIS_LOOP_225_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25944:90: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25949:91: warning: Added loop label VITIS_LOOP_226_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_xor() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_226_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25949:91: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25955:132: warning: Added loop label VITIS_LOOP_256_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator <(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                   ^~~
+                                                                                                                                   VITIS_LOOP_256_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25955:132: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25960:133: warning: Added loop label VITIS_LOOP_257_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator <=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_257_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25960:133: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25965:133: warning: Added loop label VITIS_LOOP_258_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator ==(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_258_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25965:133: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25970:133: warning: Added loop label VITIS_LOOP_259_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator !=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_259_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25970:133: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25975:133: warning: Added loop label VITIS_LOOP_260_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator >=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_260_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25975:133: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25980:132: warning: Added loop label VITIS_LOOP_261_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator >(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                   ^~~
+                                                                                                                                   VITIS_LOOP_261_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:25980:132: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34638:5: warning: Added loop label VITIS_LOOP_26_1:   [xilinx-label-all-loops]
+    for (uint8_t i = 0; i < 8; ++i) {
+    ^~~
+    VITIS_LOOP_26_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34638:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34657:5: warning: Added loop label VITIS_LOOP_45_1:   [xilinx-label-all-loops]
+    for (uint8_t j = 0; j < _MACRO_W; j++) {
+    ^~~
+    VITIS_LOOP_45_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34657:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34662:5: warning: Added loop label VITIS_LOOP_50_2:   [xilinx-label-all-loops]
+    for (uint16_t i = 0; i < _MACRO_H; i++) {
+    ^~~
+    VITIS_LOOP_50_2: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34662:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34667:9: warning: Added loop label VITIS_LOOP_55_3:   [xilinx-label-all-loops]
+        for (uint8_t j = 0; j < _MACRO_W; j++) {
+        ^~~
+        VITIS_LOOP_55_3: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34667:9: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34691:5: warning: Added loop label VITIS_LOOP_79_1:   [xilinx-label-all-loops]
+    for (uint8_t i = 0; i < 32; i++) {
+    ^~~
+    VITIS_LOOP_79_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34691:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34695:5: warning: Added loop label VITIS_LOOP_83_2:   [xilinx-label-all-loops]
+    for (uint16_t i = 0; i < row; i++) {
+    ^~~
+    VITIS_LOOP_83_2: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34695:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34728:5: warning: Added loop label VITIS_LOOP_116_1:   [xilinx-label-all-loops]
+    for (int i =0; i<_MACRO_H/4; i++){
+    ^~~
+    VITIS_LOOP_116_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34728:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34731:9: warning: Added loop label VITIS_LOOP_119_2:   [xilinx-label-all-loops]
+        for (int q = 0; q < 4; q++) {
+        ^~~
+        VITIS_LOOP_119_2: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34731:9: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34758:5: warning: Added loop label VITIS_LOOP_146_1:   [xilinx-label-all-loops]
+    for (int j = 0; j < 4; j++) {
+    ^~~
+    VITIS_LOOP_146_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34758:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34766:5: warning: Added loop label VITIS_LOOP_154_2:   [xilinx-label-all-loops]
+    for(int j=0;j<_MACRO_H/4;j++){
+    ^~~
+    VITIS_LOOP_154_2: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34766:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34769:9: warning: Added loop label VITIS_LOOP_157_3:   [xilinx-label-all-loops]
+        for (int q = 0; q < 4; q++) {
+        ^~~
+        VITIS_LOOP_157_3: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34769:9: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34820:2: warning: Added loop label VITIS_LOOP_230_1:   [xilinx-label-all-loops]
+ for(uint8_t i = 0; i<(8); i++){
+ ^~~
+ VITIS_LOOP_230_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34820:2: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34832:9: error: Invalid Directive: for current device, add + fabric is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=stage1 op=add impl=fabric
+        ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34836:9: error: Invalid Directive: for current device, add + dsp is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=stage2 op=add impl=dsp
+        ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34839:9: error: Invalid Directive: for current device, add + dsp is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=final_sum op=add impl=dsp
+        ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34855:29: warning:  hls::vector type top function variable out requires aggregation [xilinx-aggregate-on-hls-vector]
+    hls::vector<float, 4 > *out,
+                            ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34862:3: note: FIX-IT applied suggested code changes
+){
+  ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34855:29: warning:  hls::vector type top function variable out requires align attribute [xilinx-aggregate-on-hls-vector]
+    hls::vector<float, 4 > *out,
+                            ^  ~
+                                __attribute__((align_value(alignof(hls::vector<float, 4>)))) 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34855:32: note: FIX-IT applied suggested code changes
+    hls::vector<float, 4 > *out,
+                               ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34856:29: warning:  hls::vector type top function variable xi requires aggregation [xilinx-aggregate-on-hls-vector]
+    hls::vector<float, 4 > *xi,
+                            ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34862:3: note: FIX-IT applied suggested code changes
+){
+  ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34856:29: warning:  hls::vector type top function variable xi requires align attribute [xilinx-aggregate-on-hls-vector]
+    hls::vector<float, 4 > *xi,
+                            ^ ~
+                               __attribute__((align_value(alignof(hls::vector<float, 4>)))) 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34856:31: note: FIX-IT applied suggested code changes
+    hls::vector<float, 4 > *xi,
+                              ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34857:32: warning:  hls::vector type top function variable mro0 requires aggregation [xilinx-aggregate-on-hls-vector]
+    hls::vector<uint32_t, 4 > *mro0,
+                               ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34862:3: note: FIX-IT applied suggested code changes
+){
+  ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34857:32: warning:  hls::vector type top function variable mro0 requires align attribute [xilinx-aggregate-on-hls-vector]
+    hls::vector<uint32_t, 4 > *mro0,
+                               ^   ~
+                                    __attribute__((align_value(alignof(hls::vector<uint32_t, 4>)))) 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34857:36: note: FIX-IT applied suggested code changes
+    hls::vector<uint32_t, 4 > *mro0,
+                                   ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34858:32: warning:  hls::vector type top function variable mro1 requires aggregation [xilinx-aggregate-on-hls-vector]
+    hls::vector<uint32_t, 4 > *mro1,
+                               ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34862:3: note: FIX-IT applied suggested code changes
+){
+  ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34858:32: warning:  hls::vector type top function variable mro1 requires align attribute [xilinx-aggregate-on-hls-vector]
+    hls::vector<uint32_t, 4 > *mro1,
+                               ^   ~
+                                    __attribute__((align_value(alignof(hls::vector<uint32_t, 4>)))) 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34858:36: note: FIX-IT applied suggested code changes
+    hls::vector<uint32_t, 4 > *mro1,
+                                   ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34859:32: warning:  hls::vector type top function variable mro2 requires aggregation [xilinx-aggregate-on-hls-vector]
+    hls::vector<uint32_t, 4 > *mro2,
+                               ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34862:3: note: FIX-IT applied suggested code changes
+){
+  ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34859:32: warning:  hls::vector type top function variable mro2 requires align attribute [xilinx-aggregate-on-hls-vector]
+    hls::vector<uint32_t, 4 > *mro2,
+                               ^   ~
+                                    __attribute__((align_value(alignof(hls::vector<uint32_t, 4>)))) 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34859:36: note: FIX-IT applied suggested code changes
+    hls::vector<uint32_t, 4 > *mro2,
+                                   ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34860:32: warning:  hls::vector type top function variable mro3 requires aggregation [xilinx-aggregate-on-hls-vector]
+    hls::vector<uint32_t, 4 > *mro3,
+                               ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34862:3: note: FIX-IT applied suggested code changes
+){
+  ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34860:32: warning:  hls::vector type top function variable mro3 requires align attribute [xilinx-aggregate-on-hls-vector]
+    hls::vector<uint32_t, 4 > *mro3,
+                               ^   ~
+                                    __attribute__((align_value(alignof(hls::vector<uint32_t, 4>)))) 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34860:36: note: FIX-IT applied suggested code changes
+    hls::vector<uint32_t, 4 > *mro3,
+                                   ^
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34904:2: warning: Added loop label VITIS_LOOP_318_1:   [xilinx-label-all-loops]
+ for (int j = 0; j < 8; j++) {
+ ^~~
+ VITIS_LOOP_318_1: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34904:2: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34910:5: warning: Added loop label VITIS_LOOP_324_2:   [xilinx-label-all-loops]
+    for (uint16_t i = 0; i < row; i++) {
+    ^~~
+    VITIS_LOOP_324_2: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34910:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34923:5: warning: Added loop label VITIS_LOOP_337_3:   [xilinx-label-all-loops]
+    for (int ch = 0; ch < 4; ++ch) {
+    ^~~
+    VITIS_LOOP_337_3: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34923:5: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34924:9: warning: Added loop label VITIS_LOOP_338_4:   [xilinx-label-all-loops]
+        for (int group = 0; group < 2; ++group) {
+        ^~~
+        VITIS_LOOP_338_4: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34924:9: note: FIX-IT applied suggested code changes
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34936:13: warning: Added loop label VITIS_LOOP_350_5:   [xilinx-label-all-loops]
+            for (int q = 0; q < 4; ++q) {
+            ^~~
+            VITIS_LOOP_350_5: 
+/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/prjhls_awqmul/solution1/.autopilot/db/awq_macro.pp.0.cpp:34936:13: note: FIX-IT applied suggested code changes

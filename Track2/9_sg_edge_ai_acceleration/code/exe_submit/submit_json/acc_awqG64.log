@@ -1,0 +1,41 @@
+Building in so_py...
+-- The C compiler identification is GNU 4.8.5
+-- The CXX compiler identification is GNU 4.8.5
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenMP_C: -fopenmp (found version "3.1")
+-- Found OpenMP_CXX: -fopenmp (found version "3.1")
+-- Found OpenMP: TRUE (found version "3.1")
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/maoyang/aicas_final/QWEN_AWQ_INFER/so_py
+make[1]: Entering directory `/home/maoyang/aicas_final/QWEN_AWQ_INFER/so_py'
+make[2]: Entering directory `/home/maoyang/aicas_final/QWEN_AWQ_INFER/so_py'
+make[3]: Entering directory `/home/maoyang/aicas_final/QWEN_AWQ_INFER/so_py'
+make[3]: Leaving directory `/home/maoyang/aicas_final/QWEN_AWQ_INFER/so_py'
+make[3]: Entering directory `/home/maoyang/aicas_final/QWEN_AWQ_INFER/so_py'
+[ 14%] Building CXX object CMakeFiles/run_with_python_tokenizer.dir/src_c/a0_main_AWQ_Layer/llm_chat.cpp.o
+[ 28%] Building CXX object CMakeFiles/run_with_python_tokenizer.dir/src_c/a0_main_AWQ_Layer/llm_sample.cpp.o
+[ 42%] Building CXX object CMakeFiles/run_with_python_tokenizer.dir/src_c/a0_main_AWQ_Layer/llm_token.cpp.o
+[ 57%] Building CXX object CMakeFiles/run_with_python_tokenizer.dir/src_c/a0_main_AWQ_Layer/main.cpp.o
+[ 71%] Building CXX object CMakeFiles/run_with_python_tokenizer.dir/src_c/a0_main_AWQ_Layer/nn_load.cpp.o
+[ 85%] Building CXX object CMakeFiles/run_with_python_tokenizer.dir/src_c/a0_main_AWQ_Layer/nn_operation.cpp.o
+[100%] Linking CXX shared library librun_with_python_tokenizer.so
+make[3]: Leaving directory `/home/maoyang/aicas_final/QWEN_AWQ_INFER/so_py'
+[100%] Built target run_with_python_tokenizer
+make[2]: Leaving directory `/home/maoyang/aicas_final/QWEN_AWQ_INFER/so_py'
+make[1]: Leaving directory `/home/maoyang/aicas_final/QWEN_AWQ_INFER/so_py'
+Python tokenizer library built in so_py
+[INFO]: Accuarcy Eva
+python3 eva/acc.py --hf_path ./Qwen2.5-0.5B-Instruct-AWQ --so_path /home/maoyang/aicas_final/QWEN_AWQ_INFER/so_py/librun_with_python_tokenizer.so --bench_path eva/final.tsv
+total_predictions=635
+Evaluation  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 635/635 tasks completed
+Model Accuracy: 0.51

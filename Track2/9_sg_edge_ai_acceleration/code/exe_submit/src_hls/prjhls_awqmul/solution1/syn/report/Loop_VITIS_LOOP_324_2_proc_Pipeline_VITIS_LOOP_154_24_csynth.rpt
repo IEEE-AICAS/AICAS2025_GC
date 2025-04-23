@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vitis HLS Report for 'Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_24'
+================================================================
+* Date:           Fri Mar 28 16:44:20 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        prjhls_awqmul
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  1.825 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |       18|       18|  90.000 ns|  90.000 ns|   17|   17|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_154_2  |       16|       16|         2|          1|          1|    16|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      55|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|     108|    -|
+|Register         |        -|     -|      14|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|      14|     163|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln154_fu_166_p2                    |         +|   0|  0|  12|           5|           1|
+    |ap_block_pp0_stage0_01001_grp1         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp3         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp5         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp7         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001              |       and|   0|  0|   2|           1|           1|
+    |icmp_ln154_fu_160_p2                   |      icmp|   0|  0|  13|           5|           6|
+    |icmp_ln160_fu_184_p2                   |      icmp|   0|  0|  10|           3|           2|
+    |ap_block_state2_pp0_stage0_iter1_grp1  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1_grp3  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1_grp5  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1_grp7  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                          |       xor|   0|  0|   2|           1|           2|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                  |          |   0|  0|  55|          23|          20|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_done_int               |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1   |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j_3      |   9|          2|    5|         10|
+    |j_fu_68                   |   9|          2|    5|         10|
+    |mro2_s_M_elems_V_0_blk_n  |   9|          2|    1|          2|
+    |mro2_s_M_elems_V_1_blk_n  |   9|          2|    1|          2|
+    |mro2_s_M_elems_V_2_blk_n  |   9|          2|    1|          2|
+    |mro2_s_M_elems_V_3_blk_n  |   9|          2|    1|          2|
+    |mro2_s_M_elems_V_4_blk_n  |   9|          2|    1|          2|
+    |mro2_s_M_elems_V_5_blk_n  |   9|          2|    1|          2|
+    |mro2_s_M_elems_V_6_blk_n  |   9|          2|    1|          2|
+    |mro2_s_M_elems_V_7_blk_n  |   9|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     | 108|         24|   20|         40|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+---+----+-----+-----------+
+    |                    Name                   | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                  |  1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp1_done_reg  |  1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp3_done_reg  |  1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp5_done_reg  |  1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp7_done_reg  |  1|   0|    1|          0|
+    |ap_done_reg                                |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |  1|   0|    1|          0|
+    |icmp_ln160_reg_233                         |  1|   0|    1|          0|
+    |j_fu_68                                    |  5|   0|    5|          0|
+    |trunc_ln159_reg_229                        |  1|   0|    1|          0|
+    +-------------------------------------------+---+----+-----+-----------+
+    |Total                                      | 14|   0|   14|          0|
+    +-------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |                     Source Object                     |    C Type    |
++---------------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_24|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_24|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_24|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_24|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_24|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  Loop_VITIS_LOOP_324_2_proc_Pipeline_VITIS_LOOP_154_24|  return value|
+|mro2_s_M_elems_V_0_din     |  out|   32|     ap_fifo|                                     mro2_s_M_elems_V_0|       pointer|
+|mro2_s_M_elems_V_0_full_n  |   in|    1|     ap_fifo|                                     mro2_s_M_elems_V_0|       pointer|
+|mro2_s_M_elems_V_0_write   |  out|    1|     ap_fifo|                                     mro2_s_M_elems_V_0|       pointer|
+|mro2_s_M_elems_V_4_din     |  out|   32|     ap_fifo|                                     mro2_s_M_elems_V_4|       pointer|
+|mro2_s_M_elems_V_4_full_n  |   in|    1|     ap_fifo|                                     mro2_s_M_elems_V_4|       pointer|
+|mro2_s_M_elems_V_4_write   |  out|    1|     ap_fifo|                                     mro2_s_M_elems_V_4|       pointer|
+|mro2_s_M_elems_V_1_din     |  out|   32|     ap_fifo|                                     mro2_s_M_elems_V_1|       pointer|
+|mro2_s_M_elems_V_1_full_n  |   in|    1|     ap_fifo|                                     mro2_s_M_elems_V_1|       pointer|
+|mro2_s_M_elems_V_1_write   |  out|    1|     ap_fifo|                                     mro2_s_M_elems_V_1|       pointer|
+|mro2_s_M_elems_V_5_din     |  out|   32|     ap_fifo|                                     mro2_s_M_elems_V_5|       pointer|
+|mro2_s_M_elems_V_5_full_n  |   in|    1|     ap_fifo|                                     mro2_s_M_elems_V_5|       pointer|
+|mro2_s_M_elems_V_5_write   |  out|    1|     ap_fifo|                                     mro2_s_M_elems_V_5|       pointer|
+|mro2_s_M_elems_V_2_din     |  out|   32|     ap_fifo|                                     mro2_s_M_elems_V_2|       pointer|
+|mro2_s_M_elems_V_2_full_n  |   in|    1|     ap_fifo|                                     mro2_s_M_elems_V_2|       pointer|
+|mro2_s_M_elems_V_2_write   |  out|    1|     ap_fifo|                                     mro2_s_M_elems_V_2|       pointer|
+|mro2_s_M_elems_V_6_din     |  out|   32|     ap_fifo|                                     mro2_s_M_elems_V_6|       pointer|
+|mro2_s_M_elems_V_6_full_n  |   in|    1|     ap_fifo|                                     mro2_s_M_elems_V_6|       pointer|
+|mro2_s_M_elems_V_6_write   |  out|    1|     ap_fifo|                                     mro2_s_M_elems_V_6|       pointer|
+|mro2_s_M_elems_V_7_din     |  out|   32|     ap_fifo|                                     mro2_s_M_elems_V_7|       pointer|
+|mro2_s_M_elems_V_7_full_n  |   in|    1|     ap_fifo|                                     mro2_s_M_elems_V_7|       pointer|
+|mro2_s_M_elems_V_7_write   |  out|    1|     ap_fifo|                                     mro2_s_M_elems_V_7|       pointer|
+|mro2_s_M_elems_V_3_din     |  out|   32|     ap_fifo|                                     mro2_s_M_elems_V_3|       pointer|
+|mro2_s_M_elems_V_3_full_n  |   in|    1|     ap_fifo|                                     mro2_s_M_elems_V_3|       pointer|
+|mro2_s_M_elems_V_3_write   |  out|    1|     ap_fifo|                                     mro2_s_M_elems_V_3|       pointer|
+|p_0_0_3700_partselect      |   in|   32|     ap_none|                                  p_0_0_3700_partselect|        scalar|
+|p_0_0_2699_partselect      |   in|   32|     ap_none|                                  p_0_0_2699_partselect|        scalar|
+|p_0_0_1698_partselect      |   in|   32|     ap_none|                                  p_0_0_1698_partselect|        scalar|
+|empty                      |   in|   32|     ap_none|                                                  empty|        scalar|
++---------------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+

@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "Macro_MAC_Acc4_top",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "Macro_MAC_Acc4_top"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/maoyang/aicas_final/QWEN_AWQ_INFER/src_hls/script/csynth.tcl",
+    "sourceLine": 26,
+    "success": true
+  }
+]
