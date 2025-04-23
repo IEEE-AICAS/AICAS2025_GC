@@ -1,0 +1,19 @@
+#
+# An unexpected error has occurred (6)
+#
+Stack:
+/lib/x86_64-linux-gnu/libc.so.6(+0x37970) [0x7f8464a76970]
+/lib/x86_64-linux-gnu/libc.so.6(gsignal+0x10b) [0x7f8464a768eb]
+/lib/x86_64-linux-gnu/libc.so.6(abort+0x121) [0x7f8464a61535]
+/home/adnepukan/vitis/Vivado/2024.2/lib/lnx64.o/Default/libstdc++.so.6(+0x8ba13) [0x7f845f48ba13]
+/home/adnepukan/vitis/Vivado/2024.2/lib/lnx64.o/Default/libstdc++.so.6(+0x91b86) [0x7f845f491b86]
+/home/adnepukan/vitis/Vivado/2024.2/lib/lnx64.o/Default/libstdc++.so.6(+0x91bc1) [0x7f845f491bc1]
+/home/adnepukan/vitis/Vivado/2024.2/lib/lnx64.o/Default/libstdc++.so.6(+0x91df4) [0x7f845f491df4]
+/home/adnepukan/vitis/Vivado/2024.2/lib/lnx64.o/libxv_common.so(HTCTclInterp::createInterp()+0xd3) [0x7f8468dafe73]
+/home/adnepukan/vitis/Vivado/2024.2/lib/lnx64.o/libxv_common.so(HTCThreadTclInterpMgr::createAndInitializeInterp()+0x1e3) [0x7f8468f169b3]
+/home/adnepukan/vitis/Vivado/2024.2/lib/lnx64.o/libxv_tcltasks.so(+0x1f944e2) [0x7f8459b944e2]
+/home/adnepukan/vitis/Vivado/2024.2/lib/lnx64.o/libxv_common.so(+0x6fab1a) [0x7f8468cfab1a]
+/home/adnepukan/vitis/Vivado/2024.2/lib/lnx64.o/libxv_common.so(std::thread::_State_impl<std::thread::_Invoker<std::tuple<tf::Executor::_spawn(unsigned long)::{lambda(tf::Worker&, std::mutex&, std::condition_variable&, unsigned long&)#1}, std::reference_wrapper<tf::Worker>, tf::Executor::_spawn(unsigned long)::{lambda(tf::Worker&, std::mutex&, std::condition_variable&, unsigned long&)#1}<std::mutex>, tf::Executor::_spawn(unsigned long)::{lambda(tf::Worker&, std::mutex&, std::condition_variable&, unsigned long&)#1}<std::condition_variable>, tf::Executor::_spawn(unsigned long)::{lambda(tf::Worker&, std::mutex&, std::condition_variable&, unsigned long&)#1}<unsigned long> > > >::_M_run()+0x566) [0x7f8468cfb5b6]
+/home/adnepukan/vitis/Vivado/2024.2/lib/lnx64.o/Default/libstdc++.so.6(+0xbadff) [0x7f845f4badff]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x7fa3) [0x7f8465de6fa3]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7f8464b3863f]

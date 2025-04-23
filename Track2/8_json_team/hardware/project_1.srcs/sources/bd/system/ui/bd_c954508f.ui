@@ -1,0 +1,46 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.15241",
+   "Default View_TopLeft":"1014,40",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 1 -x 330 -y 360 -defaultsOSRD
+preplace inst axi_cdma_0 -pg 1 -lvl 3 -x 1170 -y 370 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 5 -x 1890 -y 220 -defaultsOSRD
+preplace inst config_register_0 -pg 1 -lvl 3 -x 1170 -y 120 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1540 -y 170 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 1 -x 330 -y 580 -defaultsOSRD
+preplace inst axi_smc_1 -pg 1 -lvl 2 -x 800 -y 350 -defaultsOSRD
+preplace inst Top_0 -pg 1 -lvl 6 -x 2340 -y 180 -defaultsOSRD
+preplace netloc Top_0_io_ddr_dataRead 1 5 2 2050J 340 2570
+preplace netloc Top_0_io_fromCPU_ready 1 2 5 1010 230 1350J 360 NJ 360 NJ 360 2550
+preplace netloc Top_0_io_toCPU_bits 1 2 5 1000 240 1330J 350 NJ 350 NJ 350 2540
+preplace netloc Top_0_io_toCPU_valid 1 2 5 990 460 NJ 460 NJ 460 NJ 460 2560
+preplace netloc axi_bram_ctrl_0_bram_addr_a 1 5 1 2050 120n
+preplace netloc axi_bram_ctrl_0_bram_en_a 1 5 1 2130 160n
+preplace netloc axi_bram_ctrl_0_bram_rst_a 1 5 1 2100 100n
+preplace netloc axi_bram_ctrl_0_bram_we_a 1 5 1 2060 180n
+preplace netloc axi_bram_ctrl_0_bram_wrdata_a 1 5 1 2120 140n
+preplace netloc config_register_0_from_cpu_bits 1 3 3 1400 270 1700J 100 2070J
+preplace netloc config_register_0_from_cpu_valid 1 3 3 1340 90 NJ 90 2140J
+preplace netloc config_register_0_to_cpu_ready 1 3 3 1360 370 NJ 370 2140J
+preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 1 4 660 270 980 270 1390 280 1730J
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 6 10 230 640 230 970 280 1380 290 1720 340 2110
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 2 0 220 630
+preplace netloc axi_cdma_0_M_AXI 1 3 1 1340 150n
+preplace netloc axi_smc_1_M00_AXI 1 2 1 N 340
+preplace netloc axi_smc_1_M01_AXI 1 2 1 940 70n
+preplace netloc axi_smc_M00_AXI 1 4 1 1720 150n
+preplace netloc axi_smc_M01_AXI 1 0 5 30 250 NJ 250 950J 260 NJ 260 1690
+preplace netloc axi_smc_M02_AXI 1 0 5 20 240 NJ 240 960J 250 NJ 250 1680
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 1 1 N 330
+levelinfo -pg 1 -20 330 800 1170 1540 1890 2340 2590
+pagesize -pg 1 -db -bbox -sgen -20 -510 2590 680
+"
+}
+{
+   "da_axi4_cnt":"5",
+   "da_clkrst_cnt":"3",
+   "da_zynq_ultra_ps_e_cnt":"1"
+}

@@ -1,0 +1,2 @@
+blk_mem_gen_lnx.v,verilog,xil_defaultlib,../../../../project_1.gen/sources_1/ip/blk_mem_gen_lnx/sim/blk_mem_gen_lnx.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

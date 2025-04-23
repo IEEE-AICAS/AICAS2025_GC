@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../project_1.gen/sources_1/ip/dsp_macro_bypass/sim/dsp_macro_bypass.vhd" \
+
+# Do not sort compile order
+nosort

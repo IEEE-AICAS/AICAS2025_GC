@@ -9,3 +9,7 @@ Track2/7_显存去哪了/code/bin/Qwen2.5-0.5B-Instruct_q80.bin
 Track2/7_显存去哪了/code/bin/Qwen2.5-0.5B-Instruct.bin
 Track2/7_显存去哪了/code/model/model.safetensors
 Track2/7_显存去哪了/code/model_quantized/model.safetensors
+Track2/8_json_team/hardware/project_1.gen/sources_1/bd/system/ip/system_Top_0_0/system_Top_0_0_sim_netlist.vhdl
+Track2/8_json_team/hardware/project_1.runs/impl_1/system_wrapper_routed.dcp
+Track2/8_json_team/model/model.bin
+Track2/8_json_team/pynq/model/model.bin
