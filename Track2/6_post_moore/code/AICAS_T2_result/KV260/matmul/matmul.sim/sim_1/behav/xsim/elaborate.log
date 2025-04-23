@@ -1,0 +1,43 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot matmul_tb_behav xil_defaultlib.matmul_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AdderTree(DATA_WIDTH=16,LENGTH=1...
+Compiling module xil_defaultlib.AdderTree(DATA_WIDTH=16,LENGTH=2...
+Compiling module xil_defaultlib.AdderTree(DATA_WIDTH=16,LENGTH=4...
+Compiling module xil_defaultlib.AdderTree(DATA_WIDTH=16,LENGTH=8...
+Compiling module xil_defaultlib.AdderTree(DATA_WIDTH=16,LENGTH=1...
+Compiling module xil_defaultlib.AdderTree(DATA_WIDTH=16,LENGTH=3...
+Compiling module xil_defaultlib.AdderTree(DATA_WIDTH=16,LENGTH=6...
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.CARRY8
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.DSP48E2(ACASCREG=0,ALUMODEREG=0,...
+Compiling module unisims_ver.DSP48E2(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.float_mult
+Compiling module unisims_ver.MUXF7
+Compiling module xil_defaultlib.int_to_float
+Compiling module unisims_ver.DSP48E2(ACASCREG=0,ALUMODEREG=0,...
+Compiling module unisims_ver.VCC
+Compiling module unisims_ver.DSP48E2(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.float_add
+Compiling module xil_defaultlib.matmul_default
+Compiling module xil_defaultlib.matmul_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot matmul_tb_behav

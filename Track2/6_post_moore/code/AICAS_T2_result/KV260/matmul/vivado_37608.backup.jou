@@ -1,0 +1,115 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Mar  3 17:41:21 2025
+# Process ID: 37608
+# Current directory: E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16772 E:\Desktop\LLM\competition\FPGA_GC\KV260\matmul\matmul.xpr
+# Log file: E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/vivado.log
+# Journal file: E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul\vivado.jou
+# Running On: DESKTOP-66QCD9K, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 14877 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.xpr
+update_compile_order -fileset sources_1
+open_bd_design {E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.srcs/sources_1/bd/matmul/matmul.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0
+endgroup
+set_property CONFIG.DATA_WIDTH {512} [get_bd_cells axi_bram_ctrl_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:matmul:1.0 matmul_0
+endgroup
+set_property location {1 -214 -1142} [get_bd_cells matmul_0]
+set_property location {2 285 -931} [get_bd_cells axi_bram_ctrl_0]
+set_property location {0.5 -293 -1006} [get_bd_cells axi_bram_ctrl_0]
+set_property location {2.5 149 -1045} [get_bd_cells matmul_0]
+set_property -dict [list CONFIG.SUPPORTS_NARROW_BURST.VALUE_SRC PROPAGATED] [get_bd_cells axi_bram_ctrl_0]
+set_property -dict [list \
+  CONFIG.DATA_WIDTH {512} \
+  CONFIG.PROTOCOL {AXI4} \
+] [get_bd_cells axi_bram_ctrl_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0
+endgroup
+set_property location {1 -381 -1075} [get_bd_cells blk_mem_gen_0]
+delete_bd_objs [get_bd_cells axi_bram_ctrl_0]
+delete_bd_objs [get_bd_cells blk_mem_gen_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.2 fifo_generator_0
+endgroup
+set_property location {1 -185 -1110} [get_bd_cells fifo_generator_0]
+set_property location {1.5 -223 -1078} [get_bd_cells fifo_generator_0]
+delete_bd_objs [get_bd_cells fifo_generator_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0
+endgroup
+set_property location {1.5 -187 -1093} [get_bd_cells axi_bram_ctrl_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.5 zynq_ultra_ps_e_0
+endgroup
+set_property location {1 -382 -1356} [get_bd_cells zynq_ultra_ps_e_0]
+set_property location {1 -172 -1183} [get_bd_cells axi_bram_ctrl_0]
+set_property CONFIG.DATA_WIDTH {512} [get_bd_cells axi_bram_ctrl_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0
+endgroup
+set_property CONFIG.Memory_Type {True_Dual_Port_RAM} [get_bd_cells blk_mem_gen_0]
+set_property location {1 -366 -1210} [get_bd_cells blk_mem_gen_0]
+apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells zynq_ultra_ps_e_0]
+set_property location {1 -93 -1359} [get_bd_cells zynq_ultra_ps_e_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:bram_cntlr -config {BRAM "Auto" }  [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA]
+apply_bd_automation -rule xilinx.com:bd_rule:bram_cntlr -config {BRAM "Auto" }  [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTB]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/axi_bram_ctrl_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins matmul_0/clk]
+endgroup
+set_property location {3 710 -1064} [get_bd_cells matmul_0]
+undo
+undo
+set_property location {3 547 -1374} [get_bd_cells matmul_0]
+set_property location {2 87 -1379} [get_bd_cells axi_bram_ctrl_0]
+set_property location {2 153 -1223} [get_bd_cells blk_mem_gen_0]
+startgroup
+set_property location {2 50 -1380} [get_bd_cells axi_bram_ctrl_0]
+set_property location {2 50 -1220} [get_bd_cells blk_mem_gen_0]
+endgroup
+set_property location {3 556 -1308} [get_bd_cells matmul_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:bram_cntlr -config {BRAM "Auto" }  [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA]
+apply_bd_automation -rule xilinx.com:bd_rule:bram_cntlr -config {BRAM "Auto" }  [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTB]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/axi_bram_ctrl_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins matmul_0/clk]
+endgroup
+regenerate_bd_layout
+startgroup
+set_property CONFIG.SINGLE_PORT_BRAM {1} [get_bd_cells axi_bram_ctrl_0]
+delete_bd_objs [get_bd_intf_nets axi_bram_ctrl_0_BRAM_PORTB]
+endgroup
+delete_bd_objs [get_bd_intf_nets axi_bram_ctrl_0_BRAM_PORTA] [get_bd_cells blk_mem_gen_0]
+delete_bd_objs [get_bd_intf_nets axi_smc_M00_AXI] [get_bd_cells axi_bram_ctrl_0]
+delete_bd_objs [get_bd_nets rst_ps8_0_99M_peripheral_aresetn] [get_bd_intf_nets zynq_ultra_ps_e_0_M_AXI_HPM0_FPD] [get_bd_cells axi_smc]
+delete_bd_objs [get_bd_nets zynq_ultra_ps_e_0_pl_resetn0] [get_bd_cells rst_ps8_0_99M]
+delete_bd_objs [get_bd_nets zynq_ultra_ps_e_0_pl_clk0] [get_bd_cells zynq_ultra_ps_e_0]
+delete_bd_objs [get_bd_cells matmul_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+set_property location {1 174 -99} [get_bd_cells axi_dma_0]
+delete_bd_objs [get_bd_cells axi_dma_0]
+close_bd_design [get_bd_designs matmul]
+open_bd_design {E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.srcs/sources_1/bd/matmul/matmul.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:sync_ip:1.0 sync_ip_0
+endgroup
+delete_bd_objs [get_bd_cells sync_ip_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.5 zynq_ultra_ps_e_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+set_property location {0.5 -51 -254} [get_bd_cells zynq_ultra_ps_e_0]
+close_bd_design [get_bd_designs matmul]

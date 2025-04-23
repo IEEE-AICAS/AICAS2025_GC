@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../matmul.gen/sources_1/ip/float_add/float_add_sim_netlist.v" \
+"../../../../matmul.gen/sources_1/ip/float_mult/float_mult_sim_netlist.v" \
+"../../../../matmul.gen/sources_1/ip/int_to_float/int_to_float_sim_netlist.v" \
+"../../../../../../AICAS/FPGA_acc/pl_design/AdderTree.v" \
+"../../../../../../AICAS/FPGA_acc/pl_design/matmul.v" \
+"../../../../../../AICAS/FPGA_acc/pl_design/matmul_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

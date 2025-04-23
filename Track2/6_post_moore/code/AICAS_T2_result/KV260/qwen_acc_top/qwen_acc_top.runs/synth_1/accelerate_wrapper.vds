@@ -1,0 +1,477 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Mar 24 15:43:52 2025
+# Process ID: 10544
+# Current directory: E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1
+# Command line: vivado.exe -log accelerate_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source accelerate_wrapper.tcl
+# Log file: E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/accelerate_wrapper.vds
+# Journal file: E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1\vivado.jou
+# Running On: DESKTOP-66QCD9K, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 14877 MB
+#-----------------------------------------------------------
+source accelerate_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 567.766 ; gain = 184.477
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2023.2/data/ip'.
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 678.668 ; gain = 92.578
+Command: read_checkpoint -auto_incremental -incremental E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.srcs/utils_1/imports/synth_1/accelerate_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.srcs/utils_1/imports/synth_1/accelerate_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top accelerate_wrapper -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5932
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2086.953 ; gain = 385.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'accelerate_wrapper' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/hdl/accelerate_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'accelerate' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:13]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_axi_dma_0_0' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_axi_dma_0_0' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'accelerate_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:254]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'accelerate_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:254]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'accelerate_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:254]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'accelerate_axi_dma_0_0' has 64 connections declared, but only 61 given [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:254]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_axi_dma_0_1' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_axi_dma_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_axi_dma_0_1' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_axi_dma_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'accelerate_axi_dma_0_1' is unconnected for instance 'axi_dma_1' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:316]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'accelerate_axi_dma_0_1' is unconnected for instance 'axi_dma_1' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:316]
+WARNING: [Synth 8-7023] instance 'axi_dma_1' of module 'accelerate_axi_dma_0_1' has 40 connections declared, but only 38 given [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:316]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_axi_smc_0' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_axi_smc_0' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_axi_smc_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'S03_AXI_awready' of module 'accelerate_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:355]
+WARNING: [Synth 8-7071] port 'S03_AXI_wready' of module 'accelerate_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:355]
+WARNING: [Synth 8-7071] port 'S03_AXI_bresp' of module 'accelerate_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:355]
+WARNING: [Synth 8-7071] port 'S03_AXI_bvalid' of module 'accelerate_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:355]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'accelerate_axi_smc_0' has 101 connections declared, but only 97 given [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:355]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_axis_data_fifo_0_0' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_axis_data_fifo_0_0' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_axis_data_fifo_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'accelerate_axis_data_fifo_0_0' is unconnected for instance 'axis_data_fifo_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:453]
+WARNING: [Synth 8-7023] instance 'axis_data_fifo_0' of module 'accelerate_axis_data_fifo_0_0' has 14 connections declared, but only 13 given [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:453]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_axis_data_fifo_0_1' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_axis_data_fifo_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_axis_data_fifo_0_1' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_axis_data_fifo_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tstrb' of module 'accelerate_axis_data_fifo_0_1' is unconnected for instance 'axis_data_fifo_1' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:467]
+WARNING: [Synth 8-7023] instance 'axis_data_fifo_1' of module 'accelerate_axis_data_fifo_0_1' has 12 connections declared, but only 11 given [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:467]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_axis_data_fifo_1_0' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_axis_data_fifo_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_axis_data_fifo_1_0' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_axis_data_fifo_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'accelerate_axis_data_fifo_1_0' is unconnected for instance 'axis_data_fifo_2' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:479]
+WARNING: [Synth 8-7023] instance 'axis_data_fifo_2' of module 'accelerate_axis_data_fifo_1_0' has 14 connections declared, but only 13 given [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:479]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_gemv_float_q8_0_0' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_gemv_float_q8_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_gemv_float_q8_0_0' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_gemv_float_q8_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_ps8_0_axi_periph_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:901]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1K9U25D' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:1806]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1K9U25D' (0#1) [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:1806]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1CQM3AF' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:1931]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1CQM3AF' (0#1) [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:1931]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_28Z1' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:2077]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_28Z1' (0#1) [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:2077]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1ARITNK' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:2202]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_auto_ds_0' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_auto_ds_0' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_auto_pc_0' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_auto_pc_0' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1ARITNK' (0#1) [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:2202]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1L4YWVA' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:2612]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_auto_ds_1' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_auto_ds_1' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_auto_pc_1' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_auto_pc_1' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1L4YWVA' (0#1) [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:2612]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_xbar_0' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_xbar_0' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (9) of module 'accelerate_xbar_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:1767]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (9) of module 'accelerate_xbar_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:1771]
+WARNING: [Synth 8-689] width (8) of port connection 'm_axi_wstrb' does not match port width (12) of module 'accelerate_xbar_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:1783]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_ps8_0_axi_periph_0' (0#1) [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:901]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_rst_ps8_0_99M_0' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_rst_ps8_0_99M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_rst_ps8_0_99M_0' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_rst_ps8_0_99M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'accelerate_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:668]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'accelerate_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:668]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'accelerate_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:668]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'accelerate_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:668]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_99M' of module 'accelerate_rst_ps8_0_99M_0' has 10 connections declared, but only 6 given [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:668]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:675]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_system_ila_0_0' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_system_ila_0_0' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_xlconcat_0_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_xlconcat_0_0/synth/accelerate_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_5_xlconcat' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ipshared/147b/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_5_xlconcat' (0#1) [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ipshared/147b/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_xlconcat_0_0' (0#1) [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_xlconcat_0_0/synth/accelerate_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'accelerate_zynq_ultra_ps_e_0_0' [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_zynq_ultra_ps_e_0_0' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/.Xil/Vivado-10544-DESKTOP-66QCD9K/realtime/accelerate_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'accelerate_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:781]
+WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'accelerate_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:781]
+WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'accelerate_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:781]
+WARNING: [Synth 8-7071] port 'maxigp1_aruser' of module 'accelerate_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:781]
+WARNING: [Synth 8-7071] port 'saxigp2_bid' of module 'accelerate_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:781]
+WARNING: [Synth 8-7071] port 'saxigp2_rid' of module 'accelerate_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:781]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'accelerate_zynq_ultra_ps_e_0_0' has 123 connections declared, but only 117 given [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:781]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate' (0#1) [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'accelerate_wrapper' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/hdl/accelerate_wrapper.v:13]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_dma_0'. This will prevent further optimization [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:254]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'system_ila_0'. This will prevent further optimization [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:675]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_smc'. This will prevent further optimization [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:355]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlconcat_0'. This will prevent further optimization [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:776]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_dma_1'. This will prevent further optimization [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:316]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps8_0_axi_periph'. This will prevent further optimization [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:530]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gemv_float_q8_0'. This will prevent further optimization [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/synth/accelerate.v:493]
+WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2209.910 ; gain = 508.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2209.910 ; gain = 508.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2209.910 ; gain = 508.789
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 2209.910 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_zynq_ultra_ps_e_0_0/accelerate_zynq_ultra_ps_e_0_0/accelerate_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'accelerate_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_zynq_ultra_ps_e_0_0/accelerate_zynq_ultra_ps_e_0_0/accelerate_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'accelerate_i/zynq_ultra_ps_e_0'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_gemv_float_q8_0_0/accelerate_gemv_float_q8_0_0/accelerate_gemv_float_q8_0_0_in_context.xdc] for cell 'accelerate_i/gemv_float_q8_0'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_gemv_float_q8_0_0/accelerate_gemv_float_q8_0_0/accelerate_gemv_float_q8_0_0_in_context.xdc] for cell 'accelerate_i/gemv_float_q8_0'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_axi_dma_0_0/accelerate_axi_dma_0_0/accelerate_axi_dma_0_0_in_context.xdc] for cell 'accelerate_i/axi_dma_0'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_axi_dma_0_0/accelerate_axi_dma_0_0/accelerate_axi_dma_0_0_in_context.xdc] for cell 'accelerate_i/axi_dma_0'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_axis_data_fifo_0_0/accelerate_axis_data_fifo_0_0/accelerate_axis_data_fifo_1_0_in_context.xdc] for cell 'accelerate_i/axis_data_fifo_0'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_axis_data_fifo_0_0/accelerate_axis_data_fifo_0_0/accelerate_axis_data_fifo_1_0_in_context.xdc] for cell 'accelerate_i/axis_data_fifo_0'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_xbar_0/accelerate_xbar_0/accelerate_xbar_0_in_context.xdc] for cell 'accelerate_i/ps8_0_axi_periph/xbar'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_xbar_0/accelerate_xbar_0/accelerate_xbar_0_in_context.xdc] for cell 'accelerate_i/ps8_0_axi_periph/xbar'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_auto_ds_0/accelerate_auto_ds_0/accelerate_auto_ds_0_in_context.xdc] for cell 'accelerate_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_auto_ds_0/accelerate_auto_ds_0/accelerate_auto_ds_0_in_context.xdc] for cell 'accelerate_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_auto_pc_0/accelerate_auto_pc_0/accelerate_auto_pc_1_in_context.xdc] for cell 'accelerate_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_auto_pc_0/accelerate_auto_pc_0/accelerate_auto_pc_1_in_context.xdc] for cell 'accelerate_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_auto_ds_1/accelerate_auto_ds_1/accelerate_auto_ds_0_in_context.xdc] for cell 'accelerate_i/ps8_0_axi_periph/s01_couplers/auto_ds'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_auto_ds_1/accelerate_auto_ds_1/accelerate_auto_ds_0_in_context.xdc] for cell 'accelerate_i/ps8_0_axi_periph/s01_couplers/auto_ds'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_auto_pc_1/accelerate_auto_pc_1/accelerate_auto_pc_1_in_context.xdc] for cell 'accelerate_i/ps8_0_axi_periph/s01_couplers/auto_pc'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_auto_pc_1/accelerate_auto_pc_1/accelerate_auto_pc_1_in_context.xdc] for cell 'accelerate_i/ps8_0_axi_periph/s01_couplers/auto_pc'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_rst_ps8_0_99M_0/accelerate_rst_ps8_0_99M_0/accelerate_rst_ps8_0_99M_0_in_context.xdc] for cell 'accelerate_i/rst_ps8_0_99M'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_rst_ps8_0_99M_0/accelerate_rst_ps8_0_99M_0/accelerate_rst_ps8_0_99M_0_in_context.xdc] for cell 'accelerate_i/rst_ps8_0_99M'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_axi_smc_0/accelerate_axi_smc_0/accelerate_axi_smc_0_in_context.xdc] for cell 'accelerate_i/axi_smc'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_axi_smc_0/accelerate_axi_smc_0/accelerate_axi_smc_0_in_context.xdc] for cell 'accelerate_i/axi_smc'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_axi_dma_0_1/accelerate_axi_dma_0_1/accelerate_axi_dma_0_1_in_context.xdc] for cell 'accelerate_i/axi_dma_1'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_axi_dma_0_1/accelerate_axi_dma_0_1/accelerate_axi_dma_0_1_in_context.xdc] for cell 'accelerate_i/axi_dma_1'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_axis_data_fifo_1_0/accelerate_axis_data_fifo_1_0/accelerate_axis_data_fifo_1_0_in_context.xdc] for cell 'accelerate_i/axis_data_fifo_2'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_axis_data_fifo_1_0/accelerate_axis_data_fifo_1_0/accelerate_axis_data_fifo_1_0_in_context.xdc] for cell 'accelerate_i/axis_data_fifo_2'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_axis_data_fifo_0_1/accelerate_axis_data_fifo_0_1/accelerate_axis_data_fifo_0_1_in_context.xdc] for cell 'accelerate_i/axis_data_fifo_1'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_axis_data_fifo_0_1/accelerate_axis_data_fifo_0_1/accelerate_axis_data_fifo_0_1_in_context.xdc] for cell 'accelerate_i/axis_data_fifo_1'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_system_ila_0_0/accelerate_system_ila_0_0/accelerate_system_ila_0_0_in_context.xdc] for cell 'accelerate_i/system_ila_0'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.gen/sources_1/bd/accelerate/ip/accelerate_system_ila_0_0/accelerate_system_ila_0_0/accelerate_system_ila_0_0_in_context.xdc] for cell 'accelerate_i/system_ila_0'
+Parsing XDC File [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.srcs/constrs_1/new/system.xdc]
+Finished Parsing XDC File [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.srcs/constrs_1/new/system.xdc]
+Parsing XDC File [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2209.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2209.910 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2209.910 ; gain = 508.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2209.910 ; gain = 508.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/gemv_float_q8_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/axi_dma_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/axis_data_fifo_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/ps8_0_axi_periph/s00_couplers/auto_ds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/ps8_0_axi_periph/s01_couplers/auto_ds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/ps8_0_axi_periph/s01_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/ps8_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/rst_ps8_0_99M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/axi_smc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/axi_dma_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/axis_data_fifo_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/axis_data_fifo_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/xlconcat_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accelerate_i/system_ila_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2209.910 ; gain = 508.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2209.910 ; gain = 508.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2209.910 ; gain = 508.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2740.289 ; gain = 1039.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2740.289 ; gain = 1039.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2751.664 ; gain = 1050.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2767.465 ; gain = 1066.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2767.465 ; gain = 1066.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2767.465 ; gain = 1066.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2767.465 ; gain = 1066.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2767.465 ; gain = 1066.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2767.465 ; gain = 1066.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------------+----------+
+|      |BlackBox name                  |Instances |
++------+-------------------------------+----------+
+|1     |accelerate_xbar_0              |         1|
+|2     |accelerate_auto_ds_0           |         1|
+|3     |accelerate_auto_pc_0           |         1|
+|4     |accelerate_auto_ds_1           |         1|
+|5     |accelerate_auto_pc_1           |         1|
+|6     |accelerate_axi_dma_0_0         |         1|
+|7     |accelerate_axi_dma_0_1         |         1|
+|8     |accelerate_axi_smc_0           |         1|
+|9     |accelerate_axis_data_fifo_0_0  |         1|
+|10    |accelerate_axis_data_fifo_0_1  |         1|
+|11    |accelerate_axis_data_fifo_1_0  |         1|
+|12    |accelerate_gemv_float_q8_0_0   |         1|
+|13    |accelerate_rst_ps8_0_99M_0     |         1|
+|14    |accelerate_system_ila_0_0      |         1|
+|15    |accelerate_zynq_ultra_ps_e_0_0 |         1|
++------+-------------------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------------+------+
+|      |Cell                         |Count |
++------+-----------------------------+------+
+|1     |accelerate_auto_ds           |     2|
+|3     |accelerate_auto_pc           |     2|
+|5     |accelerate_axi_dma_0         |     2|
+|7     |accelerate_axi_smc           |     1|
+|8     |accelerate_axis_data_fifo_0  |     2|
+|10    |accelerate_axis_data_fifo_1  |     1|
+|11    |accelerate_gemv_float_q8_0   |     1|
+|12    |accelerate_rst_ps8_0_99M     |     1|
+|13    |accelerate_system_ila_0      |     1|
+|14    |accelerate_xbar              |     1|
+|15    |accelerate_zynq_ultra_ps_e_0 |     1|
++------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2767.465 ; gain = 1066.344
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 2767.465 ; gain = 1066.344
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2767.465 ; gain = 1066.344
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2767.465 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2814.574 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 6ebae2c1
+INFO: [Common 17-83] Releasing license: Synthesis
+80 Infos, 135 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 2821.586 ; gain = 2133.020
+INFO: [Common 17-1381] The checkpoint 'E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/synth_1/accelerate_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file accelerate_wrapper_utilization_synth.rpt -pb accelerate_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 24 15:45:00 2025...

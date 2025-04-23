@@ -1,0 +1,18 @@
+{
+  "name": "qwen_acc",
+  "type": "HOST",
+  "platform": "E:\\Desktop\\LLM\\competition\\FPGA_GC\\KV260\\vitis_project\\accelerate_wrapper\\export\\accelerate_wrapper\\accelerate_wrapper.xpfm",
+  "domain": "standalone_psu_cortexa53_0",
+  "cpuInstance": "psu_cortexa53_0",
+  "cpuType": "cortex-a53",
+  "os": "standalone",
+  "configuration": {
+    "componentType": "HOST",
+    "hostToolchainConfigurations": []
+  },
+  "domainRealName": "standalone_psu_cortexa53_0",
+  "applicationFlow": "EMBEDDED",
+  "previousBuildStatusMap": {
+    "hw": "SUCCESS"
+  }
+}

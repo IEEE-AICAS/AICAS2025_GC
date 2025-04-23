@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="accelerate_auto_ds_0_synth_1" LaunchDir="E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/accelerate_auto_ds_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="accelerate_auto_ds_1_synth_1" LaunchDir="E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/accelerate_auto_ds_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="accelerate_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="accelerate_axi_dma_0_0_synth_1" LaunchDir="E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/accelerate_axi_dma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="accelerate_axi_dma_0_1_synth_1" LaunchDir="E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/accelerate_axi_dma_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="accelerate_axis_data_fifo_0_1_synth_1" LaunchDir="E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/accelerate_axis_data_fifo_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="accelerate_gemv_float_q8_0_0_synth_1" LaunchDir="E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/accelerate_gemv_float_q8_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="accelerate_xbar_0_synth_1" LaunchDir="E:/Desktop/LLM/competition/FPGA_GC/KV260/qwen_acc_top/qwen_acc_top.runs/accelerate_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

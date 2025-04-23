@@ -1,0 +1,120 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Mar  5 09:49:05 2025
+# Process ID: 37884
+# Current directory: E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7232 E:\Desktop\LLM\competition\FPGA_GC\KV260\matmul\matmul.xpr
+# Log file: E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/vivado.log
+# Journal file: E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul\vivado.jou
+# Running On: DESKTOP-66QCD9K, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 14877 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.xpr
+update_compile_order -fileset sources_1
+open_bd_design {E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.srcs/sources_1/bd/matmul/matmul.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_fifo_mm_s:4.3 axi_fifo_mm_s_0
+endgroup
+delete_bd_objs [get_bd_cells axi_fifo_mm_s_0]
+close_bd_design [get_bd_designs matmul]
+launch_simulation
+launch_simulation
+open_wave_config E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/sim_wave/float_calc_tb_behav.wcfg
+source matmul_tb.tcl
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/state}} 
+relaunch_sim
+relaunch_sim
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/din_xq}} 
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/din_wq}} 
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/dout_valid}} 
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/cnt}} 
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/din_valid}} 
+relaunch_sim
+relaunch_sim
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/x_out_data}} 
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/DONE}} 
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/din_req}} 
+relaunch_sim
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/din_xs_matmul}} 
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/din_ws_matmul}} 
+relaunch_sim
+relaunch_sim
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/o_cache_valid}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/o_cache}} 
+relaunch_sim
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/scale_valid}} {{/matmul_tb/uut/xw_valid}} {{/matmul_tb/uut/o_cache_valid}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/x_q_data}} 
+relaunch_sim
+relaunch_sim
+close_sim
+synth_design -top matmul -part xck26-sfvc784-2LV-c -lint 
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_simulation
+open_wave_config E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/sim_wave/float_calc_tb_behav.wcfg
+source matmul_tb.tcl
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/din_req}} 
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/cnt}} 
+relaunch_sim
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_simulation
+open_wave_config E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/sim_wave/float_calc_tb_behav.wcfg
+source matmul_tb.tcl
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/state}} 
+relaunch_sim
+relaunch_sim
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/cnt}} 
+relaunch_sim
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+close_design
+relaunch_sim
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation

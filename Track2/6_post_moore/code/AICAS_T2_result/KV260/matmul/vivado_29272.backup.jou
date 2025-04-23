@@ -1,0 +1,262 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Mar  5 15:24:00 2025
+# Process ID: 29272
+# Current directory: E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7476 E:\Desktop\LLM\competition\FPGA_GC\KV260\matmul\matmul.xpr
+# Log file: E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/vivado.log
+# Journal file: E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul\vivado.jou
+# Running On: DESKTOP-66QCD9K, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 14877 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.xpr
+launch_simulation
+open_wave_config E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/sim_wave/float_calc_tb_behav.wcfg
+source matmul_tb.tcl
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_sim
+open_run synth_1 -name synth_1
+close_design
+launch_simulation
+open_wave_config E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/sim_wave/float_calc_tb_behav.wcfg
+source matmul_tb.tcl
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/cnt}} 
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/din_req}} 
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/dout_valid}} 
+relaunch_sim
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/uut/state}} 
+relaunch_sim
+current_wave_config {float_calc_tb_behav.wcfg}
+add_wave {{/matmul_tb/din_valid}} 
+relaunch_sim
+relaunch_sim
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+set_property needs_refresh false [get_runs pll_synth_1]
+set_property needs_refresh false [get_runs fifo_generator_synth_1]
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+set_property needs_refresh false [get_runs pll_synth_1]
+set_property needs_refresh false [get_runs fifo_generator_synth_1]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+report_utilization -name utilization_1
+close_design
+create_peripheral xilinx.com user matmul_q8_float 1.0 -dir E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/../ip_repo
+add_peripheral_interface S00_AXI_CTRL -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+add_peripheral_interface S01_AXI_DIN -interface_mode slave -axi_type full [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+add_peripheral_interface S02_AXI_DOUT -interface_mode slave -axi_type full [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+set_property  ip_repo_paths  {E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/../ip_repo/matmul_q8_float_1_0 c:/Users/31861/AppData/Roaming/Xilinx/ip_repo} [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_matmul_q8_float_v1_0 -directory E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/../ip_repo e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/component.xml
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src {E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v}
+update_compile_order -fileset sources_1
+current_project matmul
+current_project edit_matmul_q8_float_v1_0
+create_ip -name floating_point -vendor xilinx.com -library ip -version 7.1 -module_name float_add -dir e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src
+set_property -dict [list \
+  CONFIG.Add_Sub_Value {Add} \
+  CONFIG.C_Latency {1} \
+  CONFIG.Flow_Control {NonBlocking} \
+  CONFIG.Has_ARESETn {true} \
+  CONFIG.Has_RESULT_TREADY {false} \
+  CONFIG.Maximum_Latency {false} \
+] [get_ips float_add]
+generate_target {instantiation_template} [get_files e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_add/float_add.xci]
+current_project matmul
+current_project edit_matmul_q8_float_v1_0
+generate_target all [get_files  e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_add/float_add.xci]
+catch { config_ip_cache -export [get_ips -all float_add] }
+export_ip_user_files -of_objects [get_files e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_add/float_add.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_add/float_add.xci]
+launch_runs float_add_synth_1 -jobs 8
+wait_on_run float_add_synth_1
+wait_on_run float_add_synth_1
+create_ip -name floating_point -vendor xilinx.com -library ip -version 7.1 -module_name int_to_float -dir e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src
+set_property -dict [list \
+  CONFIG.A_Precision_Type {Int32} \
+  CONFIG.C_A_Exponent_Width {32} \
+  CONFIG.C_A_Fraction_Width {0} \
+  CONFIG.C_Accum_Input_Msb {32} \
+  CONFIG.C_Accum_Lsb {-31} \
+  CONFIG.C_Accum_Msb {32} \
+  CONFIG.C_Latency {1} \
+  CONFIG.C_Mult_Usage {No_Usage} \
+  CONFIG.C_Rate {1} \
+  CONFIG.C_Result_Exponent_Width {8} \
+  CONFIG.C_Result_Fraction_Width {24} \
+  CONFIG.Flow_Control {NonBlocking} \
+  CONFIG.Has_ARESETn {true} \
+  CONFIG.Has_RESULT_TREADY {false} \
+  CONFIG.Maximum_Latency {false} \
+  CONFIG.Operation_Type {Fixed_to_float} \
+  CONFIG.Result_Precision_Type {Single} \
+] [get_ips int_to_float]
+generate_target {instantiation_template} [get_files e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/int_to_float/int_to_float.xci]
+generate_target all [get_files  e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/int_to_float/int_to_float.xci]
+catch { config_ip_cache -export [get_ips -all int_to_float] }
+export_ip_user_files -of_objects [get_files e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/int_to_float/int_to_float.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/int_to_float/int_to_float.xci]
+launch_runs int_to_float_synth_1 -jobs 8
+wait_on_run int_to_float_synth_1
+wait_on_run int_to_float_synth_1
+create_ip -name floating_point -vendor xilinx.com -library ip -version 7.1 -module_name float_mult -dir e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src
+set_property -dict [list \
+  CONFIG.A_Precision_Type {Single} \
+  CONFIG.C_A_Exponent_Width {8} \
+  CONFIG.C_A_Fraction_Width {24} \
+  CONFIG.C_Latency {1} \
+  CONFIG.C_Mult_Usage {Full_Usage} \
+  CONFIG.C_Rate {1} \
+  CONFIG.C_Result_Exponent_Width {8} \
+  CONFIG.C_Result_Fraction_Width {24} \
+  CONFIG.Flow_Control {NonBlocking} \
+  CONFIG.Has_ARESETn {true} \
+  CONFIG.Has_RESULT_TREADY {false} \
+  CONFIG.Maximum_Latency {false} \
+  CONFIG.Operation_Type {Multiply} \
+  CONFIG.Result_Precision_Type {Single} \
+] [get_ips float_mult]
+generate_target {instantiation_template} [get_files e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_mult/float_mult.xci]
+current_project matmul
+current_project edit_matmul_q8_float_v1_0
+generate_target all [get_files  e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_mult/float_mult.xci]
+catch { config_ip_cache -export [get_ips -all float_mult] }
+export_ip_user_files -of_objects [get_files e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_mult/float_mult.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_mult/float_mult.xci]
+launch_runs float_mult_synth_1 -jobs 8
+wait_on_run float_mult_synth_1
+wait_on_run float_mult_synth_1
+ipx::remove_bus_interface S00_AXI_CTRL [ipx::current_core]
+close_project
+create_peripheral xilinx.com user matmul_q8_float 1.0 -dir E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/../ip_repo
+add_peripheral_interface S00_AXI_DIN -interface_mode slave -axi_type full [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+add_peripheral_interface S01_AXI_DOUT -interface_mode slave -axi_type full [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design -force [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+set_property  ip_repo_paths  {E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/../ip_repo/matmul_q8_float_1_0 E:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0 c:/Users/31861/AppData/Roaming/Xilinx/ip_repo} [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_matmul_q8_float_v1_0 -directory E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/../ip_repo e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/component.xml
+update_compile_order -fileset sources_1
+close_project
+create_peripheral xilinx.com user matmul_q8_float 1.0 -dir E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/../ip_repo
+add_peripheral_interface S00_AXI_DIN -interface_mode slave -axi_type full [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+add_peripheral_interface S01_AXI_DOUT -interface_mode slave -axi_type full [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:matmul_q8_float:1.0]
+set_property  ip_repo_paths  {E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/../ip_repo/matmul_q8_float_1_0 E:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0 E:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0 c:/Users/31861/AppData/Roaming/Xilinx/ip_repo} [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_matmul_q8_float_v1_0 -directory E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/../ip_repo e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/component.xml
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src {E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v}
+update_compile_order -fileset sources_1
+create_ip -name floating_point -vendor xilinx.com -library ip -version 7.1 -module_name float_add -dir e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src
+set_property -dict [list \
+  CONFIG.Add_Sub_Value {Add} \
+  CONFIG.C_Latency {1} \
+  CONFIG.Flow_Control {NonBlocking} \
+  CONFIG.Has_ARESETn {true} \
+  CONFIG.Has_RESULT_TREADY {false} \
+  CONFIG.Maximum_Latency {false} \
+] [get_ips float_add]
+generate_target {instantiation_template} [get_files e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_add/float_add.xci]
+current_project matmul
+current_project edit_matmul_q8_float_v1_0
+generate_target all [get_files  e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_add/float_add.xci]
+catch { config_ip_cache -export [get_ips -all float_add] }
+export_ip_user_files -of_objects [get_files e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_add/float_add.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_add/float_add.xci]
+launch_runs float_add_synth_1 -jobs 8
+wait_on_run float_add_synth_1
+wait_on_run float_add_synth_1
+create_ip -name floating_point -vendor xilinx.com -library ip -version 7.1 -module_name int_to_float -dir e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src
+set_property -dict [list \
+  CONFIG.A_Precision_Type {Int32} \
+  CONFIG.C_A_Exponent_Width {32} \
+  CONFIG.C_A_Fraction_Width {0} \
+  CONFIG.C_Accum_Input_Msb {32} \
+  CONFIG.C_Accum_Lsb {-31} \
+  CONFIG.C_Accum_Msb {32} \
+  CONFIG.C_Latency {1} \
+  CONFIG.C_Mult_Usage {No_Usage} \
+  CONFIG.C_Rate {1} \
+  CONFIG.C_Result_Exponent_Width {8} \
+  CONFIG.C_Result_Fraction_Width {24} \
+  CONFIG.Flow_Control {NonBlocking} \
+  CONFIG.Has_ARESETn {true} \
+  CONFIG.Has_RESULT_TREADY {false} \
+  CONFIG.Maximum_Latency {false} \
+  CONFIG.Operation_Type {Fixed_to_float} \
+  CONFIG.Result_Precision_Type {Single} \
+] [get_ips int_to_float]
+generate_target {instantiation_template} [get_files e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/int_to_float/int_to_float.xci]
+current_project matmul
+current_project edit_matmul_q8_float_v1_0
+generate_target all [get_files  e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/int_to_float/int_to_float.xci]
+catch { config_ip_cache -export [get_ips -all int_to_float] }
+export_ip_user_files -of_objects [get_files e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/int_to_float/int_to_float.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/int_to_float/int_to_float.xci]
+launch_runs int_to_float_synth_1 -jobs 8
+wait_on_run int_to_float_synth_1
+wait_on_run int_to_float_synth_1
+create_ip -name floating_point -vendor xilinx.com -library ip -version 7.1 -module_name float_mult -dir e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src
+set_property -dict [list \
+  CONFIG.A_Precision_Type {Single} \
+  CONFIG.C_A_Exponent_Width {8} \
+  CONFIG.C_A_Fraction_Width {24} \
+  CONFIG.C_Latency {1} \
+  CONFIG.C_Mult_Usage {Full_Usage} \
+  CONFIG.C_Rate {1} \
+  CONFIG.C_Result_Exponent_Width {8} \
+  CONFIG.C_Result_Fraction_Width {24} \
+  CONFIG.Flow_Control {NonBlocking} \
+  CONFIG.Has_ARESETn {true} \
+  CONFIG.Has_RESULT_TREADY {false} \
+  CONFIG.Maximum_Latency {false} \
+  CONFIG.Operation_Type {Multiply} \
+  CONFIG.Result_Precision_Type {Single} \
+] [get_ips float_mult]
+generate_target {instantiation_template} [get_files e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_mult/float_mult.xci]
+current_project matmul
+current_project edit_matmul_q8_float_v1_0
+generate_target all [get_files  e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_mult/float_mult.xci]
+catch { config_ip_cache -export [get_ips -all float_mult] }
+export_ip_user_files -of_objects [get_files e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_mult/float_mult.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/matmul_q8_float_1_0/src/float_mult/float_mult.xci]
+launch_runs float_mult_synth_1 -jobs 8
+wait_on_run float_mult_synth_1
+wait_on_run float_mult_synth_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+current_project matmul
+current_project edit_matmul_q8_float_v1_0
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+current_project matmul
+close_project
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]

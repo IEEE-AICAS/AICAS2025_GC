@@ -1,0 +1,45 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.272047",
+   "Default View_TopLeft":"129,-915",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port S_AXIS_S2MM -pg 1 -lvl 0 -x -10 -y 240 -defaultsOSRD
+preplace port M_AXIS_MM2S -pg 1 -lvl 7 -x 2430 -y 360 -defaultsOSRD
+preplace port port-id_mm2s_prmry_reset_out_n -pg 1 -lvl 7 -x 2430 -y 400 -defaultsOSRD
+preplace port port-id_s2mm_prmry_reset_out_n -pg 1 -lvl 7 -x 2430 -y 420 -defaultsOSRD
+preplace port port-id_pl_clk0 -pg 1 -lvl 7 -x 2430 -y 340 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -x 1090 -y 350 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1980 -y 390 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 2 -x 570 -y 380 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 6 -x 2310 -y 250 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 4 -x 1600 -y 390 -defaultsOSRD
+preplace inst rst_ps8_0_96M -pg 1 -lvl 1 -x 190 -y 560 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 2 -x 570 -y 110 -defaultsOSRD
+preplace netloc axi_dma_0_mm2s_introut 1 1 5 420 570 NJ 570 NJ 570 NJ 570 2180
+preplace netloc axi_dma_0_mm2s_prmry_reset_out_n 1 5 2 NJ 400 NJ
+preplace netloc axi_dma_0_s2mm_introut 1 1 5 400 580 NJ 580 NJ 580 NJ 580 2140
+preplace netloc axi_dma_0_s2mm_prmry_reset_out_n 1 5 2 NJ 420 NJ
+preplace netloc rst_ps8_0_96M_peripheral_aresetn 1 1 5 390 550 NJ 550 1460 550 1820 550 2210J
+preplace netloc xlconcat_0_dout 1 2 1 N 380
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 7 10 310 380 310 790 440 1450 510 1810 560 2200 340 NJ
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 4 20 460 NJ 460 NJ 460 1380
+preplace netloc S_AXIS_S2MM_1 1 0 6 NJ 240 NJ 240 NJ 240 NJ 240 1810 240 NJ
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 5 2 2190 360 NJ
+preplace netloc axi_dma_0_M_AXI_MM2S 1 1 5 430 530 NJ 530 NJ 530 NJ 530 2160
+preplace netloc axi_dma_0_M_AXI_S2MM 1 1 5 410 540 NJ 540 NJ 540 NJ 540 2150
+preplace netloc axi_dma_0_M_AXI_SG 1 1 5 440 520 NJ 520 NJ 520 NJ 520 2170
+preplace netloc axi_smc_M00_AXI 1 2 1 800 110n
+preplace netloc ps8_0_axi_periph_M00_AXI 1 4 1 1740 330n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 3 1 N 330
+levelinfo -pg 1 -10 190 570 1090 1600 1980 2310 2430
+pagesize -pg 1 -db -bbox -sgen -160 -90 2710 1320
+"
+}
+{
+   "da_axi4_cnt":"5",
+   "da_bram_cntlr_cnt":"4",
+   "da_clkrst_cnt":"3",
+   "da_zynq_ultra_ps_e_cnt":"2"
+}

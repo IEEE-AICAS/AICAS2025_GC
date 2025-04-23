@@ -1,0 +1,670 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Mar 16 18:24:15 2025
+# Process ID: 31648
+# Current directory: E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.runs/synth_1
+# Command line: vivado.exe -log matmul.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source matmul.tcl
+# Log file: E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.runs/synth_1/matmul.vds
+# Journal file: E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.runs/synth_1\vivado.jou
+# Running On: DESKTOP-66QCD9K, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 14877 MB
+#-----------------------------------------------------------
+source matmul.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 566.184 ; gain = 181.363
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/Desktop/LLM/competition/FPGA_GC/KV260/ip_repo/gemv_float_q8_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/31861/AppData/Roaming/Xilinx/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2023.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.srcs/utils_1/imports/synth_1/matmul.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.srcs/utils_1/imports/synth_1/matmul.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top matmul -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 32232
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1979.262 ; gain = 388.488
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'matmul' with formal parameter declaration list [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:24]
+WARNING: [Synth 8-11065] parameter 'LOAD_DATA' becomes localparam in 'matmul' with formal parameter declaration list [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:25]
+WARNING: [Synth 8-11065] parameter 'UPDATE_ACC' becomes localparam in 'matmul' with formal parameter declaration list [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:26]
+WARNING: [Synth 8-11065] parameter 'NEXT_GROUP' becomes localparam in 'matmul' with formal parameter declaration list [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:27]
+WARNING: [Synth 8-11065] parameter 'WIRE_OUT' becomes localparam in 'matmul' with formal parameter declaration list [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:28]
+INFO: [Synth 8-6157] synthesizing module 'matmul' [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:1]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'AdderTree' [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter LENGTH bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AdderTree__parameterized0' [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter LENGTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AdderTree__parameterized1' [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter LENGTH bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AdderTree__parameterized2' [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter LENGTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AdderTree__parameterized3' [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter LENGTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AdderTree__parameterized4' [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter LENGTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AdderTree__parameterized5' [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter LENGTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AdderTree__parameterized5' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'AdderTree__parameterized4' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'AdderTree__parameterized3' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'AdderTree__parameterized2' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'AdderTree__parameterized1' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'AdderTree__parameterized0' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'AdderTree' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/AdderTree.v:3]
+INFO: [Synth 8-6157] synthesizing module 'float_mult' [E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.runs/synth_1/.Xil/Vivado-31648-DESKTOP-66QCD9K/realtime/float_mult_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_mult' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.runs/synth_1/.Xil/Vivado-31648-DESKTOP-66QCD9K/realtime/float_mult_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'int_to_float' [E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.runs/synth_1/.Xil/Vivado-31648-DESKTOP-66QCD9K/realtime/int_to_float_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'int_to_float' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.runs/synth_1/.Xil/Vivado-31648-DESKTOP-66QCD9K/realtime/int_to_float_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_add' [E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.runs/synth_1/.Xil/Vivado-31648-DESKTOP-66QCD9K/realtime/float_add_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_add' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.runs/synth_1/.Xil/Vivado-31648-DESKTOP-66QCD9K/realtime/float_add_stub.v:6]
+WARNING: [Synth 8-6090] variable 'DONE' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:217]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'matmul' (0#1) [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:1]
+WARNING: [Synth 8-7137] Register DONE_reg in module matmul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:140]
+WARNING: [Synth 8-7137] Register x_out_data_reg in module matmul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:180]
+WARNING: [Synth 8-7137] Register i_reg in module matmul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:169]
+WARNING: [Synth 8-7137] Register o_cache_reg in module matmul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:125]
+WARNING: [Synth 8-7137] Register state_reg in module matmul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:52]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2089.898 ; gain = 499.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2089.898 ; gain = 499.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2089.898 ; gain = 499.125
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2089.898 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.gen/sources_1/ip/float_add/float_add/float_add_in_context.xdc] for cell 'u_float_add'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.gen/sources_1/ip/float_add/float_add/float_add_in_context.xdc] for cell 'u_float_add'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.gen/sources_1/ip/float_mult/float_mult/float_mult_in_context.xdc] for cell 'u_scale_mult'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.gen/sources_1/ip/float_mult/float_mult/float_mult_in_context.xdc] for cell 'u_scale_mult'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.gen/sources_1/ip/float_mult/float_mult/float_mult_in_context.xdc] for cell 'u_dequant_mult'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.gen/sources_1/ip/float_mult/float_mult/float_mult_in_context.xdc] for cell 'u_dequant_mult'
+Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.gen/sources_1/ip/int_to_float/int_to_float/int_to_float_in_context.xdc] for cell 'u_int2float'
+Finished Parsing XDC File [e:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.gen/sources_1/ip/int_to_float/int_to_float/int_to_float_in_context.xdc] for cell 'u_int2float'
+Parsing XDC File [E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2124.430 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2124.652 ; gain = 0.078
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2126.449 ; gain = 535.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2126.449 ; gain = 535.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for u_float_add. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_dequant_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_scale_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_int2float. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2126.449 ; gain = 535.676
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'scale_valid_reg' [E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul.v:91]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2126.449 ; gain = 535.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   22 Bit       Adders := 1     
+	   2 Input   21 Bit       Adders := 2     
+	   2 Input   20 Bit       Adders := 4     
+	   2 Input   19 Bit       Adders := 8     
+	   2 Input   18 Bit       Adders := 16    
+	   2 Input   17 Bit       Adders := 32    
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   6 Input   32 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 1     
+	   6 Input   16 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP i0, operation Mode is: C+1.
+DSP Report: operator i0 is absorbed into DSP i0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+DSP Report: Generating DSP xw_q_buf0, operation Mode is: A*B.
+DSP Report: operator xw_q_buf0 is absorbed into DSP xw_q_buf0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2126.449 ; gain = 535.676
+---------------------------------------------------------------------------------
+ Sort Area is  xw_q_buf0_10 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_11 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_12 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_13 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_14 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_15 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_16 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_17 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_18 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_19 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_1a : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_1b : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_1c : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_1d : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_1e : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_1f : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_2 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_20 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_21 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_22 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_23 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_24 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_25 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_26 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_27 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_28 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_29 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_2a : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_2b : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_2c : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_2d : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_2e : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_2f : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_30 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_31 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_32 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_33 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_34 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_35 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_36 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_37 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_38 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_39 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_3a : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_3b : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_3c : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_3d : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_3e : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_3f : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_4 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_40 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_41 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_42 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_5 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_6 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_7 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_8 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_9 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_a : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_b : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_c : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_d : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_e : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  xw_q_buf0_f : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is  i0_0 : 0 0 : 30 30 : Used 1 time 100
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|matmul      | C+1         | -      | -      | 16     | -      | 16     | -    | -    | 0    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2681.164 ; gain = 1090.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2685.598 ; gain = 1094.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2696.152 ; gain = 1105.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 2708.883 ; gain = 1118.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 2708.883 ; gain = 1118.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 2708.883 ; gain = 1118.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 2708.883 ; gain = 1118.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 2708.883 ; gain = 1118.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 2708.883 ; gain = 1118.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|matmul      | C+1         | -      | -      | 16     | -      | 16     | -    | -    | 1    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matmul      | A*B         | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |float_mult    |         2|
+|2     |int_to_float  |         1|
+|3     |float_add     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |float_add       |     1|
+|2     |float_mult      |     2|
+|4     |int_to_float    |     1|
+|5     |BUFG            |     1|
+|6     |CARRY8          |   189|
+|7     |DSP_ALU         |    65|
+|8     |DSP_A_B_DATA    |    65|
+|10    |DSP_C_DATA      |    65|
+|12    |DSP_MULTIPLIER  |    65|
+|14    |DSP_M_DATA      |    65|
+|15    |DSP_OUTPUT      |    65|
+|16    |DSP_PREADD      |    65|
+|17    |DSP_PREADD_DATA |    65|
+|19    |LUT1            |    63|
+|20    |LUT2            |  1098|
+|21    |LUT3            |    34|
+|22    |LUT4            |    22|
+|23    |LUT5            |     5|
+|24    |LUT6            |     2|
+|25    |FDCE            |    84|
+|26    |LDC             |     1|
+|27    |IBUF            |  1092|
+|28    |OBUF            |    34|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 2708.883 ; gain = 1118.109
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 2708.883 ; gain = 1081.559
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 2708.883 ; gain = 1118.109
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 2720.938 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1348 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2765.848 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1159 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 65 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1092 instances
+  LDC => LDCE: 1 instance 
+
+Synth Design complete | Checksum: 55791a2d
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:52 . Memory (MB): peak = 2765.848 ; gain = 2149.598
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2765.848 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/Desktop/LLM/competition/FPGA_GC/KV260/matmul/matmul.runs/synth_1/matmul.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file matmul_utilization_synth.rpt -pb matmul_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 16 18:25:29 2025...

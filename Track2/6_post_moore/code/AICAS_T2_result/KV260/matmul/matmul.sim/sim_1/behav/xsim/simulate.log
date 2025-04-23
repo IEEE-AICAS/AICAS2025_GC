@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+Matrix Multiplication Result:
+x_out_data = 44000000
+DONE = 1
+$finish called at time : 220 ns : File "E:/Desktop/LLM/competition/FPGA_GC/AICAS/FPGA_acc/pl_design/matmul_tb.v" Line 81
