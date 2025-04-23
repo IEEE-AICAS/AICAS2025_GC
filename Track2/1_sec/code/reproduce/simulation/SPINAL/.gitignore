@@ -1,0 +1,6 @@
+verilator
+tmp
+target
+simWorkspace
+**/*.log
+*.log
