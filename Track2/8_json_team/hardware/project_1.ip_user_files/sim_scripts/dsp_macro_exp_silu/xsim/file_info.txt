@@ -1,1 +1,0 @@
-dsp_macro_exp_silu.vhd,vhdl,xil_defaultlib,../../../../project_1.gen/sources_1/ip/dsp_macro_exp_silu/sim/dsp_macro_exp_silu.vhd,
