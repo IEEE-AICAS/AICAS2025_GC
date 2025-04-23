@@ -1,0 +1,31 @@
+Time resolution is 1 ps
+XilinxAXIVIP: Found at Path: w4a8_gemm_tb.inst_control_w4a8_gemm_vip.inst
+XilinxAXIVIP: Found at Path: w4a8_gemm_tb.inst_slv_m00_axi_vip.inst
+XilinxAXIVIP: Found at Path: w4a8_gemm_tb.inst_slv_m01_axi_vip.inst
+XilinxAXIVIP: Found at Path: w4a8_gemm_tb.inst_slv_m02_axi_vip.inst
+///////////////////////////////////////////////////////////////////////////
+Control Master: ctrl
+///////////////////////////////////////////////////////////////////////////
+Starting Memory slave: m00_axi
+///////////////////////////////////////////////////////////////////////////
+Starting Memory slave: m01_axi
+///////////////////////////////////////////////////////////////////////////
+Starting Memory slave: m02_axi
+200 ns : Checking post reset values of scalar registers
+474 ns : Checking post reset values of pointer registers
+Starting: Enabling Interrupts....
+Finished: Interrupts enabled.
+Starting: multiple_iteration
+Starting iteration:          1 /          1
+918 ns - Applying slv_random_backpressure_wready
+918 ns - Applying slv_no_delay_rvalid
+918 ns : Setting Scalar Registers registers
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+Warning: AXI4_ERRS_RLAST_ALL_DONE_EOS: All outstanding read bursts must have completed a the end of the simulation.
+Time: 12350058 ps  Iteration: 24  Process: /w4a8_gemm_tb/inst_slv_m00_axi_vip/inst/IF/PC/Always3109_1235  Scope: w4a8_gemm_tb.inst_slv_m00_axi_vip.inst.IF.PC.arm_amba4_pc_msg_err  File: /tools/Xilinx/Vivado/2022.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv Line: 725
+Executing Axi4 End Of Simulation checks
+Warning: AXI4_ERRS_RLAST_ALL_DONE_EOS: All outstanding read bursts must have completed a the end of the simulation.
+Time: 12350058 ps  Iteration: 24  Process: /w4a8_gemm_tb/inst_slv_m01_axi_vip/inst/IF/PC/Always3109_1235  Scope: w4a8_gemm_tb.inst_slv_m01_axi_vip.inst.IF.PC.arm_amba4_pc_msg_err  File: /tools/Xilinx/Vivado/2022.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv Line: 725
+Executing Axi4 End Of Simulation checks
+INFO: xsimkernel Simulation Memory Usage: 655800 KB (Peak: 655800 KB), Simulation CPU Usage: 69220 ms

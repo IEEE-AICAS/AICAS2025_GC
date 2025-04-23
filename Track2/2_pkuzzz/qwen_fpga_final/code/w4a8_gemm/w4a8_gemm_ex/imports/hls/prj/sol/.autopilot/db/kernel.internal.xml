@@ -1,0 +1,21 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel name="w4a8_gemm" language="c" vlnv="xilinx.com:hls:w4a8_gemm:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" compileOptions="" profileType="none" hwControlProtocol="ap_ctrl_hs">
+    <ports>
+      <port name="M_AXI_M00_AXI" portType="addressable" mode="master" base="0x0" range="0xFFFFFFFF" dataWidth="512"/>
+      <port name="M_AXI_M01_AXI" portType="addressable" mode="master" base="0x0" range="0xFFFFFFFF" dataWidth="512"/>
+      <port name="M_AXI_M02_AXI" portType="addressable" mode="master" base="0x0" range="0xFFFFFFFF" dataWidth="512"/>
+      <port name="S_AXI_CONTROL" portType="addressable" mode="slave" base="0x0" range="0x54" dataWidth="32"/>
+    </ports>
+    <args>
+    <arg id="0" name="scalar00" addressQualifier="0" port="S_AXI_CONTROL" hostOffset="0x0" hostSize="0x4" offset="0x10" size="0x4" type="unsigned int"/>
+    <arg id="1" name="scalar01" addressQualifier="0" port="S_AXI_CONTROL" hostOffset="0x0" hostSize="0x4" offset="0x18" size="0x4" type="unsigned int"/>
+    <arg id="2" name="scalar02" addressQualifier="0" port="S_AXI_CONTROL" hostOffset="0x0" hostSize="0x4" offset="0x20" size="0x4" type="unsigned int"/>
+    <arg id="3" name="scalar03" addressQualifier="0" port="S_AXI_CONTROL" hostOffset="0x0" hostSize="0x4" offset="0x28" size="0x4" type="unsigned int"/>
+    <arg id="4" name="axi00_ptr0" addressQualifier="1" port="M_AXI_M00_AXI" hostOffset="0x0" hostSize="0x8" offset="0x30" size="0x8" type="void*"/>
+    <arg id="5" name="axi01_ptr0" addressQualifier="1" port="M_AXI_M01_AXI" hostOffset="0x0" hostSize="0x8" offset="0x3C" size="0x8" type="void*"/>
+    <arg id="6" name="axi02_ptr0" addressQualifier="1" port="M_AXI_M02_AXI" hostOffset="0x0" hostSize="0x8" offset="0x48" size="0x8" type="void*"/>
+    </args>
+    <compileWorkGroupSize x="1" y="1" z="1"/>
+    <maxWorkGroupSize x="1" y="1" z="1"/>
+  </kernel>
+</root>

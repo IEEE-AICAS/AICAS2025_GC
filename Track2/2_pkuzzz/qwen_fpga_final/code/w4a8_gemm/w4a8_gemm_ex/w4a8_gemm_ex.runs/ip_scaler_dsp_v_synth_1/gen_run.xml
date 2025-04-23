@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="ip_scaler_dsp_v_synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1740329445">
+  <File Type="RDS-DCP" Name="ip_scaler_dsp_v.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="ip_scaler_dsp_v_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="ip_scaler_dsp_v.tcl"/>
+  <File Type="RDS-UTIL" Name="ip_scaler_dsp_v_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="ip_scaler_dsp_v_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ip_scaler_dsp_v.vds"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ip_scaler_dsp_v">
+    <File Path="$PSRCDIR/sources_1/ip/ip_scaler_dsp_v/ip_scaler_dsp_v.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="ip_scaler_dsp_v"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ip_scaler_dsp_v">
+    <File Path="$PSRCDIR/sources_1/ip/ip_scaler_dsp_v/ip_scaler_dsp_v.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="ip_scaler_dsp_v"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PPRDIR/imports/post_synth_impl.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;ROUTE_DESIGN;TCL.POST"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

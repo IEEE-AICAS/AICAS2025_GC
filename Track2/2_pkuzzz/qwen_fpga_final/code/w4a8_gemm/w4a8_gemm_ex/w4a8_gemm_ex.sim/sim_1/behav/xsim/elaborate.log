@@ -1,0 +1,127 @@
+Vivado Simulator v2022.1.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_12 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_2 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot w4a8_gemm_tb_behav xil_defaultlib.w4a8_gemm_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'p_addr_in' [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:494]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'q_addr_in' [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:495]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'r_rd_addr_in' [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:496]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'r_wr_addr_in' [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:497]
+WARNING: [VRFC 10-3091] actual bit length 2048 differs from formal bit length 128 for port 'data_out' [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:586]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ctrl_start' [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:634]
+WARNING: [VRFC 10-3091] actual bit length 2048 differs from formal bit length 128 for port 's_axis_tdata' [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:685]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_gemm.sv" Line 1. Module async_gemm(K=32,B_K=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_WIDTH=2053) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_WIDTH=1030) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_DEPTH=64,DATA_WIDTH=2064) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_DEPTH=4,DATA_WIDTH=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/buffer.sv" Line 3. Module buffer(DATA_WIDTH=2048,BUFFER_DEPTH=128,ADDR_WIDTH=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/OPorDP.sv" Line 3. Module OPorDP(LATENCY=11,K=32,B_K=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_DEPTH=64,DATA_WIDTH=2049) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_DEPTH=4,DATA_WIDTH=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_DEPTH=4,DATA_WIDTH=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_gemm.sv" Line 1. Module async_gemm(K=32,B_K=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_WIDTH=2053) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_WIDTH=1030) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_DEPTH=64,DATA_WIDTH=2064) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_DEPTH=4,DATA_WIDTH=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/buffer.sv" Line 3. Module buffer(DATA_WIDTH=2048,BUFFER_DEPTH=128,ADDR_WIDTH=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/OPorDP.sv" Line 3. Module OPorDP(LATENCY=11,K=32,B_K=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_DEPTH=64,DATA_WIDTH=2049) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_DEPTH=4,DATA_WIDTH=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" Line 2. Module async_fifo(DATA_DEPTH=4,DATA_WIDTH=1) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
+Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xilinx_vip.axi_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.$unit_OPorDP_sv_1046011943
+Compiling package xil_defaultlib.slv_m00_axi_vip_pkg
+Compiling package xil_defaultlib.slv_m01_axi_vip_pkg
+Compiling package xil_defaultlib.slv_m02_axi_vip_pkg
+Compiling package xil_defaultlib.control_w4a8_gemm_vip_pkg
+Compiling module xil_defaultlib.w4a8_gemm_control_s_axi(C_S_AXI_...
+Compiling module xil_defaultlib.w4a8_gemm_example_counter(C_WIDT...
+Compiling module xil_defaultlib.w4a8_gemm_example_counter(C_WIDT...
+Compiling module xil_defaultlib.w4a8_gemm_example_axi_read_maste...
+Compiling module xil_defaultlib.data_concat(INPUT_DATA_WIDTH=128...
+Compiling module xil_defaultlib.data_concat(INPUT_DATA_WIDTH=128...
+Compiling module xil_defaultlib.data_concat(INPUT_DATA_WIDTH=204...
+Compiling module xil_defaultlib.async_fifo(DATA_WIDTH=2053)
+Compiling module xil_defaultlib.async_fifo(DATA_WIDTH=1030)
+Compiling module xil_defaultlib.async_fifo(DATA_DEPTH=64,DATA_WI...
+Compiling module xil_defaultlib.async_fifo(DATA_DEPTH=4,DATA_WID...
+Compiling module xil_defaultlib.double_buffer
+Compiling module xil_defaultlib.double_buffer(DATA_WIDTH=1024,BU...
+Compiling module xil_defaultlib.buffer(DATA_WIDTH=2048,BUFFER_DE...
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=17...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=8)...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(amultsel="AD",bcascreg=...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e2_wrapper_v3_0 [\xbip_dsp48e2_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=24...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(1,1)(1,1)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv [\dsp_macro_v1_0_2_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_2.dsp_macro_v1_0_2 [\dsp_macro_v1_0_2(c_xdevicefamil...]
+Compiling architecture ip_scaler_dsp_v_arch of entity xil_defaultlib.ip_scaler_dsp_v [ip_scaler_dsp_v_default]
+Compiling module xil_defaultlib.recursive_adder(N=1,INPUT_WIDTH=...
+Compiling module xil_defaultlib.recursive_adder(N=2,INPUT_WIDTH=...
+Compiling module xil_defaultlib.recursive_adder(INPUT_WIDTH=15)
+Compiling module xil_defaultlib.recursive_adder(N=8,INPUT_WIDTH=...
+Compiling module xil_defaultlib.recursive_adder(N=16,INPUT_WIDTH...
+Compiling module xil_defaultlib.recursive_adder(N=32,INPUT_WIDTH...
+Compiling module xil_defaultlib.OPorDP(LATENCY=11,K=32,B_K=2)
+Compiling module xil_defaultlib.gemm(K=32,B_K=2)
+Compiling module xil_defaultlib.async_fifo(DATA_DEPTH=64,DATA_WI...
+Compiling module xil_defaultlib.async_gemm(K=32,B_K=2)
+Compiling module xil_defaultlib.fifo(DATA_WIDTH=2048)
+Compiling module xil_defaultlib.data_devide(INPUT_DATA_WIDTH=204...
+Compiling module xil_defaultlib.w4a8_gemm_example_counter(C_WIDT...
+Compiling module xil_defaultlib.w4a8_gemm_example_counter(C_WIDT...
+Compiling module xil_defaultlib.w4a8_gemm_example_counter(C_WIDT...
+Compiling module xil_defaultlib.w4a8_gemm_example_axi_write_mast...
+Compiling module xpm.xpm_fifo_rst_default
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=6...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=5...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(FIFO_MEMORY_TYPE=1...
+Compiling module xpm.xpm_fifo_sync(FIFO_MEMORY_TYPE="...
+Compiling module xil_defaultlib.w4a8_gemm_example_axi_write_mast...
+Compiling module xil_defaultlib.w4a8_gemm_example_default
+Compiling module xil_defaultlib.w4a8_controler
+Compiling module xil_defaultlib.w4a8_gemm_wrapper(C_M00_AXI_DATA...
+Compiling module xil_defaultlib.w4a8_gemm
+Compiling module xilinx_vip.axi_vip_axi4pc(WADDR_WIDTH=13,RA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=2,C_AX...
+Compiling module axi_vip_v1_1_12.axi_vip_v1_1_12_top(C_AXI_PROTOC...
+Compiling module xil_defaultlib.control_w4a8_gemm_vip
+Compiling module xilinx_vip.axi_vip_axi4pc(WADDR_WIDTH=64,RA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_ADDR_WIDTH=64,C...
+Compiling module axi_vip_v1_1_12.axi_vip_v1_1_12_top(C_AXI_ADDR_W...
+Compiling module xil_defaultlib.slv_m00_axi_vip
+Compiling module xil_defaultlib.slv_m01_axi_vip
+Compiling module xil_defaultlib.slv_m02_axi_vip
+Compiling module xil_defaultlib.w4a8_gemm_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot w4a8_gemm_tb_behav

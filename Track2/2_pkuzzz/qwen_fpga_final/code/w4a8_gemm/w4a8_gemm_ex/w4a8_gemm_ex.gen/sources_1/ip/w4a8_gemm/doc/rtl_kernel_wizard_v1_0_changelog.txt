@@ -1,0 +1,125 @@
+2022.1.2:
+ * Version 1.0 (Rev. 7)
+ * No changes
+
+2022.1.1:
+ * Version 1.0 (Rev. 7)
+ * No changes
+
+2022.1:
+ * Version 1.0 (Rev. 7)
+ * New Feature: Added K2K stream support  and removed deprecated qdma host to kernel/ kernel to host streaming calls
+ * Other: Deprecated "Block_Design" kernel type , removed kernel_type selection option from GUI
+ * Revision change in one or more subcores
+
+2021.2.2:
+ * Version 1.0 (Rev. 6)
+ * No changes
+
+2021.2.1:
+ * Version 1.0 (Rev. 6)
+ * No changes
+
+2021.2:
+ * Version 1.0 (Rev. 6)
+ * New Feature: Added support for multiple clocks (increased to 6 clocks)
+ * Revision change in one or more subcores
+
+2021.1.1:
+ * Version 1.0 (Rev. 5)
+ * Revision change in one or more subcores
+
+2021.1:
+ * Version 1.0 (Rev. 4)
+ * Bug Fix: Remove AXI Lite Control interface with ap_ctrl_none and 0 scalar variables
+ * New Feature: Allow scalar variables always independent of kernel control type
+ * Revision change in one or more subcores
+
+2020.3:
+ * Version 1.0 (Rev. 3)
+ * Revision change in one or more subcores
+
+2020.2.2:
+ * Version 1.0 (Rev. 2)
+ * No changes
+
+2020.2.1:
+ * Version 1.0 (Rev. 2)
+ * No changes
+
+2020.2:
+ * Version 1.0 (Rev. 2)
+ * New Feature: Expanded Max number of Memory Interfaces NUM_M_AXI for only RTL kernel_type (for BD type 16 no change) to the number of compute units in the platform else to max 64.
+ * New Feature: Maximum number of total scalar and global memory arguments are limited to 340
+ * New Feature: Update Kernel packager tcl to meet DRC checks on axis interface parameters
+ * New Feature: Add -xrt flag to kernel packager integrity check
+ * Revision change in one or more subcores
+
+2020.1.1:
+ * Version 1.0 (Rev. 1)
+ * No changes
+
+2020.1:
+ * Version 1.0 (Rev. 1)
+ * Revision change in one or more subcores
+
+2019.2.2:
+ * Version 1.0
+ * No changes
+
+2019.2.1:
+ * Version 1.0
+ * No changes
+
+2019.2:
+ * Version 1.0
+ * Bug Fix: Update XGUI register map offsets to be accurate.
+ * New Feature: Renamed Wizard source files
+ * New Feature: Add hwControlProtocol to kernel.xml.
+ * New Feature: Add integrity check to kernel packager tcl.
+
+(c) Copyright 2019 - 2022 Xilinx, Inc. All rights reserved.
+
+This file contains confidential and proprietary information
+of Xilinx, Inc. and is protected under U.S. and
+international copyright and other intellectual property
+laws.
+
+DISCLAIMER
+This disclaimer is not a license and does not grant any
+rights to the materials distributed herewith. Except as
+otherwise provided in a valid license issued to you by
+Xilinx, and to the maximum extent permitted by applicable
+law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+(2) Xilinx shall not be liable (whether in contract or tort,
+including negligence, or under any other theory of
+liability) for any loss or damage of any kind or nature
+related to, arising under or in connection with these
+materials, including for any direct, or any indirect,
+special, incidental, or consequential loss or damage
+(including loss of data, profits, goodwill, or any type of
+loss or damage suffered as a result of any action brought
+by a third party) even if such damage or loss was
+reasonably foreseeable or Xilinx had been advised of the
+possibility of the same.
+
+CRITICAL APPLICATIONS
+Xilinx products are not designed or intended to be fail-
+safe, or for use in any application requiring fail-safe
+performance, such as life-support or safety devices or
+systems, Class III medical devices, nuclear facilities,
+applications related to the deployment of airbags, or any
+other applications that could lead to death, personal
+injury, or severe property or environmental damage
+(individually and collectively, "Critical
+Applications"). Customer assumes the sole risk and
+liability of any use of Xilinx products in Critical
+Applications, subject only to applicable laws and
+regulations governing limitations on product liability.
+
+THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+PART OF THIS FILE AT ALL TIMES.

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1.2 (64-bit)
+# SW Build 3605665 on Fri Aug  5 22:52:02 MDT 2022
+# IP Build 3603185 on Sat Aug  6 04:07:44 MDT 2022
+# Start of session at: Mon Feb 24 00:50:49 2025
+# Process ID: 788708
+# Current directory: /home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.runs/ip_scaler_dsp_v_synth_1
+# Command line: vivado -log ip_scaler_dsp_v.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ip_scaler_dsp_v.tcl
+# Log file: /home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.runs/ip_scaler_dsp_v_synth_1/ip_scaler_dsp_v.vds
+# Journal file: /home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.runs/ip_scaler_dsp_v_synth_1/vivado.jou
+# Running On: admin2024-MS73-HB1-000, OS: Linux, CPU Frequency: 2100.000 MHz, CPU Physical cores: 32, Host memory: 540675 MB
+#-----------------------------------------------------------
+source ip_scaler_dsp_v.tcl -notrace

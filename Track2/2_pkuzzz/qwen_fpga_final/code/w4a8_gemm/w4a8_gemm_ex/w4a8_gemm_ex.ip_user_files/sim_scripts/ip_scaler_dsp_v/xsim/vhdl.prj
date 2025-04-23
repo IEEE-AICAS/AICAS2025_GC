@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../w4a8_gemm_ex.gen/sources_1/ip/ip_scaler_dsp_v/sim/ip_scaler_dsp_v.vhd" \
+
+nosort

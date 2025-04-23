@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "w4a8_gemm",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/xiping\/workspace\/kv260_rtl_kernel_test_vitis\/rtl_kernel_test_100M_kernels\/vivado_rtl_kernel\/w4a8_gemm_ex\/imports\/hls\/run_hls.tcl",
+          "sourceLine": "9",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "w4a8_gemm"
+              }]
+          }
+        }]
+    }]}

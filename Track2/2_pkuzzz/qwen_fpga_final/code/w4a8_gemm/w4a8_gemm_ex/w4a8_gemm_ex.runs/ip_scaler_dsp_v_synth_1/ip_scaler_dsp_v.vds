@@ -1,0 +1,383 @@
+#-----------------------------------------------------------
+# Vivado v2022.1.2 (64-bit)
+# SW Build 3605665 on Fri Aug  5 22:52:02 MDT 2022
+# IP Build 3603185 on Sat Aug  6 04:07:44 MDT 2022
+# Start of session at: Mon Feb 24 00:50:49 2025
+# Process ID: 788708
+# Current directory: /home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.runs/ip_scaler_dsp_v_synth_1
+# Command line: vivado -log ip_scaler_dsp_v.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ip_scaler_dsp_v.tcl
+# Log file: /home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.runs/ip_scaler_dsp_v_synth_1/ip_scaler_dsp_v.vds
+# Journal file: /home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.runs/ip_scaler_dsp_v_synth_1/vivado.jou
+# Running On: admin2024-MS73-HB1-000, OS: Linux, CPU Frequency: 2100.000 MHz, CPU Physical cores: 32, Host memory: 540675 MB
+#-----------------------------------------------------------
+source ip_scaler_dsp_v.tcl -notrace
+Command: synth_design -top ip_scaler_dsp_v -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 788936
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3124.520 ; gain = 211.828 ; free physical = 58949 ; free virtual = 456107
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ip_scaler_dsp_v' [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.gen/sources_1/ip/ip_scaler_dsp_v/synth/ip_scaler_dsp_v.vhd:69]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynquplus - type: string 
+	Parameter C_HAS_CE bound to: 0 - type: integer 
+	Parameter C_HAS_INDEP_CE bound to: 0 - type: integer 
+	Parameter C_HAS_CED bound to: 0 - type: integer 
+	Parameter C_HAS_CEA bound to: 0 - type: integer 
+	Parameter C_HAS_CEB bound to: 0 - type: integer 
+	Parameter C_HAS_CEC bound to: 0 - type: integer 
+	Parameter C_HAS_CECONCAT bound to: 0 - type: integer 
+	Parameter C_HAS_CEM bound to: 0 - type: integer 
+	Parameter C_HAS_CEP bound to: 0 - type: integer 
+	Parameter C_HAS_CESEL bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_HAS_INDEP_SCLR bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRD bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRA bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRB bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRC bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRM bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRP bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRCONCAT bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRSEL bound to: 0 - type: integer 
+	Parameter C_HAS_CARRYCASCIN bound to: 0 - type: integer 
+	Parameter C_HAS_CARRYIN bound to: 0 - type: integer 
+	Parameter C_HAS_ACIN bound to: 0 - type: integer 
+	Parameter C_HAS_BCIN bound to: 0 - type: integer 
+	Parameter C_HAS_PCIN bound to: 0 - type: integer 
+	Parameter C_HAS_A bound to: 1 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_D bound to: 1 - type: integer 
+	Parameter C_HAS_CONCAT bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_SQUARE_FCN bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 17 - type: integer 
+	Parameter C_B_WIDTH bound to: 8 - type: integer 
+	Parameter C_C_WIDTH bound to: 48 - type: integer 
+	Parameter C_D_WIDTH bound to: 17 - type: integer 
+	Parameter C_CONCAT_WIDTH bound to: 48 - type: integer 
+	Parameter C_P_MSB bound to: 25 - type: integer 
+	Parameter C_P_LSB bound to: 0 - type: integer 
+	Parameter C_SEL_WIDTH bound to: 0 - type: integer 
+	Parameter C_HAS_ACOUT bound to: 0 - type: integer 
+	Parameter C_HAS_BCOUT bound to: 0 - type: integer 
+	Parameter C_HAS_CARRYCASCOUT bound to: 0 - type: integer 
+	Parameter C_HAS_CARRYOUT bound to: 0 - type: integer 
+	Parameter C_HAS_PCOUT bound to: 0 - type: integer 
+	Parameter C_CONSTANT_1 bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: -1 - type: integer 
+	Parameter C_OPMODES bound to: 000100100000010100001000 - type: string 
+	Parameter C_REG_CONFIG bound to: 00000000000011010011000001000100 - type: string 
+	Parameter C_TEST_CORE bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'dsp_macro_v1_0_2' declared at '/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.gen/sources_1/ip/ip_scaler_dsp_v/hdl/dsp_macro_v1_0_rfs.vhd:5245' bound to instance 'U0' of component 'dsp_macro_v1_0_2' [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.gen/sources_1/ip/ip_scaler_dsp_v/synth/ip_scaler_dsp_v.vhd:211]
+INFO: [Synth 8-256] done synthesizing module 'ip_scaler_dsp_v' (0#1) [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.gen/sources_1/ip/ip_scaler_dsp_v/synth/ip_scaler_dsp_v.vhd:69]
+WARNING: [Synth 8-7129] Port CE in module xbip_dsp48e2_wrapper_v3_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_dsp48e2_wrapper_v3_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CEA1 in module xbip_dsp48e2_wrapper_v3_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SEL[0] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[47] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[46] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[45] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[44] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[43] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[42] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[41] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[40] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[39] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[38] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[37] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[36] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[35] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[34] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[33] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[32] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[31] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[30] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[29] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[28] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[27] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[26] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[25] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[24] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[23] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[22] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[21] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[20] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[19] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[18] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[17] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[16] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[15] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[14] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[13] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[12] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[11] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[10] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[9] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[8] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[7] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[6] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[5] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[4] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[3] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[2] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[1] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C[0] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[47] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[46] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[45] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[44] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[43] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[42] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[41] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[40] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[39] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[38] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[37] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[36] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[35] in module dsp_macro_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CONCAT[34] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3198.488 ; gain = 285.797 ; free physical = 59835 ; free virtual = 456995
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3216.301 ; gain = 303.609 ; free physical = 59825 ; free virtual = 456984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3216.301 ; gain = 303.609 ; free physical = 59825 ; free virtual = 456984
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3226.207 ; gain = 0.000 ; free physical = 59858 ; free virtual = 457017
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.gen/sources_1/ip/ip_scaler_dsp_v/ip_scaler_dsp_v_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.gen/sources_1/ip/ip_scaler_dsp_v/ip_scaler_dsp_v_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.runs/ip_scaler_dsp_v_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.runs/ip_scaler_dsp_v_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3327.988 ; gain = 0.000 ; free physical = 59482 ; free virtual = 456652
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3327.988 ; gain = 0.000 ; free physical = 59479 ; free virtual = 456648
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3327.988 ; gain = 415.297 ; free physical = 59296 ; free virtual = 456466
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3327.988 ; gain = 415.297 ; free physical = 59296 ; free virtual = 456466
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.runs/ip_scaler_dsp_v_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3327.988 ; gain = 415.297 ; free physical = 59296 ; free virtual = 456466
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3327.988 ; gain = 415.297 ; free physical = 59291 ; free virtual = 456462
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3327.988 ; gain = 415.297 ; free physical = 59265 ; free virtual = 456439
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3696.832 ; gain = 784.141 ; free physical = 58643 ; free virtual = 455823
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3697.832 ; gain = 785.141 ; free physical = 58642 ; free virtual = 455822
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3725.879 ; gain = 813.188 ; free physical = 58637 ; free virtual = 455818
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3725.879 ; gain = 813.188 ; free physical = 58632 ; free virtual = 455812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3725.879 ; gain = 813.188 ; free physical = 58632 ; free virtual = 455812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3725.879 ; gain = 813.188 ; free physical = 58691 ; free virtual = 455872
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3725.879 ; gain = 813.188 ; free physical = 58691 ; free virtual = 455872
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3725.879 ; gain = 813.188 ; free physical = 58693 ; free virtual = 455873
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3725.879 ; gain = 813.188 ; free physical = 58693 ; free virtual = 455873
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name               | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|xbip_dsp48e2_wrapper_v3_0 | Dynamic     | -      | -      | -      | -      | 48     | -    | -    | -    | -    | 1     | 1    | 1    | 
++--------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |DSP_ALU         |     1|
+|2     |DSP_A_B_DATA    |     1|
+|3     |DSP_C_DATA      |     1|
+|4     |DSP_MULTIPLIER  |     1|
+|5     |DSP_M_DATA      |     1|
+|6     |DSP_OUTPUT      |     1|
+|7     |DSP_PREADD      |     1|
+|8     |DSP_PREADD_DATA |     1|
+|9     |LUT2            |     1|
+|10    |LUT3            |     1|
+|11    |FDRE            |    98|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3725.879 ; gain = 813.188 ; free physical = 58693 ; free virtual = 455873
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 140 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3725.879 ; gain = 701.500 ; free physical = 58734 ; free virtual = 455914
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3725.887 ; gain = 813.188 ; free physical = 58734 ; free virtual = 455914
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3725.887 ; gain = 0.000 ; free physical = 58726 ; free virtual = 455906
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3756.598 ; gain = 0.000 ; free physical = 58746 ; free virtual = 455927
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+
+Synth Design complete, checksum: cf4ceec4
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 3756.598 ; gain = 843.906 ; free physical = 58958 ; free virtual = 456138
+INFO: [Common 17-1381] The checkpoint '/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.runs/ip_scaler_dsp_v_synth_1/ip_scaler_dsp_v.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ip_scaler_dsp_v, cache-ID = f920872b48489ea2
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/w4a8_gemm_ex.runs/ip_scaler_dsp_v_synth_1/ip_scaler_dsp_v.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ip_scaler_dsp_v_utilization_synth.rpt -pb ip_scaler_dsp_v_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 24 00:51:36 2025...

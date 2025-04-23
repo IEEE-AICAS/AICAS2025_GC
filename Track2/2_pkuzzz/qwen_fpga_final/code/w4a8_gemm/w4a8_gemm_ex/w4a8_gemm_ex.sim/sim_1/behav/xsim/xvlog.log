@@ -1,0 +1,88 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/OPorDP.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OPorDP
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_fifo
+INFO: [VRFC 10-311] analyzing module gray_to_binary
+INFO: [VRFC 10-311] analyzing module binary_to_gray
+INFO: [VRFC 10-311] analyzing module sync
+INFO: [VRFC 10-311] analyzing module spill_register
+INFO: [VRFC 10-311] analyzing module spill_register_flushable
+INFO: [VRFC 10-311] analyzing module cdc_fifo_gray
+INFO: [VRFC 10-311] analyzing module cdc_fifo_gray_src
+INFO: [VRFC 10-311] analyzing module cdc_fifo_gray_dst
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/async_gemm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_gemm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/buffer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/data_concat.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_concat
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/data_devide.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_devide
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/double_buffer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module double_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gemm_muti
+WARNING: [VRFC 10-2938] 'result' is already implicitly declared on line 118 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:125]
+WARNING: [VRFC 10-2938] 'r_wr_addr_reg' is already implicitly declared on line 120 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:191]
+WARNING: [VRFC 10-2938] 'r_rd_addr_reg' is already implicitly declared on line 119 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:192]
+WARNING: [VRFC 10-2938] 'r_rd_en_reg' is already implicitly declared on line 117 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:193]
+WARNING: [VRFC 10-2938] 'r_wr_en_reg' is already implicitly declared on line 116 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:194]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:136]
+WARNING: [VRFC 10-3380] identifier 'PIPELINE_DEPTH' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:145]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:225]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:231]
+INFO: [VRFC 10-311] analyzing module gemm
+WARNING: [VRFC 10-2938] 'r_wr_addr_reg' is already implicitly declared on line 403 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:504]
+WARNING: [VRFC 10-2938] 'r_wr_en_reg' is already implicitly declared on line 399 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:507]
+WARNING: [VRFC 10-2938] 'buffer_sel_load' is already implicitly declared on line 352 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:621]
+WARNING: [VRFC 10-2938] 'buffer_sel_comp' is already implicitly declared on line 353 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:622]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:419]
+WARNING: [VRFC 10-3380] identifier 'PIPELINE_DEPTH' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:458]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:538]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:544]
+WARNING: [VRFC 10-3380] identifier 'buffer_state' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:567]
+WARNING: [VRFC 10-3380] identifier 'buffer_state' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:594]
+WARNING: [VRFC 10-3380] identifier 'buffer_state' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:595]
+WARNING: [VRFC 10-3380] identifier 'buffer_state' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/gemm.sv:599]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/recursive_adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module recursive_adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/w4a8_controler.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module w4a8_controler
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module w4a8_gemm_example
+WARNING: [VRFC 10-3380] identifier 'next_block' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:186]
+WARNING: [VRFC 10-3380] identifier 'next_block' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:187]
+WARNING: [VRFC 10-3380] identifier 'p_addr_wr' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:190]
+WARNING: [VRFC 10-3380] identifier 'q_addr_wr' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:191]
+WARNING: [VRFC 10-3380] identifier 'r_addr_wr' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:192]
+WARNING: [VRFC 10-3380] identifier 'M' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:210]
+WARNING: [VRFC 10-3380] identifier 'N' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:211]
+WARNING: [VRFC 10-3380] identifier 'MATRIXA_DATA_WIDTH' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:226]
+WARNING: [VRFC 10-3380] identifier 'MATRIXB_DATA_WIDTH' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:256]
+WARNING: [VRFC 10-3380] identifier 'RESULT_WIDTH' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:288]
+WARNING: [VRFC 10-3380] identifier 'M' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:305]
+WARNING: [VRFC 10-3380] identifier 'M' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:309]
+WARNING: [VRFC 10-3380] identifier 'M' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:331]
+WARNING: [VRFC 10-3380] identifier 'N' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:347]
+WARNING: [VRFC 10-3380] identifier 'M' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:362]
+WARNING: [VRFC 10-3380] identifier 'M' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:363]
+WARNING: [VRFC 10-3380] identifier 'fifo_full' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:437]
+WARNING: [VRFC 10-3380] identifier 'fifo_full' is used before its declaration [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example.sv:466]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example_axi_read_master.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module w4a8_gemm_example_axi_read_master
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example_axi_write_master.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module w4a8_gemm_example_axi_write_master
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_example_counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module w4a8_gemm_example_counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/w4a8_gemm_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module w4a8_gemm_wrapper
+WARNING: [VRFC 10-2938] 'addr_weight' is already implicitly declared on line 244 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/w4a8_gemm_wrapper.sv:248]
+WARNING: [VRFC 10-2938] 'addr_activation' is already implicitly declared on line 243 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/w4a8_gemm_wrapper.sv:249]
+WARNING: [VRFC 10-2938] 'addr_result' is already implicitly declared on line 245 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/w4a8_gemm_wrapper.sv:250]
+WARNING: [VRFC 10-2938] 'op_code' is already implicitly declared on line 242 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/w4a8_gemm_wrapper.sv:251]
+WARNING: [VRFC 10-2938] 'block_done' is already implicitly declared on line 239 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/w4a8_gemm_wrapper.sv:253]
+WARNING: [VRFC 10-2938] 'block_start' is already implicitly declared on line 238 [/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/include/verilog/w4a8_gemm_wrapper.sv:254]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/xiping/workspace/kv260_rtl_kernel_test_vitis/rtl_kernel_test_100M_kernels/vivado_rtl_kernel/w4a8_gemm_ex/imports/w4a8_gemm_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module w4a8_gemm_tb

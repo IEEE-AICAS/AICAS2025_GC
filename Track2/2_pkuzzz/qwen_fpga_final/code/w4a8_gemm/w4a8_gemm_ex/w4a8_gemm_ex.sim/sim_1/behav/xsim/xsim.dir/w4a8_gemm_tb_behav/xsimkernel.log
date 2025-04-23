@@ -1,0 +1,7 @@
+Running: xsim.dir/w4a8_gemm_tb_behav/xsimk -sv_seed 1 -simmode gui -wdb w4a8_gemm_tb_behav.wdb -simrunnum 0 -socket 37091
+Design successfully loaded
+Design Loading Memory Usage: 450504 KB (Peak: 458632 KB)
+Design Loading CPU Usage: 1650 ms
+Simulation completed
+Simulation Memory Usage: 655800 KB (Peak: 655800 KB)
+Simulation CPU Usage: 69220 ms

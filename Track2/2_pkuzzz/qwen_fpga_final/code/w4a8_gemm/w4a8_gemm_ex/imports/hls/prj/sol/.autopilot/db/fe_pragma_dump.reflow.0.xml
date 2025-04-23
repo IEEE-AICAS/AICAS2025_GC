@@ -1,0 +1,14 @@
+<pragmas>
+<pragma file="../w4a8_gemm_cmodel.cpp" line="36" pragmaType="interface" parentfunction="w4a8_gemm" mode="m_axi" port="axi00_ptr0" bundle="m00_axi" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="../w4a8_gemm_cmodel.cpp" line="37" pragmaType="interface" parentfunction="w4a8_gemm" mode="m_axi" port="axi01_ptr0" bundle="m01_axi" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="../w4a8_gemm_cmodel.cpp" line="38" pragmaType="interface" parentfunction="w4a8_gemm" mode="m_axi" port="axi02_ptr0" bundle="m02_axi" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="../w4a8_gemm_cmodel.cpp" line="39" pragmaType="interface" parentfunction="w4a8_gemm" mode="s_axilite" port="scalar00" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../w4a8_gemm_cmodel.cpp" line="40" pragmaType="interface" parentfunction="w4a8_gemm" mode="s_axilite" port="scalar01" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../w4a8_gemm_cmodel.cpp" line="41" pragmaType="interface" parentfunction="w4a8_gemm" mode="s_axilite" port="scalar02" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../w4a8_gemm_cmodel.cpp" line="42" pragmaType="interface" parentfunction="w4a8_gemm" mode="s_axilite" port="scalar03" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../w4a8_gemm_cmodel.cpp" line="43" pragmaType="interface" parentfunction="w4a8_gemm" mode="s_axilite" port="axi00_ptr0" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../w4a8_gemm_cmodel.cpp" line="44" pragmaType="interface" parentfunction="w4a8_gemm" mode="s_axilite" port="axi01_ptr0" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../w4a8_gemm_cmodel.cpp" line="45" pragmaType="interface" parentfunction="w4a8_gemm" mode="s_axilite" port="axi02_ptr0" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../w4a8_gemm_cmodel.cpp" line="46" pragmaType="interface" parentfunction="w4a8_gemm" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../w4a8_gemm_cmodel.cpp" line="47" pragmaType="interface" parentfunction="w4a8_gemm" mode="ap_ctrl_hs" port="return" name=""/>
+</pragmas>

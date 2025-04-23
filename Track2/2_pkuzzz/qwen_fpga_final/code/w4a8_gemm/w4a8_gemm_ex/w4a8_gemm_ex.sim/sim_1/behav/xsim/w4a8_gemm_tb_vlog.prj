@@ -1,0 +1,39 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../include/verilog" --include "../../../../w4a8_gemm_ex.ip_user_files/ipstatic/hdl" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../w4a8_gemm_ex.gen/sources_1/ip/slv_m02_axi_vip/sim/slv_m02_axi_vip_pkg.sv" \
+"../../../../w4a8_gemm_ex.gen/sources_1/ip/slv_m02_axi_vip/sim/slv_m02_axi_vip.sv" \
+"../../../../w4a8_gemm_ex.gen/sources_1/ip/slv_m01_axi_vip/sim/slv_m01_axi_vip_pkg.sv" \
+"../../../../w4a8_gemm_ex.gen/sources_1/ip/slv_m01_axi_vip/sim/slv_m01_axi_vip.sv" \
+"../../../../w4a8_gemm_ex.gen/sources_1/ip/slv_m00_axi_vip/sim/slv_m00_axi_vip_pkg.sv" \
+"../../../../w4a8_gemm_ex.gen/sources_1/ip/slv_m00_axi_vip/sim/slv_m00_axi_vip.sv" \
+"../../../../w4a8_gemm_ex.gen/sources_1/ip/control_w4a8_gemm_vip/sim/control_w4a8_gemm_vip_pkg.sv" \
+"../../../../w4a8_gemm_ex.gen/sources_1/ip/control_w4a8_gemm_vip/sim/control_w4a8_gemm_vip.sv" \
+
+verilog xil_defaultlib  --include "../../../../../include/verilog" --include "../../../../w4a8_gemm_ex.ip_user_files/ipstatic/hdl" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../imports/w4a8_gemm.v" \
+"../../../../imports/w4a8_gemm_control_s_axi.v" \
+
+sv xil_defaultlib  --include "../../../../../include/verilog" --include "../../../../w4a8_gemm_ex.ip_user_files/ipstatic/hdl" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../../include/verilog/OPorDP.sv" \
+"../../../../../include/verilog/async_fifo.sv" \
+"../../../../../include/verilog/async_gemm.sv" \
+"../../../../../include/verilog/buffer.sv" \
+"../../../../../include/verilog/data_concat.sv" \
+"../../../../../include/verilog/data_devide.sv" \
+"../../../../../include/verilog/double_buffer.sv" \
+"../../../../../include/verilog/fifo.sv" \
+"../../../../../include/verilog/gemm.sv" \
+"../../../../../include/verilog/recursive_adder.sv" \
+"../../../../../include/verilog/w4a8_controler.sv" \
+"../../../../imports/w4a8_gemm_example.sv" \
+"../../../../imports/w4a8_gemm_example_axi_read_master.sv" \
+"../../../../imports/w4a8_gemm_example_axi_write_master.sv" \
+"../../../../imports/w4a8_gemm_example_counter.sv" \
+"../../../../../include/verilog/w4a8_gemm_wrapper.sv" \
+"../../../../imports/w4a8_gemm_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

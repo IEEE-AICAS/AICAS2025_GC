@@ -1,0 +1,217 @@
+
+
+================================================================
+== Synthesis Summary Report of 'w4a8_gemm'
+================================================================
++ General Information: 
+    * Date:           Mon Feb 24 00:39:04 2025
+    * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+    * Project:        prj
+    * Solution:       sol (Vitis Kernel Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----+------------+------------+-----+
+    |                 Modules                | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |    |            |            |     |
+    |                 & Loops                | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   | DSP|     FF     |     LUT    | URAM|
+    +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----+------------+------------+-----+
+    |+ w4a8_gemm                             |     -|  0.00|    12440|  1.244e+05|         -|    12441|     -|        no|  96 (33%)|   -|  10566 (4%)|  11349 (9%)|    -|
+    | + w4a8_gemm_Pipeline_1                 |     -|  0.00|     4099|  4.099e+04|         -|     4099|     -|        no|         -|   -|  1040 (~0%)|   117 (~0%)|    -|
+    |  o Loop 1                              |     -|  7.30|     4097|  4.097e+04|         3|        1|  4096|       yes|         -|   -|           -|           -|    -|
+    | + w4a8_gemm_Pipeline_4                 |     -|  0.00|     4099|  4.099e+04|         -|     4099|     -|        no|         -|   -|  1040 (~0%)|   117 (~0%)|    -|
+    |  o Loop 1                              |     -|  7.30|     4097|  4.097e+04|         3|        1|  4096|       yes|         -|   -|           -|           -|    -|
+    | + w4a8_gemm_Pipeline_7                 |     -|  0.00|     4099|  4.099e+04|         -|     4099|     -|        no|         -|   -|  1040 (~0%)|   117 (~0%)|    -|
+    |  o Loop 1                              |     -|  7.30|     4097|  4.097e+04|         3|        1|  4096|       yes|         -|   -|           -|           -|    -|
+    | + w4a8_gemm_Pipeline_VITIS_LOOP_64_1   |     -|  3.81|     4098|  4.098e+04|         -|     4098|     -|        no|         -|   -|    29 (~0%)|   109 (~0%)|    -|
+    |  o VITIS_LOOP_64_1                     |     -|  7.30|     4096|  4.096e+04|         2|        1|  4096|       yes|         -|   -|           -|           -|    -|
+    | + w4a8_gemm_Pipeline_VITIS_LOOP_85_2   |     -|  3.81|     4098|  4.098e+04|         -|     4098|     -|        no|         -|   -|    29 (~0%)|   109 (~0%)|    -|
+    |  o VITIS_LOOP_85_2                     |     -|  7.30|     4096|  4.096e+04|         2|        1|  4096|       yes|         -|   -|           -|           -|    -|
+    | + w4a8_gemm_Pipeline_VITIS_LOOP_106_3  |     -|  3.81|     4098|  4.098e+04|         -|     4098|     -|        no|         -|   -|    29 (~0%)|   109 (~0%)|    -|
+    |  o VITIS_LOOP_106_3                    |     -|  7.30|     4096|  4.096e+04|         2|        1|  4096|       yes|         -|   -|           -|           -|    -|
+    | + w4a8_gemm_Pipeline_3                 |     -|  0.00|     4099|  4.099e+04|         -|     4099|     -|        no|         -|   -|   533 (~0%)|   574 (~0%)|    -|
+    |  o Loop 1                              |     -|  7.30|     4097|  4.097e+04|         3|        1|  4096|       yes|         -|   -|           -|           -|    -|
+    | + w4a8_gemm_Pipeline_6                 |     -|  0.00|     4099|  4.099e+04|         -|     4099|     -|        no|         -|   -|   533 (~0%)|   574 (~0%)|    -|
+    |  o Loop 1                              |     -|  7.30|     4097|  4.097e+04|         3|        1|  4096|       yes|         -|   -|           -|           -|    -|
+    | + w4a8_gemm_Pipeline_9                 |     -|  0.00|     4099|  4.099e+04|         -|     4099|     -|        no|         -|   -|   533 (~0%)|   574 (~0%)|    -|
+    |  o Loop 1                              |     -|  7.30|     4097|  4.097e+04|         3|        1|  4096|       yes|         -|   -|           -|           -|    -|
+    +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++---------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface     | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|               | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++---------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_m00_axi | 32 -> 512  | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
+| m_axi_m01_axi | 32 -> 512  | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
+| m_axi_m02_axi | 32 -> 512  | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
++---------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register     | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL         | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER         | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER       | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR       | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | scalar00     | 0x10   | 32    | W      | Data signal of scalar00          |                                                                      |
+| s_axi_control | scalar01     | 0x18   | 32    | W      | Data signal of scalar01          |                                                                      |
+| s_axi_control | scalar02     | 0x20   | 32    | W      | Data signal of scalar02          |                                                                      |
+| s_axi_control | scalar03     | 0x28   | 32    | W      | Data signal of scalar03          |                                                                      |
+| s_axi_control | axi00_ptr0_1 | 0x30   | 32    | W      | Data signal of axi00_ptr0        |                                                                      |
+| s_axi_control | axi00_ptr0_2 | 0x34   | 32    | W      | Data signal of axi00_ptr0        |                                                                      |
+| s_axi_control | axi01_ptr0_1 | 0x3c   | 32    | W      | Data signal of axi01_ptr0        |                                                                      |
+| s_axi_control | axi01_ptr0_2 | 0x40   | 32    | W      | Data signal of axi01_ptr0        |                                                                      |
+| s_axi_control | axi02_ptr0_1 | 0x48   | 32    | W      | Data signal of axi02_ptr0        |                                                                      |
+| s_axi_control | axi02_ptr0_2 | 0x4c   | 32    | W      | Data signal of axi02_ptr0        |                                                                      |
++---------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+--------------+
+| Argument   | Direction | Datatype     |
++------------+-----------+--------------+
+| scalar00   | in        | unsigned int |
+| scalar01   | in        | unsigned int |
+| scalar02   | in        | unsigned int |
+| scalar03   | in        | unsigned int |
+| axi00_ptr0 | inout     | int*         |
+| axi01_ptr0 | inout     | int*         |
+| axi02_ptr0 | inout     | int*         |
++------------+-----------+--------------+
+
+* SW-to-HW Mapping
++------------+---------------+-----------+----------+----------------------------------------+
+| Argument   | HW Interface  | HW Type   | HW Usage | HW Info                                |
++------------+---------------+-----------+----------+----------------------------------------+
+| scalar00   | s_axi_control | register  |          | name=scalar00 offset=0x10 range=32     |
+| scalar01   | s_axi_control | register  |          | name=scalar01 offset=0x18 range=32     |
+| scalar02   | s_axi_control | register  |          | name=scalar02 offset=0x20 range=32     |
+| scalar03   | s_axi_control | register  |          | name=scalar03 offset=0x28 range=32     |
+| axi00_ptr0 | m_axi_m00_axi | interface |          |                                        |
+| axi00_ptr0 | s_axi_control | register  | offset   | name=axi00_ptr0_1 offset=0x30 range=32 |
+| axi00_ptr0 | s_axi_control | register  | offset   | name=axi00_ptr0_2 offset=0x34 range=32 |
+| axi01_ptr0 | m_axi_m01_axi | interface |          |                                        |
+| axi01_ptr0 | s_axi_control | register  | offset   | name=axi01_ptr0_1 offset=0x3c range=32 |
+| axi01_ptr0 | s_axi_control | register  | offset   | name=axi01_ptr0_2 offset=0x40 range=32 |
+| axi02_ptr0 | m_axi_m02_axi | interface |          |                                        |
+| axi02_ptr0 | s_axi_control | register  | offset   | name=axi02_ptr0_1 offset=0x48 range=32 |
+| axi02_ptr0 | s_axi_control | register  | offset   | name=axi02_ptr0_2 offset=0x4c range=32 |
++------------+---------------+-----------+----------+----------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++---------------+-----------+--------+-------+-------------------------------+
+| HW Interface  | Direction | Length | Width | Location                      |
++---------------+-----------+--------+-------+-------------------------------+
+| m_axi_m00_axi | read      | 256    | 512   | ../w4a8_gemm_cmodel.cpp:61:5  |
+| m_axi_m00_axi | write     | 256    | 512   | ../w4a8_gemm_cmodel.cpp:69:5  |
+| m_axi_m01_axi | read      | 256    | 512   | ../w4a8_gemm_cmodel.cpp:82:5  |
+| m_axi_m01_axi | write     | 256    | 512   | ../w4a8_gemm_cmodel.cpp:90:5  |
+| m_axi_m02_axi | read      | 256    | 512   | ../w4a8_gemm_cmodel.cpp:103:5 |
+| m_axi_m02_axi | write     | 256    | 512   | ../w4a8_gemm_cmodel.cpp:111:5 |
++---------------+-----------+--------+-------+-------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------+-----+--------+-----------+-----+--------+---------+
+| Name                                   | DSP | Pragma | Variable  | Op  | Impl   | Latency |
++----------------------------------------+-----+--------+-----------+-----+--------+---------+
+| + w4a8_gemm                            | 0   |        |           |     |        |         |
+|  + w4a8_gemm_Pipeline_1                | 0   |        |           |     |        |         |
+|    empty_53_fu_122_p2                  | -   |        | empty_53  | add | fabric | 0       |
+|  + w4a8_gemm_Pipeline_4                | 0   |        |           |     |        |         |
+|    empty_44_fu_122_p2                  | -   |        | empty_44  | add | fabric | 0       |
+|  + w4a8_gemm_Pipeline_7                | 0   |        |           |     |        |         |
+|    empty_35_fu_122_p2                  | -   |        | empty_35  | add | fabric | 0       |
+|  + w4a8_gemm_Pipeline_VITIS_LOOP_64_1  | 0   |        |           |     |        |         |
+|    add_ln64_fu_74_p2                   | -   |        | add_ln64  | add | fabric | 0       |
+|    m00_axi_output_buffer_d0            | -   |        | add_ln65  | add | fabric | 0       |
+|  + w4a8_gemm_Pipeline_VITIS_LOOP_85_2  | 0   |        |           |     |        |         |
+|    add_ln85_fu_74_p2                   | -   |        | add_ln85  | add | fabric | 0       |
+|    m01_axi_output_buffer_d0            | -   |        | add_ln86  | add | fabric | 0       |
+|  + w4a8_gemm_Pipeline_VITIS_LOOP_106_3 | 0   |        |           |     |        |         |
+|    add_ln106_fu_74_p2                  | -   |        | add_ln106 | add | fabric | 0       |
+|    m02_axi_output_buffer_d0            | -   |        | add_ln107 | add | fabric | 0       |
+|  + w4a8_gemm_Pipeline_3                | 0   |        |           |     |        |         |
+|    empty_49_fu_122_p2                  | -   |        | empty_49  | add | fabric | 0       |
+|  + w4a8_gemm_Pipeline_6                | 0   |        |           |     |        |         |
+|    empty_40_fu_122_p2                  | -   |        | empty_40  | add | fabric | 0       |
+|  + w4a8_gemm_Pipeline_9                | 0   |        |           |     |        |         |
+|    empty_31_fu_122_p2                  | -   |        | empty_31  | add | fabric | 0       |
++----------------------------------------+-----+--------+-----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++---------------------------+------+------+--------+-----------------------+---------+------+---------+
+| Name                      | BRAM | URAM | Pragma | Variable              | Storage | Impl | Latency |
++---------------------------+------+------+--------+-----------------------+---------+------+---------+
+| + w4a8_gemm               | 96   | 0    |        |                       |         |      |         |
+|   m00_axi_input_buffer_U  | 16   | -    |        | m00_axi_input_buffer  | ram_1p  | auto | 1       |
+|   m00_axi_output_buffer_U | 16   | -    |        | m00_axi_output_buffer | ram_1p  | auto | 1       |
+|   m01_axi_input_buffer_U  | 16   | -    |        | m01_axi_input_buffer  | ram_1p  | auto | 1       |
+|   m01_axi_output_buffer_U | 16   | -    |        | m01_axi_output_buffer | ram_1p  | auto | 1       |
+|   m02_axi_input_buffer_U  | 16   | -    |        | m02_axi_input_buffer  | ram_1p  | auto | 1       |
+|   m02_axi_output_buffer_U | 16   | -    |        | m02_axi_output_buffer | ram_1p  | auto | 1       |
++---------------------------+------+------+--------+-----------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------------------------------+-----------------------------------------------------+
+| Type      | Options                                           | Location                                            |
++-----------+---------------------------------------------------+-----------------------------------------------------+
+| interface | m_axi port=axi00_ptr0 offset=slave bundle=m00_axi | ../w4a8_gemm_cmodel.cpp:36 in w4a8_gemm, axi00_ptr0 |
+| interface | m_axi port=axi01_ptr0 offset=slave bundle=m01_axi | ../w4a8_gemm_cmodel.cpp:37 in w4a8_gemm, axi01_ptr0 |
+| interface | m_axi port=axi02_ptr0 offset=slave bundle=m02_axi | ../w4a8_gemm_cmodel.cpp:38 in w4a8_gemm, axi02_ptr0 |
+| interface | s_axilite port=scalar00 bundle=control            | ../w4a8_gemm_cmodel.cpp:39 in w4a8_gemm, scalar00   |
+| interface | s_axilite port=scalar01 bundle=control            | ../w4a8_gemm_cmodel.cpp:40 in w4a8_gemm, scalar01   |
+| interface | s_axilite port=scalar02 bundle=control            | ../w4a8_gemm_cmodel.cpp:41 in w4a8_gemm, scalar02   |
+| interface | s_axilite port=scalar03 bundle=control            | ../w4a8_gemm_cmodel.cpp:42 in w4a8_gemm, scalar03   |
+| interface | s_axilite port=axi00_ptr0 bundle=control          | ../w4a8_gemm_cmodel.cpp:43 in w4a8_gemm, axi00_ptr0 |
+| interface | s_axilite port=axi01_ptr0 bundle=control          | ../w4a8_gemm_cmodel.cpp:44 in w4a8_gemm, axi01_ptr0 |
+| interface | s_axilite port=axi02_ptr0 bundle=control          | ../w4a8_gemm_cmodel.cpp:45 in w4a8_gemm, axi02_ptr0 |
+| interface | s_axilite port=return bundle=control              | ../w4a8_gemm_cmodel.cpp:46 in w4a8_gemm, return     |
+| interface | ap_ctrl_hs port=return                            | ../w4a8_gemm_cmodel.cpp:47 in w4a8_gemm, return     |
++-----------+---------------------------------------------------+-----------------------------------------------------+
+
+
